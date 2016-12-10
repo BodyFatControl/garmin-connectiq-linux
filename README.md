@@ -4,7 +4,7 @@ The main instructions I found on this site: http://blog.aaronboman.com/programmi
 
 My quick instructions
 
-* Install Eclipse and the Garmin plugin
+* Install Eclipse and the Garmin plugin *
 Install Eclipse on yor Linux machine and the plugin, as the instructions on Garmin Connect IQ developer page.
 On Eclipse, on the plugin options, you will be asked for it to automatically download an SDK (it will download the MAC plugin but works well).
 
