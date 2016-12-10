@@ -1,0 +1,145 @@
+<monkeybrains>
+
+    <appPermissions>
+        <permission id="Ant" name="ANT" description="Permission to use ANT" module="Ant" />
+        <permission id="Communications" name="Communications" description="Permission to use Bluetooth LE" module="Communications" />
+        <permission id="Fit" name="Activity Recording" description="Permission to record fit files" module="ActivityRecording" />
+        <permission id="FitContributor" name="FIT Contributor" description="Permission to add data to fit files" module="FitContributor" />
+        <permission id="PersistedContent" name="Persisted Content" description="Permission to read persisted content" module="PersistedContent" />
+        <permission id="PersistedLocations" name="Persisted Locations" description="Permission to save persisted locations" module="PersistedLocations" />
+        <permission id="Positioning" name="Positioning" description="Permission to use GPS" module="Position" />
+        <permission id="Sensor" name="Sensor" description="Permission to access sensor data" module="Sensor" />
+        <permission id="SensorHistory" name="Sensor History" description="Permission to access historical sensor data" module="SensorHistory" />
+        <permission id="UserProfile" name="User Profile" description="Permission to access the user's profile" module="UserProfile" />
+    </appPermissions>
+
+    <appTypes>
+        <appType id="watchface" value="0" name="Watch Face" description="A simple watch face" />
+        <appType id="datafield" value="2" name="Data Field" description="A data field" />
+        <appType id="widget" value="3" name="Widget" description="A widget" />
+        <appType id="watch-app" value="1" name="Watch App" description="Application" />
+    </appTypes>
+
+    <permissionMaps>
+        <permissionMap appType="watchface">
+            <permissions>
+                <permission id="SensorHistory" />
+                <permission id="UserProfile" />
+            </permissions>
+        </permissionMap>
+        <permissionMap appType="datafield">
+            <permissions>
+                <permission id="Ant" />
+                <permission id="FitContributor" />
+                <permission id="SensorHistory" />
+                <permission id="UserProfile" />
+            </permissions>
+        </permissionMap>
+        <permissionMap appType="widget">
+            <permissions>
+                <permission id="Ant" />
+                <permission id="Communications" />
+                <permission id="PersistedContent" />
+                <permission id="Positioning" />
+                <permission id="Sensor" />
+                <permission id="SensorHistory" />
+                <permission id="UserProfile" />
+            </permissions>
+        </permissionMap>
+        <permissionMap appType="watch-app">
+            <permissions>
+                <permission id="Ant" />
+                <permission id="Communications" />
+                <permission id="Fit" />
+                <permission id="FitContributor" />
+                <permission id="PersistedContent" />
+                <permission id="PersistedLocations" />
+                <permission id="Positioning" />
+                <permission id="Sensor" />
+                <permission id="SensorHistory" />
+                <permission id="UserProfile" />
+            </permissions>
+        </permissionMap>
+    </permissionMaps>
+
+    <newProjectFilePlaceholders>
+        <placeHolder sanitized="false">appName</placeHolder>
+        <placeHolder suffix="App">appClassName</placeHolder>
+        <placeHolder suffix="View">viewClassName</placeHolder>
+        <placeHolder suffix="Delegate">delegateClassName</placeHolder>
+        <placeHolder suffix="MenuDelegate">menuDelegateClassName</placeHolder>
+    </newProjectFilePlaceholders>
+
+    <newProjectFilesMaps>
+        <newProjectFileMap appType="watchface" name="Simple" baseDir="templates/watchface/simple"
+            description="A simple watch face that displays the time in a digital format centered in the middle of the screen.">
+            <file type="source">source/App.mc</file>
+            <file type="source">source/View.mc</file>
+            <file type="manifest">manifest.xml</file>
+            <file type="resource">resources/strings/strings.xml</file>
+            <file type="resource">resources/drawables/launcher_icon.png</file>
+            <file type="resource">resources/drawables/drawables.xml</file>
+            <file type="resource">resources/layouts/layout.xml</file>
+        </newProjectFileMap>
+        <newProjectFileMap appType="watchface" name="Simple with Settings" baseDir="templates/watchface/settings"
+            description="A simple watch face that displays the time in a digital format centered in the middle of the screen.&#xA;&#xA;There are also settings for the background color, foreground color and whether or not to draw 24 hour time in a military format.">
+            <file type="source">source/App.mc</file>
+            <file type="source">source/View.mc</file>
+            <file type="source">source/Background.mc</file>
+            <file type="manifest">manifest.xml</file>
+            <file type="resource">resources/strings/strings.xml</file>
+            <file type="resource">resources/settings/properties.xml</file>
+            <file type="resource">resources/settings/settings.xml</file>
+            <file type="resource">resources/drawables/launcher_icon.png</file>
+            <file type="resource">resources/drawables/drawables.xml</file>
+            <file type="resource">resources/layouts/layout.xml</file>
+        </newProjectFileMap>
+        <newProjectFileMap appType="datafield" name="Simple" baseDir="templates/datafield/simple"
+            description="A data field that extends the SimpleDataField class.">
+            <file type="source">source/App.mc</file>
+            <file type="source">source/View.mc</file>
+            <file type="manifest">manifest.xml</file>
+            <file type="resource">resources/strings/strings.xml</file>
+            <file type="resource">resources/drawables/drawables.xml</file>
+            <file type="resource">resources/drawables/launcher_icon.png</file>
+        </newProjectFileMap>
+        <newProjectFileMap appType="datafield" name="Complex" baseDir="templates/datafield/complex"
+            description="A data field that extends the DataField class.&#xA;&#xA;This template uses Connect IQ 1.2.0 APIs and will not run on devices that haven't been updated to support 1.2.0 or higher.">
+            <file type="source">source/App.mc</file>
+            <file type="source">source/View.mc</file>
+            <file type="source">source/Background.mc</file>
+            <file type="manifest">manifest.xml</file>
+            <file type="resource">resources/strings/strings.xml</file>
+            <file type="resource">resources/drawables/launcher_icon.png</file>
+            <file type="resource">resources/drawables/drawables.xml</file>
+            <file type="resource">resources/strings/strings.xml</file>
+            <file type="resource">resources/layouts/layouts.xml</file>
+        </newProjectFileMap>
+        <newProjectFileMap appType="widget" name="Simple" baseDir="templates/widget/simple"
+            description="A simple widget that draws a monkey in the middle of the screen.">
+            <file type="source">source/App.mc</file>
+            <file type="source">source/View.mc</file>
+            <file type="manifest">manifest.xml</file>
+            <file type="resource">resources/strings/strings.xml</file>
+            <file type="resource">resources/drawables/launcher_icon.png</file>
+            <file type="resource">resources/drawables/monkey.png</file>
+            <file type="resource">resources/drawables/drawables.xml</file>
+            <file type="resource">resources/layouts/layout.xml</file>
+        </newProjectFileMap>
+        <newProjectFileMap appType="watch-app" name="Simple" baseDir="templates/watch-app/simple"
+            description="A simple watch app that draws a monkey and implements a menu.">
+            <file type="source">source/App.mc</file>
+            <file type="source">source/View.mc</file>
+            <file type="source">source/Delegate.mc</file>
+            <file type="source">source/MenuDelegate.mc</file>
+            <file type="manifest">manifest.xml</file>
+            <file type="resource">resources/strings/strings.xml</file>
+            <file type="resource">resources/menus/menu.xml</file>
+            <file type="resource">resources/drawables/launcher_icon.png</file>
+            <file type="resource">resources/drawables/monkey.png</file>
+            <file type="resource">resources/drawables/drawables.xml</file>
+            <file type="resource">resources/layouts/layout.xml</file>
+        </newProjectFileMap>
+    </newProjectFilesMaps>
+
+</monkeybrains>

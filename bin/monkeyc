@@ -1,0 +1,4 @@
+#!/bin/bash
+
+MB_HOME="$( cd "$( dirname "$0" )" && pwd )"
+java -classpath "$MB_HOME"/monkeybrains.jar com.garmin.monkeybrains.Monkeybrains -a "$MB_HOME"/api.db -u "$MB_HOME"/devices.xml "$@"

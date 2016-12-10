@@ -1,0 +1,5 @@
+<resources>
+    <drawable-list id="arrow" foreground="Gfx.COLOR_WHITE">
+        <shape type="polygon" points="[[3,82],[23,66],[23,96]]" color="Gfx.COLOR_WHITE"/>
+    </drawable-list>
+</resources>

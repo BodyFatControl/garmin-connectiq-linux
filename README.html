@@ -1,0 +1,2606 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>Monkey C Release Notes</title>
+	<meta name="author" content="Garmin International"/>
+	<meta name="date" content="October 28, 2016"/>
+	<link type="text/css" rel="stylesheet" href="resources/readme/style.css"/>
+</head>
+<body>
+
+<script language="JavaScript">
+<!-- Begin
+var h_img_src = "resources/readme/hide.jpg";
+var s_img_src = "resources/readme/show.jpg";
+
+function toggle(id, img_name) {
+  var e = document.getElementById(id);
+  if(e.style.display == 'none') {
+      e.style.display = 'block';
+      document[img_name].src = s_img_src;
+  } else {
+      e.style.display = 'none';
+      document[img_name].src = h_img_src;
+  }
+}
+// End -->
+</script>
+<div id="title">MONKEY C</div>
+<div id="tagline">Release 2.2.1 (Biker Monkey)</div>
+<div class="clear"></div>
+
+<h1 id="tableofcontents">Table of Contents</h1>
+<div id="toc">
+
+<ul>
+<li><a href="#tableofcontents">Table of Contents</a></li>
+<li><a href="#intro">Intro</a></li>
+<li><a href="#gettingstarted">Getting Started</a>
+
+<ul>
+<li><a href="#osxinstallation">OS X Installation</a></li>
+<li><a href="#windowsinstallation">Windows Installation</a></li>
+<li><a href="#basiccommands">Basic Commands</a></li>
+</ul></li>
+<li><a href="#theeclipseplug-in">The Eclipse Plug-in</a>
+
+<ul>
+<li><a href="#configuringtheeclipseplug-in">Configuring the Eclipse Plug-in</a></li>
+</ul></li>
+<li><a href="#errormessages">Error Messages</a></li>
+<li><a href="#usingthesamples">Using the Samples</a>
+
+<ul>
+<li><a href="#accelmag">AccelMag</a></li>
+<li><a href="#activitytracker">ActivityTracker</a></li>
+<li><a href="#analog">Analog</a></li>
+<li><a href="#attention">Attention</a></li>
+<li><a href="#comm">Comm</a></li>
+<li><a href="#confirmationdialog">ConfirmationDialog</a></li>
+<li><a href="#drawable">Drawable</a></li>
+<li><a href="#input">Input</a></li>
+<li><a href="#keyboard">Keyboard</a></li>
+<li><a href="#mathsample">MathSample</a></li>
+<li><a href="#menutest">MenuTest</a></li>
+<li><a href="#mo2display">MO2Display</a></li>
+<li><a href="#moxydatafield">MoxyDataField</a></li>
+<li><a href="#numberpicker">NumberPicker</a></li>
+<li><a href="#objectstore">ObjectStore</a></li>
+<li><a href="#picker">Picker</a></li>
+<li><a href="#positionsample">PositionSample</a></li>
+<li><a href="#primates">Primates</a></li>
+<li><a href="#progressbar">ProgressBar</a></li>
+<li><a href="#recordsample">RecordSample</a></li>
+<li><a href="#sensor">Sensor</a></li>
+<li><a href="#simpledatafield">SimpleDataField</a></li>
+<li><a href="#strings">Strings</a></li>
+<li><a href="#timer">Timer</a></li>
+<li><a href="#userprofile">UserProfile</a></li>
+<li><a href="#webrequest">WebRequest</a></li>
+</ul></li>
+<li><a href="#releasenotes">Release Notes</a>
+
+<ul>
+<li><a href="#v2.2.1">v2.2.1</a></li>
+</ul></li>
+<li><a href="#additionalnotes">Additional Notes</a></li>
+</ul>
+</div>
+
+<h1 id="intro">Intro</h1>
+
+<p>Thank you for trying Monkey C!</p>
+
+<p>Monkey C is a dynamically typed scripting language designed for publishing applications for Garmin devices that support Connect IQ. To find out more about Monkey C and Connect IQ, please visit <a href="http://developer.garmin.com/connect-iq/overview/">http://developer.garmin.com/connect-iq/overview/</a>. You can also join the Connect IQ developer community on the <a href="https://forums.garmin.com/forumdisplay.php?479-Connect-IQ">Garmin Forums</a> to find Monkey C tips &amp; tricks and answers to many questions about Connect IQ.</p>
+
+<h1 id="gettingstarted">Getting Started</h1>
+
+<p>To use the Connect IQ SDK on all platforms you will need Oracle Java&trade; software development kit version 7 or higher. You can download the JDK from <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">http://www.oracle.com/technetwork/java/javase/downloads/index.html</a>.</p>
+
+<p>Download the latest version of the Connect IQ SDK from <a href="http://developer.garmin.com/connect-iq/sdk/">http://developer.garmin.com/connect-iq/sdk/</a> and unzip the connect-iq-sdk-x.y.z.zip file into a local directory. Installation specifics will vary depending on your operating system</p>
+
+<h2 id="osxinstallation">OS X Installation</h2>
+
+<p>The first step for using Monkey C is to point your <code>PATH</code> to the Monkey C bin directory.</p>
+
+<p>To add to a single local shell instance:</p>
+
+<pre><code class="bash">$ export PATH=$PATH:path/to/monkeyc/bin
+</code></pre>
+
+<p>To add to a user profile:</p>
+
+<pre><code class="bash">$ touch ~/.bash_profile
+$ open ~/.bash_profile
+</code></pre>
+
+<p>The above opens <code>.bash_profile</code> in a text editor. Add the line below to the file and save the changes:</p>
+
+<pre><code class="bash">$ export PATH=$PATH:path/to/monkeyc/bin
+</code></pre>
+
+<h2 id="windowsinstallation">Windows Installation</h2>
+
+<p>This release works from the Windows NT shell.</p>
+
+<p>The first step for using Monkey C is to point your <code>PATH</code> to the Monkey C bin directory:</p>
+
+<pre><code>&gt; set PATH=%PATH%;path\to\monkeyc\bin
+</code></pre>
+
+<h2 id="basiccommands">Basic Commands</h2>
+
+<p>After installation, three new shell commands will be available: <code>connectiq</code>, <code>monkeyc</code>, and <code>monkeydo</code>.</p>
+
+<ul>
+<li><p><code>connectiq</code> launches the Monkey C simulator. Use this simple command to start the simulator in the background.</p></li>
+<li><p><code>monkeyc</code> calls the Monkey C compiler. The compiler can take code from multiple files and link them together into a single Monkey C executable (a PRG file). The optional <code>-z</code> argument allows resource files to be passed in. If your project uses multiple resource files separate them with the system path separator (&#8216;<code>;</code>&#8217; in Windows and &#8216;<code>:</code>&#8217; in OSX). This allows the addition of bitmaps, drawables, fonts, strings, and menus to your executable. See the samples directory for a sample resource file.</p></li>
+</ul>
+
+<p>The usage is:</p>
+
+<pre><code>&gt; monkeyc -o &lt;output.prg&gt; -m &lt;manifest.xml&gt; [-z resource.xml;resource2.xml] &lt;file1.mc&gt; [file2.mc]...
+</code></pre>
+
+<ul>
+<li><code>monkeydo</code> runs a Monkey C executable in the simulator. You must have previously started the simulator with <code>connectiq</code>. The usage is:</li>
+</ul>
+
+<pre><code>&gt; monkeydo myApp.prg
+</code></pre>
+
+<p>An example of a typical build cycle would be:</p>
+
+<pre><code>&gt; connectiq
+&gt; monkeyc -o myApp.prg -m manifest.xml myApp.mc
+&gt; monkeydo myApp.prg
+</code></pre>
+
+<h1 id="theeclipseplug-in">The Eclipse Plug-in</h1>
+
+<p>The Connect IQ Eclipse plug-in turns Eclipse into a Monkey C development environment. Its features include:</p>
+
+<ul>
+<li>Syntax highlighting editor</li>
+<li>Build integration</li>
+<li>Integrated execution of applications in the Connect IQ simulator</li>
+</ul>
+
+<p>The Connect IQ plug-in requires either the Standard Edition or IDE for Java Developers (either 32 or 64 bit) of <a href="http://www.eclipse.org/luna/" title="Eclipse Luna">Eclipse Luna</a>. It will also require version 1.8 of the <a href="http://java.com/en/download/" title="Java JRE">Java JRE</a>.</p>
+
+<p>Once Eclipse is installed, install the plug-in with the following steps.</p>
+
+<ol>
+<li>In the top menu, go to <em>Help &gt; Install New Software</em></li>
+<li>Use the <em>Add&#8230;</em> button to add <em>http://developer.garmin.com/downloads/connect-iq/eclipse/</em></li>
+<li>Mark the check box next to Connect IQ in the list and hit <em>Next</em></li>
+<li>Dependent plug-in modules may need to be downloaded and installed. When this is complete, restart Eclipse to complete the installation.</li>
+</ol>
+
+<h2 id="configuringtheeclipseplug-in">Configuring the Eclipse Plug-in</h2>
+
+<ol>
+<li>Next, the plug-in will need to know where to find the Connect IQ SDK. To set this, go to the <em>Window &gt; Preferences</em> menu (Windows), or to <em>Eclipse &gt; Preferences</em> (Mac).</li>
+<li>Click the <em>Browse</em> button and add the path to your Connect IQ SDK directory. Make sure it is referencing the root directory of the SDK and not the <code>bin</code> subdirectory.</li>
+<li>Add the Connect IQ perspective to Eclipse by selecting <em>Window &gt; Open Perspective &gt; Other&#8230;</em> and then select <em>Connect IQ</em></li>
+</ol>
+
+<p>For more information about Eclipse plug-in setup and use, please refer to <a href="http://developer.garmin.com/connect-iq/getting-started/" title="Getting started with Connect IQ">Getting Started</a> or the Programmers Guide PDF included in the SDK download package.</p>
+
+<h1 id="errormessages">Error Messages</h1>
+
+<p>If your program terminates abruptly, you should get a stack trace from <code>monkeydo</code> with an error. The errors are as follows:</p>
+
+<dl>
+<dt>Array Out Of Bounds</dt>
+<dd>An attempt is being made to reference an array outside of its allocated bounds</dd>
+
+<dt>Circular Dependency</dt>
+<dd>There is a loop in the dependency graph of a module or object that prevents a module or object from being constructed</dd>
+
+<dt>Communications Error</dt>
+<dd>An error has occurred in <a href="https://en.wikipedia.org/wiki/Bluetooth_low_energy" title="Bluetooth low energy">BLE</a> communications</dd>
+
+<dt>File Not Found</dt>
+<dd>The app file could not be found, which is usually caused when trying to load a resource from the app file</dd>
+
+<dt>Illegal Frame</dt>
+<dd>The return address on the stack is corrupted</dd>
+
+<dt>Initializer Error</dt>
+<dd>An error occured in an initializer</dd>
+
+<dt>Invalid Value</dt>
+<dd>An argument passed to a function or method is invalid</dd>
+
+<dt>Null Reference</dt>
+<dd>A value is being requested from a null value</dd>
+
+<dt>Out of Memory</dt>
+<dd>Indicates no more system memory is available for allocation</dd>
+
+<dt>Permission Required</dt>
+<dd>An attempt was made to use a restricted API without permission</dd>
+
+<dt>Stack Underflow</dt>
+<dd>The stack pointer went past the bottom of the stack memory limit</dd>
+
+<dt>Stack Overflow</dt>
+<dd>The stack pointer went past the top of the stack memory limit</dd>
+
+<dt>Symbol Not Found</dt>
+<dd>An attempt was made to access a variable or method that does not exist in the specified object or method</dd>
+
+<dt>System Error</dt>
+<dd>A generic error used by the Toybox APIs for fatal errors</dd>
+
+<dt>Too Many Arguments</dt>
+<dd>Too many arguments used by a method, which are currently limited to 10 arguments</dd>
+
+<dt>Too Many Objects</dt>
+<dd>The program has allocated too many objects, pushing the object count above the maximum. The maximum varies among devices, but a count of 256 can be assumed at least.</dd>
+
+<dt>Too Many Timers</dt>
+<dd>Too many <code>Timer::Timer</code> objects for the target device were started</dd>
+
+<dt>Unexpected Type</dt>
+<dd>Indicates an operation being done on a variable that is unsupported by the type; for example, trying to perform a bitwise OR on two string</dd>
+
+<dt>Unhandled Exception</dt>
+<dd>An <code>Exception</code> was thrown but was not caught by an exception handler</dd>
+
+<dt>Watchdog Tripped</dt>
+<dd>A Monkey C function has executed for too long; watchdogs prevent a Monkey C program from hanging the system via an infinite loop</dd>
+</dl>
+
+<h1 id="usingthesamples">Using the Samples</h1>
+
+<p>Sample applications are included with every SDK release in the &#8216;samples&#8217; directory, and are meant give a small demonstration of the different parts of the Connect IQ API.</p>
+
+<h2 id="accelmag">AccelMag</h2>
+
+<p><strong>About The Sample</strong></p>
+<figure>
+<img src="resources/readme/AccelMag.png" />
+</figure>
+
+<ul>
+<li>Type: Application</li>
+<li>Modules: <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/WatchUi.html" title="WatchUi API documentation">WatchUi</a>, <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Sensor.html" title="Sensor API documentation">Sensor</a></li>
+</ul>
+
+<p>Demonstrates Accelerometer and Magnetometer support.</p>
+
+<p><strong>How It Works</strong></p>
+
+<ul>
+<li>Accelerometer:
+
+<ol>
+<li>Tilt device in various directions - The ball on the screen moves in the direction of the tilt</li>
+</ol></li>
+<li>Magnetometer:
+
+<ol>
+<li>Turn the device in place - An arrow on the edge of the screen should point north</li>
+<li>Press the start button - The ball will get &#8220;kicked&#8221; in the direction the arrow is pointing</li>
+</ol></li>
+</ul>
+
+<h2 id="activitytracker">ActivityTracker</h2>
+
+<p><strong>About The Sample</strong></p>
+<figure>
+<img src="resources/readme/ActivityTracker.png" />
+</figure>
+
+<ul>
+<li>Type: Widget</li>
+<li>Modules: <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/ActivityMonitor.html" title="ActivityMonitor API documentation">ActivityMonitor</a>, <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Timer.html" title="Timer API documentation">Timer</a></li>
+</ul>
+
+<p>Demonstrates an application of the activity tracking features.</p>
+
+<p><strong>How It Works</strong></p>
+
+<p>Three values are displayed; the current number of steps, your step goal, and the goal pace (the number of steps you should have taken by the current time of day).</p>
+
+<ol>
+<li>Swipe to the widget</li>
+<li>Walk around with the device for a short period of time</li>
+</ol>
+
+<p>The step counter increases, the step pace increases, and the progress bar advances, all in accordance to the number of steps taken during the test.</p>
+
+<h2 id="analog">Analog</h2>
+
+<p><strong>About The Sample</strong></p>
+<figure>
+<img src="resources/readme/Analog.png" />
+</figure>
+
+<ul>
+<li>Type: Watch Face</li>
+<li>Modules: <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Math.html" title="Math API documentation">Math</a>, <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Time.html" title="Time API documentation">Time</a></li>
+</ul>
+
+<p>A simple analog watch face.</p>
+
+<p><strong>How It Works</strong></p>
+
+<p>Show the current time, and will update the watch hands once a minute.</p>
+
+<h2 id="attention">Attention</h2>
+
+<p><strong>About The Sample</strong></p>
+<figure>
+<img src="resources/readme/Attention.png" />
+</figure>
+
+<ul>
+<li>Type: Widget</li>
+<li>Modules: <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Attention.html" title="Attention API documentation">Attention</a>, <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/WatchUi.html" title="WatchUi API documentation">WatchUi</a></li>
+</ul>
+
+<p>Demonstrates tones, vibration alerts and use of the back light.</p>
+
+<p><strong>How It Works</strong></p>
+
+<ol>
+<li>Tap the screen - The back light activates</li>
+<li>Tap and hold screen - Vibration activates</li>
+<li>Press Menu - Each Menu press cycles through available tones</li>
+</ol>
+
+<h2 id="comm">Comm</h2>
+
+<p><strong>About The Sample</strong></p>
+<figure>
+<img src="resources/readme/Comm.png" />
+</figure>
+
+<ul>
+<li>Type: Widget</li>
+<li>Modules: <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Communications.html" title="Communications API documentation">Communications</a></li>
+</ul>
+
+<p>Tests communication between a device and a phone (Android and iOS).</p>
+
+<p><strong>How It Works</strong></p>
+
+<p>Loading the Mobile Comm sample to a Android/iOS phone:</p>
+
+<ol>
+<li>Download the appropriate <a href="http://developer.garmin.com/connect-iq/sdk/" title="Mobile SDK Download Link">Mobile SDK</a> for the phone</li>
+<li>Follow the included instructions for building/installing the sample application</li>
+</ol>
+
+<p>Connecting the Connect IQ simulator and Android phone:</p>
+
+<ol>
+<li>Run the Connect IQ Comm sample application on the Connect IQ simulator</li>
+<li>Connect your Android phone to your computer, ensuring Android Debug Bridge (ADB) is installed</li>
+<li>Using a console, run &#8220;adb devices&#8221; - your device should appear in this list (if not, install the drivers for your phone)</li>
+<li>Using the same console, run &#8220;adb forward tcp:7381 tcp:7381&#8221; to forward ADB traffic to the Connect IQ simulator</li>
+<li>Select &#8220;Connection-&gt;Start&#8221; from the simulator drop down menu</li>
+</ol>
+
+<p>Connecting a device and Android/iOS phone:</p>
+
+<ol>
+<li>Connect the test device to your computer</li>
+<li>Install the Connect IQ Comm sample widget to the test device by side-loading it directly to the device&#8217;s file system</li>
+<li>Disconnect the test device from the computer</li>
+<li>Pair the test device to the phone via GCM/BLE</li>
+<li>Run the sample application on the phone</li>
+<li>Launch the Comm sample widget on the test device</li>
+<li>Touch the test device in the device list on the phone (if presented)</li>
+</ol>
+
+<p>Using the sample:</p>
+
+<ol>
+<li>Touch any of the available strings on the phone (e.g. &#8220;Hello World&#8221;)</li>
+<li>Watch for a response on the Connect IQ Comm sample with the string you selected</li>
+<li>Touch the menu button on the Connect IQ Comm sample</li>
+<li>Swipe to select and touch any available string on the Connect IQ Comm sample</li>
+<li>Watch for a response on the phone with the string you selected</li>
+</ol>
+
+<h2 id="confirmationdialog">ConfirmationDialog</h2>
+
+<p><strong>About The Sample</strong></p>
+<figure>
+<img src="resources/readme/ConfirmationDialog.png" />
+</figure>
+
+<ul>
+<li>Type: Widget</li>
+<li>Modules: <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/WatchUi.html" title="WatchUi API documentation">WatchUi</a></li>
+</ul>
+
+<p>Example of how to handle behaviours (e.g. button presses) and present confirmation dialogues.</p>
+
+<p><strong>How It Works</strong></p>
+
+<ol>
+<li>Press Menu:
+
+<ul>
+<li>Tap Confirm</li>
+<li>&#8220;Test the confirm Confirm/Yes&#8221; should be displayed</li>
+</ul></li>
+<li>Press Menu
+
+<ul>
+<li>Tap Cancel</li>
+<li>&#8220;Test the confirm Cancel/No&#8221; should be displayed</li>
+</ul></li>
+<li>Press Menu to return to dismiss the response.</li>
+</ol>
+
+<h2 id="drawable">Drawable</h2>
+
+<p><strong>About The Sample</strong></p>
+<figure>
+<img src="resources/readme/Drawable.png" />
+</figure>
+
+<ul>
+<li>Type: Widget</li>
+<li>Modules: <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Graphics.html" title="Graphics API documentation">Graphics</a></li>
+</ul>
+
+<p>Demonstrates use of the resource compiler.</p>
+
+<p><strong>How It Works</strong></p>
+
+<p>Swipe to the widget, and picture with a train, cloud and the sun is displayed.</p>
+<!-- ##FieldTimerEvents
+
+**About The Sample**
+
+<figure>
+<img src="resources/readme/FieldTimerEvents.png" />
+</figure>
+
+* Type: Data Field
+* Modules: [WatchUi]
+
+Demonstrates use timer events within a data field.
+
+**How It Works**
+
+Displays a number with a color and value that changes depending on timer events:
+
+* The lap number should be red if the timer is stopped
+* The lap number should be green if the timer is running
+* The lap number should be yellow if the timer has been auto-paused (make sure this feature is enabled in your device settings)
+* The lap number should increment with each lap key press
+-->
+
+<h2 id="input">Input</h2>
+
+<p><strong>About The Sample</strong></p>
+<figure>
+<img src="resources/readme/Input.png" />
+</figure>
+
+<ul>
+<li>Type: Widget</li>
+<li>Modules: <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/WatchUi.html" title="WatchUi API documentation">WatchUi</a></li>
+</ul>
+
+<p>Demonstrates various ways of detecting and handling user input.</p>
+
+<p><strong>How It Works</strong></p>
+
+<p>For each input event supported by a device, the application will display:</p>
+
+<ul>
+<li>The event that was detected (i.e. key/swipe/touch)</li>
+<li>The behaviour that is mapped to the input event (if any)</li>
+</ul>
+
+<p>Not all devices support every touch/key/swipe event. To exit the sample, press the back button twice in a row.</p>
+
+<h2 id="keyboard">Keyboard</h2>
+
+<p><strong>About The Sample</strong></p>
+<figure>
+<img src="resources/readme/Keyboard.png" />
+</figure>
+
+<ul>
+<li>Type: Application</li>
+<li>Modules: <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/WatchUi.html" title="WatchUi API documentation">WatchUi</a></li>
+</ul>
+
+<p>Demonstrate use of the text picker page in an application.</p>
+
+<p><strong>How It Works</strong></p>
+
+<p>Select characters one-by-one to create a string. When &#8220;OK&#8221; is selected, the final string will be returned with a &#8220;Changed=true&#8221; status.</p>
+
+<p><strong>How It Works</strong></p>
+
+<p>A watch face with a centered blue triangle is displayed; the watch hands will move with each minute. There is a separate layout for square and round devices.</p>
+
+<h2 id="mathsample">MathSample</h2>
+
+<p><strong>About The Sample</strong></p>
+<figure>
+<img src="resources/readme/MathSample.png" />
+</figure>
+
+<ul>
+<li>Type: Widget</li>
+<li>Modules: <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Math.html" title="Math API documentation">Math</a></li>
+</ul>
+
+<p>Demonstrates the use of math functions available in Connect IQ.</p>
+
+<p><strong>How It Works</strong></p>
+
+<p>Click the screen to cycle through several different math functions displaying input values and their respective results.</p>
+
+<h2 id="menutest">MenuTest</h2>
+
+<p><strong>About the Sample</strong></p>
+<figure>
+<img src="resources/readme/MenuTest.png" />
+</figure>
+
+<ul>
+<li>Type: Application</li>
+<li>Modules: <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/WatchUi/Menu.html" title="Menu API Documentation">Menu</a>, <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/WatchUi/MenuInputDelegate.html" title="MenuInputDelegate API Documentation">MenuInputDelegate</a></li>
+</ul>
+
+<p>This sample shows how to define menus using resources and demonstrates the use of nested menus.</p>
+
+<p><strong>How It Works</strong></p>
+
+<p>Press the Menu button to display an on-screen menu, which has options to return to the home screen or display an auxiliary, nested menu.</p>
+
+<h2 id="mo2display">MO2Display</h2>
+
+<p><strong>About The Sample</strong></p>
+<figure>
+<img src="resources/readme/MO2Display.png" />
+</figure>
+
+<ul>
+<li>Type: Application</li>
+<li>Modules: <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Ant.html" title="Ant API documentation">Ant</a></li>
+</ul>
+
+<p>Demonstrates use of the Ant module by connecting to the closest ANT source broadcasting Muscle Oxygen Monitor data.</p>
+
+<p><strong>How It Works</strong></p>
+
+<p>The sample works with either a <a href="http://www.moxymonitor.com/" title="Muscle Oxygen Monitor Home Page">Muscle Oxygen Monitor</a> or the SimulAnt tool from <a href="https://www.thisisant.com/" title="ANT+ Developer Resources">ANT+</a> and an ANT stick configured to run in Muscle Oxygen Monitor mode:</p>
+
+<ol>
+<li>Launch the sample (on the Connect IQ simulator or device)</li>
+<li>The Muscle Oxygen Monitor should be set to broadcast mode and nearby the test device or computer</li>
+<li>The sample will start tracking the broadcasted data and indicate that with green &#8220;tracking&#8221; text</li>
+<li>Swipe to the second page to see information on the current event packets being received</li>
+<li>Swipe to the third page to see a graph of g/dl output of the data (historical)</li>
+</ol>
+
+<h2 id="moxydatafield">MoxyDataField</h2>
+
+<p><strong>About The Sample</strong></p>
+<figure>
+<img src="resources/readme/MoxyDataField.png" />
+</figure>
+
+<ul>
+<li>Type: Widget</li>
+<li>Modules: <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/WatchUi.html" title="WatchUi API documentation">WatchUi</a>, <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Ant.html" title="Ant API documentation">Ant</a></li>
+</ul>
+
+<p>An example of how to use the <a href="http://www.moxymonitor.com/" title="Muscle Oxygen Monitor Home Page">Muscle Oxygen Monitor</a> in a Data Field.</p>
+
+<p><strong>How It Works</strong></p>
+
+<p>See the MO2Display for instructions on how to set up a real or simulated <a href="http://www.moxymonitor.com/" title="Muscle Oxygen Monitor Home Page">Muscle Oxygen Monitor</a>:</p>
+
+<ol>
+<li>The Data Field will start and initially display &#8220;Searching&#8221; until a broadcast source is found</li>
+<li>The sample will start tracking the broadcasted data and indicate that with green &#8220;tracking&#8221; text</li>
+<li>Saturated Hemoglobin (%) and Hemoglobin Concentration (g/dl) are displayed</li>
+</ol>
+
+<h2 id="numberpicker">NumberPicker</h2>
+
+<p><strong>About The Sample</strong></p>
+<figure>
+<img src="resources/readme/NumberPicker.png" />
+</figure>
+
+<ul>
+<li>Type: Widget</li>
+<li>Modules: <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/WatchUi.html" title="WatchUi API documentation">WatchUi</a></li>
+</ul>
+
+<p>An example of how to use the number picker in an application.</p>
+
+<p><strong>How It Works</strong></p>
+
+<p>The number picker sample takes inputs with specific units and converts them to system units. Press &#8220;Menu&#8221; to cycle through each input:</p>
+
+<ol>
+<li>Enter 5 miles - Top value changes to 8046.735840 (Meters)</li>
+<li>Enter &#8220;05:00:00&#8221; - Bottom value changes to 18000 (Seconds)</li>
+<li>Enter &#8220;30:00&#8221; - Bottom value changes to 1800 (Seconds)</li>
+<li>Enter &#8220;05:00:00 PM&#8221; - Bottom value changes to 61200 (Seconds)</li>
+<li>Enter 250 pounds - Top value changes to 113.398087 (Kilograms)</li>
+<li>Enter 72.00 inches - Top value changes to 1.828800 (Meters)</li>
+<li>Enter 200 calories - Middle value changes to 200 (Calories)</li>
+<li>Enter 1975 - Middle value changes to 1975 (Years)</li>
+</ol>
+
+<h2 id="objectstore">ObjectStore</h2>
+
+<p><strong>About The Sample</strong></p>
+<figure>
+<img src="resources/readme/ObjectStore.png" />
+</figure>
+
+<ul>
+<li>Type: Application</li>
+<li>Modules: [AppBase]</li>
+</ul>
+
+<p>Demonstrates saving and retrieving data in the object store on the device.</p>
+
+<p><strong>How It Works</strong></p>
+
+<p>The first page displays values from the ObjectStore. Tap the screen six times, pausing between each tap to check for changed values on the screen:</p>
+
+<ul>
+<li>&#8220;Int&#8221; is assigned a value of 3</li>
+<li>&#8220;Float&#8221; is assigned a value of 3.141590</li>
+<li>&#8220;String&#8221; is assigned a value of &#8220;pie&#8221;</li>
+<li>&#8220;Boolean&#8221; is assigned a value of &#8220;true&#8221;</li>
+<li>&#8220;Array&#8221; is assigned a value of &#8220;[1,2,3,null]&#8221;</li>
+<li>&#8220;Dictionary&#8221; is assigned a value of &#8220;{two=&gt;2, 1=&gt;one, null=&gt;null}&#8221;</li>
+</ul>
+
+<p>Tapping the screen another six times will result in all values indicating &#8220;Not set&#8221;. The second page displays the settings. To modify these values when the sample running in the Simulator:</p>
+
+<ol>
+<li>Select the &#8220;App Settings Editor&#8221; item from the Connect IQ Eclipse Plugin</li>
+<li>Select the ObjectStore item from the &#8220;Project&#8221; drop down</li>
+<li>Edit any of the values present and click &#8220;Send Settings&#8221;</li>
+<li>The values will change in the Connect IQ simulator display</li>
+</ol>
+
+<h2 id="picker">Picker</h2>
+
+<p><strong>About The Sample</strong></p>
+<figure>
+<img src="resources/readme/Picker.png" />
+</figure>
+
+<ul>
+<li>Type: Application</li>
+<li>Modules: <a href="#picker">Picker</a></li>
+</ul>
+
+<p>Demonstrates the generic Picker features via several different implementations.</p>
+
+<p><strong>How It Works</strong></p>
+
+<p>Select a color:</p>
+
+<ol>
+<li>Tap Menu</li>
+<li>Arrow up or down to select the color picker</li>
+<li>Tap the check mark to activate the color picker</li>
+<li>Tap the selection arrows to choose a color</li>
+<li>Tap the paint brush to confirm color selection</li>
+<li>Tap Back</li>
+<li>The color of the text is drawn in the selected color</li>
+</ol>
+
+<p>Select a date:</p>
+
+<ol>
+<li>Tap Menu</li>
+<li>Arrow up or down to select the date picker</li>
+<li>Tap the check mark to activate the date picker</li>
+<li>Arrow up or down to select a month</li>
+<li>Tap the &#8216;-&#8217; on the right side of the screen</li>
+<li>Arrow up or down to choose a day</li>
+<li>Tap the &#8216;-&#8217; on the right side of the screen</li>
+<li>Arrow up or down to choose a year</li>
+<li>Tap the check mark to confirm date selection</li>
+<li>Tap Back</li>
+<li>The top string shows the selected date</li>
+</ol>
+
+<p>Select a string:</p>
+
+<ol>
+<li>Tap Menu</li>
+<li>Arrow up or down to select the string picker</li>
+<li>Tap the check mark to activate the string picker</li>
+<li>Arrow up or down to select a letter</li>
+<li>Tap the check mark to confirm the letter</li>
+<li>Repeat steps 4 and 5 until you have completed your chosen string</li>
+<li>Arrow up or down to select &#8216;OK&#8217;</li>
+<li>Tap the check mark to confirm the string</li>
+<li>Tap Back</li>
+<li>The bottom string shows the selected string</li>
+</ol>
+
+<p>Select a time:</p>
+
+<ol>
+<li>Tap Menu</li>
+<li>Arrow up or down to select the time picker</li>
+<li>Tap the check mark to activate the time picker</li>
+<li>Arrow up or down to select an hour</li>
+<li>Tap the &#8216;:&#8217; on the right side of the screen</li>
+<li>Arrow up or down to choose a minute</li>
+<li>Tap the &#8216;AM&#8217; or &#8216;PM&#8217; on the right side of the screen</li>
+<li>Arrow up or down to choose a period</li>
+<li>Tap the check mark to confirm period selection</li>
+<li>Tap Back</li>
+<li>The middle string shows the selected time</li>
+</ol>
+
+<h2 id="positionsample">PositionSample</h2>
+
+<p><strong>About The Sample</strong></p>
+<figure>
+<img src="resources/readme/PositionSample.png" />
+</figure>
+
+<ul>
+<li>Type: Application</li>
+<li>Modules: <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Position.html" title="Position API documentation">Position</a></li>
+</ul>
+
+<p>Demonstrates how to get device position.</p>
+
+<p><strong>How It Works</strong></p>
+
+<ul>
+<li>Allow the GPS to acquire a position (device) or simulate FIT data (CIQ simulator)</li>
+<li>A screen showing simulated values (or values reasonable for your current position) will display</li>
+</ul>
+
+<h2 id="primates">Primates</h2>
+
+<p><strong>About The Sample</strong></p>
+<figure>
+<img src="resources/readme/Primates.png" />
+</figure>
+
+<ul>
+<li>Type: Application</li>
+<li>Modules: <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Graphics.html" title="Graphics API documentation">Graphics</a>, <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/WatchUi.html" title="WatchUi API documentation">WatchUi</a></li>
+</ul>
+
+<p>A good example of multiple pages within a single application and use of different types of graphics resources.</p>
+
+<p><strong>How It Works</strong></p>
+
+<ol>
+<li>Issue next/previous page behaviours (i.e. swipes) to cycle through different primate pictures</li>
+<li>Each picture shows a different primate species and resource type:
+
+<ul>
+<li>Closest-mapping</li>
+<li>Floyd-Steinberg dithering</li>
+<li>Alpha channel (Edge only)</li>
+</ul></li>
+<li>Tapping a page will push a new view which displays information about the primate species</li>
+</ol>
+
+<h2 id="progressbar">ProgressBar</h2>
+
+<p><strong>About The Sample</strong></p>
+<figure>
+<img src="resources/readme/ProgressBar.png" />
+</figure>
+
+<ul>
+<li>Type: Widget</li>
+<li>Modules: <a href="#progressbar">ProgressBar</a></li>
+</ul>
+
+<p>A demonstration of the use of the WatchUi ProgressBar.</p>
+
+<p><strong>How It Works</strong></p>
+
+<ol>
+<li>Tap the screen</li>
+<li>Displays &#8220;Processing&#8221; with a &#8220;busy&#8221; progress bar for five seconds
+
+<ul>
+<li>After five seconds, displays &#8220;Processing&#8221; with an updating progress bar for ten seconds</li>
+<li>After ten seconds, displays &#8220;Complete&#8221;</li>
+</ul></li>
+<li>Displays &#8220;Tap to test progress bar&#8221; message</li>
+</ol>
+
+<h2 id="recordsample">RecordSample</h2>
+
+<p><strong>About The Sample</strong></p>
+<figure>
+<img src="resources/readme/RecordSample.png" />
+</figure>
+
+<ul>
+<li>Type: Application</li>
+<li>Modules: <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/ActivityRecording.html" title="ActivityRecording API documentation">ActivityRecording</a>, <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Position.html" title="Position API documentation">Position</a></li>
+</ul>
+
+<p>Shows how to record an activity session.</p>
+
+<p><strong>How It Works</strong></p>
+
+<ol>
+<li>Launch the app - Displays &#8220;Press Menu to Start Recording&#8221;&#8217;</li>
+<li>Press Menu to start recording and activity:
+
+<ul>
+<li>Displays &#8220;Recording&#8230;&#8221;</li>
+<li>Press Menu again to Stop and Save the Recording&quot;</li>
+</ul></li>
+<li>Note the duration of the activity</li>
+<li>View activity history: &#8220;Main Menu&#8221; &gt; &#8220;History&#8221; (Device Only)</li>
+<li>A Walking activity is saved for the duration of the activity (Device Only)</li>
+</ol>
+
+<h2 id="sensor">Sensor</h2>
+
+<p><strong>About The Sample</strong></p>
+<figure>
+<img src="resources/readme/Sensor.png" />
+</figure>
+
+<ul>
+<li>Type: Application</li>
+<li>Modules: <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Sensor.html" title="Sensor API documentation">Sensor</a>, <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Position.html" title="Position API documentation">Position</a></li>
+</ul>
+
+<p>Demonstrates access to sensors (in this case, the HRM), and is a good sample of graphing data.</p>
+
+<p><strong>How It Works</strong></p>
+
+<p>Displays current heart rate, along with a time series graph of the heart rate from the last 20 seconds.</p>
+
+<h2 id="simpledatafield">SimpleDataField</h2>
+
+<p><strong>About The Sample</strong></p>
+<figure>
+<img src="resources/readme/SimpleDataField.png" />
+</figure>
+
+<ul>
+<li>Type: Data Field</li>
+<li>Modules: <a href="#simpledatafield">SimpleDataField</a></li>
+</ul>
+
+<p>A sample of the simple data field; good for basic data field testing.</p>
+
+<p><strong>How It Works</strong></p>
+
+<p>Simple Data Field that alternates between heart rate, distance and total time every few seconds. To run it on a physical device:</p>
+
+<ol>
+<li>Pair an HRM (either real or simulated) to the wearable device</li>
+<li>After loading the SimpleDataField to the device, configure an activity to use it as a data field</li>
+<li>Start an activity</li>
+<li>If necessary, switch to the screen configured to use the SimpleDataField</li>
+</ol>
+
+<p>The displayed values are reasonable for the current activity session if used on a device.</p>
+
+<h2 id="strings">Strings</h2>
+
+<p><strong>About The Sample</strong></p>
+<figure>
+<img src="resources/readme/Strings.png" />
+</figure>
+
+<ul>
+<li>Type: Application</li>
+<li>Modules: <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Graphics.html" title="Graphics API documentation">Graphics</a></li>
+</ul>
+
+<p>Demonstrates localization techniques using string resources.</p>
+
+<p><strong>How It Works</strong></p>
+
+<ol>
+<li>Set the language on the device/simulator to English</li>
+<li>Run the sample</li>
+<li>Verify the values match what is expected (English):
+
+<ul>
+<li>Language: English</li>
+<li>Greeting: hi</li>
+<li>Food: eggs</li>
+<li>Drink: milk</li>
+</ul></li>
+<li>Repeat steps after setting language to Spanish. Expected values:
+
+<ul>
+<li>Language: Spanish</li>
+<li>Greeting: hola</li>
+<li>Food: los huevos</li>
+<li>Drink: la leche</li>
+</ul></li>
+<li>Repeat steps after setting language to German. Expected values:
+
+<ul>
+<li>Language: German</li>
+<li>Greeting: Guten Tag</li>
+<li>Food: Eier</li>
+<li>Drink: Milch</li>
+</ul></li>
+<li>Repeat steps after setting language to French. Expected values:
+
+<ul>
+<li>Language: French</li>
+<li>Greeting: bonjour</li>
+<li>Food: les oeufs</li>
+<li>Drink: le lait</li>
+</ul></li>
+</ol>
+
+<h2 id="timer">Timer</h2>
+
+<p><strong>About The Sample</strong></p>
+<figure>
+<img src="resources/readme/Timer.png" />
+</figure>
+
+<ul>
+<li>Type: Application</li>
+<li>Modules: <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Timer.html" title="Timer API documentation">Timer</a></li>
+</ul>
+
+<p>A simple demonstration of the implementation of a Timer.</p>
+
+<p><strong>How It Works</strong></p>
+
+<p>Three timers will start counting with different frequencies, and will update the screen with the count. The timer on the top should be the fastest, and the bottom the slowest.</p>
+
+<h2 id="userprofile">UserProfile</h2>
+
+<p><strong>About The Sample</strong></p>
+<figure>
+<img src="resources/readme/UserProfile.png" />
+</figure>
+
+<ul>
+<li>Type: Widget</li>
+<li>Modules: <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/UserProfile.html" title="UserProfile API documentation">UserProfile</a></li>
+</ul>
+
+<p>Shows how to access user profile data from a device.</p>
+
+<p><strong>How It Works</strong></p>
+
+<ol>
+<li>Press the menu to cycle through each of three screens of user profile data</li>
+<li>The values should match the user profile configured if used on a device, or show preset values in the Connect IQ simulator</li>
+</ol>
+
+<h2 id="webrequest">WebRequest</h2>
+
+<p><strong>About The Sample</strong></p>
+<figure>
+<img src="resources/readme/WebRequest.png" />
+</figure>
+
+<ul>
+<li>Type: Widget</li>
+<li>Modules: <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Communications.html" title="Communications API documentation">Communications</a></li>
+</ul>
+
+<p>Tests web requests through GCM to get mirrored data from httpbin.org</p>
+
+<p><strong>How It Works</strong></p>
+
+<p>The CIQ simulator will start the web request when the menu button is pushed. The response may either be the hard coded arguments the app sends as URL encoded paramaters or a BLE/HTTP response code. To run on a device:</p>
+
+<ol>
+<li>Side-load the sample directly to the device&#8217;s file system</li>
+<li>Disconnect the test device from the computer</li>
+<li>Pair the test device to the mobile device via GCM/BLE</li>
+<li>Launch the WebRequest widget on the test device</li>
+<li>Press the device menu button</li>
+<li>Watch for a response from the widget</li>
+</ol>
+
+<h1 id="releasenotes">Release Notes</h1>
+
+<h2 id="v2.2.1">v2.2.1</h2>
+
+<p><strong>General Changes</strong></p>
+
+<ul>
+<li>Update the compiler to include warnings when a module and class share the same name.</li>
+<li>Prevent zero/negative width characters in custom fonts.</li>
+<li>Fixed directory name build exclusion bug. Now excluding &#8220;source_fenix3&#8221; won&#8217;t also exclude &#8220;source_fenix3hr&#8221;.</li>
+<li>Fix compile time error with using clauses when trying to use a previously defined &#8216;using&#8217; label in another &#8216;using&#8217; label.</li>
+<li>Fix bugs in the &#8220;Not all code paths return a value&#8221; and &#8220;Variable used before being initialized&#8221; error detection logic.</li>
+<li>Update the Windows monkeydo script to prevent shortening of PRG file names.</li>
+<li>Enable limited Selectable functionality in data-fields; the Highlighted state is not possible in this mode due to input restrictions. Remove support for Buttons and <code>View.setKeyToSelectableInteraction()</code> when in data-fields.</li>
+<li>Various fixes related to stability and security.</li>
+<li>Updated Programmer&#8217;s Guide, UX Guide and API documentation with fixes and new additions.</li>
+</ul>
+
+<p><strong>Simulator Changes</strong></p>
+
+<ul>
+<li>Fix issues which may cause a crash when trying to download FIT files.</li>
+<li>Fix a crash that occurred when clicking a progress bar.</li>
+<li>Add an ANT+ sensor dialog that shows ANT+ sensor and allows pairing and unpairing.</li>
+<li>Add menu item to clean up persisted content storage within the simulator.</li>
+<li>Fix &#8220;pen&#8221; set-up issues to draw primitive shapes correctly.</li>
+<li>Update monkeydo.bat to support /t and -t, and correct the Programmer&#8217;s Guide to specify use of -t for Run No Evil commands.</li>
+<li>Fix vivoactive HR swipe direction definitions.</li>
+<li>Fix NumberPicker / isSleepMode missing on Connect IQ 1.x simulated devices (fenix 3, Forerunner 920xt, etc).</li>
+<li>Add a 240x240 Round Device.</li>
+<li>Deprecate Round Watch, Square Watch, Semi-Round Watch and Tall Watch generic devices. If one of these generic devices is detected in a manifest file at compiler time a warning is printed indicating the device will be removed in the future.</li>
+</ul>
+
+<p><strong>Known Issues</strong></p>
+
+<ul>
+<li>If an <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Lang/Exception.html" title="Exception API documentation">Exception</a> is thrown from a catch block, the finally block of the current try/catch/finally will not be executed.</li>
+</ul>
+<h3 id="v2.2.0"><a href="#2.2.0" onclick="toggle('2.2.0', 'Img_2.2.0');"><img src="resources/readme/hide.jpg" border=0 name="Img_2.2.0" />v2.2.0</a></h3>
+<div id="2.2.0" style="display:none;">
+
+<p><strong>General Changes</strong></p>
+
+<ul>
+<li>Change assertEquals(), assertEqualsMessage(), assertNotEquals(), and assertNotEqualsMessage() to use .equals() instead of the == operator.</li>
+<li>Add access to saved waypoints, courses, and workouts on a device with the PersistedContent module. See the Programmer&#8217;s Guide for more details.</li>
+<li>Deprecate the PersistedLocations module. Use PersistedContent.saveWaypoint() instead.</li>
+<li>Add support for Bike Light status and control using ANT+.</li>
+<li>Add support for Bike Power using ANT+.</li>
+<li>Add support for bursting in Ant.GenericChannel.</li>
+<li>Add support for downloading FIT files and loading them onto the device. See the makeWebRequest() section in the Programmer&#8217;s Guide for more details.</li>
+<li>Allow a watch-app or widget to open another CIQ app or native application using System.exitTo(). See the Programmer&#8217;s Guide for more details.</li>
+<li>Optimize apps by having the compiler fold constants into a single value. <code>var number = 4 + 5;</code> will now compile to <code>var number = 9;</code> instead of performing an add operation.</li>
+<li>Clean up samples to only support devices that can run them.</li>
+<li>Several API / documentation fixes</li>
+<li>Add Call to Parent&#8217;s initialize() in RunNoEvil</li>
+<li>Limit the size of an app&#8217;s mailbox from a partner app to 8kb.</li>
+</ul>
+
+<p><strong>Simulator Changes</strong></p>
+
+<ul>
+<li>Simulate navigation data.</li>
+<li>Simulate Accel and Mag data.</li>
+<li>Save waypoints created with PersistedContent.saveWaypoint().</li>
+<li>Simulate APIs available to the device being run. For example, Pressure History is no longer available to the Forerunner 735 in the simulator.</li>
+<li>Support pairing Bike Lights.</li>
+<li>Fix UTF8 strings in memory window</li>
+</ul>
+
+<p><strong>Known Issues</strong></p>
+
+<ul>
+<li>If an <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Lang/Exception.html" title="Exception API documentation">Exception</a> is thrown from a catch block, the finally block of the current try/catch/finally will not be executed.</li>
+</ul>
+</div>
+<h3 id="v2.1.5"><a href="#2.1.5" onclick="toggle('2.1.5', 'Img_2.1.5');"><img src="resources/readme/hide.jpg" border=0 name="Img_2.1.5" />v2.1.5</a></h3>
+<div id="2.1.5" style="display:none;">
+
+<p><strong>General Changes:</strong></p>
+
+<ul>
+<li>Corrected APAC Edge 820 Connect IQ versions to match the VM that they are currently using</li>
+</ul>
+
+<p><strong>Known Issues:</strong></p>
+
+<ul>
+<li>If an <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Lang/Exception.html" title="Exception API documentation">Exception</a> is thrown from a catch block, the finally block of the current try/catch/finally will not be executed.</li>
+</ul>
+</div>
+<h3 id="v2.1.4"><a href="#2.1.4" onclick="toggle('2.1.4', 'Img_2.1.4');"><img src="resources/readme/hide.jpg" border=0 name="Img_2.1.4" />v2.1.4</a></h3>
+<div id="2.1.4" style="display:none;">
+
+<p><strong>General Changes:</strong></p>
+
+<ul>
+<li>Update minimum firmware versions for certain products</li>
+<li>Fix some minor documentation errors in the programmer&#8217;s guide.</li>
+<li>Fix a memory leak caused by the Picker class</li>
+<li>Fix a bug where some apps incorrectly report available updates via Garmin Express</li>
+</ul>
+
+<p><strong>Simulator Changes</strong></p>
+
+<ul>
+<li>Update battery status settings dialog to allow floating point input</li>
+<li>Add a menu option that allows the user to select where to save the last recorded fit session via a save file dialog.</li>
+<li>Fix a bug where menu bars were not visible when native menu views were active on touch-screen edge devices.</li>
+<li>Fix a simulator crash when launching apps in certain cases</li>
+<li>Fix a bug where incorrect error messages were reported when exceptions are not caught</li>
+</ul>
+
+<p><strong>Known Issues:</strong></p>
+
+<ul>
+<li>If an <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Lang/Exception.html" title="Exception API documentation">Exception</a> is thrown from a catch block, the finally block of the current try/catch/finally will not be executed.</li>
+</ul>
+</div>
+<h3 id="v2.1.3"><a href="#2.1.3" onclick="toggle('2.1.3', 'Img_2.1.3');"><img src="resources/readme/hide.jpg" border=0 name="Img_2.1.3" />v2.1.3</a></h3>
+<div id="2.1.3" style="display:none;">
+
+<p><strong>General Changes:</strong></p>
+
+<ul>
+<li>Add support for fēnix™ Chronos.</li>
+<li>Add ability to target specific SDK version when building for a device.</li>
+<li>Fix a crash in image requests on 2.1 devices.</li>
+<li>Cancel pending image and JSON requests when an app is closed.</li>
+<li>Fix a bug where max cadence overwrites average.</li>
+<li>Fix a bug where formatted strings weren&#8217;t properly terminated.</li>
+<li>Fix a bug where settings files were being deleted for new apps loaded via Garmin Express.</li>
+<li>Fix unintialized variable in input sample project.</li>
+<li>Add missing device support for some sample projects.</li>
+</ul>
+
+<p><strong>Compiler Changes</strong></p>
+
+<ul>
+<li>Add -s option to target a specific SDK version when compiling. Example uses of this would be &#8220;-s 2.1.1&#8221; or &#8220;-s 1.3.1&#8221;.</li>
+</ul>
+
+<p><strong>Simulator Changes</strong></p>
+
+<ul>
+<li>Fix a bug where the status bar truncates memory information.</li>
+<li>Fix a bug in handling of transparency for some devices.</li>
+</ul>
+
+<p><strong>Known Issues:</strong></p>
+
+<ul>
+<li>If an <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Lang/Exception.html" title="Exception API documentation">Exception</a> is thrown from a catch block, the finally block of the current try/catch/finally will not be executed.</li>
+</ul>
+</div>
+<h3 id="v2.1.2"><a href="#2.1.2" onclick="toggle('2.1.2', 'Img_2.1.2');"><img src="resources/readme/hide.jpg" border=0 name="Img_2.1.2" />v2.1.2</a></h3>
+<div id="2.1.2" style="display:none;">
+
+<p><strong>General Changes:</strong></p>
+
+<ul>
+<li>Removed support for Oregon APAC units.</li>
+</ul>
+
+<p><strong>Known Issues:</strong></p>
+
+<ul>
+<li>If an <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Lang/Exception.html" title="Exception API documentation">Exception</a> is thrown from a catch block, the finally block of the current try/catch/finally will not be executed.</li>
+</ul>
+</div>
+<h3 id="v2.1.1"><a href="#2.1.1" onclick="toggle('2.1.1', 'Img_2.1.1');"><img src="resources/readme/hide.jpg" border=0 name="Img_2.1.1" />v2.1.1</a></h3>
+<div id="2.1.1" style="display:none;">
+
+<p><strong>General Changes:</strong></p>
+
+<ul>
+<li>Add ability to target an SDK version within a project.</li>
+<li>Remove Steps permission and do not require it to be used to access the ActivityMonitor module.</li>
+<li>Do not set response type as URL-encoded if not provided with a makeWebRequest() call.</li>
+<li>Generate generic error with a PC for symbol not found error for apps built in release mode.</li>
+<li>Correctly delete the PRG and all supplemental files when user data is cleared on a device.</li>
+<li>Fix device crash occurring after user data is cleared when pre-loaded apps were deleted.</li>
+<li>Fix crash when launching a goal view.</li>
+<li>Fix issue where Toybox.ActivityMonitor.getInfo() would crash on some products.</li>
+<li>Improve speed of signature checks when exiting mass-storage on a device.</li>
+<li>Fix issue where application settings would not work with GCM.</li>
+<li>Fix issue where Object Store (STR) files would be truncated at 255 bytes.</li>
+<li>Fix issue where step distance would be 1/10 its actual value.</li>
+<li>Fix bug in the sensor history options parsing where newest/oldest did not match expectations.</li>
+<li>Fix an issue preventing all apps from enabling a sensor after previous app run.</li>
+<li>Fix OAuth requests not being able to accept UTF&#8211;8 characters in the application name.</li>
+<li>Allow non-strings to be passed into System.error().</li>
+<li>Allow files greater than 64KB in size to be sent via makeImageRequest() on 2.1.x devices. This increases the amount of RAM required to extract the image, but is necessary for new large screen / hi-color devices.</li>
+<li>Fix problem where apps would not update from GCM until mass-storage was entered / exited.</li>
+<li>Change the onSelectable() API to receive SelectableEvent containing instance and previou state of selectable.</li>
+<li>Correct UP/DOWN key map to prev/next selectable.</li>
+<li>Remove %g/G specifiers from acceptable print() format input.</li>
+<li>Delete an existing Object Store (STR) file or prevent creating a new one when the device is in an error state and attempts to use it.</li>
+<li>Properly delete an apps Object Store (STR) file when decryption fails.</li>
+<li>Remove the Fit Contributions created by a session when the session is closed. This preserves the association of Fit contributions with the session object.</li>
+<li>Fix a bug introduced when Sensor History was added that changed invalid values in HR History from 255 to null.</li>
+<li>Add invalid values to heart rate history.</li>
+<li>Clean up the memory held by the settings in workarea before loading new settings from Eclipse / GCM / Express.</li>
+<li>Fix several crashes when handling error conditions.</li>
+<li>Support native FIT field value in developer fields and update the Moxy Data Field to use these native fit values.</li>
+<li>Better handling of paths in the compiler.</li>
+<li>Update palette processing to allow transparent colors to be inserted anywhere in the palette.</li>
+<li>Update bitmap processing to allow more efficient color matching for devices with a palette greater than 8 bpp.</li>
+<li>Add support for the Rino 7xx to the SDK.</li>
+<li>Add support for the Korean Forerunner 735xt variant.</li>
+<li>Many API documentation improvements and fixes.</li>
+</ul>
+
+<p><strong>Compiler Changes:</strong></p>
+
+<ul>
+<li>Add support for build file resources. A build file resource allows you to exclude Monkey C code at compile time via directories, files or annotations.</li>
+<li>Fix a bug where the product signature was not being added to the manifest product entry during app packaging if a &#8220;square_watch&#8221;, &#8220;round_watch&#8221;, etc were also present in the manifest file.</li>
+<li>Add support for a new optional attribute in the <bitmap> drawable tag called &#8220;paletteIntensity&#8221; that will allow a developer to specify a color multiplier to apply to the device palette prior to sending any images they&#8217;re using through the dithering algorithm.</li>
+<li>Remove dashes before writing the app UUID to a PRG for consistent handling / identification.</li>
+<li>Add error checking for <code>&lt;menu&gt;</code> tags to validate no more than 16 <menu-item> child elements are present.</li>
+<li>Fix a null pointer exception that could occur if a relative path was provided for the PRG output file.</li>
+<li>Add support in the compiler to define builds as resources. These resource builds let a developer define either a file, directory or annotation to exclude when building. When compiling the most detailed, relevant build file defined will be used. See Programmer&#8217;s Guide for more information.</li>
+<li>Update the Connect IQ versions of target devices so features such as argument count checking and font RLE compression are enabled, since the compiler is version dependent.</li>
+<li>Allow both Gfx and Graphics in resources.</li>
+<li>Allow a class to be specified for Buttons and Selectables via XML. If a class is specified an instance of that class will be created instead of a Button/Selectable.</li>
+<li>Fix a bug that prevented developers from overriding an app&#8217;s launcher icon.</li>
+</ul>
+
+<p><strong>Simulator Changes:</strong></p>
+
+<ul>
+<li>Add support for a single field layout for the vivoactive HR.</li>
+<li>Update samples for products with no vibe support.</li>
+<li>Add pressed and released events to the Input sample.</li>
+<li>Log signature failures to shell output instead of pushing a dialogue box.</li>
+<li>Fix crashes in SensorHistory sample.</li>
+<li>Fix crashes when viewing / editing an Object Store.</li>
+<li>Update OAuth sample to fix several issues including calling makeJsonRequest() for Twitter when it should have used makeWebRequest() to be able to parse URL encoded responses. The Google app needed to set the Content-Type header for a makeWebRequest() call as the Google services require it. Also require authorization every time for the Google portion so the web page stays up during the oauth flow.</li>
+<li>Add goal view support to Analog sample.</li>
+<li>Fix several issues in the simulated native pages on Edge devices.</li>
+<li>Reduce frequency of Out of Memory Errors and fix an intermittent crash when calling makeWebRequest().</li>
+<li>Fix memory leak that occured with makeWebRequest() and makeImageRequest().</li>
+<li>Fix performance / stability issues when using makeImageRequest() with the Edge 1000 simulated device.</li>
+<li>Adds Fit Contributions to the Moxy Data Field for current, lap, and session averages of Hemoglobin concentration and percentage.</li>
+<li>Change Strings and Sensor Widgets to Watch Apps.</li>
+<li>Lowercase the memory stats display.</li>
+<li>Fix issue where the Sample picker did not respond to onMenu().</li>
+<li>Fix issue where visiting a URL for the OAuth sample / Google provider could not be completed.</li>
+<li>Correct a problem where Activity.Info.elapsedDistance would report 1/10 its actual value.</li>
+<li>Add support for all devices to WebRequest sample.</li>
+<li>Adds pages for the system fonts to the font test app.</li>
+<li>Fixes an issue that caused the display to become distorted on views with a menu bar after pushing a native view and then popping it.</li>
+<li>Update Drawable sample to support D2 Bravo Titanium and FR735xt.</li>
+<li>Correct handling of makeJsonRequest()/makeWebRequest() to match GCM experience.</li>
+<li>Improve Simulator crash handling.</li>
+<li>Pull image processing improvements into the simulator.</li>
+<li>Add encryption support to the edit object store dialog.</li>
+<li>Replace wxSockets with Winsock for the Windows simulator build.</li>
+<li>Add a Fit simulation indicator to the simulator&#8217;s status bar.</li>
+<li>Many Programmer&#8217;s Guide / UX Guide improvements and fixes.</li>
+</ul>
+
+<p><strong>Known Issues:</strong></p>
+
+<ul>
+<li>If an <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Lang/Exception.html" title="Exception API documentation">Exception</a> is thrown from a catch block, the finally block of the current try/catch/finally will not be executed.</li>
+</ul>
+</div>
+<h3 id="v2.1.0"><a href="#2.1.0" onclick="toggle('2.1.0', 'Img_2.1.0');"><img src="resources/readme/hide.jpg" border=0 name="Img_2.1.0" />v2.1.0</a></h3>
+<div id="2.1.0" style="display:none;">
+
+<p><strong>General Changes:</strong></p>
+
+<ul>
+<li>Apps need permission for Steps to access ActivityMonitoring information.</li>
+<li>Call onStop() and save settings when app exits through a System.exit() call.</li>
+<li>Add front and rear dérailleur index and max metrics to the Activity Info object.</li>
+<li>Fix device crash involving Ui.animate().</li>
+<li>Add Turkish to the languages available in CIQ.</li>
+<li>Add new &#8220;System&#8221; font enumerations (TVM_GFX_SYSTEM_FONT_*) to the Graphics module, extending the current enumeration with device-specific fonts. The non-system fonts will have more portability between screens of the same shape/size.</li>
+<li>Invoking Exception.printStackTrace() now prints the result of Exception.getErrorMessage().</li>
+<li>JSON requests are now compressed to speed up the transmission of data between a phone and device.</li>
+<li>Add support for the new Ui.Selectable and Ui.Button features which allow touch screen products to easily create selectable objects or buttons using Monkey C or layouts. See Programmer&#8217;s Guide for more information.</li>
+<li>Add support for OAuth 1.0a HMAC-SHA1 and OAuth 2 logins via GCM with Communications.makeOAuthRequest(). See Programmer&#8217;s Guide for more information.</li>
+<li>Only allow signed applications to run on a device. See Programmer&#8217;s Guide for more information.</li>
+<li>Require encryption for Connect IQ storage files (STR) so that program storage is private to an application instance.</li>
+<li>Add Time::Gregorian::utcInfo() to avoid local time conversion implicit in Time::Gregorian::info().</li>
+<li>Deprecate the isSleepMode value in the Activity Monitoring Module.</li>
+<li>Add the current timer state to ActivityInfo::timerState. See ActivityInfo::TIMER_STATE_* for more details on the different states.</li>
+<li>The Attention module is now allowed in data fields.</li>
+<li>Add String::toNumberWithBase() that allows specifying the base radix of the a string when converting to a Number.</li>
+<li>Add active minutes and floors climbed to the ActivityMonitor module for devices that support those metrics.</li>
+<li>Add support for custom FIT recording fields. Developers can define custom data values and record them along side native FIT data. These custom values can be added to Record, Lap, and/or Session messages. See Programmer&#8217;s Guide for more information.</li>
+<li>Add Fit Graph tool for viewing graphs generated by new FIT recording. See Programmer&#8217;s Guide for more information.</li>
+<li>Check the number of arguments for functions at run-time. An error will be issued if the argument count issued does not match the routine.</li>
+<li>Add the Do Not Disturb mode setting to System::DeviceSettings::doNotDisturb.</li>
+<li>Add goal views to Application::AppBase. Goal views are triggered from the WatchFace app type, and are briefly shown when a user reaches the current Step, Climb, or Activity goal.</li>
+<li>Fix an issue with String.toNumber() where it would interpret numbers with leading 0s as octal.</li>
+<li>Add new methods add, addAll, remove, removeAll, reverse, and slice to Lang::Array.</li>
+<li>Add the SensorHistory module that can provide historic data from Heart Rate, Temperature, Pressure, and Elevation sensors if available on the device.</li>
+<li>Fix &#8220;has&#8221; operator to work with class definitions instead of instances only.</li>
+<li>Add toRadians, toDegrees, floor, round, ceil, and atan2 to the Math module.</li>
+<li>Add support for getting HR zones to the UserProfile module.</li>
+<li>Add timer event functions to the WatchUi::DataField class. These are called when the timer is started, stopped, lapped, paused resumed and reset. See Programmer&#8217;s Guide for more information.</li>
+<li>Fix many issues within API documentation.</li>
+<li>Prevent a buffer overflow which could occur when compressing an image during Communication::makeImageRequest().</li>
+<li>Add support for opening a web page on the phone (or Simulator) with Communications.openWebPage(). See Programmer&#8217;s Guide for more information.</li>
+<li>Add the RunNoEvil test framework which implements Monkey C unit test generation, a command line interface, and asserts. See Programmer&#8217;s Guide for more information.</li>
+<li>Add ability for some Connect IQ 1.x products to charge watch-apps memory when creating FIT recording sessions.</li>
+<li>Fix menu transition type not being respected on devices.</li>
+</ul>
+
+<p><strong>Language Changes:</strong></p>
+
+<ul>
+<li>Add global scope operator to MonkeyC Language ($). See Programmer&#8217;s Guide for more information.</li>
+<li>Fix compilation error caused by inheriting from a class located in another file.</li>
+<li>Add support for a new Monkey C primitive type (Char) and supporting APIs. See Programmer&#8217;s Guide for more information.</li>
+</ul>
+
+<p><strong>Compiler Changes:</strong></p>
+
+<ul>
+<li>Allow a developer to import anti-aliased fonts. By default all fonts remain non-anti-aliased. When importing a custom font, add the attribute antialias=&#8220;true&#8221; to the font tag.</li>
+<li>Update the XML parsing to pass values set in the standard XML attributes for a Drawable definition to a developer defined Drawable class. This means if the attribute &#8220;x&#8221; is defined it will be passed as &#8220;locX&#8221; to the Drawable class it&#8217;s associated with.</li>
+<li>Update resource compiler to start using all attributes values. This means values like &#8220;center&#8221;, &#8220;left&#8221;, &#8220;right&#8221; and &#8220;fill&#8221; should start working for drawables. A warning will be issued if the attribute doesn&#8217;t match one of the pre-defined regular expressions.</li>
+<li>Allow multiple multi-line comments in a single Monkey C source file.</li>
+<li>If the &#8220;class&#8221; attribute is defined in a <code>&lt;bitmap&gt;</code> or <code>&lt;label&gt;</code> definition we&#8217;ll use the class defined instead of Ui.Bitmap or Ui.Text.</li>
+<li>Add support for specifying a so-called device &#8220;family&#8221; in the resource folder naming structure. This allows a developer to target a group of devices, characterized by their screen shape and size, rather than just a specific device. Examples of this would be resources-round, resources-semi_round, and resources-round&#8211;218x218. See Programmer&#8217;s Guide for more information.</li>
+<li>Disallow duplicate declarations of a single symbol within the same scope.</li>
+<li>Add support for the background attribute on label resource tags. The background value gets passed onto the WatchUi object as the :backgroundColor attribute.</li>
+<li>Add default launcher icon even without a device specified (via the monkeydo command).</li>
+</ul>
+
+<p><strong>Simulator Changes:</strong></p>
+
+<ul>
+<li>Support apps / widgets on the Edge 1000, and add a native button bar for Back / Menu soft keys.</li>
+<li>Support apps / widgets on the Edge 520, and fix menu key not being present.</li>
+<li>Fix multibyte JSON key characters becoming mangled.</li>
+<li>Add a Selectable sample demonstrating use of the WatchUi::Selectable and WatchUi::Button classes.</li>
+<li>Add usage text that is printed if monkeydo is run without any parameters or a parameter of &#8220;help&#8221;, &#8220;-help&#8221; or &#8220;&#8211;help&#8221;.</li>
+<li>Fix crash when using App Settings in Eclipse and the Simulator on Mac OS X.</li>
+<li>Add MenuTest sample that demonstrates the use of nested menus.</li>
+<li>Clean up samples to add missing functionality, support more devices, adhere to cohesive coding standards and improve documentation.</li>
+<li>Add maximum memory used tracking to the Simulator. The numbers are displayed as MEM:X/Y, PEAK:Z where X is the currently used memory, Y is the maximum memory available and Z is the peak memory usage.</li>
+<li>Remove MathSample, C64Face, GameCube, and Layout samples which duplicated other existing sample functionality.</li>
+<li>Improve Simulator time zone support.</li>
+<li>Add BeersEarned data field sample that uses custom fit recording features to write out the following fields (all type float):
+
+<ol>
+<li>&#8220;current_beers&#8221; -&gt; record field</li>
+<li>&#8220;beers_per_lap&#8221; -&gt; lap field</li>
+<li>&#8220;total_beers&#8221; -&gt; session field</li>
+</ol></li>
+<li>Update the JsonRequest sample to use the makeWebRequest() API and rename it WebRequest.</li>
+<li>Fix crash in when using the text picker and Keyboard sample with touchscreen enabled devices.</li>
+</ul>
+
+<p><strong>Known Issues:</strong></p>
+
+<ul>
+<li>If an <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Lang/Exception.html" title="Exception API documentation">Exception</a> is thrown from a catch block, the finally block of the current try/catch/finally will not be executed.</li>
+<li>The format() method in the Number, Float, Long, and Double classes do not support the %g and %G format specifiers on all devices.</li>
+</ul>
+</div>
+<h3 id="v1.2.11"><a href="#1.2.11" onclick="toggle('1.2.11', 'Img_1.2.11');"><img src="resources/readme/hide.jpg" border=0 name="Img_1.2.11" />v1.2.11</a></h3>
+<div id="1.2.11" style="display:none;">
+
+<p><strong>General Changes:</strong></p>
+
+<ul>
+<li>Add support for Edge 820 and Edge 820 Touring</li>
+<li>Update D2 Bravo minimum firmware version</li>
+</ul>
+
+<p><strong>Known Issues:</strong></p>
+
+<ul>
+<li>If an <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Lang/Exception.html" title="Exception API documentation">Exception</a> is thrown from a catch block, the finally block of the current try/catch/finally will not be executed.</li>
+</ul>
+</div>
+<h3 id="v1.2.10"><a href="#1.2.10" onclick="toggle('1.2.10', 'Img_1.2.10');"><img src="resources/readme/hide.jpg" border=0 name="Img_1.2.10" />v1.2.10</a></h3>
+<div id="1.2.10" style="display:none;">
+
+<p><strong>General Changes:</strong></p>
+
+<ul>
+<li>Add shifter data to ActivityInfo API</li>
+<li>Add navigation data to ActivityInfo API</li>
+<li>Added Arabic, Hebrew, and Bulgarian language support</li>
+<li>Add support for the Oregon 7 series</li>
+<li>Add support for FR235 Korea</li>
+<li>Prevent data fields from starting a high priority search on the ANT radio</li>
+<li>Allow has operator to work with classdefs</li>
+</ul>
+
+<p><strong>Known Issues:</strong></p>
+
+<ul>
+<li>If an <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Lang/Exception.html" title="Exception API documentation">Exception</a> is thrown from a catch block, the finally block of the current try/catch/finally will not be executed.</li>
+</ul>
+</div>
+<h3 id="v1.2.9"><a href="#1.2.9" onclick="toggle('1.2.9', 'Img_1.2.9');"><img src="resources/readme/hide.jpg" border=0 name="Img_1.2.9" />v1.2.9</a></h3>
+<div id="1.2.9" style="display:none;">
+
+<p><strong>General Changes:</strong></p>
+
+<ul>
+<li>Add support for the D2 Bravo Titanium</li>
+</ul>
+
+<p><strong>Known Issues:</strong></p>
+
+<ul>
+<li>If an <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Lang/Exception.html" title="Exception API documentation">Exception</a> is thrown from a catch block, the finally block of the current try/catch/finally will not be executed.</li>
+</ul>
+</div>
+<h3 id="v1.2.8"><a href="#1.2.8" onclick="toggle('1.2.8', 'Img_1.2.8');"><img src="resources/readme/hide.jpg" border=0 name="Img_1.2.8" />v1.2.8</a></h3>
+<div id="1.2.8" style="display:none;">
+
+<p><strong>General Changes:</strong></p>
+
+<ul>
+<li>Add support for getting HR zones to the UserProfile module.</li>
+<li>Update device minimum firmware versions.</li>
+</ul>
+
+<p><strong>Known Issues:</strong></p>
+
+<ul>
+<li>If an <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Lang/Exception.html" title="Exception API documentation">Exception</a> is thrown from a catch block, the finally block of the current try/catch/finally will not be executed.</li>
+</ul>
+</div>
+<h3 id="v1.2.7"><a href="#1.2.7" onclick="toggle('1.2.7', 'Img_1.2.7');"><img src="resources/readme/hide.jpg" border=0 name="Img_1.2.7" />v1.2.7</a></h3>
+<div id="1.2.7" style="display:none;">
+
+<p><strong>General Changes:</strong></p>
+
+<ul>
+<li>Add FR735XT support.</li>
+<li>Add color palette images to the UX Guide.</li>
+<li>Add data field dimensions to the UX Guide.</li>
+<li>Update fenix 3/D2 Bravo font sizes in UX Guide.</li>
+<li>Add font information for the FR 230, FR 235 and FR 630 to Appendix B of the UX Guide.</li>
+<li>Disable high priority timeout search in the MO2 sample. The API now also defaults high priority search to off. It is not recommended for developers to use high priority search.</li>
+<li>Enable help URL support for app settings.</li>
+</ul>
+
+<p><strong>Simulator Changes:</strong></p>
+
+<ul>
+<li>Handle large JSON responses better.</li>
+<li>Remove shadow from the Edge 1000 image.</li>
+<li>Add support for 1 and 2 field layouts on vivoactive.</li>
+</ul>
+
+<p><strong>Known Issues:</strong></p>
+
+<ul>
+<li>If an <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Lang/Exception.html" title="Exception API documentation">Exception</a> is thrown from a catch block, the finally block of the current try/catch/finally will not be executed.
+</div></li>
+</ul>
+<h3 id="v1.2.6"><a href="#1.2.6" onclick="toggle('1.2.6', 'Img_1.2.6');"><img src="resources/readme/hide.jpg" border=0 name="Img_1.2.6" />v1.2.6</a></h3>
+<div id="1.2.6" style="display:none;">
+
+<p><strong>General Changes:</strong></p>
+
+<ul>
+<li>Fix Monkey C scope resolution to correctly find a parent class&#8217;s member when it has the same symbol as a global variable.</li>
+<li>Fix APAC fonts on Fenix 3 / HR and D2 Bravo.</li>
+<li>Update Tall Watch/VVA-HR to allow two-field data field configuration.</li>
+<li>Fix missing background color on Edge when displaying fonts.</li>
+<li>Fix Tall Watch / VVAHR Medium Font.</li>
+</ul>
+
+<p><strong>Simulator Changes:</strong></p>
+
+<ul>
+<li>Let App Settings Editor read settings of type password instead of overwriting the setting with an empty string.</li>
+<li>Fix Settings Editor to write UTC values for data fields instead of local values.</li>
+</ul>
+
+<p><strong>Known Issues:</strong></p>
+
+<ul>
+<li>If an <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Lang/Exception.html" title="Exception API documentation">Exception</a> is thrown from a catch block, the finally block of the current try/catch/finally will not be executed.
+</div></li>
+</ul>
+<h3 id="v1.2.5"><a href="#1.2.5" onclick="toggle('1.2.5', 'Img_1.2.5');"><img src="resources/readme/hide.jpg" border=0 name="Img_1.2.5" />v1.2.5</a></h3>
+<div id="1.2.5" style="display:none;">
+
+<p><strong>General Changes:</strong></p>
+
+<ul>
+<li>Add documentation for Custom Drawables to the programmer&#8217;s guide.</li>
+<li>Update Input sample to be compatible with the Tall Watch screen type.</li>
+<li>Fix application icon overriding bug.</li>
+<li>Fix out-of-memory error when allocating large objects (such as parsing large JSON responses).</li>
+<li>Fix a bug in custom font generation where xoffset was incorrectly used to determine width versus position within the glyph itself.</li>
+</ul>
+
+<p><strong>Simulator Changes:</strong></p>
+
+<ul>
+<li>Add vívoactive HR device and update Tall Watch with final fonts, memory sizes and data-field parameters.</li>
+<li>Reduce Simulator run-time system memory usage.</li>
+</ul>
+
+<p><strong>Known Issues:</strong></p>
+
+<ul>
+<li>If an <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Lang/Exception.html" title="Exception API documentation">Exception</a> is thrown from a catch block, the finally block of the current try/catch/finally will not be executed.</li>
+<li>The compiler is processing custom fonts in a way that allows for more data to be specified, but hand-made font files may display slightly different.
+</div></li>
+</ul>
+<h3 id="v1.2.4"><a href="#1.2.4" onclick="toggle('1.2.4', 'Img_1.2.4');"><img src="resources/readme/hide.jpg" border=0 name="Img_1.2.4" />v1.2.4</a></h3>
+<div id="1.2.4" style="display:none;">
+
+<p><strong>General Changes:</strong></p>
+
+<ul>
+<li>Address custom font rendering problems on the 920XT.</li>
+<li>Fix case where it was possible to upload Edge 1000 / 520 widget or watch-app.</li>
+<li>Fix memory leak when creating / destroying a device context (dc).</li>
+<li>Reduce memory consumption when creating large numbers of objects.</li>
+</ul>
+
+<p><strong>Simulator Changes:</strong></p>
+
+<ul>
+<li>Adjust System.getDeviceSettings() to take into account landscape mode in the Simulator.</li>
+<li>Fix occurrences of &#8220;Too Many Objects&#8221; error when receiving JSON requests in the Simulator. Very large JSON requests may still produce this error, although valid in this instance to better emulate devices.</li>
+<li>Better alignment of reported memory estimates between OS X and Windows.</li>
+<li>Devices have a limit to the number of objects they can allocate. A &#8220;Too Many Objects&#8221; error is issued when this limit is reached; the number has been increased to better reflect device capability.</li>
+</ul>
+
+<p><strong>Known Issues:</strong></p>
+
+<ul>
+<li>If an <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Lang/Exception.html" title="Exception API documentation">Exception</a> is thrown from a catch block, the finally block of the current try/catch/finally will not be executed.</li>
+<li>The compiler is processing custom fonts in a way that allows for more data to be specified, but hand-made font files may display slightly different.
+</div></li>
+</ul>
+<h3 id="v1.2.3"><a href="#1.2.3" onclick="toggle('1.2.3', 'Img_1.2.3');"><img src="resources/readme/hide.jpg" border=0 name="Img_1.2.3" />v1.2.3</a></h3>
+<div id="1.2.3" style="display:none;">
+
+<p><strong>General Changes:</strong></p>
+
+<ul>
+<li>Prevent sensor permissions from being selectable for watch-faces in Eclipse.</li>
+<li>Update UX Guide page layouts graphics.</li>
+<li>Update string format API documentation.</li>
+<li>Fix case where a symbol was being added to the Rez.String module for each language defined.</li>
+<li>Fix case where string routines would return an out-of-memory error instead of the actual error that occurred.</li>
+<li>Fix an intermittent crash that occurred in certain applications over long periods of execution.</li>
+<li>Fix memory leak that would occur when loading application settings.</li>
+<li>Fix issue where application icons did not display correctly on Edge device in landscape mode.</li>
+</ul>
+
+<p><strong>Simulator Changes:</strong></p>
+
+<ul>
+<li>Properly blend fonts when running on 16-bit devices.</li>
+<li>Update Tall Watch Icon Size to 40x33.</li>
+<li>Update number fonts on the Edge 520 to match the device.</li>
+<li>Correct 20pt number font on FR920XT.</li>
+<li>Add quatix 3 device support, update D2 Bravo FW version.</li>
+<li>Remove &#8220;suspend/resume app&#8221; from Simulator tool-bar as it is currently not functional.</li>
+<li>Update Fenix 3 data field layouts to match recent firmware releases.</li>
+<li>Better estimate application memory usage on OS X machines.</li>
+</ul>
+
+<p><strong>Known Issues:</strong></p>
+
+<ul>
+<li>If an <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Lang/Exception.html" title="Exception API documentation">Exception</a> is thrown from a catch block, the finally block of the current try/catch/finally will not be executed.</li>
+<li>The compiler is processing custom fonts in a way that allows for more data to be specified, but hand-made font files may display slightly different.
+</div></li>
+</ul>
+<h3 id="v1.2.2"><a href="#1.2.2" onclick="toggle('1.2.2', 'Img_1.2.2');"><img src="resources/readme/hide.jpg" border=0 name="Img_1.2.2" />v1.2.2</a></h3>
+<div id="1.2.2" style="display:none;">
+
+<p><strong>General Changes:</strong></p>
+
+<ul>
+<li>Improve API documentation based on feedback.</li>
+<li>Replace the Input sample with a new version which tests more permutations of input than the original.</li>
+<li>Add support for &#8220;Tall Watch&#8221; profile, a new/upcoming device which has new screen dimensions.</li>
+<li>Add better documentation for each released sample within the README.</li>
+<li>Extend Primates sample to use a BehaviorDelegate and demonstrate multiple types of bitmaps.</li>
+<li>Update the Layouts sample to have a blue triangle as the background, and clean up build warnings.</li>
+<li>Add check to make sure the type of the application being compiled is supported by the device that&#8217;s being targeted.</li>
+<li>Add 16-bit alpha channel support to the resource compiler for compatible devices (Edge only).</li>
+<li>Add ability to preview data fields on the non-active profile without running them (Edge only).</li>
+<li>New memory management system which improves object creation/deletion performance by up to 3x (Edge only).</li>
+<li>Allow comments as last line of a Monkey C file.</li>
+<li>Deprecate loadProperties() and saveProperties().</li>
+<li>Allow Unicode support for custom fonts.</li>
+<li>Replace the Weather sample with JsonRequest which prints arguments duplicated and returned by httpbin.org, a free service.</li>
+</ul>
+
+<p><strong>Simulator Changes:</strong></p>
+
+<ul>
+<li>Fix the encoding of Unicode characters in Communications.encodeURL() in the Simulator.</li>
+<li>Correct an issue that sometimes caused a System Error in the simulator when loading an app.</li>
+<li>Fix the data contained in ActivityMonitor.Info when Activity Tracking is disabled in the simulator.</li>
+<li>JSON responses greater than 512 characters are now allowed.</li>
+<li>Correct an issue with the Picker sample that caused the initial screen to not display correctly.</li>
+<li>Prevent an empty string from being chosen in the TextPicker, which emulates behavior on devices.</li>
+<li>The Simulator will now issue callbacks with negative Communications status codes.</li>
+<li>Fix Simulator crash when passing C format specifiers to print()/println().</li>
+<li>The Simulator now requires a minimum of 1 second when choosing a duration with a number picker.</li>
+<li>Fix incorrect purple (palette) definitions for semi-round watch, FR630, FR235 and FR230.</li>
+<li>Add landscape mode setting which allows Edge devices that support a landscape rotation (90/270 degrees) to run data fields in that mode.</li>
+<li>Resolve several crashes with the Simulator Memory Window.</li>
+<li>Support the FR230/235/630 in the Picker sample.</li>
+<li>Allow for simulating and FIT file playback of swim lap data.</li>
+<li>Add Fenix 3 HR, tactix Bravo and new APAC device support.</li>
+<li>Ensure onUpdate() is called during a push/pop/switch view operation.</li>
+<li>Only call onStop() once on during application shut-down.</li>
+<li>Do not respond to the ENTER key in Menus on devices that do not map it to onSelect().</li>
+<li>If an ON_BACK behavior is issued by pressing the ESC key, pop the view if the key is not used, i.e. false is returned by the input or behavior delegate. Emulates the current device behavior under these circumstances.</li>
+<li>Fix several crashes occurring in various circumstances when using the Number Picker.</li>
+</ul>
+
+<p><strong>API Additions:</strong></p>
+
+<ul>
+<li>Add support for heart rate history on devices with wrist-based heart rate monitoring; see ActivityMonitor.getHeartRateHistory() for more details. The FR235 will support this new API at a later date.</li>
+</ul>
+
+<p><strong>Bug Fixes:</strong></p>
+
+<ul>
+<li>Fix an issue preventing empty string resources from being defined. <string id="emptyString"></string> now works as expected.</li>
+<li>Fix an issue that caused devices to reboot when deleting a class that used WeakReference.</li>
+<li>A warning is now generated generated with Module.className.init(). Note: Module name is not checked against the module to which the parent class belongs.</li>
+<li>If a class does not initialize its parent class, the compiler now includes a relevant line number for that warning - the line of the class&#8217;s initialize if it exists and the line of the class declaration if it doesn&#8217;t.</li>
+<li>Adjust makeJsonRequest() to support Unicode in addition to 1252 as the source code page.</li>
+<li>Fix hidden keyword functionality in the compiler, which will now generate a symbol not found error when a hidden item is accessed out-of-scope.</li>
+<li>Exception errors now correctly print the call-stack.</li>
+<li>Defines a new error &#8220;Invalid Resource&#8221; which is issued when a bitmap is loaded that is not compiled for the current system.</li>
+<li>Invalid permissions errors will now display a &#8220;Permission Required&#8221; error versus the previous &#8220;Symbol Not Found Error&#8221;.</li>
+<li>Always ensure a call stack is printed when a Monkey C application crashes.</li>
+<li>Toybox::WatchUi::DataField::getBackgroundColor() will now return either COLOR_WHITE or COLOR_BLACK.</li>
+<li>Allow for :method to not be in the options hash, if passed into makeJsonRequest. This allows it to be null as it defaults to GET.</li>
+<li>Fix a crash that occurred when pushing a menu with no items (empty).</li>
+<li>Prevent pushing views in watch-faces or data-fields and generate an error.</li>
+<li>Time.today() now returns the locally adjusted time of the beginning of the day in Unix time.</li>
+<li>Fix several issues with stack trace handling.</li>
+<li>Prevent the system from running out of timers if both a widget and application are running.</li>
+<li>Fix System.exit() so that it doesn&#8217;t &#8220;crash&#8221; the application or fail to exit.</li>
+</ul>
+
+<p><strong>Known Issues:</strong></p>
+
+<ul>
+<li>If an <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Lang/Exception.html" title="Exception API documentation">Exception</a> is thrown from a catch block, the finally block of the current try/catch/finally will not be executed.</li>
+<li>The compiler is processing custom fonts in a way that allows for more data to be specified, but hand-made font files may display slightly different.
+</div></li>
+</ul>
+<h3 id="v1.2.1"><a href="#1.2.1" onclick="toggle('1.2.1', 'Img_1.2.1');"><img src="resources/readme/hide.jpg" border=0 name="Img_1.2.1" />v1.2.1</a></h3>
+<div id="1.2.1" style="display:none;">
+
+<p><strong>General Changes</strong></p>
+
+<ul>
+<li>Updated the new project templates to use new features from 1.2.0.</li>
+<li>Improved API documentation based on feedback.</li>
+<li>Restored memory lost to apps in recent SDK releases.</li>
+</ul>
+
+<p><strong>Simulator Changes</strong></p>
+
+<ul>
+<li>Added simulator only support for Edge 520.</li>
+<li>Added support for Communcations.makeImageRequest().</li>
+<li>Added support for all HTTP method types in Communcations.makeJsonRequest().</li>
+</ul>
+
+<p><strong>API Additions</strong></p>
+
+<ul>
+<li>Added Communcations.makeImageRequest().</li>
+<li>Deprecated WatchUi.NumberPicker and ActivityRecording.getGeometry(). These will still be available through the 2.x.x SDK.</li>
+</ul>
+
+<p><strong>Bug Fixes:</strong></p>
+
+<ul>
+<li>Defaulted the color of WatchUi.Text objects Graphics.COLOR_WHITE.</li>
+<li>Corrected an issue causing System.DeviceInfo.monkeyVersion to always be null and System.DeviceInfo.firmwareVersion to return the incorrect value.</li>
+<li>Prevent the simulator from crashing in several scenarios.</li>
+<li>Fixed an erroneous icon size warning when compiling an app.</li>
+<li>Allow negative coordinate values for Drawables inside of a resource file.</li>
+</ul>
+
+<p><strong>Known Issues:</strong></p>
+
+<ul>
+<li>If an <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Lang/Exception.html" title="Exception API documentation">Exception</a> is thrown from a catch block, the finally block of the current try/catch/finally will not be executed
+</div></li>
+</ul>
+<h3 id="v1.2.0"><a href="#1.2.0" onclick="toggle('1.2.0', 'Img_1.2.0');"><img src="resources/readme/hide.jpg" border=0 name="Img_1.2.0" />v1.2.0</a></h3>
+<div id="1.2.0" style="display:none;">
+
+<p><strong>General Changes</strong></p>
+
+<ul>
+<li>Increased the Epix memory limits for CIQ apps.
+
+<ul>
+<li>Watch-Apps, Widgets, and Watchfaces get 1024 kB.</li>
+<li>Data fields get 128 kB.</li>
+</ul></li>
+<li>Changed the format of the README from text to HTML.</li>
+<li>Changed the format of the UX Guide from PDF to HTML.</li>
+<li>Changed the format of the Programmer&#8217;s Guide from PDF to HTML.</li>
+<li>The default launcher icons created in the plug-in are now 30x30.</li>
+<li>The manifest and resource files are now validated against a schema. A <code>&lt;drawable-list&gt;</code> can no longer be defined in a <code>&lt;layout&gt;</code> or <code>&lt;layouts&gt;</code> tag.</li>
+<li>Added support for app settings. For the beta, settings can be edited via the Eclipse plug-in. See the Programmer&#8217;s Guide for more details. Also see the updated Object Store sample.</li>
+<li>Added a complex data field template.</li>
+<li>Allow multi-line C-style comments. <code>/*...*/</code></li>
+<li>Resources can now be referenced inside a resource by using the syntax <code>&quot;@&lt;resource submodule&gt;.&lt;resource id&gt;&quot;</code>. For example:</li>
+</ul>
+
+<pre><code class="xml">        &lt;resources&gt;
+            &lt;string id=&quot;date&quot;&gt;Pick a date&lt;/string&gt;
+        &lt;/resources&gt;
+        &lt;layout id=&quot;MainLayout&quot;&gt;
+            &lt;label id=&quot;date&quot; x=&quot;5&quot; y=&quot;5&quot; text=&quot;@Strings.date&quot; color=&quot;Gfx.COLOR_WHITE&quot; justification=&quot;Gfx.TEXT_JUSTIFY_LEFT&quot; /&gt;
+        &lt;/layout&gt;
+</code></pre>
+
+<ul>
+<li>Documentation improvements
+
+<ul>
+<li>Positioning</li>
+<li>Activity</li>
+<li>Sensor</li>
+<li>WatchUi.switchToView</li>
+</ul></li>
+<li>New Samples:
+
+<ul>
+<li>AccelMag</li>
+<li>MoxyDataField</li>
+<li>Picker</li>
+</ul></li>
+<li>Allow custom drawables in Layouts.</li>
+<li>The compiler now generates a warning when a class does not call its parent&#8217;s initialize function.</li>
+<li>Updated the ObjectStore sample to use onSettingsChanged().</li>
+<li>Longs and doubles can now be stored in the ObjectStore.</li>
+</ul>
+
+<p><strong>Simulator Changes</strong></p>
+
+<ul>
+<li>Added the ability to edit the object store for the currently running application. This is available under the <em>File &gt; Edit Object Store</em> menu. Dictionarys and Arrays can only be viewed in the editor.</li>
+<li>Support per device memory limits.</li>
+<li>Support the Edge 1000 and Edge Explore 1000.</li>
+<li>Allow the datafield background color to be changed by using the <em>Data Fields &gt; Background Color</em> menu.</li>
+<li>Allow activity tracking to be enabled and disabled by using the <em>Settings &gt; Activity Tracking</em> menu.</li>
+<li>Added simulator interface for Events.</li>
+<li>Added FIT simulation for Firstbeat values.</li>
+</ul>
+
+<p><strong>API Additions</strong></p>
+
+<ul>
+<li>Added WatchUi.Picker. This is a new Picker that allows for every picker element to be customized. See the Programmer&#8217;s Guide for details.</li>
+<li>Deprecated WatchUi.NumberPicker. This has been replaced by WatchUi.Picker.</li>
+<li>Datafields are no longer able to call WatchUi.requestUpdate().</li>
+<li>Widgets and Datafields may now use ANT.</li>
+<li>Added more fields to System.DeviceInfo.</li>
+<li>Added alarmCount and notificationCount to System.DeviceSettings.</li>
+<li>Added onSelect() to WatchUi.BehaviorDelegate. This triggers when the user has performed a select behavior on the device. Examples of this behavior are tapping on the touch screen for vivoactive or pressing the enter key on the Forerunner 920XT.</li>
+<li>Added getFontAscent() and getFontDescent() to the Graphics module.</li>
+<li>Added POST/PUT/DELETE Support to Communications.makeJsonRequest(). Any provided parameters are appended to the URL of a DELETE request.</li>
+<li>Added Grahpics.drawArc().</li>
+<li>System.exit() now cleanly exits an application. For all other app types this call is ignored.</li>
+<li>Added Communications.cancelAllRequests().</li>
+<li>Added Lang.WeakReference class. See the Programmer&#8217;s Guide for more details.</li>
+<li>Added Application.onSettingsChanged(). This function is called when the app has been configured while it is running.</li>
+<li>Added WatchUi.DataField.getBackgroundColor().</li>
+<li>Added the Events module. See the Programmer&#8217;s Guide for more details.</li>
+<li>Added multi-channel support to the ANT Generic Channel.</li>
+<li>Added Firstbeat values to Activy.Info. The new fields are trainingEffect and energyExpenditure.</li>
+<li>Added background scanning to Ant.GenericChannel.</li>
+<li>Added support for private network keys in the Ant module.</li>
+<li>The progress bar can now take a WatchUi.InputDelegate when pushing a WatchUi.View.</li>
+<li>Added new attributes to System.DeviceSettings:
+
+<ul>
+<li>screenShape</li>
+<li>screenWidth</li>
+<li>screenHeight</li>
+<li>isTouchScreen</li>
+<li>inputButtons</li>
+<li>partNumber</li>
+<li>firmwareVersion</li>
+<li>monkeyVersion</li>
+<li>temperatureUnits</li>
+<li>alarmCount</li>
+<li>notificationCount</li>
+<li>activityTrackingOn</li>
+</ul></li>
+<li>Added accelerometer and magnetometer to Sensors.Info. The new members are accel and mag.</li>
+<li>The API now throws an UnexpectedTypeException instead of an unexpected type error. The exception can be
+caught and recovered from. It also provides more details on the expected types and what was given.</li>
+</ul>
+
+<p><strong>Bug Fixes:</strong></p>
+
+<ul>
+<li>App names are preserved when using monkeydo.bat on Windows.</li>
+<li>Fix symbol not found error when hashing a Method object.</li>
+<li>Allow a class to use it&#8217;s parent function without prepending the parent class name to the function call.</li>
+<li>Allow Gregorian.info() to work with dates prior to 1990.</li>
+<li>Allow a timer to stop and restart in the timer callback.</li>
+<li>Validate Gregorian.moment() options. An error is now given when invalid values are given for the date.</li>
+<li>Fix GPS accuracy in the simulator. Values other than Position.QUALITY_LAST_KNOWN will be returned now.</li>
+<li>Fix duration and moment addition.</li>
+<li>Fix computation of clipping for data fields.</li>
+<li>Fix ActivityHistory time ranges in the simulator.</li>
+<li>Fix a bug in FIT file altitude parsing in the simulator.</li>
+<li>Prevent simulator crash that could happen when exiting an app using ctrl-k/command-k.</li>
+<li>Position.Info.when field now returns the current time in the simulator.</li>
+</ul>
+
+<p><strong>Known Issues:</strong></p>
+
+<ul>
+<li>As this is a beta release, this SDK will not be able to generate app packages for upload to the store.</li>
+<li>If an <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Lang/Exception.html" title="Exception API documentation">Exception</a> is thrown from a catch block, the finally block of the current try/catch/finally will not be executed
+</div></li>
+</ul>
+<h3 id="v1.1.4"><a href="#1.1.4" onclick="toggle('1.1.4', 'Img_1.1.4');"><img src="resources/readme/hide.jpg" border=0 name="Img_1.1.4" />v1.1.4</a></h3>
+<div id="1.1.4" style="display:none;">
+
+<ul>
+<li>Modified grammar to allow an expanded set of unicode characters in the ID definition. Fixes a bug where non-latin characters couldn&#8217;t be used in hard coded strings because the compiler-generated label was using the string value (which contained non-latin characters).</li>
+<li>Fixed an issue with using string resources qualified using <code>zht</code> and <code>zhs</code> instead of <code>cht</code> and <code>chs</code> when running the app export wizard</li>
+<li>Fixed a simulator-only memory leak in non-simple data fields when an application returned a value from the <code>compute()</code> function.</li>
+<li>Fixed an issue where a large string value could crash the memory window</li>
+<li>With specific projects a bug existed that didn&#8217;t allow for the application icon to be overridden properly. This could cause compiler errors if the icon to be overridden was bigger than what the device allowed.</li>
+<li>Added the <code>semi_round_watch</code> profile to <code>devices.xml</code> to support new and exciting devices that will be launching to support Connect IQ.</li>
+<li>Fixed an issue where behavior delegate events were being sent when keys were pressed and released, and not only on the action event for those keys</li>
+<li>Fixed an issue where the system pen width could be altered and affect native application behavior</li>
+<li>Now exits with an error if an application tries to push or switch to something that is not a view</li>
+<li>Increased reliability and speed of JSON requests on devices</li>
+<li>Fixed an issue where a widget was able to pop the base view and put the unit
+ into an undefined state, causing the unit to hang:
+
+<ul>
+<li>Menu 1: Pop view and push menu 2</li>
+<li>Menu 2: Pop view (and auto pop pops base view)</li>
+<li>The application will exit with an error in this situation.</li>
+</ul></li>
+<li>Fixed an issue where the generic delegate was not being passed to the progress bar in order for it to be cancelled (if present)</li>
+<li>Now always creates the <code>CIQ_LOG.txt</code> in the event of an application crash</li>
+<li>Standardized the output of Error/Warning logging and prevent two errors being issued for a single instance</li>
+<li>Fixed a memory leak in <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Lang/Dictionary.html" title="Dictionary API documentation"><code>Toybox.Lang.Dictionary.values()</code></a></li>
+<li>Improved memory usage reporting on the simulator in Mac OS X</li>
+<li>Support new Asia/Pacific SKUs for v&iacute;voactive, f&emacr;nix 3 and epix</li>
+<li>Several other minor bug fixes and improvements
+</div></li>
+</ul>
+<h3 id="v1.1.3"><a href="#1.1.3" onclick="toggle('1.1.3', 'Img_1.1.3');"><img src="resources/readme/hide.jpg" border=0 name="Img_1.1.3" />v1.1.3</a></h3>
+<div id="1.1.3" style="display:none;">
+
+<ul>
+<li>Automatic URL encoding of parameters in <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Communications.html" title="Communications API documentation"><code>Toybox::Communications::makeJsonRequest()</code></a> has been removed. Please use <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Communications.html" title="Communications API documentation"><code>Toybox::Communications::encodeURL()</code></a>, introduced in 1.1.2, as needed in your application.</li>
+<li>All &#8216;<code>%</code>&#8217; characters encountered by <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Communications.html" title="Communications API documentation"><code>Toybox::Communications::encodeURL()</code></a> are now encoded as &#8216;<code>%25</code>&#8217; to follow <a href="http://www.rfc-base.org/rfc-3986.html" title="The RFC 3986 Specification">RFC 3986 specification</a></li>
+<li>Fixed an issue that caused <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Application.html" title="Application API documentation"><code>Toybox::Application::setProperty()</code></a> to intermittently fail</li>
+<li>Several other minor bug fixes and documentation updates</li>
+</ul>
+
+<p><strong>Known Issues:</strong></p>
+
+<ul>
+<li>If an <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Lang/Exception.html" title="Exception API documentation">Exception</a> is thrown from a catch block, the finally block of the current try/catch/finally will not be executed</li>
+</ul>
+</div>
+<h3 id="v1.1.2"><a href="#1.1.2" onclick="toggle('1.1.2', 'Img_1.1.2');"><img src="resources/readme/hide.jpg" border=0 name="Img_1.1.2" />v1.1.2</a></h3>
+<div id="1.1.2" style="display:none;">
+
+<ul>
+<li>Fixed issues with <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Lang/Exception.html" title="Exception API documentation"><code>Toybox::Lang::Exception</code></a> so that user-implemented try/catch blocks will now work</li>
+<li>Added call to <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Application.html" title="Application API documentation"><code>Toybox.Application.AppBase.saveProperties()</code></a> after <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Application.html" title="Application API documentation"><code>Toybox.Application.AppBase.onStop()</code></a> so any properties updated by an app after <code>onStop()</code> are preserved</li>
+<li>Fixed memory leak when receiving messages via the <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Communications.html" title="Communications API documentation"><code>Communications</code></a> module</li>
+<li>Increased reliability of transmitting messages via the <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Communications.html" title="Communications API documentation"><code>Communications</code></a> module</li>
+<li>Corrected the <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Time.html" title="Time API documentation"><code>Toybox::Time::Moment</code></a> module&#8217;s <code>initialize()</code> method, which was never getting called automatically</li>
+<li>Added <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/WatchUi.html" title="WatchUi API documentation"><code>Toybox.WatchUi.InputDelegate.OnKeyPressed(evt)</code></a> and <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/WatchUi.html" title="WatchUi API documentation"><code>WatchUi.InputDelegate.OnKeyReleased(evt)</code></a>. These are used to detect when a hard key is pressed and subsequently released, allowing applications to access this type of input schema in addition to the basic key action</li>
+<li>Added <code>KEY_CLOCK</code> support for fenix 3 and epix in the simulator</li>
+<li>Removed <code>KEY_POWER</code> and <code>KEY_LIGHT</code> from devices.xml for the simulator (since they are not supported by any devices)</li>
+<li>Corrected key behaviour mappings for a number of devices in the simulator</li>
+<li>Added D2 Bravo, Japan fenix 3, and APAC epix device support</li>
+<li>Now prevents sending input to view without a defined input/behaviour delegate</li>
+<li>Fixed device crashes when reading corrupt PRG files</li>
+<li>Fixed bug that truncated FIT session names</li>
+<li>Fixed issues with rapid key presses causing key messages to hit a view after a push or pop had already occurred</li>
+<li><a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Application.html" title="Application API documentation"><code>Toybox.Application.AppBase.onStop()</code></a> will now always be called when a data field exits</li>
+<li>JSON request URLs are now percent-encoded so that any special characters are replaced by their identifying hex pair</li>
+<li>Added the new routine <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Communications.html" title="Communications API documentation"><code>Toybox.Communications.encodeURL(url)</code></a>, which allows apps to encode JSON request URLs as described in above</li>
+<li>Add deprecation tags to the <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/ActivityRecording.html" title="ActivityRecording API documentation"><code>Toybox::ActivityRecording::Session::GeometryIterator</code></a> class and related methods, which will not be supported in the Connect IQ 2.0 release</li>
+<li>Added interface to simulate GPS quality which allow the simulator to control the accuracy of the current GPS for testing</li>
+<li>Fixed several memory leaks that occurred under specific error-recovery conditions</li>
+<li>The <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/ActivityMonitor.html" title="ActivityMonitor API documentation"><code>Toybox::ActivityMonitor</code></a> module times now use UTC as the standard format</li>
+<li>Circular memory references are now detected and after an app is shut down, and an error will be written out to the ConnectIQ log file (device only, <code>/GARMIN/APPS/LOGS/CIQLOG.txt</code>)</li>
+<li>Now prevents processing view push/pop messages from applications that have already closed</li>
+<li>Added HTTPS support to CURL requests in the simulator</li>
+<li>Properly handles condition where <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Communications.html" title="Communications API documentation"><code>Toybox.Communications.makeJsonRequest()</code></a> returns an <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Lang/Array.html" title="Array API documentation"><code>Array</code></a> by default instead of an object</li>
+<li>Fixed palette bitmap padding offset on the Forerunner 920XT, and ellipse border offset on all devices</li>
+<li>Re-added support for escaped characters to <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Lang/String.html" title="String API documentation"><code>String</code></a> resources</li>
+<li>Add four menu items to control settings in the simulator:
+
+<ul>
+<li><em>Set Battery Status</em> allows the user to set the level of the battery currently</li>
+<li><em>Force onHide</em> forces the onHide method to run for the current view</li>
+<li><em>Force onShow</em> forced the onShow method to run for the current view</li>
+<li><em>Phone Connected</em> toggles whether a phone is connected or not</li>
+</ul></li>
+<li>Now allows spaces in project and SDK Paths</li>
+<li>Removeed the extra menu for toggling low power mode and creates a checkbox for low power in the settings menu. All apps now start up in low power mode by default and exiting an app resets the menu. Also adds in a menu option for toggling sleep mode for <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/ActivityMonitor.html" title="ActivityMonitor API documentation"><code>Toybox::ActivityMonitor</code></a>.</li>
+<li>The simulator now supports memory tracking which adds a new window available at <em>File &gt; View Memory</em>. This window shows a snapshot of the current allocations as well as any circular references. When the app starts to shut down, a snapshot is taken and if any circular references exist after the app is shut down, the snapshot is shown to the user along with a message about circular references.</li>
+<li>Added activity history editing support to the simulator</li>
+<li>Updated the epix simulator data field layouts and fonts to match the on-device experience</li>
+<li>Fixed issue with converting coordinates to <code>GEO_MGRS</code></li>
+<li>Improved general Connect IQ stability across devices</li>
+<li>Various other minor bug fixes, performance improvements and documentation updates</li>
+</ul>
+
+<p><strong>Known Issues:</strong></p>
+
+<ul>
+<li>If an <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Lang/Exception.html" title="Exception API documentation">Exception</a> is thrown from a catch block, the finally block of the current try/catch/finally will not be executed.</li>
+</ul>
+</div>
+<h3 id="v1.1.1"><a href="#1.1.1" onclick="toggle('1.1.1', 'Img_1.1.1');"><img src="resources/readme/hide.jpg" border=0 name="Img_1.1.1" />v1.1.1</a></h3>
+<div id="1.1.1" style="display:none;">
+
+<ul>
+<li>No longer supports swipe up/down in simulator to match current device behaviour</li>
+<li>Fixed simulator <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/WatchUi.html" title="WatchUi API documentation"><code>Toybox.WatchUi.InputDelegate.onHold()</code></a> event reporting incorrect coordinates</li>
+<li>Fixed corrupted 1-bit palette bitmap display</li>
+<li>Fixed size and alignment of round watch display region to prevent clipping</li>
+<li>Added Japanese Gregorian translation</li>
+<li>Added English support to APAC devices</li>
+<li>Added Thai language support</li>
+<li>Disabled &#8220;Not Set&#8221; language option for running applications</li>
+<li>Allow applications to pass an input delegate into <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/WatchUi.html" title="WatchUi API documentation"><code>Toybox.WatchUi.pushView()</code></a> when creating a progress bar. The progress bar should only be able to be popped if the developer specifies an input delegate when pushing the dialogue. If <code>null</code> is passed then the progress bar will remain on-screen regardless of input.</li>
+<li>The simulator now kills an application when pressing back on the base page</li>
+<li>When adding a <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Time.html" title="Time API documentation"><code>Toybox::Time::Duration</code></a> to a <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Time.html" title="Time API documentation"><code>Toybox::Time::Moment</code></a>, <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Time.html" title="Time API documentation"><code>Toybox.Time.Duration.value()</code></a> will now return a <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Lang/Long.html" title="Long API documentation"><code>Long</code></a> to avoid floating point number precision loss</li>
+<li>Fixed several stability issues with the geometry iterator</li>
+<li><a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Activity.html" title="Activity API documentation"><code>Toybox.Activity.Info.startLocation</code></a> now correctly initializes to <code>null</code> on devices</li>
+<li><a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/System.html" title="System API documentation"><code>Toybox.System.getSystemStats()</code></a> now returns the correct used, free, and total memory amounts</li>
+<li>The FIT recording session will now be saved when a new session is created, or if the application is closed</li>
+<li>The <code>dst</code> field in <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/System.html" title="System API documentation"><code>Toybox::System::ClockTime</code></a> is now correctly populated</li>
+<li>Activity monitoring history now uses the UNIX time epoch</li>
+<li>Calling <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/System.html" title="System API documentation"><code>Toybox.System.println(null)</code></a> now correctly prints <code>null</code></li>
+<li>Fixed issue where <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Application.html" title="Application API documentation"><code>Toybox.Application.deleteProperty()</code></a> would not always delete a specified property depending on call order with <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Application.html" title="Application API documentation"><code>Toybox.Application.setProperty()</code></a></li>
+<li>Changed the content of a property ID from a <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Lang/String.html" title="String API documentation"><code>String</code></a> to a <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Lang/Number.html" title="Number API documentation">`Number&#8217;</a> using <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Application.html" title="Application API documentation"><code>Toybox.Application.setProperty()</code></a>, which will no longer result in a crash</li>
+<li>Using a sub sport greater than <code>SUB_SPORT_FLEXIBILITY_TRAINING</code> should no longer give an unexpected type error</li>
+<li>Fixed several device crashes and memory leaks under various circumstances</li>
+<li>Various other minor bug fixes and documentation updates</li>
+</ul>
+
+<p><strong>Known Issues:</strong></p>
+
+<ul>
+<li>Exceptions are not working correctly</li>
+</ul>
+</div>
+<h3 id="v1.1.0"><a href="#1.1.0" onclick="toggle('1.1.0', 'Img_1.1.0');"><img src="resources/readme/hide.jpg" border=0 name="Img_1.1.0" />v1.1.0</a></h3>
+<div id="1.1.0" style="display:none;">
+
+<ul>
+<li>Added new project templates to SDK</li>
+<li>Updated fenix 3 layouts to match hardware changes</li>
+<li>Updated gender check in UserProfile sample app to report propertly</li>
+<li>Updated watch face samples to extend <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/WatchUi.html" title="WatchUi API documentation"><code>Toybox::WatchUi::WatchFace</code></a></li>
+</ul>
+
+<p><strong>Known Issues:</strong></p>
+
+<ul>
+<li>Exceptions are not working correctly</li>
+</ul>
+</div>
+<h3 id="v1.0.3"><a href="#1.0.3" onclick="toggle('1.0.3', 'Img_1.0.3');"><img src="resources/readme/hide.jpg" border=0 name="Img_1.0.3" />v1.0.3</a></h3>
+<div id="1.0.3" style="display:none;">
+
+<ul>
+<li>Added shapes to <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/WatchUi.html" title="WatchUi API documentation"><code>Toybox::WatchUi</code></a> module</li>
+<li><a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/WatchUi.html" title="WatchUi API documentation"><code>Toybox::WatchUi::TextPicker</code></a> has been added. This is a native text entry view that is device dependent. <em>Note:</em> Not all devices support this view. This is currently supported by the Forerunner Forerunner 920XT and fenix 3.</li>
+<li>Fixed issue with interpreting hex values that ended in &#8216;<code>d</code>&#8217; or &#8216;<code>f</code>&#8217;</li>
+<li>Added phone connection state to the system settings</li>
+<li>Made improvements to logging on devices</li>
+<li>Made some localization updates</li>
+<li>Updated the API documentation</li>
+<li>Various bug fixes</li>
+</ul>
+
+<p><strong>Known Issues:</strong></p>
+
+<ul>
+<li><a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/WatchUi.html" title="WatchUi API documentation"><code>Toybox::WatchUi::Drawable</code></a> list resources cannot be animated because they don&#8217;t use the new Shape objects (and therefore don&#8217;t extend <code>Drawable</code>). If you want to animate a shape you can do so by creating and drawing it in code.</li>
+</ul>
+</div>
+<h3 id="v1.0.2"><a href="#1.0.2" onclick="toggle('1.0.2', 'Img_1.0.2');"><img src="resources/readme/hide.jpg" border=0 name="Img_1.0.2" />v1.0.2</a></h3>
+<div id="1.0.2" style="display:none;">
+
+<ul>
+<li>Integrated the package tool with the compiler</li>
+<li>Added support for packaging an application for different regions</li>
+<li>Added Asian font support to the simulator</li>
+<li>Updated Chinese language qualifiers from cht/chs to zht/zhs. The compiler will still accept cht/chs. All other languages follow the <a href="http://www.loc.gov/standards/iso639-2/" title="The ISO 639-2 Standard">ISO 639&#8211;2 3-character code standard</a></li>
+<li>Pulled project types and permissions out into a XML file. The compiler will now require a &#8216;<code>-p</code>&#8217; option with the file path to the <em>projectInfo.xml</em> file inside the bin folder</li>
+<li>Removed filepaths in release builds</li>
+<li>Allows <code>%</code> print syntax in <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/System.html" title="System API documentation"><code>Toybox.System.print()</code></a> calls</li>
+<li>The simulator now opens in the foreground on OSX</li>
+<li>Updated the API documentation</li>
+<li>Various bug fixes</li>
+</ul>
+</div>
+<h3 id="v1.0.1"><a href="#1.0.1" onclick="toggle('1.0.1', 'Img_1.0.1');"><img src="resources/readme/hide.jpg" border=0 name="Img_1.0.1" />v1.0.1</a></h3>
+<div id="1.0.1" style="display:none;">
+
+<ul>
+<li>Added heading information for simulator</li>
+<li>Various ANT+ improvements</li>
+<li>Various bug fixes</li>
+</ul>
+</div>
+<h3 id="v1.0.0"><a href="#1.0.0" onclick="toggle('1.0.0', 'Img_1.0.0');"><img src="resources/readme/hide.jpg" border=0 name="Img_1.0.0" />v1.0.0</a></h3>
+<div id="1.0.0" style="display:none;">
+
+<ul>
+<li>Native fonts now align at the top, like custom fonts, instead of the bottom. This will require adjustment of any text drawn on the screen.</li>
+<li>Added <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/WatchUi.html" title="WatchUi API documentation"><code>Toybox.WatchUi.DataField.getObscurityFlags()</code></a>. This indicates what portions of a data field are obscured by a round screen.</li>
+<li>Added number-only fonts under <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Graphics.html" title="Graphics API documentation"><code>Toybox.Graphics.FONT_NUMBER_XXX</code></a>. These are larger fonts that contain only numbers and certain characters.</li>
+<li><code>initialize()</code> is now called for <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Application.html" title="Application API documentation"><code>AppBase</code></a> objects.</li>
+<li>Added <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/System.html" title="System API documentation"><code>Toybox::System::DeviceSettings</code></a>. This provides access to the device settings such as distance units and time format. Also added support for this in the simulator.</li>
+<li>Added support for entering and exiting low power in the simulator to provide support for testing the <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/WatchUi.html" title="WatchUi API documentation"><code>Toybox::WatchUi::WatchFace</code></a> class</li>
+<li>Simulated devices now use their correct font</li>
+<li>Added simulator support for the vivoactive, fenix 3 and epix</li>
+<li>Various bug fixes</li>
+</ul>
+</div>
+<h3 id="v0.3.0"><a href="#0.3.0" onclick="toggle('0.3.0', 'Img_0.3.0');"><img src="resources/readme/hide.jpg" border=0 name="Img_0.3.0" />v0.3.0</a></h3>
+<div id="0.3.0" style="display:none;">
+
+<ul>
+<li>A breaking change has been made to the compiler. Older apps will not run with this release and must be recompiled.</li>
+<li>Added gesture support for watch faces. This allows a watch to provide 1 second updates while the user is looking at it. While not in low power mode watch faces have access to <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Timer.html" title="Timer API documentation"><code>Toybox.Timer</code></a> and <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/WatchUi.html" title="WatchUi API documentation"><code>Toybox.WatchUi.animate()</code></a>.</li>
+<li>Added <code>power</code> and <code>position</code> values to <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Activity.html" title="Activity API documentation"><code>Toybox::Activity::Info</code></a> to allow datafields to access this information. Removed current pace from <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Activity.html" title="Activity API documentation"><code>Toybox::Activity::Info</code></a> as it was a duplicate of speed.</li>
+<li>Various bug fixes</li>
+</ul>
+</div>
+<h3 id="v0.2.4"><a href="#0.2.4" onclick="toggle('0.2.4', 'Img_0.2.4');"><img src="resources/readme/hide.jpg" border=0 name="Img_0.2.4" />v0.2.4</a></h3>
+<div id="0.2.4" style="display:none;">
+
+<ul>
+<li><em>Symbol Not Found</em> error includes the symbol name</li>
+<li>Updates to the documentation</li>
+<li>Various bug fixes</li>
+</ul>
+</div>
+<h3 id="v0.2.3"><a href="#0.2.3" onclick="toggle('0.2.3', 'Img_0.2.3');"><img src="resources/readme/hide.jpg" border=0 name="Img_0.2.3" />v0.2.3</a></h3>
+<div id="0.2.3" style="display:none;">
+
+<ul>
+<li>Added <em>power</em> to the Fit parsing and simulation</li>
+<li>Added <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Graphics.html" title="Graphics API documentation"><code>Toybox.Graphics.setPenWidth()</code></a></li>
+<li>Added <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/WatchUi.html" title="WatchUi API documentation"><code>Toybox.WatchUi.View.findDrawableById()</code></a></li>
+<li>Added functions to <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/WatchUi.html" title="WatchUi API documentation"><code>Toybox::WatchUi::Text</code></a> and <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/WatchUi.html" title="WatchUi API documentation"><code>Toybox::WatchUi::Bitmap</code></a> to allow certain attributes to be modified</li>
+<li>Added support for exceptions:</li>
+</ul>
+
+<pre><code class="java">try {
+    ...
+}
+catch( ex instanceof AnExceptionClass ) {
+    ...
+}
+catch( ex ) {
+    ...
+}
+finally {
+    ...
+}
+</code></pre>
+
+<ul>
+<li>Added support for simulating <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/ActivityMonitor.html" title="ActivityMonitor API documentation"><code>Toybox::ActivityMonitor</code></a> data in the simulator</li>
+<li>Added tone and vibrate support in the simulator</li>
+<li>The permission for using the <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Position.html" title="Position API documentation"><code>Toybox::Position</code></a> module has changed from <em>Position</em> to <em>Positioning</em></li>
+<li>Added several new samples</li>
+<li>Various bug fixes</li>
+</ul>
+
+<p><strong>Known Issues:</strong></p>
+
+<ul>
+<li>When extending a class, the full class name must be used, i.e.:</li>
+</ul>
+
+<pre><code class="java">module Module {
+    class A {}
+    class B extends Module.A {}
+}
+</code></pre>
+
+<p>The <code>using</code> keyword can still be used in place of the full class name.</p>
+
+<ul>
+<li>Power and swim fields are not available from the <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Activity.html" title="Activity API documentation"><code>Toybox::Activity</code></a> module</li>
+<li>SimpleDataFields do not currently accept strings as documented</li>
+<li>Formatting issues from <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Communications.html" title="Communications API documentation"><code>Toybox.Communications.makeJsonRequest()</code></a> sometimes causes responses to not be parsed</li>
+<li>In the Windows simulator, apps will share an object store. A workaround will be to either use <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Application.html" title="Application API documentation"><code>Toybox.Application.AppBase.clearProperties()</code></a> or to delete <code>%TEMP%\GARMIN\APPS\DATA\APP.str</code>.</li>
+</ul>
+</div>
+<h3 id="v0.2.1"><a href="#0.2.1" onclick="toggle('0.2.1', 'Img_0.2.1');"><img src="resources/readme/hide.jpg" border=0 name="Img_0.2.1" />v0.2.1</a></h3>
+<div id="0.2.1" style="display:none;">
+
+<ul>
+<li>Added <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Attention.html" title="Attention API documentation"><code>Toybox::Attention</code></a> API (tones, vibrate, and backlight)</li>
+<li>Added <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/WatchUi.html" title="WatchUi API documentation"><code>Toybox::WatchUi::ProgressBar</code></a> and <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/WatchUi.html" title="WatchUi API documentation"><code>Toybox::WatchUi::ConfirmationDialog</code></a></li>
+<li>Added a time zone offset field to the <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/System.html" title="System API documentation"><code>Toybox::System::ClockTime</code></a> object</li>
+<li>Added 64 color support to compiler and simulator. When compiling for a device which supports 64 colors the compiler will make use of all the colors to better dither the image. A developer can specify a palette to use when compiling an image:</li>
+</ul>
+
+<pre><code class="xml">&lt;bitmap id=&quot;AmericanFlag&quot; filename=&quot;images/american_flag.png&quot;&gt;
+    &lt;palette&gt;
+        &lt;color&gt;FF0000&lt;/color&gt;
+        &lt;color&gt;FFFFFF&lt;/color&gt;
+        &lt;color&gt;0000FF&lt;/color&gt;
+    &lt;/palette&gt;
+&lt;/bitmap&gt;
+</code></pre>
+
+<p>If a palette is specified the compiler will take each specified color and map it to the closest color in the device palette. The image is then compiled using only those colors.</p>
+
+<ul>
+<li>Added launcher icon support. The launcher icon and app name must now be specified as resource IDs. The launcher icon is optional (a default icon will be compiled in). If resources can be specified as:</li>
+</ul>
+
+<pre><code class="xml">&lt;resources&gt;
+    &lt;string id=&quot;AppName&quot;&gt;My App&lt;/string&gt;
+    &lt;bitmap id=&quot;LauncherIcon&quot; filename=&quot;images/launcher_icon.png&quot; /&gt;
+&lt;/resource&gt;
+</code></pre>
+
+<p>The app name and launcher icon in the manifest would be:</p>
+
+<pre><code class="xml">&lt;iq:application name=&quot;AppName&quot; launcherIcon=&quot;LauncherIcon&quot;&gt;
+</code></pre>
+
+<p>The manifest file for existing projects must at least specify a name as a string resource or they will not compile.</p>
+
+<ul>
+<li>Added support for Linux simulator</li>
+<li>Restricted input to widget and watch type Connect IQ apps. Widgets will no longer receive the swipe left and swipe right inputs for their base view.</li>
+<li>General bug fixes to the compiler</li>
+<li>General bug fixes to the simulator</li>
+</ul>
+
+<p><strong>Known Issues:</strong></p>
+
+<ul>
+<li>Ant support on Linux is untested</li>
+</ul>
+</div>
+<h3 id="v0.2.0"><a href="#0.2.0" onclick="toggle('0.2.0', 'Img_0.2.0');"><img src="resources/readme/hide.jpg" border=0 name="Img_0.2.0" />v0.2.0</a></h3>
+<div id="0.2.0" style="display:none;">
+
+<ul>
+<li>Added support for suspending an app</li>
+<li>Added an option to disable dithering</li>
+<li>Fixed layouts and overriding issues with resource compiler</li>
+<li>General bug fixes to the simulator</li>
+</ul>
+
+<p><strong>Known Issues:</strong></p>
+
+<ul>
+<li>Current pace, power fields and swim fields are not available from the Activity module</li>
+<li>SimpleDataFields do not currently accept strings as documented</li>
+<li>Formatting issues from <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Communications.html" title="Communications API documentation"><code>Toybox.Communications.makeJsonRequest()</code></a> sometimes causes responses to not be parsed</li>
+<li>SDKs downloaded using the SDK Manager in OSX will not run without giving the files <em>execute</em> permissions</li>
+</ul>
+</div>
+<h3 id="v0.1.1"><a href="#0.1.1" onclick="toggle('0.1.1', 'Img_0.1.1');"><img src="resources/readme/hide.jpg" border=0 name="Img_0.1.1" />v0.1.1</a></h3>
+<div id="0.1.1" style="display:none;">
+
+<ul>
+<li>Added the Forerunner Forerunner 920XT as a product for which you can develop</li>
+<li>Added <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Graphics.html" title="Graphics API documentation"><code>Toybox.Graphics.Dc.getFontHeight(font)</code></a> to get the height of fonts</li>
+<li>drawText now handles &#8216;<code>\n</code>&#8217;</li>
+<li>Fixed an issue with bike cadence being invalid</li>
+<li>There was an issue with do/while loops not executing correctly that was address, which has been fixed</li>
+<li>The keywords <code>break</code> and <code>continue</code> were added. We will never speak of this again.</li>
+<li><a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Lang/Array.html" title="Array API documentation"><code>Array</code></a> types were having an out of bounds error when adding items to the last element</li>
+<li>The time zone should now be correct when testing watch faces</li>
+<li>Fixed a memory leak when using <code>Duration</code> or <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Lang/Long.html" title="Long API documentation"><code>Long</code></a> types with simple data fields</li>
+</ul>
+</div>
+<h3 id="v0.1.0"><a href="#0.1.0" onclick="toggle('0.1.0', 'Img_0.1.0');"><img src="resources/readme/hide.jpg" border=0 name="Img_0.1.0" />v0.1.0</a></h3>
+<div id="0.1.0" style="display:none;">
+
+<ul>
+<li>Added support for complex data fields. These data fields receive the same sensor data as a simple data field but can draw custom graphics for the field.</li>
+<li>Added support for ANT in the API under <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Ant.html" title="Ant API documentation"><code>Toybox::Ant</code></a> and in the simulator. Devices that operate on the public and Ant+ networks can be communicated with using the new API. <em>Note:</em> In the simulator the ANT device must be a few feet from the USB ANT stick. On OS X only USB2 and USBM sticks are supported. Ensure that no other programs are using the USB ANT stick on your computer.</li>
+<li>Added support for BLE simulation in the simulator over ADB. Choose <em>Connection &gt; Start</em> in the simulator for instructions on how to configure ADB. Support for BLE communications with iOS devices are currently not supported.</li>
+<li>General bug fixes to the simulator</li>
+</ul>
+</div>
+<h3 id="v0.0.21"><a href="#0.0.21" onclick="toggle('0.0.21', 'Img_0.0.21');"><img src="resources/readme/hide.jpg" border=0 name="Img_0.0.21" />v0.0.21</a></h3>
+<div id="0.0.21" style="display:none;">
+
+<ul>
+<li>Added support for FIT file playback in the simulator. This is available in the FIT Data menu.</li>
+<li>Added support for FIT simulation in the simulator</li>
+<li>Added App permissions. Apps must request permissions for certain modules in their manifest.xml file. Apps must request permission to use the following modules: ActivityRecording, Communications, Position, and Timer.</li>
+<li>Added support for timers. A timer can be started to call a callback after a certain amount of time. Timers are available in the <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Timer.html" title="Timer API documentation"><code>Toybox.Timer.Timer</code></a> class</li>
+<li>Added <code>subString()</code> and <code>find()</code> to <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Lang/String.html" title="String API documentation"><code>String</code></a></li>
+<li>Added support for data field app types</li>
+<li>Added support for <code>++</code>, <code>—-</code>, and <code>NaN</code></li>
+<li>Added the ability to request images in the simulator. See <a href="http://developer.garmin.com/connect-iq/api-docs/" title="Communications.makeImageRequest API Documentation"><code>Toybox.Communications.makeImageRequest()</code></a> documentation for details.</li>
+<li>Added the ability to close the current running app and to take screenshots in the simulator</li>
+<li>General bug fixes to the simulator</li>
+</ul>
+
+<p><strong>Known Issues:</strong></p>
+
+<ul>
+<li>The <code>monkeydo</code> command on OS X does not work if a path is included in the argument. For example, <code>monkeydo myApp.prg</code> works, while <code>monkeydo bin/myApp.prg</code> does not.</li>
+<li>Speed, altitude, and position are not available for simulated FIT data. They are available when playing back a FIT file.</li>
+<li>The heart rate value in the <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Sensor.html" title="Sensor API documentation"><code>Toybox::Sensor::Info</code></a> object always returns 0</li>
+</ul>
+</div>
+<h3 id="v0.0.20"><a href="#0.0.20" onclick="toggle('0.0.20', 'Img_0.0.20');"><img src="resources/readme/hide.jpg" border=0 name="Img_0.0.20" />v0.0.20</a></h3>
+<div id="0.0.20" style="display:none;">
+
+<ul>
+<li>Moved <code>Toybox.View.requestUpdate()</code> to <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/WatchUi.html" title="WatchUi API documentation"><code>Toybox.WatchUi.requestUpdate()</code></a></li>
+<li>The simulator now has an interface for JSON in <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Communications.html" title="Communications API documentation"><code>Toybox.Communications.makeJsonRequest()</code></a></li>
+<li>Resources have been moved into Rez as submodules</li>
+<li>The simulator supports string resources and the language can be changed via the language menu</li>
+<li>Menu support has been added in the simulator</li>
+<li>Now prevents bad memory access on app close</li>
+<li>Added a new compiler option for Devices so that devices.xml can be supplied</li>
+<li>Notifications in the simulator have been fixed</li>
+<li>A <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Sensor.html" title="Sensor API documentation"><code>Toybox::Sensor</code></a> API has been added to interface with external sensors</li>
+<li>The simulator can now accept a device ID on launch</li>
+<li>The compiler can now test a function to make sure variables are initialized and return values can also be tested</li>
+<li>The plug-in now supports widgets</li>
+<li>Fixed bug in hash delete</li>
+<li>Fixed a buffer overrun in string copying</li>
+<li>Added <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/WatchUi.html" title="WatchUi API documentation"><code>Toybox::WatchUi::NumberPicker</code></a> API</li>
+<li>Fixed bug with <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Lang/Long.html" title="Long API documentation"><code>Long</code></a> and <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Lang/Double.html" title="Double API documentation"><code>Double</code></a> handling</li>
+<li>Fixed a bug in reading strings from the application</li>
+<li>Removed <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/WatchUi.html" title="WatchUi API documentation"><code>Toybox.WatchUi.PUSH_MENU</code></a></li>
+</ul>
+</div>
+<h3 id="v0.0.19"><a href="#0.0.19" onclick="toggle('0.0.19', 'Img_0.0.19');"><img src="resources/readme/hide.jpg" border=0 name="Img_0.0.19" />v0.0.19</a></h3>
+<div id="0.0.19" style="display:none;">
+
+<ul>
+<li>Added manifest editor to the plug-in</li>
+<li>Added input handling. An input delegate is included when pushing a view.</li>
+</ul>
+
+<pre><code class="java">// In Toybox.Application.AppBase.getInitialView()
+return [ new BaseView(), new BaseInputDelegate() ];
+
+// Using Toybox.WatchUi.pushView()
+Toybox.WatchUi.pushView( new SecondView(), new SecondInputDelegate(), Ui.SLIDE_IMMEDIATE );
+</code></pre>
+
+<ul>
+<li>Added <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Lang/Long.html" title="Long API documentation"><code>Long</code></a> and <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Lang/Double.html" title="Double API documentation"><code>Double</code></a> support. The syntax for a <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Lang/Long.html" title="Long API documentation"><code>Long</code></a> and <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Lang/Double.html" title="Double API documentation"><code>Double</code></a> is to append a &#8216;<code>l</code>&#8217; or &#8216;<code>d</code>&#8217;, respectively.</li>
+</ul>
+
+<pre><code class="java">var myLong = 345l;     // long
+var myDouble = 5.67d;  // double
+</code></pre>
+
+<ul>
+<li>Improved stability of the simulator.</li>
+</ul>
+</div>
+<h3 id="v0.0.18"><a href="#0.0.18" onclick="toggle('0.0.18', 'Img_0.0.18');"><img src="resources/readme/hide.jpg" border=0 name="Img_0.0.18" />v0.0.18</a></h3>
+<div id="0.0.18" style="display:none;">
+
+<ul>
+<li>Replaced <code>Toybox::WatchUi::Page</code> with <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/WatchUi.html" title="WatchUi API documentation"><code>Toybox::WatchUi::View</code></a></li>
+<li>Fixed boundary checking bug in arrays.</li>
+<li>Added the <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Communications.html" title="Communications API documentation"><code>Toybox::Communications::MailboxIterator</code></a> API, which allows apps to open and read from a mailbox containing messages received over BLE. At this time, the mechanism for receiving messages is not complete, so this API is limited in capablity.</li>
+<li>Fixed a memory counting bug when using the <code>isa</code> operator</li>
+<li>Fixed a memory counting bug when inserting objects over top of themselves in arrays, hashes, and objects</li>
+<li>Added handling of <code>null</code> to the <code>==</code> operator so that 0 is not equal to <code>null</code></li>
+<li>Added the <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/ActivityRecording.html" title="ActivityRecording API documentation"><code>Toybox::ActivityRecording</code></a> API, which allows apps to access the native FIT activity recording capabilities of Garmin devices. Apps can create a new session and control the activity timer.</li>
+<li>Fixed a bug in <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Lang/Dictionary.html" title="Dictionary API documentation"><code>Toybox.Lang.Dictionary.put()</code></a> causing all keys to return <code>null</code></li>
+<li>Fixed bug where object type wasn&#8217;t checked when inserting into a hash</li>
+<li>Swapped the color order in the drawable <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Graphics.html" title="Graphics API documentation"><code>Toybox.Graphics.Dc.setColor()</code></a> function</li>
+<li>Added <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/WatchUi.html" title="WatchUi API documentation"><code>Toybox.WatchUi.BitmapResource.getWidth()</code></a> and <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/WatchUi.html" title="WatchUi API documentation"><code>Toybox.WatchUi.BitmapResource.getHeight()</code></a> methods</li>
+<li>Added <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Position.html" title="Position API documentation"><code>Toybox::Positioning</code></a> API, which allows apps to subscribe to position events. The <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Position.html" title="Position API documentation"><code>Toybox::Position::Location</code></a> object provides an abstract way for developers to work with coordinates.</li>
+<li>Added entry point to the project manifest file, and changed entry point names to UUID. All projects must specify an entry point and UUID in the manifest file. The manifest compiler option &#8216;<code>-m</code>&#8217; is now mandatory.</li>
+<li>Added support for object storage, which allows an app to persist properties across runs. <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Application.html" title="Application API documentation"><code>Toybox.Application.AppBase.setProperty(key, value)</code></a> can be used to store data while <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Application.html" title="Application API documentation"><code>Toybox.Application.AppBase.getProperty(key)</code></a> can be used to retrieve it. Access to the currently running Application can be retrieved via <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Application.html" title="Application API documentation"><code>Toybox.Application.getApp()</code></a> so objects outside of the entry point have access to the object store.</li>
+<li>Added input handling to simulator by using <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/WatchUi.html" title="WatchUi API documentation"><code>Toybox::WatchUi::InputDelegate</code></a> - See the Programmer&#8217;s Guide PDF for more details.</li>
+<li>Fixed an issue causing the simulator to attempt to log some errors more than once</li>
+<li>Allow inheritance in the API and user modules - Fixes a bug in the compiler that prevented API classes from inheriting from one another and only allowed user classes to inherit from a class in the global module.</li>
+<li>Added XML drawables and <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/WatchUi.html" title="WatchUi API documentation"><code>Toybox::WatchUi::Drawable</code></a> class - A list of shapes and bitmaps can be defined in XML which will then be compiled into a Monkey C object. See the Programmer&#8217;s Guide PDF for more details.</li>
+<li>Added options to remove trailing whitespace and convert tabs to spaces</li>
+<li>Fixed bug where keywords could be highlighted inside other words</li>
+</ul>
+</div>
+<h3 id="v0.0.15"><a href="#0.0.15" onclick="toggle('0.0.15', 'Img_0.0.15');"><img src="resources/readme/hide.jpg" border=0 name="Img_0.0.15" />v0.0.15</a></h3>
+<div id="0.0.15" style="display:none;">
+
+<ul>
+<li>Mac Support - The SDK now runs on Windows <em>and</em> Mac OS X!</li>
+<li>New Connect IQ simulator - Starting with this release, we are no longer using the product simulator and will instead use the Connect IQ simulator.</li>
+<li>Initializers - In the past module/instance variables could only be initialized to constant numbers or strings. Now you can initialize using an expression:</li>
+</ul>
+
+<pre><code class="java">module Foo
+{
+    var value = new Value();
+}
+</code></pre>
+
+<ul>
+<li>Added text support into the resource compiler</li>
+<li>Added a package tool for app deployment</li>
+<li>Many changes to the Connect IQ plug-in</li>
+</ul>
+</div>
+<h3 id="v0.0.14"><a href="#0.0.14" onclick="toggle('0.0.14', 'Img_0.0.14');"><img src="resources/readme/hide.jpg" border=0 name="Img_0.0.14" />v0.0.14</a></h3>
+<div id="0.0.14" style="display:none;">
+
+<ul>
+<li>Enums have had their type names removed and now use common prefixes</li>
+<li>Static methods in classes have been made part of their parent module to avoid the <code>Module.Class.method()</code> syntax</li>
+<li><code>System.rand()</code> is now part of <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Math.html" title="Math API documentation"><code>Toybox::Lang::Math</code></a></li>
+<li><code>Toybox.Lang.String.format()</code> is now <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Lang.html" title="Lang API documentation"><code>Toybox.Lang.format()</code></a></li>
+<li><code>Toybox::Ui</code> is now <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/WatchUi.html" title="WatchUi API documentation"><code>Toybox::WatchUi</code></a></li>
+<li><a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Graphics.html" title="Graphics API documentation"><code>Toybox.Graphics.Dc.drawText()</code></a> now supports text justification</li>
+<li><code>using</code> clauses no longer require the <code>as</code> portion</li>
+<li>Content Assist of Eclipse plug-in now supports function parameters</li>
+<li>Run configuration now supports device</li>
+</ul>
+</div>
+<h3 id="v0.0.13"><a href="#0.0.13" onclick="toggle('0.0.13', 'Img_0.0.13');"><img src="resources/readme/hide.jpg" border=0 name="Img_0.0.13" />v0.0.13</a></h3>
+<div id="0.0.13" style="display:none;">
+
+<ul>
+<li>Added Date/Calendar support. There are two new classes in the <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Time.html" title="Time API documentation"><code>Toybox::Time</code></a> module - <code>Moment</code> and <code>Duration</code>. A <code>Moment</code> represents a <strong>fixed point in time</strong>, while a <code>Duration</code> represents a <strong>period of time</strong>.</li>
+</ul>
+
+<p>The <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Time.html" title="Time API documentation"><code>Toybox::Time::Gregorian</code></a> module allows the conversion from <code>Gregorian</code> date constructs to <code>Moment</code> objects. This allows for getting a <code>Moment</code> as follows:</p>
+
+<pre><code class="java">// When the Flux capacitor was conceived
+var date = Toybox.Time.Gregorian.moment( {:year=&gt;1955, :month=&gt;:november, :day=&gt;5} );
+var duration = Toybox.Time.Gregorian.duration( {:days=&gt;5} );
+var leaveDate = date.add( duration );
+</code></pre>
+
+<p><code>Gregorian</code> was separated from the <code>Time</code> module to support other calendar formats, though admittedly, it would take serious effort to support anything other than Julian, and I don&#8217;t see the rise of the Roman empire coming anytime soon.</p>
+
+<ul>
+<li>Resources are no longer loaded by default - a page has to explicitly load them. To load a bitmap or font, use <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/WatchUi.html" title="WatchUi API documentation"><code>Toybox.WatchUi.loadResource()</code></a>.</li>
+</ul>
+
+<pre><code class="java">var resource = Toybox.WatchUi.loadResource( Rez.ID_RESOURCE );
+</code></pre>
+
+<p>Once the instance exists, you can reference it where you formerly passed in the resource ID.</p>
+
+<ul>
+<li>The binary format of executables has completely changed into a new extensible format</li>
+<li>Added support for dynamically enumerating applications at startup</li>
+<li>The compiler now supports a device flag that specifies for which device to generate resources</li>
+<li>Fixed bugs in the plug-in that was causing lockups when the resource compiler failed</li>
+</ul>
+</div>
+<h3 id="v0.0.12"><a href="#0.0.12" onclick="toggle('0.0.12', 'Img_0.0.12');"><img src="resources/readme/hide.jpg" border=0 name="Img_0.0.12" />v0.0.12</a></h3>
+<div id="0.0.12" style="display:none;">
+
+<ul>
+<li>Added bitmap font support. Resource compiler now supports converting fonts from BMFont (<a href="http://www.angelcode.com/products/bmfont/">http://www.angelcode.com/products/bmfont/</a>). Bitmap fonts can be passed into the same methods as the <code>Graphics.Font</code> declarations.</li>
+<li>The <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Lang/String.html" title="String API documentation"><code>Toybox::Lang::String</code></a> class now has a static <code>format()</code> method for doing string manipulation. <code>format()</code> is similar to <code>TXT_format_string</code> in that it will reformat order (useful in translations).</li>
+</ul>
+
+<pre><code class="java">var result = Toybox.Lang.String.format( &quot;$1$ $2$&quot;,[firstName, lastName] );
+</code></pre>
+
+<ul>
+<li><a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Lang/Number.html" title="Number API documentation"><code>Number</code></a> and <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Lang/Float.html" title="Float API documentation"><code>Float</code></a> now have a <code>format()</code> method that allows for converting their values into strings of different formats. It supports the same conversions of <code>printf</code> for <code>Int</code> and <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Lang/Float.html" title="Float API documentation"><code>Float</code></a>.</li>
+</ul>
+
+<pre><code class="java">var x = 5;
+var y = x.format(&quot;02&quot;); // Convert to &quot;05&quot;
+</code></pre>
+
+<ul>
+<li>Added <code>size()</code>, <code>isEmpty()</code>, <code>keys()</code>, and <code>values()</code> to <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Lang/Dictionary.html" title="Dictionary API documentation"><code>Toybox::Lang::Dictionary</code></a></li>
+<li>Added <code>instanceof</code> and <code>has</code> operators. This allows for runtime type checking and method support.</li>
+</ul>
+
+<pre><code class="java">// Check if object has the print method
+if (value has :print) {
+    value.print();
+}
+</code></pre>
+
+<ul>
+<li>The <code>using</code> clause is now handled internally by the compiler instead of at runtime, which should give a performance boost</li>
+<li>Added <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Graphics.html" title="Graphics API documentation"><code>Toybox.Grahphics.COLOR_TRANSPARENT</code></a></li>
+<li>Added a dynamic link table to Monkey C executable. This fixes issue where generated binaries only worked on matching API runtimes.</li>
+</ul>
+</div>
+<h3 id="v0.0.11"><a href="#0.0.11" onclick="toggle('0.0.11', 'Img_0.0.11');"><img src="resources/readme/hide.jpg" border=0 name="Img_0.0.11" />v0.0.11</a></h3>
+<div id="0.0.11" style="display:none;">
+
+<ul>
+<li>Added <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Lang/Dictionary.html" title="Dictionary API documentation">&#8216;Dictionary&#8217;</a> support. You can now create a <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Lang/Dictionary.html" title="Dictionary API documentation">&#8216;Dictionary&#8217;</a> with the following syntax:</li>
+</ul>
+
+<pre><code class="java">var x = new {}; // New empty dictionary
+var y = { 1 =&gt; &quot;Hello&quot;, 2 =&gt; &quot;World&quot; }; // Initializer syntax
+</code></pre>
+
+<p>Dictionaries dynamically resize and rehash themselves. See the <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Lang/Dictionary.html" title="Dictionary API documentation"><code>Toybox::Lang::Dictionary</code></a> object documentation</p>
+
+<ul>
+<li>Added annotation support. Annotations are symbols that can be associated with a class, variable, or function. Annotations are written as a list of symbols surrounded by &#8216;<code>()</code>&#8217;:</li>
+</ul>
+
+<pre><code class="java">(:persistable :testOnly) class Person
+{
+    var first_name;
+    var last_name;
+}
+</code></pre>
+
+<p>This will allow adding new features to the language without changing the language grammar. For now, annotations are written to the debug XML.</p>
+
+<ul>
+<li>Fixed an issue with numeric <code>Strings</code></li>
+<li>Fixed an issue with spaces in file names of source files</li>
+<li>Fixed the double launch delegate issue</li>
+<li>Fixed issue with builder ignoring resources</li>
+</ul>
+</div>
+<h3 id="v0.0.10"><a href="#0.0.10" onclick="toggle('0.0.10', 'Img_0.0.10');"><img src="resources/readme/hide.jpg" border=0 name="Img_0.0.10" />v0.0.10</a></h3>
+<div id="0.0.10" style="display:none;">
+
+<ul>
+<li>Includes the Eclipse plug-in for integrated development environment</li>
+</ul>
+</div>
+<h3 id="v0.0.9"><a href="#0.0.9" onclick="toggle('0.0.9', 'Img_0.0.9');"><img src="resources/readme/hide.jpg" border=0 name="Img_0.0.9" />v0.0.9</a></h3>
+<div id="0.0.9" style="display:none;">
+
+<ul>
+<li>Added the new <code>[1, 2, 3]</code> array syntax to pre-fill an <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Lang/Array.html" title="Array API documentation"><code>Array</code></a></li>
+<li>Added <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Graphics.html" title="Graphics API documentation"><code>Toybox.Graphcs.Dc.fillPolygon()</code></a>, which takes an array of arrays (x,y) coordinates</li>
+<li>Added <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/System.html" title="System API documentation"><code>Toybox.System.getClockTime()</code></a> to get the current UTC time</li>
+<li>Added the <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Math.html" title="Math API documentation"><code>Toybox::Math</code></a> module, which contains trig and other functions</li>
+<li>Added <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/System.html" title="System API documentation"><code>Toybox.System.getSystemStats()</code></a> to get battery power and free memory</li>
+<li>Changed argument of <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Graphics.html" title="Graphics API documentation"><code>Toybox.Graphics.Dc.drawText()</code></a> to allow passing of font</li>
+</ul>
+</div>
+<h3 id="v0.0.8"><a href="#0.0.8" onclick="toggle('0.0.8', 'Img_0.0.8');"><img src="resources/readme/hide.jpg" border=0 name="Img_0.0.8" />v0.0.8</a></h3>
+<div id="0.0.8" style="display:none;">
+
+<ul>
+<li>The <code>Toybox</code> modules were switched from <em>lowercase</em> to <em>CamelCase</em>. Originally I was naming them like Java packages, but MonkeyBrains (Connect IQ) modules are more like objects than just lexical naming, so I thought it made sense for them to share the naming convention of objects. To make things more confusing, I renamed the methods from _underscore_style_ to <em>camelCaseStyle</em>, as a concession to the Java programmers. Basically, you can all begin hating me&#8230; NOW.</li>
+<li>Constructors! Now when you instantiate a class the <code>initialize()</code> function will be called. You can pass arguments to it like a regular function.</li>
+<li>You can now use the <code>:symbol</code> syntax to create/use a <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Lang/Symbol.html" title="Symbol API documentation"><code>Symbol</code></a>. This is used by the <code>method()</code> <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Lang/Object.html" title="Object API documentation"><code>Object</code></a> method to allow you to get a <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Lang/Method.html" title="Method API documentation"><code>Method</code></a> object. You can also get object members using the <code>object[:symbol]</code> syntax.</li>
+<li>The new <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Lang/Method.html" title="Method API documentation"><code>Method</code></a> object allows you to create a callback object. You can create a method using <code>var m = object.method(:method_name)</code>. You can then call the method using <code>m.invoke(parameter list)</code>.</li>
+<li>Much of the page management has been moved to the <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/WatchUi.html" title="WatchUi API documentation"><code>Toybox.WatchUi</code></a> package. There is now a <code>PageManager</code> class [deprecated] that you use to push pages onto the page stack. You can also create user menus to let the user select an item in a list.</li>
+<li>A resource compiler has been added to the Monkey C compiler. Currently it only supports bitmaps, but it will hopefully support localized text in the near future. You can read more about it&#8217;s use at <a href="https://developer.garmin.com/connect-iq/developer-tools/resource-compiler/">https://developer.garmin.com/connect-iq/developer-tools/resource-compiler/</a></li>
+<li>Many bug fixes with expressions and initializers</li>
+</ul>
+</div>
+<h3 id="v0.0.7"><a href="#0.0.7" onclick="toggle('0.0.7', 'Img_0.0.7');"><img src="resources/readme/hide.jpg" border=0 name="Img_0.0.7" />v0.0.7</a></h3>
+<div id="0.0.7" style="display:none;">
+
+<ul>
+<li>Added support for &#8220;X=&#8221;, where X is <code>*.%+-&lt;&lt;&gt;&gt;&amp;^|</code></li>
+<li>Fixed an issue where <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Lang/String.html" title="String API documentation"><code>String</code></a> initializers were generating bad code</li>
+<li>Added the <code>hidden</code> and <code>const</code> keywords</li>
+<li>Added the ability to call superclass methods</li>
+</ul>
+</div>
+<h3 id="v0.0.6"><a href="#0.0.6" onclick="toggle('0.0.6', 'Img_0.0.6');"><img src="resources/readme/hide.jpg" border=0 name="Img_0.0.6" />v0.0.6</a></h3>
+<div id="0.0.6" style="display:none;">
+
+<ul>
+<li>Fixing issues with <code>&amp;&amp;</code>, <code>||</code> and <code>!=</code></li>
+<li>Not equals was not working. Whoops.</li>
+<li>The precedence of logical <code>AND</code> and <code>OR</code> was at the wrong level, which was causing issues. They have been lowered below other operators. Also, logical <code>AND</code> will now skip over the second expression if the first expression is false.</li>
+<li>Logical <code>AND</code> and <code>OR</code> now short circuit</li>
+</ul>
+</div>
+<h3 id="v0.0.5"><a href="#0.0.5" onclick="toggle('0.0.5', 'Img_0.0.5');"><img src="resources/readme/hide.jpg" border=0 name="Img_0.0.5" />v0.0.5</a></h3>
+<div id="0.0.5" style="display:none;">
+
+<ul>
+<li>Added the using clause</li>
+<li>You can import a module now with the <code>using</code> clause:</li>
+</ul>
+
+<pre><code class="java">class Foo
+{
+    using Toybox.System as Sys;
+
+    function bar() {
+        Sys.print( &quot;Hello&quot; );
+    }
+}
+</code></pre>
+
+<p>The <code>using</code> clause adds a <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Lang/Symbol.html" title="Symbol API documentation"><code>Symbol</code></a> to your current class or module that lets you directly reference a foreign module without having to search up the global hierarchy. In a future change, you will be able to use <code>using</code> clauses with class extends.</p>
+</div>
+<h3 id="v0.0.4"><a href="#0.0.4" onclick="toggle('0.0.4', 'Img_0.0.4');"><img src="resources/readme/hide.jpg" border=0 name="Img_0.0.4" />v0.0.4</a></h3>
+<div id="0.0.4" style="display:none;">
+
+<ul>
+<li>Now with better numbers!</li>
+<li>Added the <code>to_f()</code> and <code>to_i()</code> methods to <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Lang/Number.html" title="Number API documentation"><code>Number</code></a> and <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Lang/Float.html" title="Float API documentation"><code>Float</code></a> to do casting operations</li>
+<li>Fixed <code>set_color</code> so <code>fill_rectangle</code> now works</li>
+<li>Added <code>set_update_rate</code> so an app can set it&#8217;s refresh rate (in ms)</li>
+</ul>
+</div>
+<h3 id="v0.0.3"><a href="#0.0.3" onclick="toggle('0.0.3', 'Img_0.0.3');"><img src="resources/readme/hide.jpg" border=0 name="Img_0.0.3" />v0.0.3</a></h3>
+<div id="0.0.3" style="display:none;">
+
+<ul>
+<li>Now with numbers!</li>
+<li>A number of the basic math operations like floating point and bitwise operations were not implemented. This adds floating point, bit shifting, logical and bitwise <code>AND</code> and <code>OR</code>, <code>null</code>, <code>true</code>, and <code>false</code>.</li>
+</ul>
+</div>
+<h3 id="v0.0.2"><a href="#0.0.2" onclick="toggle('0.0.2', 'Img_0.0.2');"><img src="resources/readme/hide.jpg" border=0 name="Img_0.0.2" />v0.0.2</a></h3>
+<div id="0.0.2" style="display:none;">
+
+<ul>
+<li>Now with static cling!</li>
+<li>Added the ability to have static members of classes with <code>static</code> keyword</li>
+<li>Made global static table for modules and static members</li>
+<li>Added <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/System.html" title="System API documentation"><code>Toybox.System.get_timer()</code></a> to get TSK timer</li>
+</ul>
+</div>
+<h3 id="v0.0.1"><a href="#0.0.1" onclick="toggle('0.0.1', 'Img_0.0.1');"><img src="resources/readme/hide.jpg" border=0 name="Img_0.0.1" />v0.0.1</a></h3>
+<div id="0.0.1" style="display:none;">
+
+<ul>
+<li>Initial release</li>
+</ul>
+
+<p><strong>Known Issues:</strong></p>
+
+<ul>
+<li>Colors on Mac OS X simulator are odd</li>
+<li>Goes on&#8230;</li>
+</ul>
+</div>
+
+<h1 id="additionalnotes">Additional Notes</h1>
+
+<p>The FIT Graphing Tool uses the <a href="http://www.jfree.org/jfreechart/" title="JFreeChart">JFreeChart library</a>. JFreeChart is covered by the <a href="resources/readme/licence-LGPL.txt" title="LGPL">LGPL</a>. Source <a href="https://github.com/jfree/jfreechart" title="GitHub">is available at GitHub</a> (commit 3ee5e7ec3fdd51afa658c098c4f79d9c4a3fc5f0)</p>
+
+</body>
+</html>

@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Module: Toybox::SensorHistory
+  
+    &mdash; Connect IQ SDK
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "Toybox::SensorHistory";
+  relpath = '../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../class_list.html"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../_index.html">Index (S)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../Toybox.html" title="Toybox (module)">Toybox</a></span></span>
+     &raquo; 
+    <span class="title">SensorHistory</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <iframe id="search_frame" src="../class_list.html"></iframe>
+
+      <div id="content"><h1>Module: Toybox::SensorHistory
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+  
+    
+  
+    
+  
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>The SensorHistory module contains the interface for SensorHistory</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>2.1.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Supported Devices:</p>
+<ul class="supported">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>Forerunner 735xt</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>fenix Chronos</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>Vivoactive HR</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+  
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="SensorHistory/SensorHistoryIterator.html" title="Toybox::SensorHistory::SensorHistoryIterator (class)">SensorHistoryIterator</a></span>, <span class='object_link'><a href="SensorHistory/SensorSample.html" title="Toybox::SensorHistory::SensorSample (class)">SensorSample</a></span>
+    
+  
+</p>
+
+  <h2>Constant Summary</h2>
+  
+    <dl class="constants">
+      
+        <dt id="ORDER_NEWEST_FIRST-constant" class="">ORDER_NEWEST_FIRST = 0  <div class="docstring">
+  <div class="discussion">
+    
+<p>The ORDER enum is used to select the data order of the iterator</p>
+
+<p>Request iterator with newest data first</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>2.1.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="ORDER_OLDEST_FIRST-constant" class="">ORDER_OLDEST_FIRST = 1  <div class="docstring">
+  <div class="discussion">
+    
+<p>Request iterator with oldest data first</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>2.1.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+    </dl>
+  
+
+
+
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#getElevationHistory-instance_method" title="#getElevationHistory (instance method)">#<strong>getElevationHistory</strong>(options)  &#x21d2; SensorHistory.SensorHistoryIterator </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Retrieve the elevation history for the given period, up to the last power
+cycle.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#getHeartRateHistory-instance_method" title="#getHeartRateHistory (instance method)">#<strong>getHeartRateHistory</strong>(options)  &#x21d2; SensorHistory.SensorHistoryIterator </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Retrieve the heart rate history for the given period, up to the last power
+cycle.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#getPressureHistory-instance_method" title="#getPressureHistory (instance method)">#<strong>getPressureHistory</strong>(options)  &#x21d2; SensorHistory.SensorHistoryIterator </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Retrieve the pressure history for the given period, up to the last power
+cycle.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#getTemperatureHistory-instance_method" title="#getTemperatureHistory (instance method)">#<strong>getTemperatureHistory</strong>(options)  &#x21d2; SensorHistory.SensorHistoryIterator </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Retrieve the temperature history for the given period, up to the last power
+cycle.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="getElevationHistory-instance_method">
+  
+    #<strong>getElevationHistory</strong>(options)  &#x21d2; <tt><span class='object_link'><a href="" title="Toybox::SensorHistory (module)">SensorHistory</a></span>.<span class='object_link'><a href="SensorHistory/SensorHistoryIterator.html" title="Toybox::SensorHistory::SensorHistoryIterator (class)">SensorHistoryIterator</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Retrieve the elevation history for the given period, up to the last power
+cycle. This function always returns the most recent elevation samples. The
+time between each SensorHistorySample in the iterator may be device
+dependent.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>Dictionary</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Dictionary of options. Can be null.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">/[Duration]</span>
+          <span class="type">(<tt>Number</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>:period If period is not provided, the entire available history is
+retrieved. If period is a Duration, then the history for the given Duration
+is retrieved. If period is a Number, then the last Number entries are
+retrieved.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:order</span>
+          <span class="type">(<tt>Boolean</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>If order is not provided, the samples will be newest first. Use the ORDER
+enumeration to explicitly select “newest first” or “oldest first”</p>
+</div>
+          
+        </li>
+      
+    </ul>
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Toybox::SensorHistory (module)">SensorHistory</a></span>.<span class='object_link'><a href="SensorHistory/SensorHistoryIterator.html" title="Toybox::SensorHistory::SensorHistoryIterator (class)">SensorHistoryIterator</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>an iterator for the elevation history for the given period Samples returned
+by this iterator are in meters.</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>2.1.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Supported Devices:</p>
+<ul class="supported">
+  
+    <li>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="getHeartRateHistory-instance_method">
+  
+    #<strong>getHeartRateHistory</strong>(options)  &#x21d2; <tt><span class='object_link'><a href="" title="Toybox::SensorHistory (module)">SensorHistory</a></span>.<span class='object_link'><a href="SensorHistory/SensorHistoryIterator.html" title="Toybox::SensorHistory::SensorHistoryIterator (class)">SensorHistoryIterator</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Retrieve the heart rate history for the given period, up to the last power
+cycle. This function always returns the most recent heart rate samples. The
+time between each SensorHistorySample in the iterator may be device
+dependent.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>Dictionary</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Dictionary of options. Can be null.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">/[Duration]</span>
+          <span class="type">(<tt>Number</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>:period If period is not provided, the entire available history is
+retrieved. If period is a Duration, then the history for the given Duration
+is retrieved. If period is a Number, then the last Number entries are
+retrieved.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:order</span>
+          <span class="type">(<tt>Boolean</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>If order is not provided, the samples will be newest first. Use the ORDER
+enumeration to explicitly select “newest first” or “oldest first”</p>
+</div>
+          
+        </li>
+      
+    </ul>
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Toybox::SensorHistory (module)">SensorHistory</a></span>.<span class='object_link'><a href="SensorHistory/SensorHistoryIterator.html" title="Toybox::SensorHistory::SensorHistoryIterator (class)">SensorHistoryIterator</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>an iterator for the heart rate history for the given period Samples
+returned by this iterator are in beats per minute.</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>2.1.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Supported Devices:</p>
+<ul class="supported">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>Forerunner 235/735xt</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>fenix 3 HR</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>D2 Bravo Titanium</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>Vivoactive HR</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="getPressureHistory-instance_method">
+  
+    #<strong>getPressureHistory</strong>(options)  &#x21d2; <tt><span class='object_link'><a href="" title="Toybox::SensorHistory (module)">SensorHistory</a></span>.<span class='object_link'><a href="SensorHistory/SensorHistoryIterator.html" title="Toybox::SensorHistory::SensorHistoryIterator (class)">SensorHistoryIterator</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Retrieve the pressure history for the given period, up to the last power
+cycle. This function always returns the most recent pressure samples. The
+time between each SensorHistorySample in the iterator may be device
+dependent.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>Dictionary</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Dictionary of options. Can be null.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">/[Duration]</span>
+          <span class="type">(<tt>Number</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>:period If period is not provided, the entire available history is
+retrieved. If period is a Duration, then the history for the given Duration
+is retrieved. If period is a Number, then the last Number entries are
+retrieved.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:order</span>
+          <span class="type">(<tt>Boolean</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>If order is not provided, the samples will be newest first. Use the ORDER
+enumeration to explicitly select “newest first” or “oldest first”</p>
+</div>
+          
+        </li>
+      
+    </ul>
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Toybox::SensorHistory (module)">SensorHistory</a></span>.<span class='object_link'><a href="SensorHistory/SensorHistoryIterator.html" title="Toybox::SensorHistory::SensorHistoryIterator (class)">SensorHistoryIterator</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>an iterator for the pressure history for the given period Samples returned
+by this iterator are in Pascals.</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>2.1.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Supported Devices:</p>
+<ul class="supported">
+  
+    <li>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="getTemperatureHistory-instance_method">
+  
+    #<strong>getTemperatureHistory</strong>(options)  &#x21d2; <tt><span class='object_link'><a href="" title="Toybox::SensorHistory (module)">SensorHistory</a></span>.<span class='object_link'><a href="SensorHistory/SensorHistoryIterator.html" title="Toybox::SensorHistory::SensorHistoryIterator (class)">SensorHistoryIterator</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Retrieve the temperature history for the given period, up to the last power
+cycle. This function always returns the most recent temperature samples.
+The time between each SensorHistorySample in the iterator may be device
+dependent.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>Dictionary</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Dictionary of options. Can be null.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">/[Duration]</span>
+          <span class="type">(<tt>Number</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>:period If period is not provided, the entire available history is
+retrieved. If period is a Duration, then the history for the given Duration
+is retrieved. If period is a Number, then the last Number entries are
+retrieved.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:order</span>
+          <span class="type">(<tt>Boolean</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>If order is not provided, the samples will be newest first. Use the ORDER
+enumeration to explicitly select “newest first” or “oldest first”</p>
+</div>
+          
+        </li>
+      
+    </ul>
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Toybox::SensorHistory (module)">SensorHistory</a></span>.<span class='object_link'><a href="SensorHistory/SensorHistoryIterator.html" title="Toybox::SensorHistory::SensorHistoryIterator (class)">SensorHistoryIterator</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>an iterator for the temperature history for the given period Samples
+returned by this iterator are in degrees Celcius.</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>2.1.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Supported Devices:</p>
+<ul class="supported">
+  
+    <li>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Mon Nov  7 13:39:09 2016 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.5 (ruby-2.1.5).
+</div>
+
+    </div>
+  </body>
+</html>

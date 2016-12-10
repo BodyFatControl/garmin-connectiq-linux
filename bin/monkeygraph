@@ -1,0 +1,4 @@
+#!/bin/bash
+
+MB_HOME="$( cd "$( dirname "$0" )" && pwd )"
+java -jar "$MB_HOME"/fit-graph.jar

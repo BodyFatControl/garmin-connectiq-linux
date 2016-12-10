@@ -1,0 +1,5 @@
+<layout id="MainLayout">
+    <label x="center" y="10" text="@Strings.AppName" font="Gfx.FONT_MEDIUM" color="Gfx.COLOR_BLUE" justification="Gfx.TEXT_JUSTIFY_CENTER" />
+    <label x="center" y="40" text="@Strings.HomeTitle" font="Gfx.FONT_MEDIUM" color="Gfx.COLOR_WHITE" justification="Gfx.TEXT_JUSTIFY_CENTER" />
+    <label x="center" y="center" text="@Strings.Prompt" font="Gfx.FONT_SMALL" color="Gfx.COLOR_WHITE" justification="Gfx.TEXT_JUSTIFY_CENTER" />
+</layout>

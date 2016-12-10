@@ -1,0 +1,8 @@
+<layout id="SectionTwoLayout">
+
+    <label id="SleepTimeLabel" x="25" y="44" font="Gfx.FONT_TINY" justification="Gfx.TEXT_JUSTIFY_LEFT" />
+    <label id="RunStepLengthLabel" x="25" y="64" font="Gfx.FONT_TINY" justification="Gfx.TEXT_JUSTIFY_LEFT" />
+    <label id="WalkStepLengthLabel" x="25" y="84" font="Gfx.FONT_TINY" justification="Gfx.TEXT_JUSTIFY_LEFT" />
+    <label id="RestingHeartRateLabel" x="25" y="104" font="Gfx.FONT_TINY" justification="Gfx.TEXT_JUSTIFY_LEFT" />
+
+</layout>

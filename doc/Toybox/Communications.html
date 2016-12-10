@@ -1,0 +1,2810 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Module: Toybox::Communications
+  
+    &mdash; Connect IQ SDK
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "Toybox::Communications";
+  relpath = '../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../class_list.html"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../_index.html">Index (C)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../Toybox.html" title="Toybox (module)">Toybox</a></span></span>
+     &raquo; 
+    <span class="title">Communications</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <iframe id="search_frame" src="../class_list.html"></iframe>
+
+      <div id="content"><h1>Module: Toybox::Communications
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+  
+    
+  
+    
+  
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>Widgets and apps will be able to communicate with a mobile phone via
+Bluetooth Low Energy (BLE). The mobile phone may be sharing data with the
+device, or it may act as a bridge between the app and the Internet. This
+allows the mobile phone to become part of the wearable web.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Supported Devices:</p>
+<ul class="supported">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>All devices</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">App Types:</p>
+<ul class="apptype">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>Widget</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>App</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Requires Permission:</p>
+<ul class="permission">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>Communications</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+  
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="Communications/ConnectionListener.html" title="Toybox::Communications::ConnectionListener (class)">ConnectionListener</a></span>, <span class='object_link'><a href="Communications/MailboxIterator.html" title="Toybox::Communications::MailboxIterator (class)">MailboxIterator</a></span>, <span class='object_link'><a href="Communications/Message.html" title="Toybox::Communications::Message (class)">Message</a></span>, <span class='object_link'><a href="Communications/OAuthMessage.html" title="Toybox::Communications::OAuthMessage (class)">OAuthMessage</a></span>
+    
+  
+</p>
+
+  <h2>Constant Summary</h2>
+  
+    <dl class="constants">
+      
+        <dt id="UNKNOWN_ERROR-constant" class="">UNKNOWN_ERROR = 0  <div class="docstring">
+  <div class="discussion">
+    
+<p>Additional Resonse codes that can occur from JSON requests</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="BLE_ERROR-constant" class="">BLE_ERROR = -1  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="BLE_HOST_TIMEOUT-constant" class="">BLE_HOST_TIMEOUT = -2  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="BLE_SERVER_TIMEOUT-constant" class="">BLE_SERVER_TIMEOUT = -3  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="BLE_NO_DATA-constant" class="">BLE_NO_DATA = -4  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="BLE_REQUEST_CANCELLED-constant" class="">BLE_REQUEST_CANCELLED = -5  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="BLE_QUEUE_FULL-constant" class="">BLE_QUEUE_FULL = -101  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="BLE_REQUEST_TOO_LARGE-constant" class="">BLE_REQUEST_TOO_LARGE = -102  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="BLE_UNKNOWN_SEND_ERROR-constant" class="">BLE_UNKNOWN_SEND_ERROR = -103  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="BLE_CONNECTION_UNAVAILABLE-constant" class="">BLE_CONNECTION_UNAVAILABLE = -104  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="INVALID_HTTP_HEADER_FIELDS_IN_REQUEST-constant" class="">INVALID_HTTP_HEADER_FIELDS_IN_REQUEST = -200  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="INVALID_HTTP_BODY_IN_REQUEST-constant" class="">INVALID_HTTP_BODY_IN_REQUEST = -201  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="INVALID_HTTP_METHOD_IN_REQUEST-constant" class="">INVALID_HTTP_METHOD_IN_REQUEST = -202  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="NETWORK_REQUEST_TIMED_OUT-constant" class="">NETWORK_REQUEST_TIMED_OUT = -300  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="INVALID_HTTP_BODY_IN_NETWORK_RESPONSE-constant" class="">INVALID_HTTP_BODY_IN_NETWORK_RESPONSE = -400  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="INVALID_HTTP_HEADER_FIELDS_IN_NETWORK_RESPONSE-constant" class="">INVALID_HTTP_HEADER_FIELDS_IN_NETWORK_RESPONSE = -401  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="NETWORK_RESPONSE_TOO_LARGE-constant" class="">NETWORK_RESPONSE_TOO_LARGE = -402  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="STORAGE_FULL-constant" class="">STORAGE_FULL = -1000  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>2.2.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="OAUTH_RESULT_TYPE_URL-constant" class="">OAUTH_RESULT_TYPE_URL = 0  <div class="docstring">
+  <div class="discussion">
+    
+<p>How the oauth token will be returned in the final step.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.3.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="OAUTH_SIGNING_METHOD_HMAC_SHA1-constant" class="">OAUTH_SIGNING_METHOD_HMAC_SHA1 = 0  <div class="docstring">
+  <div class="discussion">
+    
+<p>How the oauth request will be signed</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="HTTP_REQUEST_METHOD_GET-constant" class="">HTTP_REQUEST_METHOD_GET = 1  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.2.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="HTTP_REQUEST_METHOD_PUT-constant" class="">HTTP_REQUEST_METHOD_PUT = 2  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.2.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="HTTP_REQUEST_METHOD_POST-constant" class="">HTTP_REQUEST_METHOD_POST = 3  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.2.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="HTTP_REQUEST_METHOD_DELETE-constant" class="">HTTP_REQUEST_METHOD_DELETE = 4  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.2.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="HTTP_RESPONSE_CONTENT_TYPE_JSON-constant" class="">HTTP_RESPONSE_CONTENT_TYPE_JSON = 0  <div class="docstring">
+  <div class="discussion">
+    
+<p>The expected response from making a web request</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.3.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="HTTP_RESPONSE_CONTENT_TYPE_URL_ENCODED-constant" class="">HTTP_RESPONSE_CONTENT_TYPE_URL_ENCODED = 1  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.3.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="HTTP_RESPONSE_CONTENT_TYPE_GPX-constant" class="">HTTP_RESPONSE_CONTENT_TYPE_GPX = 2  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>2.2.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="HTTP_RESPONSE_CONTENT_TYPE_FIT-constant" class="">HTTP_RESPONSE_CONTENT_TYPE_FIT = 3  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>2.2.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="REQUEST_CONTENT_TYPE_URL_ENCODED-constant" class="">REQUEST_CONTENT_TYPE_URL_ENCODED = 0  <div class="docstring">
+  <div class="discussion">
+    
+<p>These values are used in conjunction with the “Content-Type” header key.</p>
+
+<p>Specifies a content type of application/x-www-form-urlencoded</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.2.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="REQUEST_CONTENT_TYPE_JSON-constant" class="">REQUEST_CONTENT_TYPE_JSON = 1  <div class="docstring">
+  <div class="discussion">
+    
+<p>Specifies a content type of application/json</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.2.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="IMAGE_DITHERING_NONE-constant" class="">IMAGE_DITHERING_NONE = 1  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.2.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="IMAGE_DITHERING_FLOYD_STEINBERG-constant" class="">IMAGE_DITHERING_FLOYD_STEINBERG = 2  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.2.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+    </dl>
+  
+
+
+
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#cancelAllRequests-instance_method" title="#cancelAllRequests (instance method)">#<strong>cancelAllRequests</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>To cancel all pending JSON and Image requests use cancelAllRequests().</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#emptyMailbox-instance_method" title="#emptyMailbox (instance method)">#<strong>emptyMailbox</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>To clear the contents of the mailbox, call emptyMailbox().</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#encodeURL-instance_method" title="#encodeURL (instance method)">#<strong>encodeURL</strong>(url)  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Convert a URL string into a percent-encoded string.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#generateSignedOAuthHeader-instance_method" title="#generateSignedOAuthHeader (instance method)">#<strong>generateSignedOAuthHeader</strong>(url, params, requestMethod, signatureMethod, token, tokenSecret, consumerKey, consumerSecret)  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Generate the value for the “Authorization” header in an OAuth 1.0a request.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#getMailbox-instance_method" title="#getMailbox (instance method)">#<strong>getMailbox</strong>  &#x21d2; MailboxIterator </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Call getMailbox() to get the MailboxIterator for this App&#39;s mailbox.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#makeImageRequest-instance_method" title="#makeImageRequest (instance method)">#<strong>makeImageRequest</strong>(url, parameters, options, responseCallback)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>To request an image through Garmin Connect Mobile, call makeImageRequest().</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public deprecated">
+  <span class="summary_signature">
+    
+      <a href="#makeJsonRequest-instance_method" title="#makeJsonRequest (instance method)">#<strong>makeJsonRequest</strong>(url, parameters, options, responseCallback)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  <span class="deprecated note title">deprecated</span>
+  
+
+  
+    <span class="summary_desc"><strong>Deprecated.</strong> <div class='inline'>
+<p>makeJsonRequest() class will be dropped in Connect IQ 4.0.0. Please use
+makeWebRequest().</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#makeOAuthRequest-instance_method" title="#makeOAuthRequest (instance method)">#<strong>makeOAuthRequest</strong>(requestUrl, requestParams, resultUrl, resultType, resultKeys)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Request an OAuth sign-in on Garmin Connect Mobile.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#makeWebRequest-instance_method" title="#makeWebRequest (instance method)">#<strong>makeWebRequest</strong>(url, parameters, options, responseCallback)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>To use Garmin Connect Mobile as a proxy to the web, use makeWebRequest().</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#openWebPage-instance_method" title="#openWebPage (instance method)">#<strong>openWebPage</strong>(url, params, options)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Request that GCM issue a phone notification that will open a web page.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#registerForOAuthMessages-instance_method" title="#registerForOAuthMessages (instance method)">#<strong>registerForOAuthMessages</strong>(method)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Register a callback for receiving OAuth messages.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#setMailboxListener-instance_method" title="#setMailboxListener (instance method)">#<strong>setMailboxListener</strong>(listener)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Add a listener for mailbox events.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#transmit-instance_method" title="#transmit (instance method)">#<strong>transmit</strong>(content, options, listener)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Send data across the the BLE link.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="cancelAllRequests-instance_method">
+  
+    #<strong>cancelAllRequests</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>To cancel all pending JSON and Image requests use cancelAllRequests()</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.2.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="emptyMailbox-instance_method">
+  
+    #<strong>emptyMailbox</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>To clear the contents of the mailbox, call emptyMailbox().</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="encodeURL-instance_method">
+  
+    #<strong>encodeURL</strong>(url)  &#x21d2; <tt>String</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Convert a URL string into a percent-encoded string. The reserved characters
+in the string will be replaced with their corresponding hex-value pairs.
+This follows the URI-encoding scheme as detailed by RFC 3986 which can be
+found here: <a
+href="https://www.ietf.org/rfc/rfc3986.txt">www.ietf.org/rfc/rfc3986.txt</a></p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>url</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The URL string to be encoded</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Percent-encoded string</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.1.2</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="generateSignedOAuthHeader-instance_method">
+  
+    #<strong>generateSignedOAuthHeader</strong>(url, params, requestMethod, signatureMethod, token, tokenSecret, consumerKey, consumerSecret)  &#x21d2; <tt>String</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Generate the value for the “Authorization” header in an OAuth 1.0a request.
+The returned value can be set as the “Authorization” header for
+makeWebRequest().</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>url</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The request URL</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>params</span>
+      
+      
+        <span class='type'>(<tt>Dictionary</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The parameters of the request</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>requestMethod</span>
+      
+      
+        <span class='type'>(<tt>Number</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>An HTTP_REQUEST_METHOD_* value</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>signatureMethod</span>
+      
+      
+        <span class='type'>(<tt>Number</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>An OAUTH_SIGNING_METHOD_* value</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>token</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The token given by the OAuth service. Can be null.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>tokenSecret</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The token secret given by the OAuth service. Used to sign the request.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>consumerKey</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The key that identifies your application</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>consumerSecret</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The consumer secret that is used to sign the request.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The value for the “Authorization” header.</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.3.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="getMailbox-instance_method">
+  
+    #<strong>getMailbox</strong>  &#x21d2; <tt><span class='object_link'><a href="Communications/MailboxIterator.html" title="Toybox::Communications::MailboxIterator (class)">MailboxIterator</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Call getMailbox() to get the MailboxIterator for this App&#39;s mailbox.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Communications/MailboxIterator.html" title="Toybox::Communications::MailboxIterator (class)">MailboxIterator</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Iterator for the mailbox</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="makeImageRequest-instance_method">
+  
+    #<strong>makeImageRequest</strong>(url, parameters, options, responseCallback)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>To request an image through Garmin Connect Mobile, call makeImageRequest().
+GCM will scale and dither the image based on the capabilities of the
+device, but the user will be able to pass additional options (like
+dithering it down to a one color image)</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>url</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>URL of image to request</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>parameters</span>
+      
+      
+        <span class='type'>(<tt>Dictionary</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Dictionary of keys and values, appended to the URL. Can be null.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>Dictionary</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Additional image options</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>responseCallback</span>
+      
+      
+        <span class='type'>(<tt>Method</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>This is a callback in the format function responseCallback(responseCode,
+data); responseCode has the server response code, and data contains a
+WatchUi.BitmapResource if it was successful.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    
+    
+    
+    
+    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:palette</span>
+          <span class="type">(<tt>Array</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>The color palette to restrict the image dithering to. Using a smaller
+palette can reduce the size of the image data to speed up transfers.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:maxWidth</span>
+          <span class="type">(<tt>Number</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>The maximum width an image should be scaled to</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:maxHeight</span>
+          <span class="type">(<tt>Number</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>The maximum height an image should be scaled to</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:dithering</span>
+          <span class="type">(<tt>Number</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>The type of dithering to use when processing the image. Defaults to
+Floyd-Steinberg.</p>
+</div>
+          
+        </li>
+      
+    </ul>
+  
+    
+    
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.2.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="makeJsonRequest-instance_method">
+  
+    #<strong>makeJsonRequest</strong>(url, parameters, options, responseCallback)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <div class="note deprecated"><strong>Deprecated.</strong> <div class='inline'>
+<p>makeJsonRequest() class will be dropped in Connect IQ 4.0.0. Please use
+makeWebRequest().</p>
+</div></div>
+
+<p>To use Garmin Connect Mobile as a proxy to the web, use makeJsonRequest().
+The request is asynchronous; the responseCallback will be called when the
+request returns.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>url</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The URL being requested</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>parameters</span>
+      
+      
+        <span class='type'>(<tt>Dictionary</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Dictionary of keys and values, appended to the URL as a GET/DELETE request
+or set as the body for a POST/PUT request. These values must be URL
+encoded. Can be null.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>Dictionary</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Dictionary of options. Can be null.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>responseCallback</span>
+      
+      
+        <span class='type'>(<tt>Method</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>This is a callback in the format function responseCallback(responseCode,
+data); responseCode has the server response code, and data contains a
+Dictionary of content if the request was successful.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    
+    
+    
+    
+    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:method</span>
+          <span class="type">(<tt>Number</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>The HTTP method of the request. Should be a HTTP_REQUEST_METHOD_* value.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:headers</span>
+          <span class="type">(<tt>Dictionary</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>A Dictionary of HTTP headers to include in the request. The “Content-Type”
+header for the body of the request can be specified using a
+REQUEST_CONTENT_TYPE_* value. This is only valid for methods PUT and POST
+(you cannot set a body for a GET or DELETE request). If the content type is
+not specified, it will default to “application/x-www-form-urlencoded”.</p>
+</div>
+          
+        </li>
+      
+    </ul>
+  
+    
+    
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="makeOAuthRequest-instance_method">
+  
+    #<strong>makeOAuthRequest</strong>(requestUrl, requestParams, resultUrl, resultType, resultKeys)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Request an OAuth sign-in on Garmin Connect Mobile. A notification will
+trigger on the phone, that when clicked, provides a webview that shows
+initialUrl. If the user grants permission to the app the function given to
+registerForOAuthMessages() will be called with a Dictionary of keys from
+the OAuth process.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>requestUrl</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The URL to load in the web view to begin authentication.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>requestParams</span>
+      
+      
+        <span class='type'>(<tt>Dictionary</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>A dictionary of non-URL encoded parameters for the initial url.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>resultUrl</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The URL of the final page of authentication that contains the resultKeys.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>resultType</span>
+      
+      
+        <span class='type'>(<tt>Number</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>What format the result will be in. Should be a OAUTH_RESULT_TYPE_XXX value.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>resultKeys</span>
+      
+      
+        <span class='type'>(<tt>Dictionary</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>A dictionary of the keys Garmin Connect Mobile will need to pull out of the
+OAuth response and given to the registered callback in
+registerForOAuthMessages().</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.3.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="makeWebRequest-instance_method">
+  
+    #<strong>makeWebRequest</strong>(url, parameters, options, responseCallback)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>To use Garmin Connect Mobile as a proxy to the web, use makeWebRequest().
+The request is asynchronous; the responseCallback will be called when the
+request returns.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>url</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The URL being requested</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>parameters</span>
+      
+      
+        <span class='type'>(<tt>Dictionary</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Dictionary of keys and values. These values should not be URL encoded. Can
+be null.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>Dictionary</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Dictionary of options. Can be null.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>responseCallback</span>
+      
+      
+        <span class='type'>(<tt>Method</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>This is a callback in the format function responseCallback(responseCode,
+data); responseCode has the server response code or a BLE_* error type, and
+data contains a Dictionary of content if the request was successful.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    
+    
+    
+    
+    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:method</span>
+          <span class="type">(<tt>Number</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>The HTTP method of the request. Should be a HTTP_REQUEST_METHOD_* value.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:headers</span>
+          <span class="type">(<tt>Dictionary</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>A Dictionary of HTTP headers to include in the request. The “Content-Type”
+header for the body of the request can be specified using a
+REQUEST_CONTENT_TYPE_* value. If the content type is not specified, it will
+default to “application/json” for POST and PUT requests. By default, GET
+and DELETE requests will have their parameters appended to the URL. Setting
+the method as GET or DELETE as well as a “Content-Type” header will result
+in the parameters being set in the body of the request and they will not be
+appended to the URL.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:responseType</span>
+          <span class="type">(<tt>Number</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>The format of the response. Should be a HTTP_RESPONSE_CONTENT_TYPE_* value.
+If HTTP_RESPONSE_CONTENT_TYPE_FIT or HTTP_RESPONSE_CONTENT_TYPE_GPX is
+given, the system will attempt to download and parse a FIT or GPX file and
+store the contained data in the device, based on the contents of the file.
+Use If not given, the system will use the Content-Type header from the
+server response.</p>
+</div>
+          
+        </li>
+      
+    </ul>
+  
+    
+    
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.3.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="openWebPage-instance_method">
+  
+    #<strong>openWebPage</strong>(url, params, options)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Request that GCM issue a phone notification that will open a web page.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>url</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The URL to open.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>params</span>
+      
+      
+        <span class='type'>(<tt>Dictionary</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The request parameters. Parameters should not be URL encoded.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>Dictionary</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Additional options for the request. (TBD)</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.3.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="registerForOAuthMessages-instance_method">
+  
+    #<strong>registerForOAuthMessages</strong>(method)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Register a callback for receiving OAuth messages. The callback will be
+called once for each received OAuth message. If there are messages waiting
+for the app when this function is called, the callback will immediately be
+called once for each waiting message.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>method</span>
+      
+      
+        <span class='type'>(<tt>Method</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The callback with the signature callback(data). data will be of type
+OAuthMessage</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.3.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="setMailboxListener-instance_method">
+  
+    #<strong>setMailboxListener</strong>(listener)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Add a listener for mailbox events.  The listener method is called whenever
+a new message is received</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>listener</span>
+      
+      
+        <span class='type'>(<tt>Method</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Callback in the format function listener(iterator) where iterator is the
+mailbox iterator for the app</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="transmit-instance_method">
+  
+    #<strong>transmit</strong>(content, options, listener)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Send data across the the BLE link.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>content</span>
+      
+      
+        <span class='type'>(<tt>Object</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The object to be sent</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>Dictionary</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Additional transmit options (TBD)</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>listener</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Communications/ConnectionListener.html" title="Toybox::Communications::ConnectionListener (class)">ConnectionListener</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>An extension of the ConnectionListener class</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Mon Nov  7 13:39:08 2016 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.5 (ruby-2.1.5).
+</div>
+
+    </div>
+  </body>
+</html>

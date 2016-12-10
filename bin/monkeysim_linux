@@ -1,0 +1,2 @@
+MB_HOME="$( cd "$( dirname "$0" )" && pwd )"
+wine "$MB_HOME"/simulator.exe

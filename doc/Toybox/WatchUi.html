@@ -1,0 +1,2722 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Module: Toybox::WatchUi
+  
+    &mdash; Connect IQ SDK
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "Toybox::WatchUi";
+  relpath = '../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../class_list.html"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../_index.html">Index (W)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../Toybox.html" title="Toybox (module)">Toybox</a></span></span>
+     &raquo; 
+    <span class="title">WatchUi</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <iframe id="search_frame" src="../class_list.html"></iframe>
+
+      <div id="content"><h1>Module: Toybox::WatchUi
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+  
+    
+  
+    
+  
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>The WatchUi module has user interface elements for watch apps.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+  
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="WatchUi/BehaviorDelegate.html" title="Toybox::WatchUi::BehaviorDelegate (class)">BehaviorDelegate</a></span>, <span class='object_link'><a href="WatchUi/Bitmap.html" title="Toybox::WatchUi::Bitmap (class)">Bitmap</a></span>, <span class='object_link'><a href="WatchUi/BitmapResource.html" title="Toybox::WatchUi::BitmapResource (class)">BitmapResource</a></span>, <span class='object_link'><a href="WatchUi/Button.html" title="Toybox::WatchUi::Button (class)">Button</a></span>, <span class='object_link'><a href="WatchUi/ClickEvent.html" title="Toybox::WatchUi::ClickEvent (class)">ClickEvent</a></span>, <span class='object_link'><a href="WatchUi/Confirmation.html" title="Toybox::WatchUi::Confirmation (class)">Confirmation</a></span>, <span class='object_link'><a href="WatchUi/ConfirmationDelegate.html" title="Toybox::WatchUi::ConfirmationDelegate (class)">ConfirmationDelegate</a></span>, <span class='object_link'><a href="WatchUi/DataField.html" title="Toybox::WatchUi::DataField (class)">DataField</a></span>, <span class='object_link'><a href="WatchUi/Drawable.html" title="Toybox::WatchUi::Drawable (class)">Drawable</a></span>, <span class='object_link'><a href="WatchUi/FontResource.html" title="Toybox::WatchUi::FontResource (class)">FontResource</a></span>, <span class='object_link'><a href="WatchUi/InputDelegate.html" title="Toybox::WatchUi::InputDelegate (class)">InputDelegate</a></span>, <span class='object_link'><a href="WatchUi/InvalidSelectableStateException.html" title="Toybox::WatchUi::InvalidSelectableStateException (class)">InvalidSelectableStateException</a></span>, <span class='object_link'><a href="WatchUi/KeyEvent.html" title="Toybox::WatchUi::KeyEvent (class)">KeyEvent</a></span>, <span class='object_link'><a href="WatchUi/Menu.html" title="Toybox::WatchUi::Menu (class)">Menu</a></span>, <span class='object_link'><a href="WatchUi/MenuInputDelegate.html" title="Toybox::WatchUi::MenuInputDelegate (class)">MenuInputDelegate</a></span>, <span class='object_link'><a href="WatchUi/NumberPicker.html" title="Toybox::WatchUi::NumberPicker (class)">NumberPicker</a></span>, <span class='object_link'><a href="WatchUi/NumberPickerDelegate.html" title="Toybox::WatchUi::NumberPickerDelegate (class)">NumberPickerDelegate</a></span>, <span class='object_link'><a href="WatchUi/Picker.html" title="Toybox::WatchUi::Picker (class)">Picker</a></span>, <span class='object_link'><a href="WatchUi/PickerDelegate.html" title="Toybox::WatchUi::PickerDelegate (class)">PickerDelegate</a></span>, <span class='object_link'><a href="WatchUi/PickerFactory.html" title="Toybox::WatchUi::PickerFactory (class)">PickerFactory</a></span>, <span class='object_link'><a href="WatchUi/ProgressBar.html" title="Toybox::WatchUi::ProgressBar (class)">ProgressBar</a></span>, <span class='object_link'><a href="WatchUi/Selectable.html" title="Toybox::WatchUi::Selectable (class)">Selectable</a></span>, <span class='object_link'><a href="WatchUi/SelectableEvent.html" title="Toybox::WatchUi::SelectableEvent (class)">SelectableEvent</a></span>, <span class='object_link'><a href="WatchUi/SimpleDataField.html" title="Toybox::WatchUi::SimpleDataField (class)">SimpleDataField</a></span>, <span class='object_link'><a href="WatchUi/SwipeEvent.html" title="Toybox::WatchUi::SwipeEvent (class)">SwipeEvent</a></span>, <span class='object_link'><a href="WatchUi/Text.html" title="Toybox::WatchUi::Text (class)">Text</a></span>, <span class='object_link'><a href="WatchUi/TextPicker.html" title="Toybox::WatchUi::TextPicker (class)">TextPicker</a></span>, <span class='object_link'><a href="WatchUi/TextPickerDelegate.html" title="Toybox::WatchUi::TextPickerDelegate (class)">TextPickerDelegate</a></span>, <span class='object_link'><a href="WatchUi/View.html" title="Toybox::WatchUi::View (class)">View</a></span>, <span class='object_link'><a href="WatchUi/WatchFace.html" title="Toybox::WatchUi::WatchFace (class)">WatchFace</a></span>
+    
+  
+</p>
+
+  <h2>Constant Summary</h2>
+  
+    <dl class="constants">
+      
+        <dt id="KEY_POWER-constant" class="">KEY_POWER = 0  <div class="docstring">
+  <div class="discussion">
+    
+<p>The power key</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="KEY_LIGHT-constant" class="">KEY_LIGHT = 1  <div class="docstring">
+  <div class="discussion">
+    
+<p>The light key</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="KEY_ZIN-constant" class="">KEY_ZIN = 2  <div class="docstring">
+  <div class="discussion">
+    
+<p>The zoom in key</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="KEY_ZOUT-constant" class="">KEY_ZOUT = 3  <div class="docstring">
+  <div class="discussion">
+    
+<p>The zoom out key</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="KEY_ENTER-constant" class="">KEY_ENTER = 4  <div class="docstring">
+  <div class="discussion">
+    
+<p>The enter key</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="KEY_ESC-constant" class="">KEY_ESC = 5  <div class="docstring">
+  <div class="discussion">
+    
+<p>The escape key</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="KEY_FIND-constant" class="">KEY_FIND = 6  <div class="docstring">
+  <div class="discussion">
+    
+<p>The find key</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="KEY_MENU-constant" class="">KEY_MENU = 7  <div class="docstring">
+  <div class="discussion">
+    
+<p>The menu key</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="KEY_DOWN-constant" class="">KEY_DOWN = 8  <div class="docstring">
+  <div class="discussion">
+    
+<p>The down key</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="KEY_DOWN_LEFT-constant" class="">KEY_DOWN_LEFT = 9  <div class="docstring">
+  <div class="discussion">
+    
+<p>The down left key</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="KEY_DOWN_RIGHT-constant" class="">KEY_DOWN_RIGHT = 10  <div class="docstring">
+  <div class="discussion">
+    
+<p>The down key</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="KEY_LEFT-constant" class="">KEY_LEFT = 11  <div class="docstring">
+  <div class="discussion">
+    
+<p>The left key</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="KEY_RIGHT-constant" class="">KEY_RIGHT = 12  <div class="docstring">
+  <div class="discussion">
+    
+<p>The right key</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="KEY_UP-constant" class="">KEY_UP = 13  <div class="docstring">
+  <div class="discussion">
+    
+<p>The up key</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="KEY_UP_LEFT-constant" class="">KEY_UP_LEFT = 14  <div class="docstring">
+  <div class="discussion">
+    
+<p>The up-left</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="KEY_UP_RIGHT-constant" class="">KEY_UP_RIGHT = 15  <div class="docstring">
+  <div class="discussion">
+    
+<p>The up-right key</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="EXTENDED_KEYS-constant" class="">EXTENDED_KEYS = 16  <div class="docstring">
+  <div class="discussion">
+    
+<p>The following keys have been added after ConnectIQ version 1.1.2. Before
+evaluating these keys, the test ( Toybox.WatchUi has :EXTENDED_KEYS )
+should be made.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.1.2</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="KEY_PAGE-constant" class="">KEY_PAGE = 17  <div class="docstring">
+  <div class="discussion">
+    
+<p>The page key</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.1.2</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="KEY_START-constant" class="">KEY_START = 18  <div class="docstring">
+  <div class="discussion">
+    
+<p>The start key</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.1.2</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="KEY_LAP-constant" class="">KEY_LAP = 19  <div class="docstring">
+  <div class="discussion">
+    
+<p>The lap key</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.1.2</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="KEY_RESET-constant" class="">KEY_RESET = 20  <div class="docstring">
+  <div class="discussion">
+    
+<p>The reset key</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.1.2</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="KEY_SPORT-constant" class="">KEY_SPORT = 21  <div class="docstring">
+  <div class="discussion">
+    
+<p>The sport key</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.1.2</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="KEY_CLOCK-constant" class="">KEY_CLOCK = 22  <div class="docstring">
+  <div class="discussion">
+    
+<p>The clock key</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.1.2</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="KEY_MODE-constant" class="">KEY_MODE = 23  <div class="docstring">
+  <div class="discussion">
+    
+<p>The mode key</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.1.2</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="ANIM_TYPE_LINEAR-constant" class="">ANIM_TYPE_LINEAR = 0  <div class="docstring">
+  <div class="discussion">
+    
+<p>Animate the property linearly, so the speed remains constant over time</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="ANIM_TYPE_EASE_IN-constant" class="">ANIM_TYPE_EASE_IN = 1  <div class="docstring">
+  <div class="discussion">
+    
+<p>Animate the property so the speed increases until the end</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="ANIM_TYPE_EASE_OUT-constant" class="">ANIM_TYPE_EASE_OUT = 2  <div class="docstring">
+  <div class="discussion">
+    
+<p>Animate the property so the speed increases until the end</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="ANIM_TYPE_EASE_IN_OUT-constant" class="">ANIM_TYPE_EASE_IN_OUT = 3  <div class="docstring">
+  <div class="discussion">
+    
+<p>Animate the property so there is a initial speed up and slow down at the
+end</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="PRESS_TYPE_DOWN-constant" class="">PRESS_TYPE_DOWN = 0  <div class="docstring">
+  <div class="discussion">
+    
+<p>Key is pressed down</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.1.2</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="PRESS_TYPE_UP-constant" class="">PRESS_TYPE_UP = 1  <div class="docstring">
+  <div class="discussion">
+    
+<p>Key is released</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.1.2</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="PRESS_TYPE_ACTION-constant" class="">PRESS_TYPE_ACTION = 2  <div class="docstring">
+  <div class="discussion">
+    
+<p>Key action is performed</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.1.2</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="CLICK_TYPE_TAP-constant" class="">CLICK_TYPE_TAP = 0  <div class="docstring">
+  <div class="discussion">
+    
+<p>A quick press and release of the screen</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="CLICK_TYPE_HOLD-constant" class="">CLICK_TYPE_HOLD = 1  <div class="docstring">
+  <div class="discussion">
+    
+<p>A press and hold of the screen</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="CLICK_TYPE_RELEASE-constant" class="">CLICK_TYPE_RELEASE = 2  <div class="docstring">
+  <div class="discussion">
+    
+<p>A release of a hold on the screen</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="SWIPE_UP-constant" class="">SWIPE_UP = 0  <div class="docstring">
+  <div class="discussion">
+    
+<p>A swipe in the upward direction</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="SWIPE_RIGHT-constant" class="">SWIPE_RIGHT = 1  <div class="docstring">
+  <div class="discussion">
+    
+<p>A swipe towards the right</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="SWIPE_DOWN-constant" class="">SWIPE_DOWN = 2  <div class="docstring">
+  <div class="discussion">
+    
+<p>A swipe in the downward direction</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="SWIPE_LEFT-constant" class="">SWIPE_LEFT = 3  <div class="docstring">
+  <div class="discussion">
+    
+<p>A swipe towards the left</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="CONFIRM_NO-constant" class="">CONFIRM_NO = 0  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="CONFIRM_YES-constant" class="">CONFIRM_YES = 1  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="NUMBER_PICKER_DISTANCE-constant" class="">NUMBER_PICKER_DISTANCE = 0  <div class="docstring">
+  <div class="discussion">
+    
+<p>A Float in meters</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="NUMBER_PICKER_TIME-constant" class="">NUMBER_PICKER_TIME = 1  <div class="docstring">
+  <div class="discussion">
+    
+<p>A Duration</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="NUMBER_PICKER_TIME_MIN_SEC-constant" class="">NUMBER_PICKER_TIME_MIN_SEC = 2  <div class="docstring">
+  <div class="discussion">
+    
+<p>A Duration</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="NUMBER_PICKER_TIME_OF_DAY-constant" class="">NUMBER_PICKER_TIME_OF_DAY = 3  <div class="docstring">
+  <div class="discussion">
+    
+<p>A Duration representing the number of seconds since midnight</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="NUMBER_PICKER_WEIGHT-constant" class="">NUMBER_PICKER_WEIGHT = 4  <div class="docstring">
+  <div class="discussion">
+    
+<p>A Float in kilograms</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="NUMBER_PICKER_HEIGHT-constant" class="">NUMBER_PICKER_HEIGHT = 5  <div class="docstring">
+  <div class="discussion">
+    
+<p>A Float in meters</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="NUMBER_PICKER_CALORIES-constant" class="">NUMBER_PICKER_CALORIES = 6  <div class="docstring">
+  <div class="discussion">
+    
+<p>A Number</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="NUMBER_PICKER_BIRTH_YEAR-constant" class="">NUMBER_PICKER_BIRTH_YEAR = 7  <div class="docstring">
+  <div class="discussion">
+    
+<p>A Number</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="SLIDE_IMMEDIATE-constant" class="">SLIDE_IMMEDIATE = 0  <div class="docstring">
+  <div class="discussion">
+    
+<p>Transition for pushView/popView.</p>
+
+<p>No transition.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="SLIDE_LEFT-constant" class="">SLIDE_LEFT = 1  <div class="docstring">
+  <div class="discussion">
+    
+<p>The View slides to the left.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="SLIDE_RIGHT-constant" class="">SLIDE_RIGHT = 2  <div class="docstring">
+  <div class="discussion">
+    
+<p>The View slides to the right.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="SLIDE_DOWN-constant" class="">SLIDE_DOWN = 3  <div class="docstring">
+  <div class="discussion">
+    
+<p>The View slides down.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="SLIDE_UP-constant" class="">SLIDE_UP = 4  <div class="docstring">
+  <div class="discussion">
+    
+<p>The View slides up.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="LAYOUT_VALIGN_TOP-constant" class="">LAYOUT_VALIGN_TOP = -0x7FFFFFFF  <div class="docstring">
+  <div class="discussion">
+    
+<p>Set a Drawable&#39;s locY property to this to align it to the top edge of
+the dc.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.2.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="LAYOUT_VALIGN_BOTTOM-constant" class="">LAYOUT_VALIGN_BOTTOM = -0x7FFFFFFE  <div class="docstring">
+  <div class="discussion">
+    
+<p>Set a Drawable&#39;s locY property to this to align it to the bottom edge
+of the dc.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.2.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="LAYOUT_VALIGN_CENTER-constant" class="">LAYOUT_VALIGN_CENTER = -0x7FFFFFFD  <div class="docstring">
+  <div class="discussion">
+    
+<p>Set a Drawable&#39;s locY property to this to center it vertically in the
+dc.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.2.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="LAYOUT_VALIGN_START-constant" class="">LAYOUT_VALIGN_START = -0x7FFFFFFC  <div class="docstring">
+  <div class="discussion">
+    
+<p>Set the Drawable&#39;s locY property equal to it&#39;s parent&#39;s locY
+property.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.2.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="LAYOUT_HALIGN_LEFT-constant" class="">LAYOUT_HALIGN_LEFT = -0x7FFFFFFF  <div class="docstring">
+  <div class="discussion">
+    
+<p>Set a Drawable&#39;s locX property to this to align it along the left edge
+of the dc.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.2.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="LAYOUT_HALIGN_RIGHT-constant" class="">LAYOUT_HALIGN_RIGHT = -0x7FFFFFFE  <div class="docstring">
+  <div class="discussion">
+    
+<p>Set a Drawable&#39;s locX property to this to align it along the right edge
+of the dc.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.2.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="LAYOUT_HALIGN_CENTER-constant" class="">LAYOUT_HALIGN_CENTER = -0x7FFFFFFD  <div class="docstring">
+  <div class="discussion">
+    
+<p>Set a Drawable&#39;s locX property to this to center it horizontally in the
+dc.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.2.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+        <dt id="LAYOUT_HALIGN_START-constant" class="">LAYOUT_HALIGN_START = -0x7FFFFFFC  <div class="docstring">
+  <div class="discussion">
+    
+<p>Set a Drawable&#39;s locX property equal to it&#39;s parent&#39;s locX
+property.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.2.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+      
+    </dl>
+  
+
+
+
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#animate-instance_method" title="#animate (instance method)">#<strong>animate</strong>(drawable, property, type, start, stop, period, callback)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Use animate() to animate a property over a given period of time.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initResources-instance_method" title="#initResources (instance method)">#<strong>initResources</strong>(rezModule)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#loadResource-instance_method" title="#loadResource (instance method)">#<strong>loadResource</strong>(resource)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Load a resource from the executable with loadResource().</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#popView-instance_method" title="#popView (instance method)">#<strong>popView</strong>(transition)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Pop a View from the View stack with popView().</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#pushView-instance_method" title="#pushView (instance method)">#<strong>pushView</strong>(view, delegate, transition)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Push a View onto the View stack with pushView().</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#requestUpdate-instance_method" title="#requestUpdate (instance method)">#<strong>requestUpdate</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Use requestUpdate() to request that onUpdate() method be called for the
+current View.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#switchToView-instance_method" title="#switchToView (instance method)">#<strong>switchToView</strong>(view, delegate, transition)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Use switchToView() to pop the current View and push the new one.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="animate-instance_method">
+  
+    #<strong>animate</strong>(drawable, property, type, start, stop, period, callback)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Use animate() to animate a property over a given period of time. The
+animation starts after the call and runs the length of the specified
+period. During this time the View&#39;s draw callback will be called.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>drawable</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="WatchUi/Drawable.html" title="Toybox::WatchUi::Drawable (class)">Drawable</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Drawable to animate</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>property</span>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Symbol of property to animate over time</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>type</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Toybox.WatchUi.ANIM_TYPE_* value</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>start</span>
+      
+      
+        <span class='type'>(<tt>Number</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Initial value of property</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>stop</span>
+      
+      
+        <span class='type'>(<tt>Number</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Final value of property after animation</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>period</span>
+      
+      
+        <span class='type'>(<tt>Float</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Time in seconds for animation to run</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>callback</span>
+      
+      
+        <span class='type'>(<tt>Method</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Method object to call when complete, or null</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="initResources-instance_method">
+  
+    #<strong>initResources</strong>(rezModule)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="loadResource-instance_method">
+  
+    #<strong>loadResource</strong>(resource)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Load a resource from the executable with loadResource().</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>resource</span>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Rez identifier from resources.xml to load</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'>
+<p>A Font, Bitmap, or String resource</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="popView-instance_method">
+  
+    #<strong>popView</strong>(transition)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Pop a View from the View stack with popView().</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>transition</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>View transition of type SLIDE_*</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="pushView-instance_method">
+  
+    #<strong>pushView</strong>(view, delegate, transition)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Push a View onto the View stack with pushView().</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>view</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="WatchUi/View.html" title="Toybox::WatchUi::View (class)">View</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>View to push</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>delegate</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The input delegate to handle input for the View</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>transition</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>View transition of type SLIDE_*</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="requestUpdate-instance_method">
+  
+    #<strong>requestUpdate</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Use requestUpdate() to request that onUpdate() method be called for the
+current View.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="switchToView-instance_method">
+  
+    #<strong>switchToView</strong>(view, delegate, transition)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Use switchToView() to pop the current View and push the new one. Native
+views (e.g. progress bars, confirmation dialogues, number pickers, etc.)
+may not be passed as an input parameter. switchToView() only supports
+switching to non-native views.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>view</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="WatchUi/View.html" title="Toybox::WatchUi::View (class)">View</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>View object to push</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>delegate</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the input delegate to handle input for the View</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>transition</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>View transition of type SLIDE_*</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Mon Nov  7 13:39:09 2016 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.5 (ruby-2.1.5).
+</div>
+
+    </div>
+  </body>
+</html>

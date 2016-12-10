@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Module: Toybox::Lang
+  
+    &mdash; Connect IQ SDK
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "Toybox::Lang";
+  relpath = '../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../class_list.html"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../_index.html">Index (L)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../Toybox.html" title="Toybox (module)">Toybox</a></span></span>
+     &raquo; 
+    <span class="title">Lang</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <iframe id="search_frame" src="../class_list.html"></iframe>
+
+      <div id="content"><h1>Module: Toybox::Lang
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+  
+    
+  
+    
+  
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>The Lang module contains Monkey C language basic types.</p>
+<ul><li>
+<p>Number - 32 bit signed integers</p>
+</li><li>
+<p>Float - 32 bit floating point numbers</p>
+</li><li>
+<p>Long - 64 bit integers</p>
+</li><li>
+<p>Double - 64 bit floating point numbers</p>
+</li><li>
+<p>Booleans - true and false</p>
+</li><li>
+<p>Symbols - Lightweight constants</p>
+</li><li>
+<p>Strings - Strings of characters</p>
+</li><li>
+<p>Objects - Instantiated objects are defined with the class keyword. Classes
+are bindings of names to values.</p>
+</li><li>
+<p>Dictionaries - Associative arrays, allocated with the syntax “new {}” or
+just “{}”</p>
+</li><li>
+<p>Arrays - Arrays, allocated with the syntax “new [X]” where X is an
+expression computing the size of the array</p>
+</li><li>
+<p>Exceptions - The base type for an error that can be handled in code with a
+try/catch. Used with the throw keyword.</p>
+</li></ul>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+  
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="Lang/Array.html" title="Toybox::Lang::Array (class)">Array</a></span>, <span class='object_link'><a href="Lang/Boolean.html" title="Toybox::Lang::Boolean (class)">Boolean</a></span>, <span class='object_link'><a href="Lang/Char.html" title="Toybox::Lang::Char (class)">Char</a></span>, <span class='object_link'><a href="Lang/Dictionary.html" title="Toybox::Lang::Dictionary (class)">Dictionary</a></span>, <span class='object_link'><a href="Lang/Double.html" title="Toybox::Lang::Double (class)">Double</a></span>, <span class='object_link'><a href="Lang/Exception.html" title="Toybox::Lang::Exception (class)">Exception</a></span>, <span class='object_link'><a href="Lang/Float.html" title="Toybox::Lang::Float (class)">Float</a></span>, <span class='object_link'><a href="Lang/Long.html" title="Toybox::Lang::Long (class)">Long</a></span>, <span class='object_link'><a href="Lang/Method.html" title="Toybox::Lang::Method (class)">Method</a></span>, <span class='object_link'><a href="Lang/Number.html" title="Toybox::Lang::Number (class)">Number</a></span>, <span class='object_link'><a href="Lang/Object.html" title="Toybox::Lang::Object (class)">Object</a></span>, <span class='object_link'><a href="Lang/String.html" title="Toybox::Lang::String (class)">String</a></span>, <span class='object_link'><a href="Lang/Symbol.html" title="Toybox::Lang::Symbol (class)">Symbol</a></span>, <span class='object_link'><a href="Lang/SymbolNotAllowedException.html" title="Toybox::Lang::SymbolNotAllowedException (class)">SymbolNotAllowedException</a></span>, <span class='object_link'><a href="Lang/UnexpectedTypeException.html" title="Toybox::Lang::UnexpectedTypeException (class)">UnexpectedTypeException</a></span>, <span class='object_link'><a href="Lang/WeakReference.html" title="Toybox::Lang::WeakReference (class)">WeakReference</a></span>
+    
+  
+</p>
+
+
+
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#format-instance_method" title="#format (instance method)">#<strong>format</strong>(format, params)  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Use format() to create a formatted String by substituting the given
+parameters into the given format at the corresponding locations.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="format-instance_method">
+  
+    #<strong>format</strong>(format, params)  &#x21d2; <tt><span class='object_link'><a href="Lang/String.html" title="Toybox::Lang::String (class)">String</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Use format() to create a formatted String by substituting the given
+parameters into the given format at the corresponding locations.</p>
+
+<p>The given format:</p>
+
+<pre class="code ruby"><code class="ruby">&quot;Your next meeting is at $1$:$2$ on $3$ $4$ in room $5$.&quot;</code></pre>
+
+<p>Paired with the given parameters:</p>
+
+<pre class="code ruby"><code class="ruby">[2, 30, &quot;Sep&quot;, 4, &quot;6820&quot;]</code></pre>
+
+<p>Would result in the String:</p>
+
+<pre class="code ruby"><code class="ruby">&quot;Your next meeting is at 2:30 on Sep 4 in room 6820.&quot;</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>format</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Lang/String.html" title="Toybox::Lang::String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>A string using $1$, $2$, $3$… as substitution identifiers</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>params</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Lang/Array.html" title="Toybox::Lang::Array (class)">Array</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Array of content to substitute in</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Lang/String.html" title="Toybox::Lang::String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>A new String with the substituted content</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Mon Nov  7 13:39:09 2016 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.5 (ruby-2.1.5).
+</div>
+
+    </div>
+  </body>
+</html>

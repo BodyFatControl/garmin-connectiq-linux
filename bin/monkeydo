@@ -1,0 +1,47 @@
+# Check for proper arguments. If the arguments aren't valid print the usage.
+if [ -z "$1" ] || [ "$1" == "-h" ] || [ "$1" == "--help" ]; then
+
+    echo "Pushes and runs a Connect IQ executable on the Connect IQ simulator. The simulator must be running for this command to succeed."
+    echo
+    echo "Usage: monkeydo executable [device_id] [-t | -t test_name]"
+    echo "    executable - A Connect IQ executable to run."
+    echo "    device_id  - The device to simulate. Defaults to \"square_watch\"."
+
+else
+
+    TEST=""
+    TEST_NAME=""
+    DEVICE_ID="square_watch"
+    MB_HOME="$( cd "$( dirname "$0" )" && pwd )"
+    PRG_PATH="$(echo "$1" | sed 's/ /%20/g')"
+    FILE=`echo $(basename "$PRG_PATH" | tr '[:lower:]' '[:upper:]')`
+
+    if [ ! -z "$2" ]; then
+        if [ "$2" != "-t"  ]; then
+            DEVICE_ID=$2
+            shift 
+        fi       
+    fi
+
+    if [ ! -z "$2" ]; then
+        if [ "$2" == "-t"  ]; then
+            TEST="$2"
+            TEST_NAME="$3"
+        else
+            echo "ILLEGAL ARGUMENT: $2"
+        fi
+    fi
+
+    # Push the executable to the simulator
+    for i in {1234..1238}; do
+        "$MB_HOME"/shell --transport=tcp --transport_args=127.0.0.1:$i push "$PRG_PATH" "0:/GARMIN/APPS/$FILE"
+        if [ $? -eq 1 ]; then
+            continue
+        fi
+        "$MB_HOME"/shell --transport=tcp --transport_args=127.0.0.1:$i tvm "0:/GARMIN/APPS/$FILE" $DEVICE_ID $TEST $TEST_NAME
+        if [ $? -ne 1 ]; then
+            break;
+        fi
+    done
+
+fi
