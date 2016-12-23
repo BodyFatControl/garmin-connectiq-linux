@@ -16,6 +16,9 @@ Inside of the bin directory, you will need to make both the monkeysim_linux and 
 
 user@machine:~/connectiq/bin$ chmod u+x monkeysim_linux monkeydo_linux
 
+For convenience, place the connectiq/bin directory in your PATH. Edit your ~/.bashrc like so:
+export PATH=$PATH:~/connectiq/bin
+
 ## Install the JDK
 
 If it isn't already installed, you'll need the JDK. If you don't know if it's installed, you can check by running
