@@ -66,15 +66,17 @@
   
   
 </h1>
-
-<dl class="box">
+<div class="box_info">
   
-    <dt class="r1">Inherits:</dt>
-    <dd class="r1">
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
       <span class="inheritName"><span class='object_link'><a href="Drawable.html" title="Toybox::WatchUi::Drawable (class)">Drawable</a></span></span>
       
         <ul class="fullTree">
           <li>Object</li>
+          
+            <li class="next"><span class='object_link'><a href="../Lang/Object.html" title="Toybox::Lang::Object (class)">Lang::Object</a></span></li>
           
             <li class="next"><span class='object_link'><a href="Drawable.html" title="Toybox::WatchUi::Drawable (class)">Drawable</a></span></li>
           
@@ -83,17 +85,18 @@
         </ul>
         <a href="#" class="inheritanceTree">show all</a>
       
-      </dd>
-    
+    </dd>
+  </dl>
+  
+
   
   
-    
-  
-    
   
   
-</dl>
-<div class="clear"></div>
+  
+
+  
+</div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
@@ -134,6 +137,10 @@ with defined states depending on selection mode</p>
   <h2>Direct Known Subclasses</h2>
   <p class="children"><span class='object_link'><a href="Button.html" title="Toybox::WatchUi::Button (class)">Button</a></span></p>
 </div>
+<div id="subclasses">
+  <h2>Direct Known Subclasses</h2>
+  <p class="children"><span class='object_link'><a href="Button.html" title="Toybox::WatchUi::Button (class)">Button</a></span></p>
+</div>
 
 
 
@@ -144,7 +151,7 @@ with defined states depending on selection mode</p>
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#stateDefault-instance_method" title="#stateDefault (instance method)">#<strong>stateDefault</strong>  &#x21d2; Object </a>
+      <a href="#stateDefault-instance_method" title="#stateDefault (instance method)"><strong>stateDefault</strong>  &#x21d2; Object </a>
     
 
     
@@ -172,7 +179,7 @@ form 0xRRGGBB.</p>
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#stateDisabled-instance_method" title="#stateDisabled (instance method)">#<strong>stateDisabled</strong>  &#x21d2; Object </a>
+      <a href="#stateDisabled-instance_method" title="#stateDisabled (instance method)"><strong>stateDisabled</strong>  &#x21d2; Object </a>
     
 
     
@@ -200,7 +207,7 @@ the form 0xRRGGBB.</p>
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#stateHighlighted-instance_method" title="#stateHighlighted (instance method)">#<strong>stateHighlighted</strong>  &#x21d2; Object </a>
+      <a href="#stateHighlighted-instance_method" title="#stateHighlighted (instance method)"><strong>stateHighlighted</strong>  &#x21d2; Object </a>
     
 
     
@@ -228,7 +235,7 @@ the form 0xRRGGBB.</p>
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#stateSelected-instance_method" title="#stateSelected (instance method)">#<strong>stateSelected</strong>  &#x21d2; Object </a>
+      <a href="#stateSelected-instance_method" title="#stateSelected (instance method)"><strong>stateSelected</strong>  &#x21d2; Object </a>
     
 
     
@@ -260,7 +267,7 @@ the form 0xRRGGBB.</p>
   
   
   <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="Drawable.html" title="Toybox::WatchUi::Drawable (class)">Drawable</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="Drawable.html#height-instance_method" title="Toybox::WatchUi::Drawable#height (method)">#height</a></span>, <span class='object_link'><a href="Drawable.html#identifier-instance_method" title="Toybox::WatchUi::Drawable#identifier (method)">#identifier</a></span>, <span class='object_link'><a href="Drawable.html#locX-instance_method" title="Toybox::WatchUi::Drawable#locX (method)">#locX</a></span>, <span class='object_link'><a href="Drawable.html#locY-instance_method" title="Toybox::WatchUi::Drawable#locY (method)">#locY</a></span>, <span class='object_link'><a href="Drawable.html#width-instance_method" title="Toybox::WatchUi::Drawable#width (method)">#width</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="Drawable.html#height-instance_method" title="Toybox::WatchUi::Drawable#height (method)">height</a></span>, <span class='object_link'><a href="Drawable.html#identifier-instance_method" title="Toybox::WatchUi::Drawable#identifier (method)">identifier</a></span>, <span class='object_link'><a href="Drawable.html#locX-instance_method" title="Toybox::WatchUi::Drawable#locX (method)">locX</a></span>, <span class='object_link'><a href="Drawable.html#locY-instance_method" title="Toybox::WatchUi::Drawable#locY (method)">locY</a></span>, <span class='object_link'><a href="Drawable.html#width-instance_method" title="Toybox::WatchUi::Drawable#width (method)">width</a></span></p>
 
 
   
@@ -274,7 +281,7 @@ the form 0xRRGGBB.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#draw-instance_method" title="#draw (instance method)">#<strong>draw</strong>(dc)  &#x21d2; Object </a>
+      <a href="#draw-instance_method" title="#draw (instance method)"><strong>draw</strong>(dc)  &#x21d2; Object </a>
     
 
     
@@ -298,7 +305,7 @@ the form 0xRRGGBB.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#getState-instance_method" title="#getState (instance method)">#<strong>getState</strong>  &#x21d2; Symbol </a>
+      <a href="#getState-instance_method" title="#getState (instance method)"><strong>getState</strong>  &#x21d2; Symbol </a>
     
 
     
@@ -322,7 +329,7 @@ the form 0xRRGGBB.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(options)  &#x21d2; Selectable </a>
+      <a href="#initialize-instance_method" title="#initialize (instance method)"><strong>initialize</strong>(options)  &#x21d2; Selectable </a>
     
 
     
@@ -348,7 +355,7 @@ the form 0xRRGGBB.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#setState-instance_method" title="#setState (instance method)">#<strong>setState</strong>(state)  &#x21d2; Object </a>
+      <a href="#setState-instance_method" title="#setState (instance method)"><strong>setState</strong>(state)  &#x21d2; Object </a>
     
 
     
@@ -382,14 +389,25 @@ the form 0xRRGGBB.</p>
   
   
   <h3 class="inherited">Methods inherited from <span class='object_link'><a href="Drawable.html" title="Toybox::WatchUi::Drawable (class)">Drawable</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="Drawable.html#setLocation-instance_method" title="Toybox::WatchUi::Drawable#setLocation (method)">#setLocation</a></span>, <span class='object_link'><a href="Drawable.html#setSize-instance_method" title="Toybox::WatchUi::Drawable#setSize (method)">#setSize</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="Drawable.html#setLocation-instance_method" title="Toybox::WatchUi::Drawable#setLocation (method)">setLocation</a></span>, <span class='object_link'><a href="Drawable.html#setSize-instance_method" title="Toybox::WatchUi::Drawable#setSize (method)">setSize</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../Lang/Object.html" title="Toybox::Lang::Object (class)">Lang::Object</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Lang/Object.html#equals-instance_method" title="Toybox::Lang::Object#equals (method)">equals</a></span>, <span class='object_link'><a href="../Lang/Object.html#hashCode-instance_method" title="Toybox::Lang::Object#hashCode (method)">hashCode</a></span>, <span class='object_link'><a href="../Lang/Object.html#method-instance_method" title="Toybox::Lang::Object#method (method)">method</a></span>, <span class='object_link'><a href="../Lang/Object.html#toString-instance_method" title="Toybox::Lang::Object#toString (method)">toString</a></span>, <span class='object_link'><a href="../Lang/Object.html#weak-instance_method" title="Toybox::Lang::Object#weak (method)">weak</a></span></p>
 <div id="constructor_details" class="method_details_list">
   <h2>Constructor Details</h2>
   
     <div class="method_details first">
   <h3 class="signature first" id="initialize-instance_method">
   
-    #<strong>initialize</strong>(options)  &#x21d2; <tt><span class='object_link'><a href="" title="Toybox::WatchUi::Selectable (class)">Selectable</a></span></tt> 
+    <strong>initialize</strong>(options)  &#x21d2; <tt><span class='object_link'><a href="" title="Toybox::WatchUi::Selectable (class)">Selectable</a></span></tt> 
   
 
   
@@ -555,7 +573,215 @@ the form 0xRRGGBB.</p>
   
 </ul>
 
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+6080
+6081</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 6080</span>
+
+def initialize(options)
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
+  
+</div>
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    <strong>initialize</strong>(options)  &#x21d2; <tt><span class='object_link'><a href="" title="Toybox::WatchUi::Selectable (class)">Selectable</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Constructor</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>Dictionary</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Parameters to specify in Selectable creation</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:locX</span>
+          <span class="type">(<tt>Number</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>@see Drawable#initialize. Required.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:locY</span>
+          <span class="type">(<tt>Number</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>@see Drawable#initialize. Required.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:width</span>
+          <span class="type">(<tt>Number</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>@see Drawable#initialize. Required.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:height</span>
+          <span class="type">(<tt>Number</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>@see Drawable#initialize. Required.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:stateDefault</span>
+          <span class="type">(<tt>Object</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>Drawable to display in default state. Optional.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:stateHighlighted</span>
+          <span class="type">(<tt>Object</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>Drawable to display in disable state. Optional.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:stateSelected</span>
+          <span class="type">(<tt>Object</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>Drawable to display in highlight state. Optional.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:stateDisabled</span>
+          <span class="type">(<tt>Object</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>Drawable to display in selected state. Optional.</p>
+</div>
+          
+        </li>
+      
+    </ul>
+  
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>2.1.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+6080
+6081</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 6080</span>
+
+def initialize(options)
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
   
 </div>
@@ -568,7 +794,7 @@ the form 0xRRGGBB.</p>
       <div class="method_details first">
   <h3 class="signature first" id="stateDefault-instance_method">
   
-    #<strong>stateDefault</strong>  &#x21d2; <tt>Object</tt> 
+    <strong>stateDefault</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -615,7 +841,25 @@ form 0xRRGGBB</p>
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+6048
+6049
+6050</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 6048</span>
+
+def stateDefault
+  @stateDefault
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
       
@@ -623,7 +867,7 @@ form 0xRRGGBB</p>
       <div class="method_details ">
   <h3 class="signature " id="stateDisabled-instance_method">
   
-    #<strong>stateDisabled</strong>  &#x21d2; <tt>Object</tt> 
+    <strong>stateDisabled</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -670,7 +914,25 @@ the form 0xRRGGBB</p>
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+6066
+6067
+6068</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 6066</span>
+
+def stateDisabled
+  @stateDisabled
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
       
@@ -678,7 +940,7 @@ the form 0xRRGGBB</p>
       <div class="method_details ">
   <h3 class="signature " id="stateHighlighted-instance_method">
   
-    #<strong>stateHighlighted</strong>  &#x21d2; <tt>Object</tt> 
+    <strong>stateHighlighted</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -725,7 +987,25 @@ the form 0xRRGGBB</p>
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+6054
+6055
+6056</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 6054</span>
+
+def stateHighlighted
+  @stateHighlighted
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
       
@@ -733,7 +1013,7 @@ the form 0xRRGGBB</p>
       <div class="method_details ">
   <h3 class="signature " id="stateSelected-instance_method">
   
-    #<strong>stateSelected</strong>  &#x21d2; <tt>Object</tt> 
+    <strong>stateSelected</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -780,7 +1060,25 @@ the form 0xRRGGBB</p>
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+6060
+6061
+6062</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 6060</span>
+
+def stateSelected
+  @stateSelected
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
   </div>
@@ -793,7 +1091,7 @@ the form 0xRRGGBB</p>
       <div class="method_details first">
   <h3 class="signature first" id="draw-instance_method">
   
-    #<strong>draw</strong>(dc)  &#x21d2; <tt>Object</tt> 
+    <strong>draw</strong>(dc)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -847,13 +1145,29 @@ context has already been configured to the proper settings.</p>
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+6099
+6100</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 6099</span>
+
+def draw(dc)
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
       <div class="method_details ">
   <h3 class="signature " id="getState-instance_method">
   
-    #<strong>getState</strong>  &#x21d2; <tt>Symbol</tt> 
+    <strong>getState</strong>  &#x21d2; <tt>Symbol</tt> 
   
 
   
@@ -904,13 +1218,29 @@ context has already been configured to the proper settings.</p>
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+6086
+6087</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 6086</span>
+
+def getState()
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
       <div class="method_details ">
   <h3 class="signature " id="setState-instance_method">
   
-    #<strong>setState</strong>(state)  &#x21d2; <tt>Object</tt> 
+    <strong>setState</strong>(state)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -963,7 +1293,23 @@ context has already been configured to the proper settings.</p>
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+6092
+6093</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 6092</span>
+
+def setState(state)
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
   </div>
@@ -971,7 +1317,7 @@ context has already been configured to the proper settings.</p>
 </div>
 
       <div id="footer">
-  Generated on Mon Nov  7 13:39:14 2016 by
+  Generated on Wed Dec 21 14:04:06 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.5 (ruby-2.1.5).
 </div>

@@ -22,6 +22,11 @@ class DatePicker extends Ui.Picker {
 }
 
 class DatePickerDelegate extends Ui.PickerDelegate {
+
+    function initialize() {
+        PickerDelegate.initialize();
+    }
+
     function onCancel() {
         Ui.popView(Ui.SLIDE_IMMEDIATE);
     }
@@ -32,4 +37,5 @@ class DatePickerDelegate extends Ui.PickerDelegate {
         App.getApp().setProperty("date", date);
         Ui.popView(Ui.SLIDE_IMMEDIATE);
     }
+
 }

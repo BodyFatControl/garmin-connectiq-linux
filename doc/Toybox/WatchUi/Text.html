@@ -66,15 +66,17 @@
   
   
 </h1>
-
-<dl class="box">
+<div class="box_info">
   
-    <dt class="r1">Inherits:</dt>
-    <dd class="r1">
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
       <span class="inheritName"><span class='object_link'><a href="Drawable.html" title="Toybox::WatchUi::Drawable (class)">Drawable</a></span></span>
       
         <ul class="fullTree">
           <li>Object</li>
+          
+            <li class="next"><span class='object_link'><a href="../Lang/Object.html" title="Toybox::Lang::Object (class)">Lang::Object</a></span></li>
           
             <li class="next"><span class='object_link'><a href="Drawable.html" title="Toybox::WatchUi::Drawable (class)">Drawable</a></span></li>
           
@@ -83,17 +85,18 @@
         </ul>
         <a href="#" class="inheritanceTree">show all</a>
       
-      </dd>
-    
+    </dd>
+  </dl>
+  
+
   
   
-    
-  
-    
   
   
-</dl>
-<div class="clear"></div>
+  
+
+  
+</div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
@@ -138,7 +141,7 @@
   <h2>Instance Attribute Summary</h2>
   
   <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="Drawable.html" title="Toybox::WatchUi::Drawable (class)">Drawable</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="Drawable.html#height-instance_method" title="Toybox::WatchUi::Drawable#height (method)">#height</a></span>, <span class='object_link'><a href="Drawable.html#identifier-instance_method" title="Toybox::WatchUi::Drawable#identifier (method)">#identifier</a></span>, <span class='object_link'><a href="Drawable.html#locX-instance_method" title="Toybox::WatchUi::Drawable#locX (method)">#locX</a></span>, <span class='object_link'><a href="Drawable.html#locY-instance_method" title="Toybox::WatchUi::Drawable#locY (method)">#locY</a></span>, <span class='object_link'><a href="Drawable.html#width-instance_method" title="Toybox::WatchUi::Drawable#width (method)">#width</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="Drawable.html#height-instance_method" title="Toybox::WatchUi::Drawable#height (method)">height</a></span>, <span class='object_link'><a href="Drawable.html#identifier-instance_method" title="Toybox::WatchUi::Drawable#identifier (method)">identifier</a></span>, <span class='object_link'><a href="Drawable.html#locX-instance_method" title="Toybox::WatchUi::Drawable#locX (method)">locX</a></span>, <span class='object_link'><a href="Drawable.html#locY-instance_method" title="Toybox::WatchUi::Drawable#locY (method)">locY</a></span>, <span class='object_link'><a href="Drawable.html#width-instance_method" title="Toybox::WatchUi::Drawable#width (method)">width</a></span></p>
 
 
   
@@ -152,7 +155,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#draw-instance_method" title="#draw (instance method)">#<strong>draw</strong>(dc)  &#x21d2; Object </a>
+      <a href="#draw-instance_method" title="#draw (instance method)"><strong>draw</strong>(dc)  &#x21d2; Object </a>
     
 
     
@@ -176,7 +179,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(dictionary)  &#x21d2; Text </a>
+      <a href="#initialize-instance_method" title="#initialize (instance method)"><strong>initialize</strong>(dictionary)  &#x21d2; Text </a>
     
 
     
@@ -202,7 +205,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#setBackgroundColor-instance_method" title="#setBackgroundColor (instance method)">#<strong>setBackgroundColor</strong>(color)  &#x21d2; Object </a>
+      <a href="#setBackgroundColor-instance_method" title="#setBackgroundColor (instance method)"><strong>setBackgroundColor</strong>(color)  &#x21d2; Object </a>
     
 
     
@@ -226,7 +229,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#setColor-instance_method" title="#setColor (instance method)">#<strong>setColor</strong>(color)  &#x21d2; Object </a>
+      <a href="#setColor-instance_method" title="#setColor (instance method)"><strong>setColor</strong>(color)  &#x21d2; Object </a>
     
 
     
@@ -250,7 +253,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#setFont-instance_method" title="#setFont (instance method)">#<strong>setFont</strong>(font)  &#x21d2; Object </a>
+      <a href="#setFont-instance_method" title="#setFont (instance method)"><strong>setFont</strong>(font)  &#x21d2; Object </a>
     
 
     
@@ -274,7 +277,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#setJustification-instance_method" title="#setJustification (instance method)">#<strong>setJustification</strong>(justification)  &#x21d2; Object </a>
+      <a href="#setJustification-instance_method" title="#setJustification (instance method)"><strong>setJustification</strong>(justification)  &#x21d2; Object </a>
     
 
     
@@ -298,7 +301,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#setText-instance_method" title="#setText (instance method)">#<strong>setText</strong>(text)  &#x21d2; Object </a>
+      <a href="#setText-instance_method" title="#setText (instance method)"><strong>setText</strong>(text)  &#x21d2; Object </a>
     
 
     
@@ -332,14 +335,25 @@
   
   
   <h3 class="inherited">Methods inherited from <span class='object_link'><a href="Drawable.html" title="Toybox::WatchUi::Drawable (class)">Drawable</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="Drawable.html#setLocation-instance_method" title="Toybox::WatchUi::Drawable#setLocation (method)">#setLocation</a></span>, <span class='object_link'><a href="Drawable.html#setSize-instance_method" title="Toybox::WatchUi::Drawable#setSize (method)">#setSize</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="Drawable.html#setLocation-instance_method" title="Toybox::WatchUi::Drawable#setLocation (method)">setLocation</a></span>, <span class='object_link'><a href="Drawable.html#setSize-instance_method" title="Toybox::WatchUi::Drawable#setSize (method)">setSize</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../Lang/Object.html" title="Toybox::Lang::Object (class)">Lang::Object</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Lang/Object.html#equals-instance_method" title="Toybox::Lang::Object#equals (method)">equals</a></span>, <span class='object_link'><a href="../Lang/Object.html#hashCode-instance_method" title="Toybox::Lang::Object#hashCode (method)">hashCode</a></span>, <span class='object_link'><a href="../Lang/Object.html#method-instance_method" title="Toybox::Lang::Object#method (method)">method</a></span>, <span class='object_link'><a href="../Lang/Object.html#toString-instance_method" title="Toybox::Lang::Object#toString (method)">toString</a></span>, <span class='object_link'><a href="../Lang/Object.html#weak-instance_method" title="Toybox::Lang::Object#weak (method)">weak</a></span></p>
 <div id="constructor_details" class="method_details_list">
   <h2>Constructor Details</h2>
   
     <div class="method_details first">
   <h3 class="signature first" id="initialize-instance_method">
   
-    #<strong>initialize</strong>(dictionary)  &#x21d2; <tt><span class='object_link'><a href="" title="Toybox::WatchUi::Text (class)">Text</a></span></tt> 
+    <strong>initialize</strong>(dictionary)  &#x21d2; <tt><span class='object_link'><a href="" title="Toybox::WatchUi::Text (class)">Text</a></span></tt> 
   
 
   
@@ -473,7 +487,183 @@
   
 </ul>
 
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+5988
+5989</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 5988</span>
+
+def initialize(dictionary)
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
+  
+</div>
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    <strong>initialize</strong>(dictionary)  &#x21d2; <tt><span class='object_link'><a href="" title="Toybox::WatchUi::Text (class)">Text</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Constructor</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>dictionary</span>
+      
+      
+        <span class='type'>(<tt>Dictionary</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>A Dictionary containing the settings</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <p class="tag_title">Options Hash (<tt>dictionary</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:text</span>
+          <span class="type">(<tt>Object</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>The text string or the Rez ID of a string resource</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:color</span>
+          <span class="type">(<tt>Object</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>The text color of type Graphics.COLOR_*</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:backgroundColor</span>
+          <span class="type">(<tt>Object</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>The background color of type Graphics.COLOR_*</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:font</span>
+          <span class="type">(<tt>Object</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>The font to use of type Graphics.FONT_*</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:justification</span>
+          <span class="type">(<tt>Object</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>The text justification of type Graphics.TEXT_JUSTIFY_*</p>
+</div>
+          
+        </li>
+      
+    </ul>
+  
+
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li>Drawable#initializes</li>
+    
+  </ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+5988
+5989</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 5988</span>
+
+def initialize(dictionary)
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
   
 </div>
@@ -486,7 +676,7 @@
       <div class="method_details first">
   <h3 class="signature first" id="draw-instance_method">
   
-    #<strong>draw</strong>(dc)  &#x21d2; <tt>Object</tt> 
+    <strong>draw</strong>(dc)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -539,13 +729,29 @@
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+5994
+5995</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 5994</span>
+
+def draw(dc)
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
       <div class="method_details ">
   <h3 class="signature " id="setBackgroundColor-instance_method">
   
-    #<strong>setBackgroundColor</strong>(color)  &#x21d2; <tt>Object</tt> 
+    <strong>setBackgroundColor</strong>(color)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -598,13 +804,29 @@
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+6006
+6007</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 6006</span>
+
+def setBackgroundColor(color)
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
       <div class="method_details ">
   <h3 class="signature " id="setColor-instance_method">
   
-    #<strong>setColor</strong>(color)  &#x21d2; <tt>Object</tt> 
+    <strong>setColor</strong>(color)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -657,13 +879,29 @@
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+6000
+6001</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 6000</span>
+
+def setColor(color)
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
       <div class="method_details ">
   <h3 class="signature " id="setFont-instance_method">
   
-    #<strong>setFont</strong>(font)  &#x21d2; <tt>Object</tt> 
+    <strong>setFont</strong>(font)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -716,13 +954,29 @@
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+6012
+6013</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 6012</span>
+
+def setFont(font)
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
       <div class="method_details ">
   <h3 class="signature " id="setJustification-instance_method">
   
-    #<strong>setJustification</strong>(justification)  &#x21d2; <tt>Object</tt> 
+    <strong>setJustification</strong>(justification)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -775,13 +1029,29 @@
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+6018
+6019</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 6018</span>
+
+def setJustification(justification)
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
       <div class="method_details ">
   <h3 class="signature " id="setText-instance_method">
   
-    #<strong>setText</strong>(text)  &#x21d2; <tt>Object</tt> 
+    <strong>setText</strong>(text)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -834,7 +1104,23 @@
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+6024
+6025</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 6024</span>
+
+def setText(text)
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
   </div>
@@ -842,7 +1128,7 @@
 </div>
 
       <div id="footer">
-  Generated on Mon Nov  7 13:39:14 2016 by
+  Generated on Wed Dec 21 14:04:06 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.5 (ruby-2.1.5).
 </div>

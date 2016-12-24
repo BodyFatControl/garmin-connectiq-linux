@@ -66,32 +66,35 @@
   
   
 </h1>
-
-<dl class="box">
+<div class="box_info">
   
-    <dt class="r1">Inherits:</dt>
-    <dd class="r1">
-      <span class="inheritName">Object</span>
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="../Lang/Object.html" title="Toybox::Lang::Object (class)">Lang::Object</a></span></span>
       
         <ul class="fullTree">
           <li>Object</li>
+          
+            <li class="next"><span class='object_link'><a href="../Lang/Object.html" title="Toybox::Lang::Object (class)">Lang::Object</a></span></li>
           
             <li class="next">Toybox::AntPlus::CommonData</li>
           
         </ul>
         <a href="#" class="inheritanceTree">show all</a>
       
-      </dd>
-    
+    </dd>
+  </dl>
+  
+
   
   
-    
-  
-    
   
   
-</dl>
-<div class="clear"></div>
+  
+
+  
+</div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
@@ -126,6 +129,10 @@ using them.</p>
   <h2>Direct Known Subclasses</h2>
   <p class="children"><span class='object_link'><a href="BatteryStatus.html" title="Toybox::AntPlus::BatteryStatus (class)">BatteryStatus</a></span>, <span class='object_link'><a href="BikeLight.html" title="Toybox::AntPlus::BikeLight (class)">BikeLight</a></span>, <span class='object_link'><a href="ManufacturerInfo.html" title="Toybox::AntPlus::ManufacturerInfo (class)">ManufacturerInfo</a></span>, <span class='object_link'><a href="ProductInfo.html" title="Toybox::AntPlus::ProductInfo (class)">ProductInfo</a></span></p>
 </div>
+<div id="subclasses">
+  <h2>Direct Known Subclasses</h2>
+  <p class="children"><span class='object_link'><a href="BatteryStatus.html" title="Toybox::AntPlus::BatteryStatus (class)">BatteryStatus</a></span>, <span class='object_link'><a href="BikeLight.html" title="Toybox::AntPlus::BikeLight (class)">BikeLight</a></span>, <span class='object_link'><a href="ManufacturerInfo.html" title="Toybox::AntPlus::ManufacturerInfo (class)">ManufacturerInfo</a></span>, <span class='object_link'><a href="ProductInfo.html" title="Toybox::AntPlus::ProductInfo (class)">ProductInfo</a></span></p>
+</div>
 
 
 
@@ -136,7 +143,7 @@ using them.</p>
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#identifier-instance_method" title="#identifier (instance method)">#<strong>identifier</strong>  &#x21d2; Number </a>
+      <a href="#identifier-instance_method" title="#identifier (instance method)"><strong>identifier</strong>  &#x21d2; Number </a>
     
 
     
@@ -163,7 +170,7 @@ using them.</p>
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#numComponents-instance_method" title="#numComponents (instance method)">#<strong>numComponents</strong>  &#x21d2; Number </a>
+      <a href="#numComponents-instance_method" title="#numComponents (instance method)"><strong>numComponents</strong>  &#x21d2; Number </a>
     
 
     
@@ -193,6 +200,17 @@ using them.</p>
 
 
 
+  
+  
+  
+  
+  
+  
+  <h2>Method Summary</h2>
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../Lang/Object.html" title="Toybox::Lang::Object (class)">Lang::Object</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Lang/Object.html#equals-instance_method" title="Toybox::Lang::Object#equals (method)">equals</a></span>, <span class='object_link'><a href="../Lang/Object.html#hashCode-instance_method" title="Toybox::Lang::Object#hashCode (method)">hashCode</a></span>, <span class='object_link'><a href="../Lang/Object.html#method-instance_method" title="Toybox::Lang::Object#method (method)">method</a></span>, <span class='object_link'><a href="../Lang/Object.html#toString-instance_method" title="Toybox::Lang::Object#toString (method)">toString</a></span>, <span class='object_link'><a href="../Lang/Object.html#weak-instance_method" title="Toybox::Lang::Object#weak (method)">weak</a></span></p>
+
   <div id="instance_attr_details" class="attr_details">
     <h2>Instance Attribute Details</h2>
     
@@ -201,7 +219,7 @@ using them.</p>
       <div class="method_details first">
   <h3 class="signature first" id="identifier-instance_method">
   
-    #<strong>identifier</strong>  &#x21d2; <tt>Number</tt> 
+    <strong>identifier</strong>  &#x21d2; <tt>Number</tt> 
   
 
   
@@ -248,7 +266,25 @@ Light index for bike lights. NULL if single-component.</p>
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+6266
+6267
+6268</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 6266</span>
+
+def identifier
+  @identifier
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
       
@@ -256,7 +292,7 @@ Light index for bike lights. NULL if single-component.</p>
       <div class="method_details ">
   <h3 class="signature " id="numComponents-instance_method">
   
-    #<strong>numComponents</strong>  &#x21d2; <tt>Number</tt> 
+    <strong>numComponents</strong>  &#x21d2; <tt>Number</tt> 
   
 
   
@@ -302,7 +338,25 @@ Light index for bike lights. NULL if single-component.</p>
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+6272
+6273
+6274</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 6272</span>
+
+def numComponents
+  @numComponents
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
   </div>
@@ -311,7 +365,7 @@ Light index for bike lights. NULL if single-component.</p>
 </div>
 
       <div id="footer">
-  Generated on Mon Nov  7 13:39:14 2016 by
+  Generated on Wed Dec 21 14:04:06 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.5 (ruby-2.1.5).
 </div>

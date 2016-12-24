@@ -66,11 +66,11 @@
   
   
 </h1>
-
-<dl class="box">
+<div class="box_info">
   
-    <dt class="r1">Inherits:</dt>
-    <dd class="r1">
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
       <span class="inheritName"><span class='object_link'><a href="Object.html" title="Toybox::Lang::Object (class)">Object</a></span></span>
       
         <ul class="fullTree">
@@ -83,17 +83,18 @@
         </ul>
         <a href="#" class="inheritanceTree">show all</a>
       
-      </dd>
-    
+    </dd>
+  </dl>
+  
+
   
   
-    
-  
-    
   
   
-</dl>
-<div class="clear"></div>
+  
+
+  
+</div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
@@ -142,7 +143,7 @@ allows the developer to avoid circular references.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#get-instance_method" title="#get (instance method)">#<strong>get</strong>  &#x21d2; Object </a>
+      <a href="#get-instance_method" title="#get (instance method)"><strong>get</strong>  &#x21d2; Object </a>
     
 
     
@@ -166,7 +167,7 @@ allows the developer to avoid circular references.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#stillAlive-instance_method" title="#stillAlive (instance method)">#<strong>stillAlive</strong>  &#x21d2; Boolean </a>
+      <a href="#stillAlive-instance_method" title="#stillAlive (instance method)"><strong>stillAlive</strong>  &#x21d2; Boolean </a>
     
 
     
@@ -200,7 +201,7 @@ allows the developer to avoid circular references.</p>
   
   
   <h3 class="inherited">Methods inherited from <span class='object_link'><a href="Object.html" title="Toybox::Lang::Object (class)">Object</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="Object.html#equals-instance_method" title="Toybox::Lang::Object#equals (method)">#equals</a></span>, <span class='object_link'><a href="Object.html#hashCode-instance_method" title="Toybox::Lang::Object#hashCode (method)">#hashCode</a></span>, <span class='object_link'><a href="Object.html#method-instance_method" title="Toybox::Lang::Object#method (method)">#method</a></span>, <span class='object_link'><a href="Object.html#toString-instance_method" title="Toybox::Lang::Object#toString (method)">#toString</a></span>, <span class='object_link'><a href="Object.html#weak-instance_method" title="Toybox::Lang::Object#weak (method)">#weak</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="Object.html#equals-instance_method" title="Toybox::Lang::Object#equals (method)">equals</a></span>, <span class='object_link'><a href="Object.html#hashCode-instance_method" title="Toybox::Lang::Object#hashCode (method)">hashCode</a></span>, <span class='object_link'><a href="Object.html#method-instance_method" title="Toybox::Lang::Object#method (method)">method</a></span>, <span class='object_link'><a href="Object.html#toString-instance_method" title="Toybox::Lang::Object#toString (method)">toString</a></span>, <span class='object_link'><a href="Object.html#weak-instance_method" title="Toybox::Lang::Object#weak (method)">weak</a></span></p>
 
 
   <div id="instance_method_details" class="method_details_list">
@@ -210,7 +211,7 @@ allows the developer to avoid circular references.</p>
       <div class="method_details first">
   <h3 class="signature first" id="get-instance_method">
   
-    #<strong>get</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Toybox::Lang::Object (class)">Object</a></span></tt> 
+    <strong>get</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Toybox::Lang::Object (class)">Object</a></span></tt> 
   
 
   
@@ -261,13 +262,29 @@ allows the developer to avoid circular references.</p>
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+3208
+3209</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 3208</span>
+
+def get()
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
       <div class="method_details ">
   <h3 class="signature " id="stillAlive-instance_method">
   
-    #<strong>stillAlive</strong>  &#x21d2; <tt><span class='object_link'><a href="Boolean.html" title="Toybox::Lang::Boolean (class)">Boolean</a></span></tt> 
+    <strong>stillAlive</strong>  &#x21d2; <tt><span class='object_link'><a href="Boolean.html" title="Toybox::Lang::Boolean (class)">Boolean</a></span></tt> 
   
 
   
@@ -319,7 +336,23 @@ STILL ALIVE I feel fantastic and I am STILL ALIVE</p>
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+3202
+3203</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 3202</span>
+
+def stillAlive()
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
   </div>
@@ -327,7 +360,7 @@ STILL ALIVE I feel fantastic and I am STILL ALIVE</p>
 </div>
 
       <div id="footer">
-  Generated on Mon Nov  7 13:39:12 2016 by
+  Generated on Wed Dec 21 14:04:02 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.5 (ruby-2.1.5).
 </div>

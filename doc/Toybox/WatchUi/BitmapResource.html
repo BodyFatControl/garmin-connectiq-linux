@@ -66,32 +66,35 @@
   
   
 </h1>
-
-<dl class="box">
+<div class="box_info">
   
-    <dt class="r1">Inherits:</dt>
-    <dd class="r1">
-      <span class="inheritName">Object</span>
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="../Lang/Object.html" title="Toybox::Lang::Object (class)">Lang::Object</a></span></span>
       
         <ul class="fullTree">
           <li>Object</li>
+          
+            <li class="next"><span class='object_link'><a href="../Lang/Object.html" title="Toybox::Lang::Object (class)">Lang::Object</a></span></li>
           
             <li class="next">Toybox::WatchUi::BitmapResource</li>
           
         </ul>
         <a href="#" class="inheritanceTree">show all</a>
       
-      </dd>
-    
+    </dd>
+  </dl>
+  
+
   
   
-    
-  
-    
   
   
-</dl>
-<div class="clear"></div>
+  
+
+  
+</div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
@@ -139,7 +142,7 @@ from WatchUi.loadResource().</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#getHeight-instance_method" title="#getHeight (instance method)">#<strong>getHeight</strong>  &#x21d2; Number </a>
+      <a href="#getHeight-instance_method" title="#getHeight (instance method)"><strong>getHeight</strong>  &#x21d2; Number </a>
     
 
     
@@ -163,7 +166,7 @@ from WatchUi.loadResource().</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#getWidth-instance_method" title="#getWidth (instance method)">#<strong>getWidth</strong>  &#x21d2; Number </a>
+      <a href="#getWidth-instance_method" title="#getWidth (instance method)"><strong>getWidth</strong>  &#x21d2; Number </a>
     
 
     
@@ -187,7 +190,7 @@ from WatchUi.loadResource().</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#toString-instance_method" title="#toString (instance method)">#<strong>toString</strong>  &#x21d2; String </a>
+      <a href="#toString-instance_method" title="#toString (instance method)"><strong>toString</strong>  &#x21d2; String </a>
     
 
     
@@ -212,6 +215,17 @@ from WatchUi.loadResource().</p>
   
 
 
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../Lang/Object.html" title="Toybox::Lang::Object (class)">Lang::Object</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Lang/Object.html#equals-instance_method" title="Toybox::Lang::Object#equals (method)">equals</a></span>, <span class='object_link'><a href="../Lang/Object.html#hashCode-instance_method" title="Toybox::Lang::Object#hashCode (method)">hashCode</a></span>, <span class='object_link'><a href="../Lang/Object.html#method-instance_method" title="Toybox::Lang::Object#method (method)">method</a></span>, <span class='object_link'><a href="../Lang/Object.html#weak-instance_method" title="Toybox::Lang::Object#weak (method)">weak</a></span></p>
+
 
   <div id="instance_method_details" class="method_details_list">
     <h2>Instance Method Details</h2>
@@ -220,7 +234,7 @@ from WatchUi.loadResource().</p>
       <div class="method_details first">
   <h3 class="signature first" id="getHeight-instance_method">
   
-    #<strong>getHeight</strong>  &#x21d2; <tt>Number</tt> 
+    <strong>getHeight</strong>  &#x21d2; <tt>Number</tt> 
   
 
   
@@ -271,13 +285,29 @@ from WatchUi.loadResource().</p>
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+5816
+5817</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 5816</span>
+
+def getHeight()
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
       <div class="method_details ">
   <h3 class="signature " id="getWidth-instance_method">
   
-    #<strong>getWidth</strong>  &#x21d2; <tt>Number</tt> 
+    <strong>getWidth</strong>  &#x21d2; <tt>Number</tt> 
   
 
   
@@ -328,13 +358,29 @@ from WatchUi.loadResource().</p>
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+5822
+5823</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 5822</span>
+
+def getWidth()
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
       <div class="method_details ">
   <h3 class="signature " id="toString-instance_method">
   
-    #<strong>toString</strong>  &#x21d2; <tt>String</tt> 
+    <strong>toString</strong>  &#x21d2; <tt>String</tt> 
   
 
   
@@ -385,7 +431,23 @@ from WatchUi.loadResource().</p>
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+5828
+5829</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 5828</span>
+
+def toString()
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
   </div>
@@ -393,7 +455,7 @@ from WatchUi.loadResource().</p>
 </div>
 
       <div id="footer">
-  Generated on Mon Nov  7 13:39:13 2016 by
+  Generated on Wed Dec 21 14:04:05 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.5 (ruby-2.1.5).
 </div>

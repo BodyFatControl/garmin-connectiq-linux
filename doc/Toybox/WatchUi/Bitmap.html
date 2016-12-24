@@ -66,15 +66,17 @@
   
   
 </h1>
-
-<dl class="box">
+<div class="box_info">
   
-    <dt class="r1">Inherits:</dt>
-    <dd class="r1">
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
       <span class="inheritName"><span class='object_link'><a href="Drawable.html" title="Toybox::WatchUi::Drawable (class)">Drawable</a></span></span>
       
         <ul class="fullTree">
           <li>Object</li>
+          
+            <li class="next"><span class='object_link'><a href="../Lang/Object.html" title="Toybox::Lang::Object (class)">Lang::Object</a></span></li>
           
             <li class="next"><span class='object_link'><a href="Drawable.html" title="Toybox::WatchUi::Drawable (class)">Drawable</a></span></li>
           
@@ -83,17 +85,18 @@
         </ul>
         <a href="#" class="inheritanceTree">show all</a>
       
-      </dd>
-    
+    </dd>
+  </dl>
+  
+
   
   
-    
-  
-    
   
   
-</dl>
-<div class="clear"></div>
+  
+
+  
+</div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
@@ -139,7 +142,7 @@ the resource compiler.</p>
   <h2>Instance Attribute Summary</h2>
   
   <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="Drawable.html" title="Toybox::WatchUi::Drawable (class)">Drawable</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="Drawable.html#height-instance_method" title="Toybox::WatchUi::Drawable#height (method)">#height</a></span>, <span class='object_link'><a href="Drawable.html#identifier-instance_method" title="Toybox::WatchUi::Drawable#identifier (method)">#identifier</a></span>, <span class='object_link'><a href="Drawable.html#locX-instance_method" title="Toybox::WatchUi::Drawable#locX (method)">#locX</a></span>, <span class='object_link'><a href="Drawable.html#locY-instance_method" title="Toybox::WatchUi::Drawable#locY (method)">#locY</a></span>, <span class='object_link'><a href="Drawable.html#width-instance_method" title="Toybox::WatchUi::Drawable#width (method)">#width</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="Drawable.html#height-instance_method" title="Toybox::WatchUi::Drawable#height (method)">height</a></span>, <span class='object_link'><a href="Drawable.html#identifier-instance_method" title="Toybox::WatchUi::Drawable#identifier (method)">identifier</a></span>, <span class='object_link'><a href="Drawable.html#locX-instance_method" title="Toybox::WatchUi::Drawable#locX (method)">locX</a></span>, <span class='object_link'><a href="Drawable.html#locY-instance_method" title="Toybox::WatchUi::Drawable#locY (method)">locY</a></span>, <span class='object_link'><a href="Drawable.html#width-instance_method" title="Toybox::WatchUi::Drawable#width (method)">width</a></span></p>
 
 
   
@@ -153,7 +156,7 @@ the resource compiler.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#draw-instance_method" title="#draw (instance method)">#<strong>draw</strong>(dc)  &#x21d2; Object </a>
+      <a href="#draw-instance_method" title="#draw (instance method)"><strong>draw</strong>(dc)  &#x21d2; Object </a>
     
 
     
@@ -177,7 +180,7 @@ the resource compiler.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#getDimensions-instance_method" title="#getDimensions (instance method)">#<strong>getDimensions</strong>  &#x21d2; Array </a>
+      <a href="#getDimensions-instance_method" title="#getDimensions (instance method)"><strong>getDimensions</strong>  &#x21d2; Array </a>
     
 
     
@@ -201,7 +204,7 @@ the resource compiler.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(dictionary)  &#x21d2; Bitmap </a>
+      <a href="#initialize-instance_method" title="#initialize (instance method)"><strong>initialize</strong>(dictionary)  &#x21d2; Bitmap </a>
     
 
     
@@ -227,7 +230,7 @@ the resource compiler.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#setBitmap-instance_method" title="#setBitmap (instance method)">#<strong>setBitmap</strong>(rezId)  &#x21d2; Object </a>
+      <a href="#setBitmap-instance_method" title="#setBitmap (instance method)"><strong>setBitmap</strong>(rezId)  &#x21d2; Object </a>
     
 
     
@@ -261,14 +264,25 @@ the resource compiler.</p>
   
   
   <h3 class="inherited">Methods inherited from <span class='object_link'><a href="Drawable.html" title="Toybox::WatchUi::Drawable (class)">Drawable</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="Drawable.html#setLocation-instance_method" title="Toybox::WatchUi::Drawable#setLocation (method)">#setLocation</a></span>, <span class='object_link'><a href="Drawable.html#setSize-instance_method" title="Toybox::WatchUi::Drawable#setSize (method)">#setSize</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="Drawable.html#setLocation-instance_method" title="Toybox::WatchUi::Drawable#setLocation (method)">setLocation</a></span>, <span class='object_link'><a href="Drawable.html#setSize-instance_method" title="Toybox::WatchUi::Drawable#setSize (method)">setSize</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../Lang/Object.html" title="Toybox::Lang::Object (class)">Lang::Object</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Lang/Object.html#equals-instance_method" title="Toybox::Lang::Object#equals (method)">equals</a></span>, <span class='object_link'><a href="../Lang/Object.html#hashCode-instance_method" title="Toybox::Lang::Object#hashCode (method)">hashCode</a></span>, <span class='object_link'><a href="../Lang/Object.html#method-instance_method" title="Toybox::Lang::Object#method (method)">method</a></span>, <span class='object_link'><a href="../Lang/Object.html#toString-instance_method" title="Toybox::Lang::Object#toString (method)">toString</a></span>, <span class='object_link'><a href="../Lang/Object.html#weak-instance_method" title="Toybox::Lang::Object#weak (method)">weak</a></span></p>
 <div id="constructor_details" class="method_details_list">
   <h2>Constructor Details</h2>
   
     <div class="method_details first">
   <h3 class="signature first" id="initialize-instance_method">
   
-    #<strong>initialize</strong>(dictionary)  &#x21d2; <tt><span class='object_link'><a href="" title="Toybox::WatchUi::Bitmap (class)">Bitmap</a></span></tt> 
+    <strong>initialize</strong>(dictionary)  &#x21d2; <tt><span class='object_link'><a href="" title="Toybox::WatchUi::Bitmap (class)">Bitmap</a></span></tt> 
   
 
   
@@ -350,7 +364,131 @@ the resource compiler.</p>
   
 </ul>
 
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+5952
+5953</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 5952</span>
+
+def initialize(dictionary)
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
+  
+</div>
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    <strong>initialize</strong>(dictionary)  &#x21d2; <tt><span class='object_link'><a href="" title="Toybox::WatchUi::Bitmap (class)">Bitmap</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Constructor</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>dictionary</span>
+      
+      
+        <span class='type'>(<tt>Dictionary</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>A Dictionary containing the settings</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <p class="tag_title">Options Hash (<tt>dictionary</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:rezId</span>
+          <span class="type">(<tt>Symbol</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>The Rez identifier for the bitmap</p>
+</div>
+          
+        </li>
+      
+    </ul>
+  
+
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="Drawable.html#initialize-instance_method" title="Toybox::WatchUi::Drawable#initialize (method)">Drawable#initialize</a></span></li>
+    
+  </ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+5952
+5953</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 5952</span>
+
+def initialize(dictionary)
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
   
 </div>
@@ -363,7 +501,7 @@ the resource compiler.</p>
       <div class="method_details first">
   <h3 class="signature first" id="draw-instance_method">
   
-    #<strong>draw</strong>(dc)  &#x21d2; <tt>Object</tt> 
+    <strong>draw</strong>(dc)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -416,13 +554,29 @@ the resource compiler.</p>
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+5964
+5965</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 5964</span>
+
+def draw(dc)
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
       <div class="method_details ">
   <h3 class="signature " id="getDimensions-instance_method">
   
-    #<strong>getDimensions</strong>  &#x21d2; <tt>Array</tt> 
+    <strong>getDimensions</strong>  &#x21d2; <tt>Array</tt> 
   
 
   
@@ -473,13 +627,29 @@ the resource compiler.</p>
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+5958
+5959</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 5958</span>
+
+def getDimensions()
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
       <div class="method_details ">
   <h3 class="signature " id="setBitmap-instance_method">
   
-    #<strong>setBitmap</strong>(rezId)  &#x21d2; <tt>Object</tt> 
+    <strong>setBitmap</strong>(rezId)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -532,7 +702,23 @@ the resource compiler.</p>
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+5970
+5971</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 5970</span>
+
+def setBitmap(rezId)
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
   </div>
@@ -540,7 +726,7 @@ the resource compiler.</p>
 </div>
 
       <div id="footer">
-  Generated on Mon Nov  7 13:39:13 2016 by
+  Generated on Wed Dec 21 14:04:05 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.5 (ruby-2.1.5).
 </div>

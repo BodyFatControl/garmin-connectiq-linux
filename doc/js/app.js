@@ -230,7 +230,7 @@ function mainFocus() {
 $(document).ready(function() {
   navResizer();
   navExpander();
-  createSourceLinks();
+  //createSourceLinks();
   createDefineLinks();
   createFullTreeLinks();
   searchFrameButtons();

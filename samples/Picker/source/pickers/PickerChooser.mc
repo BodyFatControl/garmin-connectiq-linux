@@ -18,6 +18,10 @@ class PickerChooser extends Ui.Picker {
 
 class PickerChooserDelegate extends Ui.PickerDelegate {
 
+    function initialize() {
+        PickerDelegate.initialize();
+    }
+
     function onCancel() {
         Ui.popView(Ui.SLIDE_IMMEDIATE);
     }
@@ -40,4 +44,5 @@ class PickerChooserDelegate extends Ui.PickerDelegate {
             Ui.pushView(new LayoutPicker(), new LayoutPickerDelegate(), Ui.SLIDE_IMMEDIATE);
         }
     }
+
 }

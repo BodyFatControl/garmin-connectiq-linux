@@ -49,7 +49,6 @@
 <li><a href="#windowsinstallation">Windows Installation</a></li>
 <li><a href="#basiccommands">Basic Commands</a></li>
 </ul></li>
-<li><a href="#theconnectiqsimulator">The Connect IQ Simulator</a></li>
 <li><a href="#theeclipseplug-in">The Eclipse Plug-in</a>
 
 <ul>
@@ -139,16 +138,18 @@
 </ul></li>
 <li><a href="#bitmaps">Bitmaps</a></li>
 <li><a href="#fonts">Fonts</a></li>
+<li><a href="#datastorage">Data Storage</a>
+
+<ul>
+<li><a href="#objectstore">Object Store</a></li>
 <li><a href="#appsettings">App Settings</a>
 
 <ul>
-<li><a href="#defininganappsetting">Defining an App Setting</a>
-
-<ul>
+<li><a href="#defininganappsetting">Defining an App Setting</a></li>
 <li><a href="#properties">Properties</a></li>
 <li><a href="#settings">Settings</a></li>
-</ul></li>
 <li><a href="#accessingappsettingvalues">Accessing App Setting Values</a></li>
+</ul></li>
 <li><a href="#changingsettingswithingarminconnectmobilegarminexpress">Changing Settings Within Garmin Connect Mobile/Garmin Express</a>
 
 <ul>
@@ -377,76 +378,79 @@
 <img src="resources/programmers-guide/learning-monkey.png" style="max-width:408px;" title="What is step 3?" />
 </figure>
 
-<p>To use the Connect IQ SDK on all platforms Oracle Java&trade; Runtime Environment version 7 or higher is needed. <a href="http://java.com/en/download/">Download the JRE</a>.</p>
-
 <h2 id="theconnectiqsdk">The Connect IQ SDK</h2>
 
-<p>Download the latest version of the <a href="http://developer.garmin.com/connect-iq/sdk/">Connect IQ SDK</a> and unzip the connect-iq-sdk-x.y.z.zip file into a local directory. Installation specifics will vary depending on your operating system.</p>
+<p>Before getting started with the installation on Mac or Windows, you&#8217;ll need <a href="JavaJRE">Oracle Java&trade; Runtime Environment 8</a> (version 1.8.0 or higher) installed. Once that&#8217;s done, continue on to your platform&#8217;s installation instructions.</p>
 
 <h3 id="osxinstallation">OS X Installation</h3>
 
-<p>The first step for using Monkey C is to point your <code>PATH</code> to the Monkey C bin directory.</p>
+<ol>
+<li>Visit the <a href="http://developer.garmin.com/connect-iq/sdk/">Connect IQ SDK</a> download page</li>
+<li>After reviewing the SDK license agreement, click the <em>Accept &amp; Download for Mac</em> button to download the SDK</li>
+<li>When the download has finished, locate the Connect IQ SDK disk image file in your Downloads folder and open it (a Finder window containing the SDK may open automatically)</li>
+<li>Create a new folder in a convenient location</li>
+<li>Drag the contents of the Connect IQ SDK disk image into this new folder</li>
+<li>Once complete, you may eject the disk image and delete the Connect IQ SDK disk image file</li>
+<li>Next, point your <code>PATH</code> to the Connect IQ bin directory in the Terminal. To temporarily add it to a single local shell instance:</li>
+</ol>
 
-<p>To add to a single local shell instance:</p>
-
-<pre><code class="bash">$ export PATH=$PATH:path/to/monkeyc/bin
+<pre><code class="bash">$ export PATH=$PATH:path/to/connectiq-sdk/bin
 </code></pre>
 
-<p>To add to a user profile:</p>
+<p>For a more persistent addition, open <code>.bash_profile</code> in a text editor:</p>
 
 <pre><code class="bash">$ touch ~/.bash_profile
 $ open ~/.bash_profile
 </code></pre>
 
-<p>The above opens <code>.bash_profile</code> in a text editor. Add the line below to the file and save the changes:</p>
+<p>Then add the line below to the file and save the changes:</p>
 
-<pre><code class="bash">$ export PATH=$PATH:path/to/monkeyc/bin
+<pre><code class="bash">$ export PATH=$PATH:path/to/connectiq-sdk/bin
 </code></pre>
 
 <h3 id="windowsinstallation">Windows Installation</h3>
 
-<p>This release works from the Windows NT shell.</p>
+<ol>
+<li>Visit the <a href="http://developer.garmin.com/connect-iq/sdk/">Connect IQ SDK</a> download page</li>
+<li>After reviewing the SDK license agreement, click the <em>Accept &amp; Download for Windows</em> button to download the SDK</li>
+<li>Create a new folder in a convenient location</li>
+<li>When the download has finished, locate the Connect IQ SDK zip file and extract it to this new folder</li>
+<li>Once complete, you may delete the Connect IQ SDK zip file</li>
+<li>Next, point your <code>PATH</code> to the Connect IQ bin directory in the command prompt:</li>
+</ol>
 
-<p>The first step for using Monkey C is to point your <code>PATH</code> to the Monkey C bin directory:</p>
-
-<pre><code>&gt; set PATH=%PATH%;path\to\monkeyc\bin
+<pre><code>&gt; set PATH=%PATH%;path\to\connectiq-sdk\bin
 </code></pre>
 
 <h3 id="basiccommands">Basic Commands</h3>
 
-<p>After installation, three new shell commands will be available: <code>connectiq</code>, <code>monkeyc</code>, and <code>monkeydo</code>.</p>
+<p>After installation, three new shell commands are available: <code>connectiq</code>, <code>monkeyc</code>, and <code>monkeydo</code>.</p>
 
 <ul>
-<li><p><code>connectiq</code> launches the Monkey C simulator. Use this simple command to start the simulator in the background.</p></li>
-<li><p><code>monkeyc</code> calls the Monkey C compiler. The compiler can take code from multiple files and link them together into a single Monkey C executable (a PRG file). The optional <code>-z</code> argument allows resource files to be passed in. If your project uses multiple resource files separate them with the system path separator (&#8216;<code>;</code>&#8217; in Windows and &#8216;<code>:</code>&#8217; in OSX). This allows the addition of bitmaps, drawables, fonts, strings, and menus to your executable. See the samples directory for a sample resource file.</p></li>
+<li><p><code>connectiq</code> launches the Connect IQ simulator, which can be used to run and test apps on your computer before running them on your device. In the simulator, your app will only have access to those APIs that are available on the currently simulated device. For example, an API only available in Connect IQ v2.2.x or higher, such as <code>PersistedContent</code>, will not be available on devices that run earlier versions of Connect IQ.</p></li>
+<li><p><code>monkeyc</code> calls the Monkey C compiler. The compiler can take code from multiple files and link them together into a single Connect IQ executable (a PRG file). The optional <code>-z</code> argument allows resource files to be passed in. If your project uses multiple resource files separate them with the system path separator (&#8216;<code>;</code>&#8217; in Windows and &#8216;<code>:</code>&#8217; in OSX). This allows the addition of bitmaps, drawables, fonts, strings, and menus to your executable. See the samples directory for a sample resource file. The usage is:</p></li>
 </ul>
-
-<p>The usage is:</p>
 
 <pre><code>&gt; monkeyc -o &lt;output.prg&gt; -m &lt;manifest.xml&gt; [-z resource.xml;resource2.xml] &lt;file1.mc&gt; [file2.mc]...
 </code></pre>
 
 <ul>
-<li><code>monkeydo</code> runs a Monkey C executable in the simulator. You must have previously started the simulator with <code>connectiq</code>. The usage is:</li>
+<li><code>monkeydo</code> runs a Connect IQ executable in the simulator. You must have previously started the simulator with <code>connectiq</code>. The usage is:</li>
 </ul>
 
 <pre><code>&gt; monkeydo myApp.prg
 </code></pre>
 
-<p>An example of a typical build cycle:</p>
+<p>Here is an example of a basic build and run cycle from the command line:</p>
 
 <pre><code>&gt; connectiq
 &gt; monkeyc -o myApp.prg -m manifest.xml myApp.mc
 &gt; monkeydo myApp.prg
 </code></pre>
 
-<h2 id="theconnectiqsimulator">The Connect IQ Simulator</h2>
-
-<p>The Connect IQ Simulator can be used to run apps on your computer before running them on your device. When running an app in the simulator your app will only have access to those APIs that are available on the currently simulated device. For example, an API only available in Biker Monkey, such as <code>PersistedContent</code>, will not be available to devices that run Aikido Monkey. The generic watches, such as square watch, have access to all the Connect IQ APIs.</p>
-
 <h2 id="theeclipseplug-in">The Eclipse Plug-in</h2>
 
-<p>The Connect IQ Eclipse plug-in turns Eclipse into a Monkey C development environment. Its features include:</p>
+<p>The Connect IQ Eclipse plug-in turns Eclipse into a Connect IQ development environment. Its features include:</p>
 
 <ul>
 <li>Syntax highlighting editor</li>
@@ -454,7 +458,7 @@ $ open ~/.bash_profile
 <li>Integrated execution of applications in the Connect IQ simulator</li>
 </ul>
 
-<p>The Connect IQ plug-in requires either the Standard Edition or IDE for Java Developers (either 32 or 64 bit) of <a href="http://www.eclipse.org/" title="Eclipse">Eclipse Mars or newer</a>. Once Eclipse is installed, install the plug-in with the following steps.</p>
+<p>The Connect IQ plug-in requires either the Standard Edition or IDE for Java Developers (either 32 or 64 bit) of <a href="http://www.eclipse.org/" title="Eclipse">Eclipse Mars</a> or newer and <a href="JavaJRE">Oracle Java&trade; Runtime Environment 8</a> (version 1.8.0 or higher).</p>
 
 <h3 id="installingtheeclipsexmleditor">Installing the Eclipse XML Editor</h3>
 
@@ -462,8 +466,8 @@ $ open ~/.bash_profile
 
 <ol>
 <li><p>In the top menu, go to <em>Help &gt; Install New Software</em>:</p></li>
-<li><p>Select your Eclipse distribution (Mars, Neon, etc) from the available update sites.</p></li>
-<li><p>Find and mark the check box next to <em>Web, XML, Java EE and OSGi Enterprise Development &gt; Eclipse XML Editor and Tools</em>.</p>
+<li><p>Select your Eclipse distribution (Mars, Neon, etc.) from the available update sites.</p></li>
+<li><p>Check the box next to <em>Web, XML, Java EE and OSGi Enterprise Development &gt; Eclipse XML Editor and Tools</em>.<a href="#fn:1" id="fnref:1" title="see footnote" class="footnote">[1]</a></p>
 <figure>
 <img src="resources/programmers-guide/xml_editor.png" style="max-width:622px;" title="Eclipse XML Editor and Tools" />
 </figure></li>
@@ -480,7 +484,7 @@ $ open ~/.bash_profile
 <figure>
 <img src="resources/programmers-guide/edit_site.png" style="max-width:489px;" title="The edit site dialog box" />
 </figure></li>
-<li><p>Mark the check box next to Connect IQ in the list and hit <em>Next</em>:</p>
+<li><p>Check the box next to Connect IQ in the list and hit <em>Next</em>:</p>
 <figure>
 <img src="resources/programmers-guide/update_sites.png" style="max-width:616px;" title="The newly added Connect IQ update site" />
 </figure></li>
@@ -503,7 +507,7 @@ $ open ~/.bash_profile
 
 <h2 id="generatingadeveloperkeyciq1.3">Generating a Developer Key (CIQ 1.3)</h2>
 
-<p>The Connect IQ compiler requires a developer key be provided to for signing when compiling and packaging apps. The required key must be a RSA 4096 bit private key.</p>
+<p>The Connect IQ compiler requires a developer key to sign apps when they&#8217;re compiled and packaged. The required key must be a RSA 4096 bit private key.</p>
 
 <p><strong>Note</strong>: It&#8217;s important you keep track of the key you use to sign app packages. You will need to use the same key to sign updates to an existing app on the store. If you lose your original signing key you will not be able to update your app.</p>
 
@@ -519,7 +523,14 @@ $ open ~/.bash_profile
 
 <h3 id="generatingakeyusingtheeclipseplug-in">Generating a Key Using the Eclipse Plug-in</h3>
 
-<p>If you&#8217;re using the Eclipse Plug-in there is a key generation utility built in. The tool can be accessed through the compiler preferences page (<em>Preferences &gt; Connect IQ &gt; Compiler</em>). Clicking the <em>Generate</em> button will open the wizard. Set the output path in the wizard and click <em>Finish</em>.</p>
+<p>If you&#8217;re using the Eclipse Plug-in there is a key generation utility built-in. Here&#8217;s how to use it:</p>
+
+<ol>
+<li>In the top menu, go to <em>Preferences &gt; Connect IQ &gt; Compiler</em></li>
+<li>Click the <em>Generate</em> button to open the wizard</li>
+<li>Set the output location for your developer key</li>
+<li>Click <em>Finish</em> to create the key</li>
+</ol>
 <figure>
 <img src="resources/programmers-guide/generate_key_wizard.png" style="max-width:814px;" title="The key generation wizard" />
 </figure>
@@ -754,7 +765,7 @@ function error( msg );
 
 <p>Like Java, Monkey C compiles into byte code that is interpreted by a virtual machine. Also like Java, all objects are allocated on the heap, and the virtual machine cleans up memory (Java through garbage collection, Monkey C through reference counting). Unlike Java, Monkey C does not have primitive types&mdash;integers, floats, and chars are objects. This means primitives can have methods just like other objects.</p>
 
-<p>While Java is a statically typed language, Monkey C is <a href="https://en.wikipedia.org/wiki/Duck_typing"><em>duck typed</em></a>. In Java, the developer must declare the types for all parameters of a function, and declare the return value type. The Java compiler checks these at compile time to ensure type safety. Duck typing is the concept of &#8220;if it walks like a duck, and quacks like a duck, then it must be a duck&#8221;<a href="#fn:1" id="fnref:1" title="see footnote" class="footnote">[1]</a>. For example:</p>
+<p>While Java is a statically typed language, Monkey C is <a href="https://en.wikipedia.org/wiki/Duck_typing"><em>duck typed</em></a>. In Java, the developer must declare the types for all parameters of a function, and declare the return value type. The Java compiler checks these at compile time to ensure type safety. Duck typing is the concept of &#8220;if it walks like a duck, and quacks like a duck, then it must be a duck&#8221;<a href="#fn:2" id="fnref:2" title="see footnote" class="footnote">[2]</a>. For example:</p>
 
 <pre><code class="java">function add( a, b ) {
     return a + b;
@@ -818,7 +829,7 @@ doLongRunningTask( method( :wakeMeUpBeforeYouGoGo ) );
 
 <h2 id="functions">Functions</h2>
 
-<p>Functions are the meat<a href="#fn:2" id="fnref:2" title="see footnote" class="footnote">[2]</a> of your program. Functions define discrete callable units of code.</p>
+<p>Functions are the meat<a href="#fn:3" id="fnref:3" title="see footnote" class="footnote">[3]</a> of your program. Functions define discrete callable units of code.</p>
 
 <p>Monkey C functions can take arguments, but because Monkey C is a dynamically typed language the argument types is not declared; just its name. Also, it is not necessary to declare the return value of a function, or even if a function returns a value, because all functions return values. You can specify the return value with a <code>return</code> statement, but if your function doesn&#8217;t have a <code>return</code> statement it will return the last value on the stack.</p>
 
@@ -1531,7 +1542,7 @@ function usageSample() {
 <img src="resources/programmers-guide/weak-reference-1.png" style="max-width:153px;" />
 </figure>
 
-<p>Now C gets invited to sit at the cool-kid table, so it dereferences A so it can hang out with its <em>real</em> friends.<a href="#fn:3" id="fnref:3" title="see footnote" class="footnote">[3]</a></p>
+<p>Now C gets invited to sit at the cool-kid table, so it dereferences A so it can hang out with its <em>real</em> friends.<a href="#fn:4" id="fnref:4" title="see footnote" class="footnote">[4]</a></p>
 <figure>
 <img src="resources/programmers-guide/weak-reference-2.png" style="max-width:153px;" />
 </figure>
@@ -1610,7 +1621,7 @@ function foo() {
 }
 </code></pre>
 
-<p>The <code>as</code> clause provides a wat to assumed a module with a different name within scope. This is useful for shortening module names or when you simply disagree with our naming scheme<a href="#fn:4" id="fnref:4" title="see footnote" class="footnote">[4]</a>:</p>
+<p>The <code>as</code> clause provides a wat to assumed a module with a different name within scope. This is useful for shortening module names or when you simply disagree with our naming scheme<a href="#fn:5" id="fnref:5" title="see footnote" class="footnote">[5]</a>:</p>
 
 <pre><code class="java">using Toybox.System as Sys;
 
@@ -1874,7 +1885,7 @@ class A {
 }
 </code></pre>
 
-<p>If you are referring to a global variable, using bling can improve runtime performance<a href="#fn:5" id="fnref:5" title="see footnote" class="footnote">[5]</a>:</p>
+<p>If you are referring to a global variable, using bling can improve runtime performance<a href="#fn:6" id="fnref:6" title="see footnote" class="footnote">[6]</a>:</p>
 
 <pre><code class="java">var globalScopedVariable = &quot;Global String&quot;;
 
@@ -2089,11 +2100,57 @@ module A
 &lt;font id=&quot;font_id&quot; filename=&quot;big_font.fnt&quot; filter=&quot;0123456789:&quot;/&gt;
 </code></pre>
 
-<h2 id="appsettings">App Settings</h2>
+<h2 id="datastorage">Data Storage</h2>
+
+<p>Connect IQ provides several different methods for saving data. This is accomplished by the use of an Object Store, Properties, and App Settings. See below for more information about each method and how to use them.</p>
+
+<h3 id="objectstore">Object Store</h3>
+
+<p>The Object Store is used for saving and retrieving data from the file structure of the device at run time as defined by the developer. This data is not accessible by the end user. Information is automatically saved when <code>App.onStop()</code> is called, but no modifications will be saved if the app crashes during execution. As an example of a practical use of Object Store this feature can be used to store location information when an app was last used. On the next use of the app the Object Store can provide location data and the app will assume the last known location.</p>
+
+<pre><code class="java">// Data types that can be stored in the Object Store:
+Number
+Float
+Long
+Double
+Char
+Srting
+Boolean
+Array
+Dictionary
+</code></pre>
+
+<p>It is important to note that an <code>Array</code> or <code>Dictionary</code> may only contain the data types listed above. For example it is not possible to store a Symbol in and <code>Array</code> or <code>Dictionary</code> in the Object Store.</p>
+
+<p>Object Store values are encrypted on disk and stored in the .STR file.</p>
+
+<pre><code class="java">// Get an Object Store value from code
+var myObjectStoreItem = Application.getApp().getProperty(&quot;myObjectStoreItem&quot;);
+
+// Set an Object Store value from code
+Application.getApp().setProperty(&quot;myObjectStoreItem&quot;, myObjectStoreItem);
+
+</code></pre>
+
+<p>Here is a very basic example:</p>
+
+<pre><code class="java">// For a location one might save a location when an app is closed with the code below (assume that the value is a set of location information):
+Application.getApp().setProperty(location, value);
+
+//...when the user starts the next activity one could call:
+
+var myLastLocation = Application.getApp().getProperty(location);
+dc.drawText(x, y, Gfx.FONT_SMALL, &quot;Last location: &quot; + myLastLocation, Gfx.TEXT_JUSTIFY_LEFT);
+
+</code></pre>
+
+<p>This will print out the location information stored on the last use of the application.</p>
+
+<h3 id="appsettings">App Settings</h3>
 
 <p>The app settings framework enables app developers to present options to end users for their apps within Garmin Connect Mobile and Garmin Express. This will allow app customization and setup, especially for watch faces and data field which have no way to receive user input.</p>
 
-<h3 id="defininganappsetting">Defining an App Setting</h3>
+<h4 id="defininganappsetting">Defining an App Setting</h4>
 
 <p>An app setting is composed of a property and an associated setting. The property is used to store the underlying value. The setting is used to describe how the property should displayed to the end user. You can define a property as a default value and not define an associated setting but you cannot define a setting without tying it to a property.</p>
 
@@ -2347,7 +2404,7 @@ module A
 </tbody>
 </table>
 
-<h3 id="accessingappsettingvalues">Accessing App Setting Values</h3>
+<h4 id="accessingappsettingvalues">Accessing App Setting Values</h4>
 
 <p>App properties are accessed the same way Object Store values are accessed. To get or set a property value use the <code>AppBase.getProperty(key)</code> or <code>AppBase.setProperty(key)</code> functions respectively.</p>
 
@@ -4117,7 +4174,7 @@ function getElevationHistory(options);
 
 <h3 id="fitdeveloperfieldsciq1.3">FIT Developer Fields (CIQ 1.3)</h3>
 
-<p>Now imagine you want to add a new metric - Namastes - to the Yoga app<a href="#fn:6" id="fnref:6" title="see footnote" class="footnote">[6]</a>. This metric will combine heart rate, accelerometer, and other sensor data into a single value, and does not have an analog in any Garmin recording metric. To do this we need the <code>FitContributor</code> API, which allows you to add new metrics to a FIT recording and display it on <a href="http://connect.garmin.com" title="Visit Garmin Connect">Garmin Connect</a>.</p>
+<p>Now imagine you want to add a new metric - Namastes - to the Yoga app<a href="#fn:7" id="fnref:7" title="see footnote" class="footnote">[7]</a>. This metric will combine heart rate, accelerometer, and other sensor data into a single value, and does not have an analog in any Garmin recording metric. To do this we need the <code>FitContributor</code> API, which allows you to add new metrics to a FIT recording and display it on <a href="http://connect.garmin.com" title="Visit Garmin Connect">Garmin Connect</a>.</p>
 
 <p>First, you must enable the <code>FitContributor</code> permission in the manifest file. Next, you need to add your field definitions in your resources using the <code>fitContributions</code> block:</p>
 
@@ -4352,7 +4409,7 @@ function setupField(session) {
 
 <p>Many web services require the user to log in in order to provide API access. This log in step requires a handoff to an authorization endpoint for credential entry. Upon successful entry, the authorization endpoint redirects to the caller with the proper tokens to enable API calls.</p>
 
-<p>Credential entry can be difficult on devices with limited input. Rather than add a web browser to the wearable<a href="#fn:7" id="fnref:7" title="see footnote" class="footnote">[7]</a>, Connect IQ provides a mechanism to hand off credential entry to the phone.</p>
+<p>Credential entry can be difficult on devices with limited input. Rather than add a web browser to the wearable<a href="#fn:8" id="fnref:8" title="see footnote" class="footnote">[8]</a>, Connect IQ provides a mechanism to hand off credential entry to the phone.</p>
 
 <pre><code class="java">module Communications
 {
@@ -4412,7 +4469,38 @@ function setupField(session) {
 
 <h3 id="directmessaging">Direct Messaging</h3>
 
-<p>Some watch apps will want to communicate directly with a phone app instead of routing through Garmin Connect Mobile. For these cases Monkey C exposes a concept of a mailbox. Each app will have its own mailbox that it can retrieve messages from and it can subscribe to an event that fires when a new message comes in.</p>
+<p>Some watch apps will want to communicate directly with a phone app instead of routing through Garmin Connect Mobile. For these cases Monkey C exposes the <code>transmit</code> and <code>registerForPhoneAppMessages</code> APIs:</p>
+
+<pre><code class="java">//! Register a callback for receiving Phone App messages. The callback will be called
+//! once for each message received. If there are messages waiting for the app when this
+//! function is called, the callback will immediately be called once for each
+//! waiting message.
+//! @param method [Method] The callback with the signature callback(data). Data will be of
+//!                        type PhoneAppMessage
+//! @since 1.4.0
+native function registerForPhoneAppMessages(method);
+
+//! Send data across the the BLE link.
+//! @param [Object] The object to be sent
+//! @param [Dictionary] options Additional transmit options (TBD)
+//! @param [ConnectionListener] listener An extension of the
+//!       ConnectionListener class.
+function transmit( content, options, listener );
+
+//! Listener class for transmit
+class ConnectionListener
+{
+    //! Callback when a communications operation error occurs.
+    function onError();
+
+    //! Callback when a communications operation completes.
+    function onComplete();
+}
+</code></pre>
+
+<p><code>registerforPhoneAppMessages</code> is used to recieve messages from a phone app built with the Connect IQ Mobile SDK. If messages are received when no callback is registered with this API, they are saved on the device until the storage limit for messages is reached. Any messages that are saved on the device will be sent to the specified callback after it is specified in <code>registerForPhoneApp</code>. <code>transmit</code> is used to send messsages directly to a phone app. A connection listener is registered with each transmit to receive the status of the attempted transmission.</p>
+
+<p>The mailbox API has been deprecated in ConnectIQ 2.2 and <code>registerforPhoneAppMessages</code> should be used instead to improve performance:</p>
 
 <pre><code class="java">//! The MailboxIterator is used to get the messages out of the Mailbox.
 class MailboxIterator
@@ -4435,23 +4523,9 @@ function setMailboxListener( listener );
 //! To clear the contents of the mailbox, call emptyMailbox().
 function emptyMailbox();
 
-//! Send data across the the BLE link.
-//! @param [Object] The object to be sent
-//! @param [Dictionary] options Additional transmit options (TBD)
-//! @param [ConnectionListener] listener An extension of the
-//!       ConnectionListener class.
-function transmit( content, options, listener );
-
-//! Listener class for transmit
-class ConnectionListener
-{
-    //! Callback when a communications operation error occurs.
-    function onError();
-
-    //! Callback when a communications operation completes.
-    function onComplete();
-}
 </code></pre>
+
+<p>Please note that the mailbox and <code>registerForPhoneAppMessages</code> APIs are mutually exclusive and cannot be used at the same time in an app. If both listeners are registered, the deprecated mailbox listener will not receive any callbacks. Messages will only be sent to the registerForPhoneAppMessages listener.</p>
 
 <h2 id="persistedcontent2.2">Persisted Content (2.2)</h2>
 
@@ -4995,31 +5069,35 @@ Closing shell and port
 <ol>
 
 <li id="fn:1">
-<p>This is different than Monkey Typing, where a thousand monkeys over infinite time write the works of Shakespeare. <a href="#fnref:1" title="return to article" class="reversefootnote">&#160;&#8617;</a></p>
+<p>Newer versions of the Eclipse installer will automatically include these tools. If you do not see them listed, then you may skip this step. <a href="#fnref:1" title="return to article" class="reversefootnote">&#160;&#8617;</a></p>
 </li>
 
 <li id="fn:2">
-<p>Tofu for the vegetarians, BBQ for Kansans&hellip; <a href="#fnref:2" title="return to article" class="reversefootnote">&#160;&#8617;</a></p>
+<p>This is different than Monkey Typing, where a thousand monkeys over infinite time write the works of Shakespeare. <a href="#fnref:2" title="return to article" class="reversefootnote">&#160;&#8617;</a></p>
 </li>
 
 <li id="fn:3">
-<p>Not that this ever happened to the author. <a href="#fnref:3" title="return to article" class="reversefootnote">&#160;&#8617;</a></p>
+<p>Tofu for the vegetarians, BBQ for Kansans&hellip; <a href="#fnref:3" title="return to article" class="reversefootnote">&#160;&#8617;</a></p>
 </li>
 
 <li id="fn:4">
-<p>We are all about conflict avoidance here. <a href="#fnref:4" title="return to article" class="reversefootnote">&#160;&#8617;</a></p>
+<p>Not that this ever happened to the author. <a href="#fnref:4" title="return to article" class="reversefootnote">&#160;&#8617;</a></p>
 </li>
 
 <li id="fn:5">
-<p>Do not forget to match your bling with pieces of flair; you can&#8217;t have enough of either. <a href="#fnref:5" title="return to article" class="reversefootnote">&#160;&#8617;</a></p>
+<p>We are all about conflict avoidance here. <a href="#fnref:5" title="return to article" class="reversefootnote">&#160;&#8617;</a></p>
 </li>
 
 <li id="fn:6">
-<p>How can we possibly tell who is more at peace with the universe if we don&#8217;t have a metric? <a href="#fnref:6" title="return to article" class="reversefootnote">&#160;&#8617;</a></p>
+<p>Do not forget to match your bling with pieces of flair; you can&#8217;t have enough of either. <a href="#fnref:6" title="return to article" class="reversefootnote">&#160;&#8617;</a></p>
 </li>
 
 <li id="fn:7">
-<p>WML is gonna be making a comeback Liz! Technology is cyclical! <a href="#fnref:7" title="return to article" class="reversefootnote">&#160;&#8617;</a></p>
+<p>How can we possibly tell who is more at peace with the universe if we don&#8217;t have a metric? <a href="#fnref:7" title="return to article" class="reversefootnote">&#160;&#8617;</a></p>
+</li>
+
+<li id="fn:8">
+<p>WML is gonna be making a comeback Liz! Technology is cyclical! <a href="#fnref:8" title="return to article" class="reversefootnote">&#160;&#8617;</a></p>
 </li>
 
 </ol>

@@ -66,38 +66,42 @@
   
   
 </h1>
-
-<dl class="box">
+<div class="box_info">
   
-    <dt class="r1">Inherits:</dt>
-    <dd class="r1">
-      <span class="inheritName">Object</span>
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="../Lang/Object.html" title="Toybox::Lang::Object (class)">Lang::Object</a></span></span>
       
         <ul class="fullTree">
           <li>Object</li>
+          
+            <li class="next"><span class='object_link'><a href="../Lang/Object.html" title="Toybox::Lang::Object (class)">Lang::Object</a></span></li>
           
             <li class="next">Toybox::Time::Moment</li>
           
         </ul>
         <a href="#" class="inheritanceTree">show all</a>
       
-      </dd>
-    
+    </dd>
+  </dl>
+  
+
   
   
-    
-  
-    
   
   
-</dl>
-<div class="clear"></div>
+  
+
+  
+</div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
     
 <p>The Moment object represents an immutable moment in time. Internally stored
-as a 32 bit integer of number of seconds since the UNIX epoch.</p>
+as a 32 bit integer of number of seconds since the UNIX epoch. The Moment
+class is stored in UTC.</p>
 
 
   </div>
@@ -139,7 +143,7 @@ as a 32 bit integer of number of seconds since the UNIX epoch.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#add-instance_method" title="#add (instance method)">#<strong>add</strong>(time)  &#x21d2; Moment </a>
+      <a href="#add-instance_method" title="#add (instance method)"><strong>add</strong>(time)  &#x21d2; Moment </a>
     
 
     
@@ -163,7 +167,7 @@ as a 32 bit integer of number of seconds since the UNIX epoch.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#compare-instance_method" title="#compare (instance method)">#<strong>compare</strong>(date)  &#x21d2; Number </a>
+      <a href="#compare-instance_method" title="#compare (instance method)"><strong>compare</strong>(date)  &#x21d2; Number </a>
     
 
     
@@ -187,7 +191,7 @@ as a 32 bit integer of number of seconds since the UNIX epoch.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#greaterThan-instance_method" title="#greaterThan (instance method)">#<strong>greaterThan</strong>(date)  &#x21d2; Boolean </a>
+      <a href="#greaterThan-instance_method" title="#greaterThan (instance method)"><strong>greaterThan</strong>(date)  &#x21d2; Boolean </a>
     
 
     
@@ -211,7 +215,7 @@ as a 32 bit integer of number of seconds since the UNIX epoch.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(value)  &#x21d2; Moment </a>
+      <a href="#initialize-instance_method" title="#initialize (instance method)"><strong>initialize</strong>(value)  &#x21d2; Moment </a>
     
 
     
@@ -237,7 +241,7 @@ as a 32 bit integer of number of seconds since the UNIX epoch.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#lessThan-instance_method" title="#lessThan (instance method)">#<strong>lessThan</strong>(date)  &#x21d2; Boolean </a>
+      <a href="#lessThan-instance_method" title="#lessThan (instance method)"><strong>lessThan</strong>(date)  &#x21d2; Boolean </a>
     
 
     
@@ -261,7 +265,7 @@ as a 32 bit integer of number of seconds since the UNIX epoch.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#subtract-instance_method" title="#subtract (instance method)">#<strong>subtract</strong>(date)  &#x21d2; Duration </a>
+      <a href="#subtract-instance_method" title="#subtract (instance method)"><strong>subtract</strong>(date)  &#x21d2; Duration </a>
     
 
     
@@ -285,7 +289,7 @@ as a 32 bit integer of number of seconds since the UNIX epoch.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#value-instance_method" title="#value (instance method)">#<strong>value</strong>  &#x21d2; Number </a>
+      <a href="#value-instance_method" title="#value (instance method)"><strong>value</strong>  &#x21d2; Number </a>
     
 
     
@@ -309,13 +313,24 @@ as a 32 bit integer of number of seconds since the UNIX epoch.</p>
     </ul>
   
 
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../Lang/Object.html" title="Toybox::Lang::Object (class)">Lang::Object</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Lang/Object.html#equals-instance_method" title="Toybox::Lang::Object#equals (method)">equals</a></span>, <span class='object_link'><a href="../Lang/Object.html#hashCode-instance_method" title="Toybox::Lang::Object#hashCode (method)">hashCode</a></span>, <span class='object_link'><a href="../Lang/Object.html#method-instance_method" title="Toybox::Lang::Object#method (method)">method</a></span>, <span class='object_link'><a href="../Lang/Object.html#toString-instance_method" title="Toybox::Lang::Object#toString (method)">toString</a></span>, <span class='object_link'><a href="../Lang/Object.html#weak-instance_method" title="Toybox::Lang::Object#weak (method)">weak</a></span></p>
 <div id="constructor_details" class="method_details_list">
   <h2>Constructor Details</h2>
   
     <div class="method_details first">
   <h3 class="signature first" id="initialize-instance_method">
   
-    #<strong>initialize</strong>(value)  &#x21d2; <tt><span class='object_link'><a href="" title="Toybox::Time::Moment (class)">Moment</a></span></tt> 
+    <strong>initialize</strong>(value)  &#x21d2; <tt><span class='object_link'><a href="" title="Toybox::Time::Moment (class)">Moment</a></span></tt> 
   
 
   
@@ -348,7 +363,82 @@ as a 32 bit integer of number of seconds since the UNIX epoch.</p>
   
 </ul>
 
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+4483
+4484</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 4483</span>
+
+def initialize(value)
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
+  
+</div>
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    <strong>initialize</strong>(value)  &#x21d2; <tt><span class='object_link'><a href="" title="Toybox::Time::Moment (class)">Moment</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns a new instance of Moment</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.1.2</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+4483
+4484</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 4483</span>
+
+def initialize(value)
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
   
 </div>
@@ -361,7 +451,7 @@ as a 32 bit integer of number of seconds since the UNIX epoch.</p>
       <div class="method_details first">
   <h3 class="signature first" id="add-instance_method">
   
-    #<strong>add</strong>(time)  &#x21d2; <tt><span class='object_link'><a href="" title="Toybox::Time::Moment (class)">Moment</a></span></tt> 
+    <strong>add</strong>(time)  &#x21d2; <tt><span class='object_link'><a href="" title="Toybox::Time::Moment (class)">Moment</a></span></tt> 
   
 
   
@@ -432,13 +522,29 @@ as a 32 bit integer of number of seconds since the UNIX epoch.</p>
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+4490
+4491</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 4490</span>
+
+def add(time)
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
       <div class="method_details ">
   <h3 class="signature " id="compare-instance_method">
   
-    #<strong>compare</strong>(date)  &#x21d2; <tt>Number</tt> 
+    <strong>compare</strong>(date)  &#x21d2; <tt>Number</tt> 
   
 
   
@@ -509,13 +615,29 @@ as a 32 bit integer of number of seconds since the UNIX epoch.</p>
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+4504
+4505</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 4504</span>
+
+def compare(date)
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
       <div class="method_details ">
   <h3 class="signature " id="greaterThan-instance_method">
   
-    #<strong>greaterThan</strong>(date)  &#x21d2; <tt>Boolean</tt> 
+    <strong>greaterThan</strong>(date)  &#x21d2; <tt>Boolean</tt> 
   
 
   
@@ -586,13 +708,29 @@ as a 32 bit integer of number of seconds since the UNIX epoch.</p>
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+4518
+4519</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 4518</span>
+
+def greaterThan(date)
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
       <div class="method_details ">
   <h3 class="signature " id="lessThan-instance_method">
   
-    #<strong>lessThan</strong>(date)  &#x21d2; <tt>Boolean</tt> 
+    <strong>lessThan</strong>(date)  &#x21d2; <tt>Boolean</tt> 
   
 
   
@@ -663,13 +801,29 @@ as a 32 bit integer of number of seconds since the UNIX epoch.</p>
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+4511
+4512</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 4511</span>
+
+def lessThan(date)
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
       <div class="method_details ">
   <h3 class="signature " id="subtract-instance_method">
   
-    #<strong>subtract</strong>(date)  &#x21d2; <tt><span class='object_link'><a href="Duration.html" title="Toybox::Time::Duration (class)">Duration</a></span></tt> 
+    <strong>subtract</strong>(date)  &#x21d2; <tt><span class='object_link'><a href="Duration.html" title="Toybox::Time::Duration (class)">Duration</a></span></tt> 
   
 
   
@@ -740,13 +894,29 @@ as a 32 bit integer of number of seconds since the UNIX epoch.</p>
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+4497
+4498</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 4497</span>
+
+def subtract(date)
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
       <div class="method_details ">
   <h3 class="signature " id="value-instance_method">
   
-    #<strong>value</strong>  &#x21d2; <tt>Number</tt> 
+    <strong>value</strong>  &#x21d2; <tt>Number</tt> 
   
 
   
@@ -797,7 +967,23 @@ as a 32 bit integer of number of seconds since the UNIX epoch.</p>
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+4524
+4525</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 4524</span>
+
+def value()
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
   </div>
@@ -805,7 +991,7 @@ as a 32 bit integer of number of seconds since the UNIX epoch.</p>
 </div>
 
       <div id="footer">
-  Generated on Mon Nov  7 13:39:12 2016 by
+  Generated on Wed Dec 21 14:04:04 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.5 (ruby-2.1.5).
 </div>

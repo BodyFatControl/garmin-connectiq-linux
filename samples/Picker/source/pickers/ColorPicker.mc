@@ -29,6 +29,11 @@ class ColorPicker extends Ui.Picker {
 }
 
 class ColorPickerDelegate extends Ui.PickerDelegate {
+
+    function initialize() {
+        PickerDelegate.initialize();
+    }
+
     function onCancel() {
         Ui.popView(Ui.SLIDE_IMMEDIATE);
     }
@@ -37,4 +42,5 @@ class ColorPickerDelegate extends Ui.PickerDelegate {
         App.getApp().setProperty("color", values[0]);
         Ui.popView(Ui.SLIDE_IMMEDIATE);
     }
+
 }

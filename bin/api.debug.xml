@@ -642,6 +642,7 @@
 <entry id="8389281" method="true" symbol="onStop"/>
 <entry field="true" id="8388971" symbol="TONE_ALERT_LO"/>
 <entry field="true" id="8388915" symbol="isSleepMode"/>
+<entry id="8390068" symbol="appendParamsToUrl"/>
 <entry field="true" id="8389386" symbol="FONT_NUMBER_MEDIUM"/>
 <entry field="true" id="8389419" symbol="DEVICE_STATE_DEAD"/>
 <entry id="8389707" method="true" symbol="getMin"/>
@@ -1176,87 +1177,91 @@
 <entry endPc="805306565" name="success" stackId="2" startPc="805306521"/>
 <entry endPc="805307468" name="i" stackId="2" startPc="805306570"/>
 <entry endPc="805307652" name="previousValue" stackId="2" startPc="805307556"/>
-<entry endPc="805307971" name="i" stackId="7" startPc="805307767"/>
-<entry endPc="805307971" name="keys" stackId="6" startPc="805307767"/>
-<entry endPc="805308025" name="requestType" stackId="5" startPc="805307683"/>
-<entry endPc="805308264" name="i" stackId="6" startPc="805308063"/>
-<entry endPc="805308264" name="keys" stackId="5" startPc="805308063"/>
-<entry endPc="805308456" name="dithering" stackId="10" startPc="805308056"/>
-<entry endPc="805308456" name="palette" stackId="7" startPc="805308056"/>
-<entry endPc="805308456" name="maxHeight" stackId="9" startPc="805308056"/>
-<entry endPc="805308456" name="maxWidth" stackId="8" startPc="805308056"/>
-<entry endPc="805308838" name="i" stackId="3" startPc="805308788"/>
-<entry endPc="805308851" name="len" stackId="2" startPc="805308753"/>
-<entry endPc="805308851" name="result" stackId="1" startPc="805308753"/>
-<entry endPc="805309031" name="idx" stackId="3" startPc="805308949"/>
-<entry endPc="805309044" name="k" stackId="1" startPc="805308905"/>
-<entry endPc="805309044" name="string" stackId="2" startPc="805308905"/>
-<entry endPc="805309696" name="fmt" stackId="2" startPc="805309473"/>
-<entry endPc="805309696" name="SEMICONVERT" stackId="4" startPc="805309473"/>
-<entry endPc="805309696" name="DOUBLEPI" stackId="3" startPc="805309473"/>
-<entry endPc="805309768" name="degreeLat" stackId="1" startPc="805309701"/>
-<entry endPc="805309768" name="degreeLon" stackId="2" startPc="805309701"/>
-<entry endPc="805309857" name="radianLat" stackId="2" startPc="805309773"/>
-<entry endPc="805309857" name="radianLon" stackId="3" startPc="805309773"/>
-<entry endPc="805309857" name="DOUBLEPI" stackId="1" startPc="805309773"/>
-<entry endPc="805310868" name="delta" stackId="2" startPc="805310812"/>
-<entry endPc="805311299" name="delta" stackId="2" startPc="805311246"/>
-<entry endPc="805312455" name="hour" stackId="5" startPc="805312076"/>
-<entry endPc="805312455" name="today" stackId="8" startPc="805312076"/>
-<entry endPc="805312455" name="day" stackId="4" startPc="805312076"/>
-<entry endPc="805312455" name="second" stackId="7" startPc="805312076"/>
-<entry endPc="805312455" name="year" stackId="2" startPc="805312076"/>
-<entry endPc="805312455" name="monthHash" stackId="9" startPc="805312076"/>
-<entry endPc="805312455" name="month" stackId="3" startPc="805312076"/>
-<entry endPc="805312455" name="minute" stackId="6" startPc="805312076"/>
-<entry endPc="805312663" name="result" stackId="7" startPc="805312460"/>
-<entry endPc="805312663" name="hours" stackId="4" startPc="805312460"/>
-<entry endPc="805312663" name="minutes" stackId="5" startPc="805312460"/>
-<entry endPc="805312663" name="years" stackId="2" startPc="805312460"/>
-<entry endPc="805312663" name="seconds" stackId="6" startPc="805312460"/>
-<entry endPc="805312663" name="days" stackId="3" startPc="805312460"/>
-<entry endPc="805313159" name="type" stackId="4" startPc="805313044"/>
-<entry endPc="805313291" name="type" stackId="5" startPc="805313176"/>
-<entry endPc="805313329" name="event" stackId="3" startPc="805312964"/>
-<entry endPc="805313329" name="handled" stackId="2" startPc="805312964"/>
-<entry endPc="805313717" name="behavior" stackId="3" startPc="805313414"/>
-<entry endPc="805313717" name="symbol" stackId="4" startPc="805313414"/>
-<entry endPc="805313717" name="handled" stackId="2" startPc="805313414"/>
-<entry endPc="805313905" name="i" stackId="3" startPc="805313817"/>
-<entry endPc="805313911" name="drawable" stackId="2" startPc="805313736"/>
-<entry endPc="805314079" name="idx" stackId="2" startPc="805314043"/>
-<entry endPc="805314530" name="item" stackId="3" startPc="805314431"/>
-<entry endPc="805315138" name="value" stackId="2" startPc="805314887"/>
-<entry endPc="805315295" name="value" stackId="2" startPc="805315198"/>
-<entry endPc="805315718" name="x" stackId="2" startPc="805315424"/>
-<entry endPc="805315718" name="y" stackId="3" startPc="805315424"/>
-<entry endPc="805316115" name="value" stackId="2" startPc="805315808"/>
-<entry endPc="805316248" name="dimensions" stackId="5" startPc="805316187"/>
-<entry endPc="805316595" name="x" stackId="2" startPc="805316120"/>
-<entry endPc="805316595" name="justification" stackId="4" startPc="805316120"/>
-<entry endPc="805316595" name="y" stackId="3" startPc="805316120"/>
-<entry endPc="805317165" name="state" stackId="2" startPc="805316946"/>
-<entry endPc="805320594" name="location" stackId="3" startPc="805320524"/>
-<entry endPc="805320669" name="location" stackId="3" startPc="805320599"/>
-<entry endPc="805320744" name="location" stackId="3" startPc="805320674"/>
-<entry endPc="805321999" name="durDiff" stackId="9" startPc="805320777"/>
-<entry endPc="805321999" name="durOne" stackId="1" startPc="805320777"/>
-<entry endPc="805321999" name="durThree" stackId="6" startPc="805320777"/>
-<entry endPc="805321999" name="durationTest" stackId="5" startPc="805320777"/>
-<entry endPc="805321999" name="momentTwo" stackId="10" startPc="805320777"/>
-<entry endPc="805321999" name="durThreeVal" stackId="7" startPc="805320777"/>
-<entry endPc="805321999" name="durOneVal" stackId="2" startPc="805320777"/>
-<entry endPc="805321999" name="durTwo" stackId="3" startPc="805320777"/>
-<entry endPc="805321999" name="durTwoVal" stackId="4" startPc="805320777"/>
-<entry endPc="805321999" name="momentOne" stackId="8" startPc="805320777"/>
-<entry endPc="805322786" name="durationTest" stackId="5" startPc="805322004"/>
-<entry endPc="805322786" name="momentOneVal" stackId="2" startPc="805322004"/>
-<entry endPc="805322786" name="momentThreeVal" stackId="7" startPc="805322004"/>
-<entry endPc="805322786" name="momentTwo" stackId="3" startPc="805322004"/>
-<entry endPc="805322786" name="momentOne" stackId="1" startPc="805322004"/>
-<entry endPc="805322786" name="momentThree" stackId="6" startPc="805322004"/>
-<entry endPc="805322786" name="momentTwoVal" stackId="4" startPc="805322004"/>
-<entry endPc="805323602" name="profile" stackId="1" startPc="805323582"/>
+<entry endPc="805307833" name="requestType" stackId="5" startPc="805307683"/>
+<entry endPc="805308007" name="isPersistedContent" stackId="7" startPc="805307845"/>
+<entry endPc="805308007" name="requestType" stackId="5" startPc="805307845"/>
+<entry endPc="805308007" name="responseType" stackId="6" startPc="805307845"/>
+<entry endPc="805308007" name="appendParams" stackId="8" startPc="805307845"/>
+<entry endPc="805308244" name="i" stackId="6" startPc="805308043"/>
+<entry endPc="805308244" name="keys" stackId="5" startPc="805308043"/>
+<entry endPc="805308436" name="dithering" stackId="10" startPc="805308036"/>
+<entry endPc="805308436" name="palette" stackId="7" startPc="805308036"/>
+<entry endPc="805308436" name="maxHeight" stackId="9" startPc="805308036"/>
+<entry endPc="805308436" name="maxWidth" stackId="8" startPc="805308036"/>
+<entry endPc="805308852" name="i" stackId="5" startPc="805308507"/>
+<entry endPc="805308852" name="keys" stackId="4" startPc="805308507"/>
+<entry endPc="805309181" name="i" stackId="3" startPc="805309131"/>
+<entry endPc="805309194" name="len" stackId="2" startPc="805309096"/>
+<entry endPc="805309194" name="result" stackId="1" startPc="805309096"/>
+<entry endPc="805309374" name="idx" stackId="3" startPc="805309292"/>
+<entry endPc="805309387" name="k" stackId="1" startPc="805309248"/>
+<entry endPc="805309387" name="string" stackId="2" startPc="805309248"/>
+<entry endPc="805310039" name="fmt" stackId="2" startPc="805309816"/>
+<entry endPc="805310039" name="SEMICONVERT" stackId="4" startPc="805309816"/>
+<entry endPc="805310039" name="DOUBLEPI" stackId="3" startPc="805309816"/>
+<entry endPc="805310111" name="degreeLat" stackId="1" startPc="805310044"/>
+<entry endPc="805310111" name="degreeLon" stackId="2" startPc="805310044"/>
+<entry endPc="805310200" name="radianLat" stackId="2" startPc="805310116"/>
+<entry endPc="805310200" name="radianLon" stackId="3" startPc="805310116"/>
+<entry endPc="805310200" name="DOUBLEPI" stackId="1" startPc="805310116"/>
+<entry endPc="805311211" name="delta" stackId="2" startPc="805311155"/>
+<entry endPc="805311642" name="delta" stackId="2" startPc="805311589"/>
+<entry endPc="805312798" name="hour" stackId="5" startPc="805312419"/>
+<entry endPc="805312798" name="today" stackId="8" startPc="805312419"/>
+<entry endPc="805312798" name="day" stackId="4" startPc="805312419"/>
+<entry endPc="805312798" name="second" stackId="7" startPc="805312419"/>
+<entry endPc="805312798" name="year" stackId="2" startPc="805312419"/>
+<entry endPc="805312798" name="monthHash" stackId="9" startPc="805312419"/>
+<entry endPc="805312798" name="month" stackId="3" startPc="805312419"/>
+<entry endPc="805312798" name="minute" stackId="6" startPc="805312419"/>
+<entry endPc="805313006" name="result" stackId="7" startPc="805312803"/>
+<entry endPc="805313006" name="hours" stackId="4" startPc="805312803"/>
+<entry endPc="805313006" name="minutes" stackId="5" startPc="805312803"/>
+<entry endPc="805313006" name="years" stackId="2" startPc="805312803"/>
+<entry endPc="805313006" name="seconds" stackId="6" startPc="805312803"/>
+<entry endPc="805313006" name="days" stackId="3" startPc="805312803"/>
+<entry endPc="805313502" name="type" stackId="4" startPc="805313387"/>
+<entry endPc="805313634" name="type" stackId="5" startPc="805313519"/>
+<entry endPc="805313672" name="event" stackId="3" startPc="805313307"/>
+<entry endPc="805313672" name="handled" stackId="2" startPc="805313307"/>
+<entry endPc="805314060" name="behavior" stackId="3" startPc="805313757"/>
+<entry endPc="805314060" name="symbol" stackId="4" startPc="805313757"/>
+<entry endPc="805314060" name="handled" stackId="2" startPc="805313757"/>
+<entry endPc="805314248" name="i" stackId="3" startPc="805314160"/>
+<entry endPc="805314254" name="drawable" stackId="2" startPc="805314079"/>
+<entry endPc="805314422" name="idx" stackId="2" startPc="805314386"/>
+<entry endPc="805314873" name="item" stackId="3" startPc="805314774"/>
+<entry endPc="805315481" name="value" stackId="2" startPc="805315230"/>
+<entry endPc="805315638" name="value" stackId="2" startPc="805315541"/>
+<entry endPc="805316061" name="x" stackId="2" startPc="805315767"/>
+<entry endPc="805316061" name="y" stackId="3" startPc="805315767"/>
+<entry endPc="805316458" name="value" stackId="2" startPc="805316151"/>
+<entry endPc="805316591" name="dimensions" stackId="5" startPc="805316530"/>
+<entry endPc="805316938" name="x" stackId="2" startPc="805316463"/>
+<entry endPc="805316938" name="justification" stackId="4" startPc="805316463"/>
+<entry endPc="805316938" name="y" stackId="3" startPc="805316463"/>
+<entry endPc="805317508" name="state" stackId="2" startPc="805317289"/>
+<entry endPc="805320937" name="location" stackId="3" startPc="805320867"/>
+<entry endPc="805321012" name="location" stackId="3" startPc="805320942"/>
+<entry endPc="805321087" name="location" stackId="3" startPc="805321017"/>
+<entry endPc="805322342" name="durDiff" stackId="9" startPc="805321120"/>
+<entry endPc="805322342" name="durOne" stackId="1" startPc="805321120"/>
+<entry endPc="805322342" name="durThree" stackId="6" startPc="805321120"/>
+<entry endPc="805322342" name="durationTest" stackId="5" startPc="805321120"/>
+<entry endPc="805322342" name="momentTwo" stackId="10" startPc="805321120"/>
+<entry endPc="805322342" name="durThreeVal" stackId="7" startPc="805321120"/>
+<entry endPc="805322342" name="durOneVal" stackId="2" startPc="805321120"/>
+<entry endPc="805322342" name="durTwo" stackId="3" startPc="805321120"/>
+<entry endPc="805322342" name="durTwoVal" stackId="4" startPc="805321120"/>
+<entry endPc="805322342" name="momentOne" stackId="8" startPc="805321120"/>
+<entry endPc="805323129" name="durationTest" stackId="5" startPc="805322347"/>
+<entry endPc="805323129" name="momentOneVal" stackId="2" startPc="805322347"/>
+<entry endPc="805323129" name="momentThreeVal" stackId="7" startPc="805322347"/>
+<entry endPc="805323129" name="momentTwo" stackId="3" startPc="805322347"/>
+<entry endPc="805323129" name="momentOne" stackId="1" startPc="805322347"/>
+<entry endPc="805323129" name="momentThree" stackId="6" startPc="805322347"/>
+<entry endPc="805323129" name="momentTwoVal" stackId="4" startPc="805322347"/>
+<entry endPc="805323945" name="profile" stackId="1" startPc="805323925"/>
 </localVars>
 <annotations>
 <annotationEntry annotation="minSdk(&quot;1.0.0&quot;)" class="Activity" module="Toybox" symbol="getActivityInfo"/>
@@ -1363,9 +1368,13 @@
 <annotationEntry annotation="minSdk(&quot;1.2.0&quot;)" class="Communications" module="Toybox" symbol="cancelAllRequests"/>
 <annotationEntry annotation="minSdk(&quot;1.0.0&quot;)" class="MailboxIterator" module="Toybox_Communications" symbol="next"/>
 <annotationEntry annotation="minSdk(&quot;1.0.0&quot;)" class="Communications" module="Toybox" symbol="getMailbox"/>
+<annotationEntry annotation="hasBleLinkSupport" class="Communications" module="Toybox" symbol="getMailbox"/>
 <annotationEntry annotation="minSdk(&quot;1.0.0&quot;)" class="Communications" module="Toybox" symbol="setMailboxListener"/>
+<annotationEntry annotation="hasBleLinkSupport" class="Communications" module="Toybox" symbol="setMailboxListener"/>
 <annotationEntry annotation="minSdk(&quot;1.0.0&quot;)" class="Communications" module="Toybox" symbol="emptyMailbox"/>
+<annotationEntry annotation="hasBleLinkSupport" class="Communications" module="Toybox" symbol="emptyMailbox"/>
 <annotationEntry annotation="minSdk(&quot;1.0.0&quot;)" class="Communications" module="Toybox" symbol="transmit"/>
+<annotationEntry annotation="hasBleLinkSupport" class="Communications" module="Toybox" symbol="transmit"/>
 <annotationEntry annotation="minSdk(&quot;1.0.0&quot;)" class="ConnectionListener" module="Toybox_Communications" symbol="onError"/>
 <annotationEntry annotation="minSdk(&quot;1.0.0&quot;)" class="ConnectionListener" module="Toybox_Communications" symbol="onComplete"/>
 <annotationEntry annotation="minSdk(&quot;1.3.0&quot;)" class="OAuthMessage" module="Toybox_Communications" symbol="initialize"/>
@@ -1373,6 +1382,7 @@
 <annotationEntry annotation="minSdk(&quot;1.3.0&quot;)" class="Communications" module="Toybox" symbol="registerForOAuthMessages"/>
 <annotationEntry annotation="minSdk(&quot;1.3.0&quot;)" class="Communications" module="Toybox" symbol="openWebPage"/>
 <annotationEntry annotation="minSdk(&quot;1.4.0&quot;)" class="Communications" module="Toybox" symbol="registerForPhoneAppMessages"/>
+<annotationEntry annotation="hasBleLinkSupport" class="Communications" module="Toybox" symbol="registerForPhoneAppMessages"/>
 <annotationEntry annotation="minSdk(&quot;1.0.0&quot;)" class="ActivityRecording" module="Toybox" symbol="createSession"/>
 <annotationEntry annotation="minSdk(&quot;1.0.0&quot;)" class="Session" module="Toybox_ActivityRecording" symbol="start"/>
 <annotationEntry annotation="minSdk(&quot;1.0.0&quot;)" class="Session" module="Toybox_ActivityRecording" symbol="stop"/>
@@ -1577,18 +1587,6 @@
 <annotationEntry annotation="minSdk(&quot;2.2.0&quot;)" class="UnexpectedAppTypeException" module="Toybox_System" symbol="initialize"/>
 <annotationEntry annotation="minSdk(&quot;2.2.0&quot;)" class="AppNotInstalledException" module="Toybox_System" symbol="initialize"/>
 <annotationEntry annotation="minSdk(&quot;2.2.0&quot;)" class="PreviousOperationNotCompleteException" module="Toybox_System" symbol="initialize"/>
-<annotationEntry annotation="minSdk(&quot;2.1.0&quot;)" class="Logger" module="Toybox_Test" symbol="debug"/>
-<annotationEntry annotation="minSdk(&quot;2.1.0&quot;)" class="Logger" module="Toybox_Test" symbol="warning"/>
-<annotationEntry annotation="minSdk(&quot;2.1.0&quot;)" class="Logger" module="Toybox_Test" symbol="error"/>
-<annotationEntry annotation="minSdk(&quot;2.1.0&quot;)" class="Test" module="Toybox" symbol="assert"/>
-<annotationEntry annotation="minSdk(&quot;2.1.0&quot;)" class="Test" module="Toybox" symbol="assertMessage"/>
-<annotationEntry annotation="minSdk(&quot;2.1.0&quot;)" class="Test" module="Toybox" symbol="assertEqual"/>
-<annotationEntry annotation="minSdk(&quot;2.1.0&quot;)" class="Test" module="Toybox" symbol="assertEqualMessage"/>
-<annotationEntry annotation="minSdk(&quot;2.1.0&quot;)" class="Test" module="Toybox" symbol="assertNotEqual"/>
-<annotationEntry annotation="minSdk(&quot;2.1.0&quot;)" class="Test" module="Toybox" symbol="assertNotEqualMessage"/>
-<annotationEntry annotation="minSdk(&quot;2.1.0&quot;)" class="Test" module="Toybox_Test" symbol="getNumberOfTests"/>
-<annotationEntry annotation="minSdk(&quot;2.1.0&quot;)" class="Test" module="Toybox_Test" symbol="runTest"/>
-<annotationEntry annotation="minSdk(&quot;2.1.0&quot;)" class="Test" module="Toybox_Test" symbol="passed"/>
 <annotationEntry annotation="minSdk(&quot;1.1.2&quot;)" class="Moment" module="Toybox_Time" symbol="initialize"/>
 <annotationEntry annotation="minSdk(&quot;1.0.0&quot;)" class="Moment" module="Toybox_Time" symbol="add"/>
 <annotationEntry annotation="minSdk(&quot;1.0.0&quot;)" class="Moment" module="Toybox_Time" symbol="subtract"/>
@@ -1980,7 +1978,7 @@
 <param id="parameters"/>
 <param id="options"/>
 <param id="responseCallback"/>
-<documentation><![CDATA[<div class="description"> To use Garmin Connect Mobile as a proxy to the web, use makeWebRequest().<br/> The request is asynchronous; the responseCallback will be called when the request returns.<br/> <div class="param"> [String] url The URL being requested</div><br/> <div class="param"> [Dictionary] parameters Dictionary of keys and values. These values should not be URL encoded. Can be null.</div><br/> <div class="param"> [Dictionary] options Dictionary of options. Can be null.</div><br/> @option options [Number] :method The HTTP method of the request. Should be a HTTP_REQUEST_METHOD_* value.<br/> @option options [Dictionary] :headers A Dictionary of HTTP headers to include in the request. The "Content-Type"<br/>                                       header for the body of the request can be specified using a REQUEST_CONTENT_TYPE_*<br/>                                       value. If the content type is not specified, it will default to "application/json"<br/>                                       for POST and PUT requests. By default, GET and DELETE requests will have their<br/>                                       parameters appended to the URL. Setting the method as GET or DELETE as well as a<br/>                                       "Content-Type" header will result in the parameters being set in the body of the<br/>                                       request and they will not be appended to the URL.<br/> @option options [Number] :responseType The format of the response. Should be a HTTP_RESPONSE_CONTENT_TYPE_* value. If HTTP_RESPONSE_CONTENT_TYPE_FIT or<br/>                                        HTTP_RESPONSE_CONTENT_TYPE_GPX is given, the system will attempt to download and parse a FIT or GPX file and store<br/>                                        the contained data in the device, based on the contents of the file. Use If not given, the system will use the Content-Type<br/>                                        header from the server response.<br/> <div class="param"> [Method] responseCallback This is a callback in the format function responseCallback(responseCode, data);</div><br/>                                  responseCode has the server response code or a BLE_* error type, and data contains a Dictionary of content if the request was successful.<br/> @since 1.3.0<br/></div>]]></documentation>
+<documentation><![CDATA[<div class="description"> To use Garmin Connect Mobile as a proxy to the web, use makeWebRequest().<br/> The request is asynchronous; the responseCallback will be called when the request returns.<br/> <div class="param"> [String] url The URL being requested</div><br/> <div class="param"> [Dictionary] parameters Dictionary of keys and values. These values should not be URL encoded. Can be null.</div><br/> <div class="param"> [Dictionary] options Dictionary of options. Can be null.</div><br/> @option options [Number] :method The HTTP method of the request. Should be a HTTP_REQUEST_METHOD_* value.<br/> @option options [Dictionary] :headers A Dictionary of HTTP headers to include in the request. The "Content-Type"<br/>                                       header for the body of the request can be specified using a REQUEST_CONTENT_TYPE_*<br/>                                       value. If the content type is not specified, it will default to "application/x-www-form-urlencoded"<br/>                                       for POST and PUT requests. By default, DELETE requests will have their<br/>                                       parameters appended to the URL. Setting the method as DELETE as well as a<br/>                                       "Content-Type" header will result in the parameters being set in the body of the<br/>                                       request and they will not be appended to the URL. GET requests can only have their<br/>                                       parameters appended to the URL, specifying the "Content-Type" header will not set the body.<br/> @option options [Number] :responseType The format of the response. Should be a HTTP_RESPONSE_CONTENT_TYPE_* value. If HTTP_RESPONSE_CONTENT_TYPE_FIT or<br/>                                        HTTP_RESPONSE_CONTENT_TYPE_GPX is given, the system will attempt to download and parse a FIT or GPX file and store<br/>                                        the contained data in the device, based on the contents of the file. Use If not given, the system will use the Content-Type<br/>                                        header from the server response.<br/> <div class="param"> [Method] responseCallback This is a callback in the format function responseCallback(responseCode, data);</div><br/>                                  responseCode has the server response code or a BLE_* error type, and data contains a Dictionary of content if the request was successful.<br/> @since 1.3.0<br/></div>]]></documentation>
 </functionEntry>
 <functionEntry name="makeImageRequest" parent="Communications">
 <param id="url"/>
@@ -2064,6 +2062,12 @@
 <param id="params"/>
 <param id="options"/>
 <documentation><![CDATA[<div class="description"> Request that GCM issue a phone notification that will open a web page.<br/> <div class="param"> url [String] The URL to open.</div><br/> <div class="param"> params [Dictionary] The request parameters. Parameters should not be URL encoded.</div><br/> <div class="param"> options [Dictionary] Additional options for the request. (TBD)</div><br/> @since 1.3.0<br/></div>]]></documentation>
+</functionEntry>
+<functionEntry name="appendParamsToUrl" parent="Communications">
+<param id="url"/>
+<param id="params"/>
+<param id="urlEncode"/>
+<documentation/>
 </functionEntry>
 <functionEntry name="createSession" parent="ActivityRecording">
 <param id="options"/>
@@ -2232,10 +2236,10 @@
 <documentation><![CDATA[<div class="description"> Use setPenWidth() to set the width of a line<br/> <div class="param"> [Number] width in pixels</div><br/> @since 1.0.0<br/></div>]]></documentation>
 </functionEntry>
 <functionEntry name="getWidth" parent="Dc">
-<documentation><![CDATA[<div class="description"> Use getWidth() to get the width of the display.<br/> <div class="returns">Returns  [Number] Width of display</div><br/> @since 1.0.0<br/></div>]]></documentation>
+<documentation><![CDATA[<div class="description"> Use getWidth() to get the width of the display region that is available to the app.<br/> <div class="returns">Returns  [Number] Width of display</div><br/> @since 1.0.0<br/></div>]]></documentation>
 </functionEntry>
 <functionEntry name="getHeight" parent="Dc">
-<documentation><![CDATA[<div class="description"> Use getHeight() to get the height of the display.<br/> <div class="returns">Returns  [Number] Height of display</div><br/> @since 1.0.0<br/></div>]]></documentation>
+<documentation><![CDATA[<div class="description"> Use getHeight() to get the height of the display region that is available to the app.<br/> <div class="returns">Returns  [Number] Height of display</div><br/> @since 1.0.0<br/></div>]]></documentation>
 </functionEntry>
 <functionEntry name="getTextWidthInPixels" parent="Dc">
 <param id="text"/>
@@ -2941,7 +2945,7 @@
 </functionEntry>
 <functionEntry name="moment" parent="Gregorian">
 <param id="options"/>
-<documentation><![CDATA[<div class="description"> Create a Moment object from a hash table of options with moment(). The Moment is<br/> created from the current time. For instance, if the current day is April 1 and you<br/> pass in a :day value of 1 the returned Moment's day will be April 2.<br/> <div class="param"> [Dictionary] options Hash table of options</div><br/> @option options [Number] :year The year<br/> @option options [Number] :month The month<br/> @option options [Number] :day The day<br/> @option options [Number] :hour The hour<br/> @option options [Number] :minute The minute<br/> @option options [Number] :second The second<br/> <div class="returns">Returns  [Moment] The Moment object created using the options</div><br/> @since 1.0.0<br/></div>]]></documentation>
+<documentation><![CDATA[<div class="description"> Create a Moment object from a hash table of options with moment(); Gregorian.moment()<br/> returns UTC converted to local time. The Moment is<br/> created from the current time. Any unchanged options will default to the current<br/> time.<br/> <div class="param"> [Dictionary] options Hash table of options</div><br/> @option options [Number] :year The year<br/> @option options [Number] :month The month<br/> @option options [Number] :day The day<br/> @option options [Number] :hour The hour<br/> @option options [Number] :minute The minute<br/> @option options [Number] :second The second<br/> <div class="returns">Returns  [Moment] The Moment object created using the options</div><br/> @since 1.0.0<br/></div>]]></documentation>
 </functionEntry>
 <functionEntry name="momentNative" parent="Gregorian">
 <param id="year"/>

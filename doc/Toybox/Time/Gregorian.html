@@ -66,17 +66,17 @@
   
   
 </h1>
+<div class="box_info">
+  
 
-<dl class="box">
   
   
-    
-  
-    
   
   
-</dl>
-<div class="clear"></div>
+  
+
+  
+</div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
@@ -118,10 +118,10 @@ Gregorian calendar.</p>
 </p>
 
   <h2>Constant Summary</h2>
-  
-    <dl class="constants">
-      
-        <dt id="SECONDS_PER_YEAR-constant" class="">SECONDS_PER_YEAR = 31557600  <div class="docstring">
+  <dl class="constants">
+    
+      <dt id="SECONDS_PER_YEAR-constant" class="">SECONDS_PER_YEAR = 31557600
+        <div class="docstring">
   <div class="discussion">
     
 <p>Time constant for number of seconds in a year</p>
@@ -149,9 +149,10 @@ Gregorian calendar.</p>
 </ul>
 
 </div>
-        </dt>
-      
-        <dt id="SECONDS_PER_DAY-constant" class="">SECONDS_PER_DAY = 86400  <div class="docstring">
+      </dt>
+    
+      <dt id="SECONDS_PER_DAY-constant" class="">SECONDS_PER_DAY = 86400
+        <div class="docstring">
   <div class="discussion">
     
 <p>Time constant for number of seconds in a day</p>
@@ -179,9 +180,10 @@ Gregorian calendar.</p>
 </ul>
 
 </div>
-        </dt>
-      
-        <dt id="SECONDS_PER_HOUR-constant" class="">SECONDS_PER_HOUR = 3600  <div class="docstring">
+      </dt>
+    
+      <dt id="SECONDS_PER_HOUR-constant" class="">SECONDS_PER_HOUR = 3600
+        <div class="docstring">
   <div class="discussion">
     
 <p>Time constant for number of seconds in an hour</p>
@@ -209,9 +211,10 @@ Gregorian calendar.</p>
 </ul>
 
 </div>
-        </dt>
-      
-        <dt id="SECONDS_PER_MINUTE-constant" class="">SECONDS_PER_MINUTE = 60  <div class="docstring">
+      </dt>
+    
+      <dt id="SECONDS_PER_MINUTE-constant" class="">SECONDS_PER_MINUTE = 60
+        <div class="docstring">
   <div class="discussion">
     
 <p>Time constant for number of seconds in a minute</p>
@@ -239,10 +242,9 @@ Gregorian calendar.</p>
 </ul>
 
 </div>
-        </dt>
-      
-    </dl>
-  
+      </dt>
+    
+  </dl>
 
 
 
@@ -261,7 +263,7 @@ Gregorian calendar.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#duration-instance_method" title="#duration (instance method)">#<strong>duration</strong>(options)  &#x21d2; Duration </a>
+      <a href="#duration-instance_method" title="#duration (instance method)"><strong>duration</strong>(options)  &#x21d2; Duration </a>
     
 
     
@@ -285,7 +287,7 @@ Gregorian calendar.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#info-instance_method" title="#info (instance method)">#<strong>info</strong>(date, format)  &#x21d2; Info </a>
+      <a href="#info-instance_method" title="#info (instance method)"><strong>info</strong>(date, format)  &#x21d2; Info </a>
     
 
     
@@ -309,7 +311,7 @@ Gregorian calendar.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#moment-instance_method" title="#moment (instance method)">#<strong>moment</strong>(options)  &#x21d2; Moment </a>
+      <a href="#moment-instance_method" title="#moment (instance method)"><strong>moment</strong>(options)  &#x21d2; Moment </a>
     
 
     
@@ -324,7 +326,8 @@ Gregorian calendar.</p>
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Create a Moment object from a hash table of options with moment().</p>
+<p>Create a Moment object from a hash table of options with moment();
+Gregorian.moment() returns UTC converted to local time.</p>
 </div></span>
   
 </li>
@@ -333,7 +336,7 @@ Gregorian calendar.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#utcInfo-instance_method" title="#utcInfo (instance method)">#<strong>utcInfo</strong>(date, format)  &#x21d2; Info </a>
+      <a href="#utcInfo-instance_method" title="#utcInfo (instance method)"><strong>utcInfo</strong>(date, format)  &#x21d2; Info </a>
     
 
     
@@ -366,7 +369,7 @@ Gregorian calendar.</p>
       <div class="method_details first">
   <h3 class="signature first" id="duration-instance_method">
   
-    #<strong>duration</strong>(options)  &#x21d2; <tt><span class='object_link'><a href="Duration.html" title="Toybox::Time::Duration (class)">Duration</a></span></tt> 
+    <strong>duration</strong>(options)  &#x21d2; <tt><span class='object_link'><a href="Duration.html" title="Toybox::Time::Duration (class)">Duration</a></span></tt> 
   
 
   
@@ -511,13 +514,29 @@ Gregorian calendar.</p>
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+4657
+4658</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 4657</span>
+
+def duration(options)
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
       <div class="method_details ">
   <h3 class="signature " id="info-instance_method">
   
-    #<strong>info</strong>(date, format)  &#x21d2; <tt><span class='object_link'><a href="Gregorian/Info.html" title="Toybox::Time::Gregorian::Info (class)">Info</a></span></tt> 
+    <strong>info</strong>(date, format)  &#x21d2; <tt><span class='object_link'><a href="Gregorian/Info.html" title="Toybox::Time::Gregorian::Info (class)">Info</a></span></tt> 
   
 
   
@@ -606,13 +625,29 @@ question. The time returned has been converted to local time.</p>
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+4667
+4668</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 4667</span>
+
+def info(date, format)
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
       <div class="method_details ">
   <h3 class="signature " id="moment-instance_method">
   
-    #<strong>moment</strong>(options)  &#x21d2; <tt><span class='object_link'><a href="Moment.html" title="Toybox::Time::Moment (class)">Moment</a></span></tt> 
+    <strong>moment</strong>(options)  &#x21d2; <tt><span class='object_link'><a href="Moment.html" title="Toybox::Time::Moment (class)">Moment</a></span></tt> 
   
 
   
@@ -621,10 +656,10 @@ question. The time returned has been converted to local time.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Create a Moment object from a hash table of options with moment(). The
-Moment is created from the current time. For instance, if the current day
-is April 1 and you pass in a :day value of 1 the returned Moment&#39;s day
-will be April 2.</p>
+<p>Create a Moment object from a hash table of options with moment();
+Gregorian.moment() returns UTC converted to local time. The Moment is
+created from the current time. Any unchanged options will default to the
+current time.</p>
 
 
   </div>
@@ -773,13 +808,29 @@ will be April 2.</p>
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+4645
+4646</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 4645</span>
+
+def moment(options)
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
       <div class="method_details ">
   <h3 class="signature " id="utcInfo-instance_method">
   
-    #<strong>utcInfo</strong>(date, format)  &#x21d2; <tt><span class='object_link'><a href="Gregorian/Info.html" title="Toybox::Time::Gregorian::Info (class)">Info</a></span></tt> 
+    <strong>utcInfo</strong>(date, format)  &#x21d2; <tt><span class='object_link'><a href="Gregorian/Info.html" title="Toybox::Time::Gregorian::Info (class)">Info</a></span></tt> 
   
 
   
@@ -868,7 +919,23 @@ question. The time returned has been converted to UTC.</p>
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+4677
+4678</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 4677</span>
+
+def utcInfo(date, format)
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
   </div>
@@ -876,7 +943,7 @@ question. The time returned has been converted to UTC.</p>
 </div>
 
       <div id="footer">
-  Generated on Mon Nov  7 13:39:09 2016 by
+  Generated on Wed Dec 21 14:03:58 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.5 (ruby-2.1.5).
 </div>

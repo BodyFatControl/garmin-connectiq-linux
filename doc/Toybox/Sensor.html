@@ -66,17 +66,17 @@
   
   
 </h1>
+<div class="box_info">
+  
 
-<dl class="box">
   
   
-    
-  
-    
   
   
-</dl>
-<div class="clear"></div>
+  
+
+  
+</div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
@@ -163,10 +163,10 @@ current sensor data.</p>
 </p>
 
   <h2>Constant Summary</h2>
-  
-    <dl class="constants">
-      
-        <dt id="SENSOR_BIKESPEED-constant" class="">SENSOR_BIKESPEED = 0  <div class="docstring">
+  <dl class="constants">
+    
+      <dt id="SENSOR_BIKESPEED-constant" class="">SENSOR_BIKESPEED = 0
+        <div class="docstring">
   <div class="discussion">
     
 <p>Remote system sensors that can be enabled</p>
@@ -194,9 +194,10 @@ current sensor data.</p>
 </ul>
 
 </div>
-        </dt>
-      
-        <dt id="SENSOR_BIKECADENCE-constant" class="">SENSOR_BIKECADENCE = 1  <div class="docstring">
+      </dt>
+    
+      <dt id="SENSOR_BIKECADENCE-constant" class="">SENSOR_BIKECADENCE = 1
+        <div class="docstring">
   <div class="discussion">
     
 
@@ -222,9 +223,10 @@ current sensor data.</p>
 </ul>
 
 </div>
-        </dt>
-      
-        <dt id="SENSOR_BIKEPOWER-constant" class="">SENSOR_BIKEPOWER = 2  <div class="docstring">
+      </dt>
+    
+      <dt id="SENSOR_BIKEPOWER-constant" class="">SENSOR_BIKEPOWER = 2
+        <div class="docstring">
   <div class="discussion">
     
 
@@ -250,9 +252,10 @@ current sensor data.</p>
 </ul>
 
 </div>
-        </dt>
-      
-        <dt id="SENSOR_FOOTPOD-constant" class="">SENSOR_FOOTPOD = 3  <div class="docstring">
+      </dt>
+    
+      <dt id="SENSOR_FOOTPOD-constant" class="">SENSOR_FOOTPOD = 3
+        <div class="docstring">
   <div class="discussion">
     
 
@@ -278,9 +281,10 @@ current sensor data.</p>
 </ul>
 
 </div>
-        </dt>
-      
-        <dt id="SENSOR_HEARTRATE-constant" class="">SENSOR_HEARTRATE = 4  <div class="docstring">
+      </dt>
+    
+      <dt id="SENSOR_HEARTRATE-constant" class="">SENSOR_HEARTRATE = 4
+        <div class="docstring">
   <div class="discussion">
     
 
@@ -306,9 +310,10 @@ current sensor data.</p>
 </ul>
 
 </div>
-        </dt>
-      
-        <dt id="SENSOR_TEMPERATURE-constant" class="">SENSOR_TEMPERATURE = 5  <div class="docstring">
+      </dt>
+    
+      <dt id="SENSOR_TEMPERATURE-constant" class="">SENSOR_TEMPERATURE = 5
+        <div class="docstring">
   <div class="discussion">
     
 
@@ -334,10 +339,9 @@ current sensor data.</p>
 </ul>
 
 </div>
-        </dt>
-      
-    </dl>
-  
+      </dt>
+    
+  </dl>
 
 
 
@@ -356,7 +360,7 @@ current sensor data.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#enableSensorEvents-instance_method" title="#enableSensorEvents (instance method)">#<strong>enableSensorEvents</strong>(listener)  &#x21d2; Object </a>
+      <a href="#enableSensorEvents-instance_method" title="#enableSensorEvents (instance method)"><strong>enableSensorEvents</strong>(listener)  &#x21d2; Object </a>
     
 
     
@@ -380,7 +384,7 @@ current sensor data.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#getInfo-instance_method" title="#getInfo (instance method)">#<strong>getInfo</strong>  &#x21d2; Sensor.Info </a>
+      <a href="#getInfo-instance_method" title="#getInfo (instance method)"><strong>getInfo</strong>  &#x21d2; Sensor.Info </a>
     
 
     
@@ -404,7 +408,7 @@ current sensor data.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#setEnabledSensors-instance_method" title="#setEnabledSensors (instance method)">#<strong>setEnabledSensors</strong>(sensors)  &#x21d2; Array </a>
+      <a href="#setEnabledSensors-instance_method" title="#setEnabledSensors (instance method)"><strong>setEnabledSensors</strong>(sensors)  &#x21d2; Array </a>
     
 
     
@@ -437,7 +441,7 @@ current sensor data.</p>
       <div class="method_details first">
   <h3 class="signature first" id="enableSensorEvents-instance_method">
   
-    #<strong>enableSensorEvents</strong>(listener)  &#x21d2; <tt>Object</tt> 
+    <strong>enableSensorEvents</strong>(listener)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -491,13 +495,29 @@ events at 1Hz.</p>
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+3761
+3762</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 3761</span>
+
+def enableSensorEvents(listener)
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
       <div class="method_details ">
   <h3 class="signature " id="getInfo-instance_method">
   
-    #<strong>getInfo</strong>  &#x21d2; <tt><span class='object_link'><a href="" title="Toybox::Sensor (module)">Sensor</a></span>.<span class='object_link'><a href="Sensor/Info.html" title="Toybox::Sensor::Info (class)">Info</a></span></tt> 
+    <strong>getInfo</strong>  &#x21d2; <tt><span class='object_link'><a href="" title="Toybox::Sensor (module)">Sensor</a></span>.<span class='object_link'><a href="Sensor/Info.html" title="Toybox::Sensor::Info (class)">Info</a></span></tt> 
   
 
   
@@ -548,13 +568,29 @@ events at 1Hz.</p>
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+3841
+3842</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 3841</span>
+
+def getInfo()
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
       <div class="method_details ">
   <h3 class="signature " id="setEnabledSensors-instance_method">
   
-    #<strong>setEnabledSensors</strong>(sensors)  &#x21d2; <tt>Array</tt> 
+    <strong>setEnabledSensors</strong>(sensors)  &#x21d2; <tt>Array</tt> 
   
 
   
@@ -626,7 +662,23 @@ the system sensors if possible.</p>
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+3754
+3755</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 3754</span>
+
+def setEnabledSensors(sensors)
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
   </div>
@@ -634,7 +686,7 @@ the system sensors if possible.</p>
 </div>
 
       <div id="footer">
-  Generated on Mon Nov  7 13:39:09 2016 by
+  Generated on Wed Dec 21 14:03:58 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.5 (ruby-2.1.5).
 </div>

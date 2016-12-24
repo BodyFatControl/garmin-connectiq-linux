@@ -66,17 +66,17 @@
   
   
 </h1>
+<div class="box_info">
+  
 
-<dl class="box">
   
   
-    
-  
-    
   
   
-</dl>
-<div class="clear"></div>
+  
+
+  
+</div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
@@ -118,10 +118,10 @@ data.</p>
 </p>
 
   <h2>Constant Summary</h2>
-  
-    <dl class="constants">
-      
-        <dt id="MOVE_BAR_LEVEL_MAX-constant" class="">MOVE_BAR_LEVEL_MAX = 5  <div class="docstring">
+  <dl class="constants">
+    
+      <dt id="MOVE_BAR_LEVEL_MAX-constant" class="">MOVE_BAR_LEVEL_MAX = 5
+        <div class="docstring">
   <div class="discussion">
     
 
@@ -147,9 +147,10 @@ data.</p>
 </ul>
 
 </div>
-        </dt>
-      
-        <dt id="MOVE_BAR_LEVEL_MIN-constant" class="">MOVE_BAR_LEVEL_MIN = 0  <div class="docstring">
+      </dt>
+    
+      <dt id="MOVE_BAR_LEVEL_MIN-constant" class="">MOVE_BAR_LEVEL_MIN = 0
+        <div class="docstring">
   <div class="discussion">
     
 
@@ -175,9 +176,10 @@ data.</p>
 </ul>
 
 </div>
-        </dt>
-      
-        <dt id="INVALID_HR_SAMPLE-constant" class="">INVALID_HR_SAMPLE = 255  <div class="docstring">
+      </dt>
+    
+      <dt id="INVALID_HR_SAMPLE-constant" class="">INVALID_HR_SAMPLE = 255
+        <div class="docstring">
   <div class="discussion">
     
 <p>Indicates that the given heart rate sample is invalid.</p>
@@ -257,10 +259,9 @@ data.</p>
 </ul>
 
 </div>
-        </dt>
-      
-    </dl>
-  
+      </dt>
+    
+  </dl>
 
 
 
@@ -279,7 +280,7 @@ data.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#getHeartRateHistory-instance_method" title="#getHeartRateHistory (instance method)">#<strong>getHeartRateHistory</strong>(period, newestFirst)  &#x21d2; ActivityMonitor.HeartRateIterator </a>
+      <a href="#getHeartRateHistory-instance_method" title="#getHeartRateHistory (instance method)"><strong>getHeartRateHistory</strong>(period, newestFirst)  &#x21d2; ActivityMonitor.HeartRateIterator </a>
     
 
     
@@ -304,7 +305,7 @@ cycle.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#getHistory-instance_method" title="#getHistory (instance method)">#<strong>getHistory</strong>  &#x21d2; Array </a>
+      <a href="#getHistory-instance_method" title="#getHistory (instance method)"><strong>getHistory</strong>  &#x21d2; Array </a>
     
 
     
@@ -328,7 +329,7 @@ cycle.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#getInfo-instance_method" title="#getInfo (instance method)">#<strong>getInfo</strong>  &#x21d2; ActivityMonitor.Info </a>
+      <a href="#getInfo-instance_method" title="#getInfo (instance method)"><strong>getInfo</strong>  &#x21d2; ActivityMonitor.Info </a>
     
 
     
@@ -361,7 +362,7 @@ cycle.</p>
       <div class="method_details first">
   <h3 class="signature first" id="getHeartRateHistory-instance_method">
   
-    #<strong>getHeartRateHistory</strong>(period, newestFirst)  &#x21d2; <tt><span class='object_link'><a href="" title="Toybox::ActivityMonitor (module)">ActivityMonitor</a></span>.<span class='object_link'><a href="ActivityMonitor/HeartRateIterator.html" title="Toybox::ActivityMonitor::HeartRateIterator (class)">HeartRateIterator</a></span></tt> 
+    <strong>getHeartRateHistory</strong>(period, newestFirst)  &#x21d2; <tt><span class='object_link'><a href="" title="Toybox::ActivityMonitor (module)">ActivityMonitor</a></span>.<span class='object_link'><a href="ActivityMonitor/HeartRateIterator.html" title="Toybox::ActivityMonitor::HeartRateIterator (class)">HeartRateIterator</a></span></tt> 
   
 
   
@@ -504,13 +505,29 @@ is a Number, then the last Number entries are retrieved.</p>
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+663
+664</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 663</span>
+
+def getHeartRateHistory(period, newestFirst)
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
       <div class="method_details ">
   <h3 class="signature " id="getHistory-instance_method">
   
-    #<strong>getHistory</strong>  &#x21d2; <tt>Array</tt> 
+    <strong>getHistory</strong>  &#x21d2; <tt>Array</tt> 
   
 
   
@@ -561,13 +578,29 @@ is a Number, then the last Number entries are retrieved.</p>
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+675
+676</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 675</span>
+
+def getHistory()
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
       <div class="method_details ">
   <h3 class="signature " id="getInfo-instance_method">
   
-    #<strong>getInfo</strong>  &#x21d2; <tt><span class='object_link'><a href="" title="Toybox::ActivityMonitor (module)">ActivityMonitor</a></span>.<span class='object_link'><a href="ActivityMonitor/Info.html" title="Toybox::ActivityMonitor::Info (class)">Info</a></span></tt> 
+    <strong>getInfo</strong>  &#x21d2; <tt><span class='object_link'><a href="" title="Toybox::ActivityMonitor (module)">ActivityMonitor</a></span>.<span class='object_link'><a href="ActivityMonitor/Info.html" title="Toybox::ActivityMonitor::Info (class)">Info</a></span></tt> 
   
 
   
@@ -618,7 +651,23 @@ is a Number, then the last Number entries are retrieved.</p>
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+669
+670</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 669</span>
+
+def getInfo()
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
   </div>
@@ -626,7 +675,7 @@ is a Number, then the last Number entries are retrieved.</p>
 </div>
 
       <div id="footer">
-  Generated on Mon Nov  7 13:39:08 2016 by
+  Generated on Wed Dec 21 14:03:57 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.5 (ruby-2.1.5).
 </div>

@@ -4,7 +4,7 @@
 	<meta charset="utf-8"/>
 	<title>Monkey C Release Notes</title>
 	<meta name="author" content="Garmin International"/>
-	<meta name="date" content="October 28, 2016"/>
+	<meta name="date" content="December 14, 2016"/>
 	<link type="text/css" rel="stylesheet" href="resources/readme/style.css"/>
 </head>
 <body>
@@ -27,7 +27,7 @@ function toggle(id, img_name) {
 // End -->
 </script>
 <div id="title">MONKEY C</div>
-<div id="tagline">Release 2.2.1 (Biker Monkey)</div>
+<div id="tagline">Release 2.2.2 (Biker Monkey)</div>
 <div class="clear"></div>
 
 <h1 id="tableofcontents">Table of Contents</h1>
@@ -46,7 +46,10 @@ function toggle(id, img_name) {
 <li><a href="#theeclipseplug-in">The Eclipse Plug-in</a>
 
 <ul>
+<li><a href="#installingtheeclipsexmleditor">Installing the Eclipse XML Editor</a></li>
+<li><a href="#installingtheeclipseplug-in">Installing the Eclipse Plug-in</a></li>
 <li><a href="#configuringtheeclipseplug-in">Configuring the Eclipse Plug-in</a></li>
+<li><a href="#generatingadeveloperkey">Generating a Developer Key</a></li>
 </ul></li>
 <li><a href="#errormessages">Error Messages</a></li>
 <li><a href="#usingthesamples">Using the Samples</a>
@@ -82,7 +85,7 @@ function toggle(id, img_name) {
 <li><a href="#releasenotes">Release Notes</a>
 
 <ul>
-<li><a href="#v2.2.1">v2.2.1</a></li>
+<li><a href="#v2.2.2">v2.2.2</a></li>
 </ul></li>
 <li><a href="#additionalnotes">Additional Notes</a></li>
 </ul>
@@ -96,61 +99,68 @@ function toggle(id, img_name) {
 
 <h1 id="gettingstarted">Getting Started</h1>
 
-<p>To use the Connect IQ SDK on all platforms you will need Oracle Java&trade; software development kit version 7 or higher. You can download the JDK from <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">http://www.oracle.com/technetwork/java/javase/downloads/index.html</a>.</p>
-
-<p>Download the latest version of the Connect IQ SDK from <a href="http://developer.garmin.com/connect-iq/sdk/">http://developer.garmin.com/connect-iq/sdk/</a> and unzip the connect-iq-sdk-x.y.z.zip file into a local directory. Installation specifics will vary depending on your operating system</p>
+<p>Before getting started with the installation on Mac or Windows, you&#8217;ll need <a href="JavaJRE">Oracle Java&trade; Runtime Environment 8</a> (version 1.8.0 or higher) installed. Once that&#8217;s done, continue on to your platform&#8217;s installation instructions.</p>
 
 <h2 id="osxinstallation">OS X Installation</h2>
 
-<p>The first step for using Monkey C is to point your <code>PATH</code> to the Monkey C bin directory.</p>
+<ol>
+<li>Visit the <a href="http://developer.garmin.com/connect-iq/sdk/">Connect IQ SDK</a> download page</li>
+<li>After reviewing the SDK license agreement, click the <em>Accept &amp; Download for Mac</em> button to download the SDK</li>
+<li>When the download has finished, locate the Connect IQ SDK disk image file in your Downloads folder and open it (a Finder window containing the SDK may open automatically)</li>
+<li>Create a new folder in a convenient location</li>
+<li>Drag the contents of the Connect IQ SDK disk image into this new folder</li>
+<li>Once complete, you may eject the disk image and delete the Connect IQ SDK disk image file</li>
+<li>Next, point your <code>PATH</code> to the Connect IQ bin directory in the Terminal. To temporarily add it to a single local shell instance:</li>
+</ol>
 
-<p>To add to a single local shell instance:</p>
-
-<pre><code class="bash">$ export PATH=$PATH:path/to/monkeyc/bin
+<pre><code class="bash">$ export PATH=$PATH:path/to/connectiq-sdk/bin
 </code></pre>
 
-<p>To add to a user profile:</p>
+<p>For a more persistent addition, open <code>.bash_profile</code> in a text editor:</p>
 
 <pre><code class="bash">$ touch ~/.bash_profile
 $ open ~/.bash_profile
 </code></pre>
 
-<p>The above opens <code>.bash_profile</code> in a text editor. Add the line below to the file and save the changes:</p>
+<p>Then add the line below to the file and save the changes:</p>
 
-<pre><code class="bash">$ export PATH=$PATH:path/to/monkeyc/bin
+<pre><code class="bash">$ export PATH=$PATH:path/to/connectiq-sdk/bin
 </code></pre>
 
 <h2 id="windowsinstallation">Windows Installation</h2>
 
-<p>This release works from the Windows NT shell.</p>
+<ol>
+<li>Visit the <a href="http://developer.garmin.com/connect-iq/sdk/">Connect IQ SDK</a> download page</li>
+<li>After reviewing the SDK license agreement, click the <em>Accept &amp; Download for Windows</em> button to download the SDK</li>
+<li>Create a new folder in a convenient location</li>
+<li>When the download has finished, locate the Connect IQ SDK zip file and extract it to this new folder</li>
+<li>Once complete, you may delete the Connect IQ SDK zip file</li>
+<li>Next, point your <code>PATH</code> to the Connect IQ bin directory in the command prompt:</li>
+</ol>
 
-<p>The first step for using Monkey C is to point your <code>PATH</code> to the Monkey C bin directory:</p>
-
-<pre><code>&gt; set PATH=%PATH%;path\to\monkeyc\bin
+<pre><code>&gt; set PATH=%PATH%;path\to\connectiq-sdk\bin
 </code></pre>
 
 <h2 id="basiccommands">Basic Commands</h2>
 
-<p>After installation, three new shell commands will be available: <code>connectiq</code>, <code>monkeyc</code>, and <code>monkeydo</code>.</p>
+<p>After installation, three new shell commands are available: <code>connectiq</code>, <code>monkeyc</code>, and <code>monkeydo</code>.</p>
 
 <ul>
-<li><p><code>connectiq</code> launches the Monkey C simulator. Use this simple command to start the simulator in the background.</p></li>
-<li><p><code>monkeyc</code> calls the Monkey C compiler. The compiler can take code from multiple files and link them together into a single Monkey C executable (a PRG file). The optional <code>-z</code> argument allows resource files to be passed in. If your project uses multiple resource files separate them with the system path separator (&#8216;<code>;</code>&#8217; in Windows and &#8216;<code>:</code>&#8217; in OSX). This allows the addition of bitmaps, drawables, fonts, strings, and menus to your executable. See the samples directory for a sample resource file.</p></li>
+<li><p><code>connectiq</code> launches the Connect IQ simulator, which can be used to run and test apps on your computer before running them on your device. In the simulator, your app will only have access to those APIs that are available on the currently simulated device. For example, an API only available in Connect IQ v2.2.x or higher, such as <code>PersistedContent</code>, will not be available on devices that run earlier versions of Connect IQ.</p></li>
+<li><p><code>monkeyc</code> calls the Monkey C compiler. The compiler can take code from multiple files and link them together into a single Connect IQ executable (a PRG file). The optional <code>-z</code> argument allows resource files to be passed in. If your project uses multiple resource files separate them with the system path separator (&#8216;<code>;</code>&#8217; in Windows and &#8216;<code>:</code>&#8217; in OSX). This allows the addition of bitmaps, drawables, fonts, strings, and menus to your executable. See the samples directory for a sample resource file. The usage is:</p></li>
 </ul>
-
-<p>The usage is:</p>
 
 <pre><code>&gt; monkeyc -o &lt;output.prg&gt; -m &lt;manifest.xml&gt; [-z resource.xml;resource2.xml] &lt;file1.mc&gt; [file2.mc]...
 </code></pre>
 
 <ul>
-<li><code>monkeydo</code> runs a Monkey C executable in the simulator. You must have previously started the simulator with <code>connectiq</code>. The usage is:</li>
+<li><code>monkeydo</code> runs a Connect IQ executable in the simulator. You must have previously started the simulator with <code>connectiq</code>. The usage is:</li>
 </ul>
 
 <pre><code>&gt; monkeydo myApp.prg
 </code></pre>
 
-<p>An example of a typical build cycle would be:</p>
+<p>Here is an example of a basic build and run cycle from the command line:</p>
 
 <pre><code>&gt; connectiq
 &gt; monkeyc -o myApp.prg -m manifest.xml myApp.mc
@@ -159,7 +169,7 @@ $ open ~/.bash_profile
 
 <h1 id="theeclipseplug-in">The Eclipse Plug-in</h1>
 
-<p>The Connect IQ Eclipse plug-in turns Eclipse into a Monkey C development environment. Its features include:</p>
+<p>The Connect IQ Eclipse plug-in turns Eclipse into a Connect IQ development environment. Its features include:</p>
 
 <ul>
 <li>Syntax highlighting editor</li>
@@ -167,9 +177,19 @@ $ open ~/.bash_profile
 <li>Integrated execution of applications in the Connect IQ simulator</li>
 </ul>
 
-<p>The Connect IQ plug-in requires either the Standard Edition or IDE for Java Developers (either 32 or 64 bit) of <a href="http://www.eclipse.org/luna/" title="Eclipse Luna">Eclipse Luna</a>. It will also require version 1.8 of the <a href="http://java.com/en/download/" title="Java JRE">Java JRE</a>.</p>
+<p>The Connect IQ plug-in requires either the Standard Edition or IDE for Java Developers (either 32 or 64 bit) of <a href="http://www.eclipse.org/" title="Eclipse">Eclipse Mars</a> or newer and <a href="JavaJRE">Oracle Java&trade; Runtime Environment 8</a> (version 1.8.0 or higher).</p>
 
-<p>Once Eclipse is installed, install the plug-in with the following steps.</p>
+<h2 id="installingtheeclipsexmleditor">Installing the Eclipse XML Editor</h2>
+
+<p>Before you can install the Connect IQ plug-in you must make sure you have the Eclipse XML editor and tools installed.</p>
+
+<ol>
+<li>In the top menu, go to <em>Help &gt; Install New Software</em>:</li>
+<li>Select your Eclipse distribution (Mars, Neon, etc.) from the available update sites.</li>
+<li>Check the box next to <em>Web, XML, Java EE and OSGi Enterprise Development &gt; Eclipse XML Editor and Tools</em>.</li>
+</ol>
+
+<h2 id="installingtheeclipseplug-in">Installing the Eclipse Plug-in</h2>
 
 <ol>
 <li>In the top menu, go to <em>Help &gt; Install New Software</em></li>
@@ -185,6 +205,19 @@ $ open ~/.bash_profile
 <li>Click the <em>Browse</em> button and add the path to your Connect IQ SDK directory. Make sure it is referencing the root directory of the SDK and not the <code>bin</code> subdirectory.</li>
 <li>Add the Connect IQ perspective to Eclipse by selecting <em>Window &gt; Open Perspective &gt; Other&#8230;</em> and then select <em>Connect IQ</em></li>
 </ol>
+
+<h2 id="generatingadeveloperkey">Generating a Developer Key</h2>
+
+<p>Before starting on your first project, you&#8217;ll need to create a developer key, which the Connect IQ compiler requires to sign apps when they&#8217;re compiled and packaged.</p>
+
+<ol>
+<li>In the top menu, go to <em>Preferences &gt; Connect IQ &gt; Compiler</em></li>
+<li>Click the <em>Generate</em> button to open the wizard</li>
+<li>Set the output location for your developer key</li>
+<li>Click <em>Finish</em> to create the key</li>
+</ol>
+
+<p>The developer key specified in the Connect IQ compiler preferences will automatically be passed to the compiler when a project is compiled.</p>
 
 <p>For more information about Eclipse plug-in setup and use, please refer to <a href="http://developer.garmin.com/connect-iq/getting-started/" title="Getting started with Connect IQ">Getting Started</a> or the Programmers Guide PDF included in the SDK download package.</p>
 
@@ -1024,7 +1057,46 @@ Displays a number with a color and value that changes depending on timer events:
 
 <h1 id="releasenotes">Release Notes</h1>
 
-<h2 id="v2.2.1">v2.2.1</h2>
+<h2 id="v2.2.2">v2.2.2</h2>
+
+<p><strong>General Changes</strong></p>
+
+<ul>
+<li>Sign the MacOS Simulator and distribute SDK as a DMG file</li>
+<li>Fix incorrect moderate and vigorous weekly totals in ActivityMonitor.info</li>
+<li>Fix weak pointer memory leak that could occur in specific circumstances</li>
+<li>Fix possible GPS issues if already on when an app or widget that uses GPS tries to enable it</li>
+<li>Fix memory leak when creating a Selectable / Button input event</li>
+<li>Do not allow modulus operator to be used with float / double when folding constants</li>
+<li>Correctly evaluate boolean operations when comparing Numbers when folding constants</li>
+<li>Fix several issues in API Documention / Programmer&#8217;s Guide documentation</li>
+<li>Deprecated Communications.setMailboxListener(). Use Communications.registerForPhoneMessages() instead. D2 Bravo and vívoactive HR do not support this new API at this time.</li>
+<li>Clarify compiler error message when tyring to compile for an invalid device ID</li>
+<li>Remove support for communicating with the mobile Connect IQ SDK in the API for Edge, Oregon, and Rino devices.</li>
+<li>Prevent an app crash when a character is not present in a device&#8217;s font set.</li>
+<li>Allow the setting of headers and HTTP method when using <code>Communications.makeWebRequest()</code> to download GPX and FIT files.</li>
+<li>Correct the type of several <code>System.DeviceSettings</code> values from Booleans to Numbers.</li>
+</ul>
+
+<p><strong>Simulator Changes</strong></p>
+
+<ul>
+<li>Prevent potential memory leak when registering for OAuth and Phone App messages</li>
+<li>Improve unsupported downloadable content request handling by throwing exceptions</li>
+<li>Fix issue preventing unit test framework from being available to all devices</li>
+<li>Prevent crashes / garbage in the memory viewer tool</li>
+<li>Fix crash in makeImageRequest() with 16 color devices</li>
+<li>Fix crash when using the NumberPicker and pressing a button / tapping the screen</li>
+<li>Fix memory leak that can occur when calling makeJsonRequest() and using the POST method</li>
+</ul>
+
+<p><strong>Known Issues</strong></p>
+
+<ul>
+<li>Known issues will now be tracked in the <a href="https://forums.garmin.com/showthread.php?364535-Known-Issues-Thread">Connect IQ forums</a></li>
+</ul>
+<h3 id="v2.2.1"><a href="#2.2.1" onclick="toggle('2.2.1', 'Img_2.2.1');"><img src="resources/readme/hide.jpg" border=0 name="Img_2.2.1" />v2.2.1</a></h3>
+<div id="2.2.1" style="display:none;">
 
 <p><strong>General Changes</strong></p>
 
@@ -1060,6 +1132,7 @@ Displays a number with a color and value that changes depending on timer events:
 <ul>
 <li>If an <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Lang/Exception.html" title="Exception API documentation">Exception</a> is thrown from a catch block, the finally block of the current try/catch/finally will not be executed.</li>
 </ul>
+</div>
 <h3 id="v2.2.0"><a href="#2.2.0" onclick="toggle('2.2.0', 'Img_2.2.0');"><img src="resources/readme/hide.jpg" border=0 name="Img_2.2.0" />v2.2.0</a></h3>
 <div id="2.2.0" style="display:none;">
 

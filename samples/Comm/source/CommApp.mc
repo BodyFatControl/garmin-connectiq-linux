@@ -13,6 +13,7 @@ var page = 0;
 var strings = ["","","","",""];
 var stringsSize = 5;
 var mailMethod;
+var phoneMethod;
 var crashOnMessage = false;
 
 class CommExample extends App.AppBase {
@@ -21,7 +22,12 @@ class CommExample extends App.AppBase {
         App.AppBase.initialize();
 
         mailMethod = method(:onMail);
-        Comm.setMailboxListener(mailMethod);
+        phoneMethod = method(:onPhone);
+        if(Comm has :registerForPhoneAppMessages) {
+            Comm.registerForPhoneAppMessages(phoneMethod);
+        } else {
+            Comm.setMailboxListener(mailMethod);
+        }
     }
 
     // onStart() is called on application start up
@@ -55,4 +61,21 @@ class CommExample extends App.AppBase {
         Comm.emptyMailbox();
         Ui.requestUpdate();
     }
+
+    function onPhone(msg) {
+        var i;
+
+        if((crashOnMessage == true) && msg.data.equals("Hi")) {
+            foo = bar;
+        }
+
+        for(i = (stringsSize - 1); i > 0; i -= 1) {
+            strings[i] = strings[i-1];
+        }
+        strings[0] = msg.data.toString();
+        page = 1;
+
+        Ui.requestUpdate();
+    }
+
 }

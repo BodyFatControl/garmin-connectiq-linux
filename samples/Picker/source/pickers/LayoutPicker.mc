@@ -21,6 +21,11 @@ class LayoutPicker extends Ui.Picker {
 }
 
 class LayoutPickerDelegate extends Ui.PickerDelegate {
+
+    function initialize() {
+        PickerDelegate.initialize();
+    }
+
     function onCancel() {
         Ui.popView(Ui.SLIDE_IMMEDIATE);
     }
@@ -28,4 +33,5 @@ class LayoutPickerDelegate extends Ui.PickerDelegate {
     function onAccept(values) {
         Ui.popView(Ui.SLIDE_IMMEDIATE);
     }
+
 }

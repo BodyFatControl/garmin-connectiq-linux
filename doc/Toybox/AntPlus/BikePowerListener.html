@@ -66,15 +66,17 @@
   
   
 </h1>
-
-<dl class="box">
+<div class="box_info">
   
-    <dt class="r1">Inherits:</dt>
-    <dd class="r1">
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
       <span class="inheritName"><span class='object_link'><a href="DeviceListener.html" title="Toybox::AntPlus::DeviceListener (class)">DeviceListener</a></span></span>
       
         <ul class="fullTree">
           <li>Object</li>
+          
+            <li class="next"><span class='object_link'><a href="../Lang/Object.html" title="Toybox::Lang::Object (class)">Lang::Object</a></span></li>
           
             <li class="next"><span class='object_link'><a href="DeviceListener.html" title="Toybox::AntPlus::DeviceListener (class)">DeviceListener</a></span></li>
           
@@ -83,17 +85,18 @@
         </ul>
         <a href="#" class="inheritanceTree">show all</a>
       
-      </dd>
-    
+    </dd>
+  </dl>
+  
+
   
   
-    
-  
-    
   
   
-</dl>
-<div class="clear"></div>
+  
+
+  
+</div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
@@ -140,7 +143,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>  &#x21d2; BikePowerListener </a>
+      <a href="#initialize-instance_method" title="#initialize (instance method)"><strong>initialize</strong>  &#x21d2; BikePowerListener </a>
     
 
     
@@ -166,7 +169,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#onCalculatedCadenceUpdate-instance_method" title="#onCalculatedCadenceUpdate (instance method)">#<strong>onCalculatedCadenceUpdate</strong>(data)  &#x21d2; Object </a>
+      <a href="#onCalculatedCadenceUpdate-instance_method" title="#onCalculatedCadenceUpdate (instance method)"><strong>onCalculatedCadenceUpdate</strong>(data)  &#x21d2; Object </a>
     
 
     
@@ -190,7 +193,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#onCalculatedPowerUpdate-instance_method" title="#onCalculatedPowerUpdate (instance method)">#<strong>onCalculatedPowerUpdate</strong>(data)  &#x21d2; Object </a>
+      <a href="#onCalculatedPowerUpdate-instance_method" title="#onCalculatedPowerUpdate (instance method)"><strong>onCalculatedPowerUpdate</strong>(data)  &#x21d2; Object </a>
     
 
     
@@ -214,7 +217,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#onCalculatedWheelDistanceUpdate-instance_method" title="#onCalculatedWheelDistanceUpdate (instance method)">#<strong>onCalculatedWheelDistanceUpdate</strong>(data)  &#x21d2; Object </a>
+      <a href="#onCalculatedWheelDistanceUpdate-instance_method" title="#onCalculatedWheelDistanceUpdate (instance method)"><strong>onCalculatedWheelDistanceUpdate</strong>(data)  &#x21d2; Object </a>
     
 
     
@@ -238,7 +241,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#onCalculatedWheelSpeedUpdate-instance_method" title="#onCalculatedWheelSpeedUpdate (instance method)">#<strong>onCalculatedWheelSpeedUpdate</strong>(data)  &#x21d2; Object </a>
+      <a href="#onCalculatedWheelSpeedUpdate-instance_method" title="#onCalculatedWheelSpeedUpdate (instance method)"><strong>onCalculatedWheelSpeedUpdate</strong>(data)  &#x21d2; Object </a>
     
 
     
@@ -262,7 +265,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#onPedalPowerBalanceUpdate-instance_method" title="#onPedalPowerBalanceUpdate (instance method)">#<strong>onPedalPowerBalanceUpdate</strong>(data)  &#x21d2; Object </a>
+      <a href="#onPedalPowerBalanceUpdate-instance_method" title="#onPedalPowerBalanceUpdate (instance method)"><strong>onPedalPowerBalanceUpdate</strong>(data)  &#x21d2; Object </a>
     
 
     
@@ -286,7 +289,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#onTorqueEffectivenessPedalSmoothnessUpdate-instance_method" title="#onTorqueEffectivenessPedalSmoothnessUpdate (instance method)">#<strong>onTorqueEffectivenessPedalSmoothnessUpdate</strong>(data)  &#x21d2; Object </a>
+      <a href="#onTorqueEffectivenessPedalSmoothnessUpdate-instance_method" title="#onTorqueEffectivenessPedalSmoothnessUpdate (instance method)"><strong>onTorqueEffectivenessPedalSmoothnessUpdate</strong>(data)  &#x21d2; Object </a>
     
 
     
@@ -321,14 +324,25 @@ freq 1Hz).</p>
   
   
   <h3 class="inherited">Methods inherited from <span class='object_link'><a href="DeviceListener.html" title="Toybox::AntPlus::DeviceListener (class)">DeviceListener</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="DeviceListener.html#onBatteryStatusUpdate-instance_method" title="Toybox::AntPlus::DeviceListener#onBatteryStatusUpdate (method)">#onBatteryStatusUpdate</a></span>, <span class='object_link'><a href="DeviceListener.html#onDeviceStateUpdate-instance_method" title="Toybox::AntPlus::DeviceListener#onDeviceStateUpdate (method)">#onDeviceStateUpdate</a></span>, <span class='object_link'><a href="DeviceListener.html#onManufacturerInfoUpdate-instance_method" title="Toybox::AntPlus::DeviceListener#onManufacturerInfoUpdate (method)">#onManufacturerInfoUpdate</a></span>, <span class='object_link'><a href="DeviceListener.html#onProductInfoUpdate-instance_method" title="Toybox::AntPlus::DeviceListener#onProductInfoUpdate (method)">#onProductInfoUpdate</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="DeviceListener.html#onBatteryStatusUpdate-instance_method" title="Toybox::AntPlus::DeviceListener#onBatteryStatusUpdate (method)">onBatteryStatusUpdate</a></span>, <span class='object_link'><a href="DeviceListener.html#onDeviceStateUpdate-instance_method" title="Toybox::AntPlus::DeviceListener#onDeviceStateUpdate (method)">onDeviceStateUpdate</a></span>, <span class='object_link'><a href="DeviceListener.html#onManufacturerInfoUpdate-instance_method" title="Toybox::AntPlus::DeviceListener#onManufacturerInfoUpdate (method)">onManufacturerInfoUpdate</a></span>, <span class='object_link'><a href="DeviceListener.html#onProductInfoUpdate-instance_method" title="Toybox::AntPlus::DeviceListener#onProductInfoUpdate (method)">onProductInfoUpdate</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../Lang/Object.html" title="Toybox::Lang::Object (class)">Lang::Object</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Lang/Object.html#equals-instance_method" title="Toybox::Lang::Object#equals (method)">equals</a></span>, <span class='object_link'><a href="../Lang/Object.html#hashCode-instance_method" title="Toybox::Lang::Object#hashCode (method)">hashCode</a></span>, <span class='object_link'><a href="../Lang/Object.html#method-instance_method" title="Toybox::Lang::Object#method (method)">method</a></span>, <span class='object_link'><a href="../Lang/Object.html#toString-instance_method" title="Toybox::Lang::Object#toString (method)">toString</a></span>, <span class='object_link'><a href="../Lang/Object.html#weak-instance_method" title="Toybox::Lang::Object#weak (method)">weak</a></span></p>
 <div id="constructor_details" class="method_details_list">
   <h2>Constructor Details</h2>
   
     <div class="method_details first">
   <h3 class="signature first" id="initialize-instance_method">
   
-    #<strong>initialize</strong>  &#x21d2; <tt><span class='object_link'><a href="" title="Toybox::AntPlus::BikePowerListener (class)">BikePowerListener</a></span></tt> 
+    <strong>initialize</strong>  &#x21d2; <tt><span class='object_link'><a href="" title="Toybox::AntPlus::BikePowerListener (class)">BikePowerListener</a></span></tt> 
   
 
   
@@ -361,7 +375,82 @@ freq 1Hz).</p>
   
 </ul>
 
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+6922
+6923</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 6922</span>
+
+def initialize()
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
+  
+</div>
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    <strong>initialize</strong>  &#x21d2; <tt><span class='object_link'><a href="" title="Toybox::AntPlus::BikePowerListener (class)">BikePowerListener</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Constructor</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>2.2.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+6922
+6923</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 6922</span>
+
+def initialize()
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
   
 </div>
@@ -374,7 +463,7 @@ freq 1Hz).</p>
       <div class="method_details first">
   <h3 class="signature first" id="onCalculatedCadenceUpdate-instance_method">
   
-    #<strong>onCalculatedCadenceUpdate</strong>(data)  &#x21d2; <tt>Object</tt> 
+    <strong>onCalculatedCadenceUpdate</strong>(data)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -427,13 +516,29 @@ freq 1Hz).</p>
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+6928
+6929</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 6928</span>
+
+def onCalculatedCadenceUpdate(data)
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
       <div class="method_details ">
   <h3 class="signature " id="onCalculatedPowerUpdate-instance_method">
   
-    #<strong>onCalculatedPowerUpdate</strong>(data)  &#x21d2; <tt>Object</tt> 
+    <strong>onCalculatedPowerUpdate</strong>(data)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -486,13 +591,29 @@ freq 1Hz).</p>
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+6934
+6935</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 6934</span>
+
+def onCalculatedPowerUpdate(data)
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
       <div class="method_details ">
   <h3 class="signature " id="onCalculatedWheelDistanceUpdate-instance_method">
   
-    #<strong>onCalculatedWheelDistanceUpdate</strong>(data)  &#x21d2; <tt>Object</tt> 
+    <strong>onCalculatedWheelDistanceUpdate</strong>(data)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -545,13 +666,29 @@ freq 1Hz).</p>
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+6940
+6941</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 6940</span>
+
+def onCalculatedWheelDistanceUpdate(data)
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
       <div class="method_details ">
   <h3 class="signature " id="onCalculatedWheelSpeedUpdate-instance_method">
   
-    #<strong>onCalculatedWheelSpeedUpdate</strong>(data)  &#x21d2; <tt>Object</tt> 
+    <strong>onCalculatedWheelSpeedUpdate</strong>(data)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -604,13 +741,29 @@ freq 1Hz).</p>
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+6946
+6947</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 6946</span>
+
+def onCalculatedWheelSpeedUpdate(data)
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
       <div class="method_details ">
   <h3 class="signature " id="onPedalPowerBalanceUpdate-instance_method">
   
-    #<strong>onPedalPowerBalanceUpdate</strong>(data)  &#x21d2; <tt>Object</tt> 
+    <strong>onPedalPowerBalanceUpdate</strong>(data)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -663,13 +816,29 @@ freq 1Hz).</p>
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+6952
+6953</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 6952</span>
+
+def onPedalPowerBalanceUpdate(data)
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
       <div class="method_details ">
   <h3 class="signature " id="onTorqueEffectivenessPedalSmoothnessUpdate-instance_method">
   
-    #<strong>onTorqueEffectivenessPedalSmoothnessUpdate</strong>(data)  &#x21d2; <tt>Object</tt> 
+    <strong>onTorqueEffectivenessPedalSmoothnessUpdate</strong>(data)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -723,7 +892,23 @@ freq 1Hz)</p>
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+6958
+6959</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 6958</span>
+
+def onTorqueEffectivenessPedalSmoothnessUpdate(data)
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
   </div>
@@ -731,7 +916,7 @@ freq 1Hz)</p>
 </div>
 
       <div id="footer">
-  Generated on Mon Nov  7 13:39:14 2016 by
+  Generated on Wed Dec 21 14:04:07 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.5 (ruby-2.1.5).
 </div>

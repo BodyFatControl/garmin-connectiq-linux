@@ -66,6 +66,7 @@ class StringPickerDelegate extends Ui.PickerDelegate {
     hidden var mPicker;
 
     function initialize(picker) {
+        PickerDelegate.initialize();
         mPicker = picker;
     }
 
@@ -92,4 +93,5 @@ class StringPickerDelegate extends Ui.PickerDelegate {
             Ui.popView(Ui.SLIDE_IMMEDIATE);
         }
     }
+
 }

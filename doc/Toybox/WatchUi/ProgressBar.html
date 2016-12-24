@@ -66,32 +66,35 @@
   
   
 </h1>
-
-<dl class="box">
+<div class="box_info">
   
-    <dt class="r1">Inherits:</dt>
-    <dd class="r1">
-      <span class="inheritName">Object</span>
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="../Lang/Object.html" title="Toybox::Lang::Object (class)">Lang::Object</a></span></span>
       
         <ul class="fullTree">
           <li>Object</li>
+          
+            <li class="next"><span class='object_link'><a href="../Lang/Object.html" title="Toybox::Lang::Object (class)">Lang::Object</a></span></li>
           
             <li class="next">Toybox::WatchUi::ProgressBar</li>
           
         </ul>
         <a href="#" class="inheritanceTree">show all</a>
       
-      </dd>
-    
+    </dd>
+  </dl>
+  
+
   
   
-    
-  
-    
   
   
-</dl>
-<div class="clear"></div>
+  
+
+  
+</div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
@@ -143,7 +146,7 @@ progress bar from 0-100% or a busy bar.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(displayString, startValue)  &#x21d2; ProgressBar </a>
+      <a href="#initialize-instance_method" title="#initialize (instance method)"><strong>initialize</strong>(displayString, startValue)  &#x21d2; ProgressBar </a>
     
 
     
@@ -169,7 +172,7 @@ progress bar from 0-100% or a busy bar.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#setDisplayString-instance_method" title="#setDisplayString (instance method)">#<strong>setDisplayString</strong>(displayString)  &#x21d2; Object </a>
+      <a href="#setDisplayString-instance_method" title="#setDisplayString (instance method)"><strong>setDisplayString</strong>(displayString)  &#x21d2; Object </a>
     
 
     
@@ -194,7 +197,7 @@ view.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#setProgress-instance_method" title="#setProgress (instance method)">#<strong>setProgress</strong>(progressValue)  &#x21d2; Object </a>
+      <a href="#setProgress-instance_method" title="#setProgress (instance method)"><strong>setProgress</strong>(progressValue)  &#x21d2; Object </a>
     
 
     
@@ -218,13 +221,24 @@ view.</p>
     </ul>
   
 
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../Lang/Object.html" title="Toybox::Lang::Object (class)">Lang::Object</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Lang/Object.html#equals-instance_method" title="Toybox::Lang::Object#equals (method)">equals</a></span>, <span class='object_link'><a href="../Lang/Object.html#hashCode-instance_method" title="Toybox::Lang::Object#hashCode (method)">hashCode</a></span>, <span class='object_link'><a href="../Lang/Object.html#method-instance_method" title="Toybox::Lang::Object#method (method)">method</a></span>, <span class='object_link'><a href="../Lang/Object.html#toString-instance_method" title="Toybox::Lang::Object#toString (method)">toString</a></span>, <span class='object_link'><a href="../Lang/Object.html#weak-instance_method" title="Toybox::Lang::Object#weak (method)">weak</a></span></p>
 <div id="constructor_details" class="method_details_list">
   <h2>Constructor Details</h2>
   
     <div class="method_details first">
   <h3 class="signature first" id="initialize-instance_method">
   
-    #<strong>initialize</strong>(displayString, startValue)  &#x21d2; <tt><span class='object_link'><a href="" title="Toybox::WatchUi::ProgressBar (class)">ProgressBar</a></span></tt> 
+    <strong>initialize</strong>(displayString, startValue)  &#x21d2; <tt><span class='object_link'><a href="" title="Toybox::WatchUi::ProgressBar (class)">ProgressBar</a></span></tt> 
   
 
   
@@ -293,7 +307,118 @@ view.</p>
   
 </ul>
 
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+5694
+5695</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 5694</span>
+
+def initialize(displayString, startValue)
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
+  
+</div>
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    <strong>initialize</strong>(displayString, startValue)  &#x21d2; <tt><span class='object_link'><a href="" title="Toybox::WatchUi::ProgressBar (class)">ProgressBar</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Constructor</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>displayString</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The string to display on the progress bar view</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>startValue</span>
+      
+      
+        <span class='type'>(<tt>Float</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The initial value for the progress bar (0-100), null for “busy”</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+5694
+5695</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 5694</span>
+
+def initialize(displayString, startValue)
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
   
 </div>
@@ -306,7 +431,7 @@ view.</p>
       <div class="method_details first">
   <h3 class="signature first" id="setDisplayString-instance_method">
   
-    #<strong>setDisplayString</strong>(displayString)  &#x21d2; <tt>Object</tt> 
+    <strong>setDisplayString</strong>(displayString)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -360,13 +485,29 @@ view.</p>
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+5706
+5707</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 5706</span>
+
+def setDisplayString(displayString)
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
       <div class="method_details ">
   <h3 class="signature " id="setProgress-instance_method">
   
-    #<strong>setProgress</strong>(progressValue)  &#x21d2; <tt>Object</tt> 
+    <strong>setProgress</strong>(progressValue)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -419,7 +560,23 @@ view.</p>
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+5700
+5701</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 5700</span>
+
+def setProgress(progressValue)
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
   </div>
@@ -427,7 +584,7 @@ view.</p>
 </div>
 
       <div id="footer">
-  Generated on Mon Nov  7 13:39:13 2016 by
+  Generated on Wed Dec 21 14:04:05 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.5 (ruby-2.1.5).
 </div>

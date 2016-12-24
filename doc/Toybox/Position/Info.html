@@ -66,32 +66,35 @@
   
   
 </h1>
-
-<dl class="box">
+<div class="box_info">
   
-    <dt class="r1">Inherits:</dt>
-    <dd class="r1">
-      <span class="inheritName">Object</span>
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="../Lang/Object.html" title="Toybox::Lang::Object (class)">Lang::Object</a></span></span>
       
         <ul class="fullTree">
           <li>Object</li>
+          
+            <li class="next"><span class='object_link'><a href="../Lang/Object.html" title="Toybox::Lang::Object (class)">Lang::Object</a></span></li>
           
             <li class="next">Toybox::Position::Info</li>
           
         </ul>
         <a href="#" class="inheritanceTree">show all</a>
       
-      </dd>
-    
+    </dd>
+  </dl>
+  
+
   
   
-    
-  
-    
   
   
-</dl>
-<div class="clear"></div>
+  
+
+  
+</div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
@@ -133,7 +136,7 @@ before using it.</p>
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#accuracy-instance_method" title="#accuracy (instance method)">#<strong>accuracy</strong>  &#x21d2; Number </a>
+      <a href="#accuracy-instance_method" title="#accuracy (instance method)"><strong>accuracy</strong>  &#x21d2; Number </a>
     
 
     
@@ -160,7 +163,7 @@ before using it.</p>
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#altitude-instance_method" title="#altitude (instance method)">#<strong>altitude</strong>  &#x21d2; Float </a>
+      <a href="#altitude-instance_method" title="#altitude (instance method)"><strong>altitude</strong>  &#x21d2; Float </a>
     
 
     
@@ -187,7 +190,7 @@ before using it.</p>
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#heading-instance_method" title="#heading (instance method)">#<strong>heading</strong>  &#x21d2; Float </a>
+      <a href="#heading-instance_method" title="#heading (instance method)"><strong>heading</strong>  &#x21d2; Float </a>
     
 
     
@@ -214,7 +217,7 @@ before using it.</p>
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#position-instance_method" title="#position (instance method)">#<strong>position</strong>  &#x21d2; Location </a>
+      <a href="#position-instance_method" title="#position (instance method)"><strong>position</strong>  &#x21d2; Location </a>
     
 
     
@@ -241,7 +244,7 @@ before using it.</p>
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#speed-instance_method" title="#speed (instance method)">#<strong>speed</strong>  &#x21d2; Float </a>
+      <a href="#speed-instance_method" title="#speed (instance method)"><strong>speed</strong>  &#x21d2; Float </a>
     
 
     
@@ -268,7 +271,7 @@ before using it.</p>
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#when-instance_method" title="#when (instance method)">#<strong>when</strong>  &#x21d2; Moment </a>
+      <a href="#when-instance_method" title="#when (instance method)"><strong>when</strong>  &#x21d2; Moment </a>
     
 
     
@@ -298,6 +301,17 @@ before using it.</p>
 
 
 
+  
+  
+  
+  
+  
+  
+  <h2>Method Summary</h2>
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../Lang/Object.html" title="Toybox::Lang::Object (class)">Lang::Object</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Lang/Object.html#equals-instance_method" title="Toybox::Lang::Object#equals (method)">equals</a></span>, <span class='object_link'><a href="../Lang/Object.html#hashCode-instance_method" title="Toybox::Lang::Object#hashCode (method)">hashCode</a></span>, <span class='object_link'><a href="../Lang/Object.html#method-instance_method" title="Toybox::Lang::Object#method (method)">method</a></span>, <span class='object_link'><a href="../Lang/Object.html#toString-instance_method" title="Toybox::Lang::Object#toString (method)">toString</a></span>, <span class='object_link'><a href="../Lang/Object.html#weak-instance_method" title="Toybox::Lang::Object#weak (method)">weak</a></span></p>
+
   <div id="instance_attr_details" class="attr_details">
     <h2>Instance Attribute Details</h2>
     
@@ -306,7 +320,7 @@ before using it.</p>
       <div class="method_details first">
   <h3 class="signature first" id="accuracy-instance_method">
   
-    #<strong>accuracy</strong>  &#x21d2; <tt>Number</tt> 
+    <strong>accuracy</strong>  &#x21d2; <tt>Number</tt> 
   
 
   
@@ -357,7 +371,25 @@ before using it.</p>
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+3695
+3696
+3697</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 3695</span>
+
+def accuracy
+  @accuracy
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
       
@@ -365,7 +397,7 @@ before using it.</p>
       <div class="method_details ">
   <h3 class="signature " id="altitude-instance_method">
   
-    #<strong>altitude</strong>  &#x21d2; <tt>Float</tt> 
+    <strong>altitude</strong>  &#x21d2; <tt>Float</tt> 
   
 
   
@@ -413,7 +445,25 @@ GPS is present, then barometer readings will be used.</p>
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+3689
+3690
+3691</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 3689</span>
+
+def altitude
+  @altitude
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
       
@@ -421,7 +471,7 @@ GPS is present, then barometer readings will be used.</p>
       <div class="method_details ">
   <h3 class="signature " id="heading-instance_method">
   
-    #<strong>heading</strong>  &#x21d2; <tt>Float</tt> 
+    <strong>heading</strong>  &#x21d2; <tt>Float</tt> 
   
 
   
@@ -469,7 +519,25 @@ orientation, if supported by the device.</p>
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+3703
+3704
+3705</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 3703</span>
+
+def heading
+  @heading
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
       
@@ -477,7 +545,7 @@ orientation, if supported by the device.</p>
       <div class="method_details ">
   <h3 class="signature " id="position-instance_method">
   
-    #<strong>position</strong>  &#x21d2; <tt><span class='object_link'><a href="Location.html" title="Toybox::Position::Location (class)">Location</a></span></tt> 
+    <strong>position</strong>  &#x21d2; <tt><span class='object_link'><a href="Location.html" title="Toybox::Position::Location (class)">Location</a></span></tt> 
   
 
   
@@ -527,7 +595,25 @@ errors.</p>
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+3672
+3673
+3674</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 3672</span>
+
+def position
+  @position
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
       
@@ -535,7 +621,7 @@ errors.</p>
       <div class="method_details ">
   <h3 class="signature " id="speed-instance_method">
   
-    #<strong>speed</strong>  &#x21d2; <tt>Float</tt> 
+    <strong>speed</strong>  &#x21d2; <tt>Float</tt> 
   
 
   
@@ -583,7 +669,25 @@ accuracy.</p>
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+3680
+3681
+3682</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 3680</span>
+
+def speed
+  @speed
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
       
@@ -591,7 +695,7 @@ accuracy.</p>
       <div class="method_details ">
   <h3 class="signature " id="when-instance_method">
   
-    #<strong>when</strong>  &#x21d2; <tt>Moment</tt> 
+    <strong>when</strong>  &#x21d2; <tt>Moment</tt> 
   
 
   
@@ -637,7 +741,25 @@ accuracy.</p>
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+3709
+3710
+3711</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 3709</span>
+
+def when
+  @when
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
   </div>
@@ -646,7 +768,7 @@ accuracy.</p>
 </div>
 
       <div id="footer">
-  Generated on Mon Nov  7 13:39:12 2016 by
+  Generated on Wed Dec 21 14:04:03 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.5 (ruby-2.1.5).
 </div>

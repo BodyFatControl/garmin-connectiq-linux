@@ -1,4 +1,4 @@
-2.2.1
+2.2.2
 Toybox_Test_Logger Toybox_Test Logger
 Toybox_Test_AssertException Toybox_Test AssertException
 Toybox_Test_Test Toybox_Test Test
@@ -804,6 +804,7 @@ alarmCount 8389583
 altitude 8388963
 animate 8389020
 antfsSupport 8389531
+appendParamsToUrl 8390068
 april 8389322
 arguments 8389948
 arrayCount 8389390

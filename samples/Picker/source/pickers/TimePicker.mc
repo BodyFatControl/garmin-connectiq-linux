@@ -89,6 +89,11 @@ class TimePicker extends Ui.Picker {
 }
 
 class TimePickerDelegate extends Ui.PickerDelegate {
+
+    function initialize() {
+        PickerDelegate.initialize();
+    }
+
     function onCancel() {
         Ui.popView(Ui.SLIDE_IMMEDIATE);
     }
@@ -102,4 +107,5 @@ class TimePickerDelegate extends Ui.PickerDelegate {
 
         Ui.popView(Ui.SLIDE_IMMEDIATE);
     }
+
 }

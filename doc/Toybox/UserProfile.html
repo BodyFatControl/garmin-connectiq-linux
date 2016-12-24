@@ -66,17 +66,17 @@
   
   
 </h1>
+<div class="box_info">
+  
 
-<dl class="box">
   
   
-    
-  
-    
   
   
-</dl>
-<div class="clear"></div>
+  
+
+  
+</div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
@@ -133,10 +133,10 @@
 </p>
 
   <h2>Constant Summary</h2>
-  
-    <dl class="constants">
-      
-        <dt id="GENDER_FEMALE-constant" class="">GENDER_FEMALE = 0  <div class="docstring">
+  <dl class="constants">
+    
+      <dt id="GENDER_FEMALE-constant" class="">GENDER_FEMALE = 0
+        <div class="docstring">
   <div class="discussion">
     
 <p>The GENDER enum specifies the gender of the user working out.</p>
@@ -164,9 +164,10 @@
 </ul>
 
 </div>
-        </dt>
-      
-        <dt id="GENDER_MALE-constant" class="">GENDER_MALE = 1  <div class="docstring">
+      </dt>
+    
+      <dt id="GENDER_MALE-constant" class="">GENDER_MALE = 1
+        <div class="docstring">
   <div class="discussion">
     
 
@@ -192,9 +193,10 @@
 </ul>
 
 </div>
-        </dt>
-      
-        <dt id="HR_ZONE_SPORT_GENERIC-constant" class="">HR_ZONE_SPORT_GENERIC = 0  <div class="docstring">
+      </dt>
+    
+      <dt id="HR_ZONE_SPORT_GENERIC-constant" class="">HR_ZONE_SPORT_GENERIC = 0
+        <div class="docstring">
   <div class="discussion">
     
 <p>The HR_ZONE_SPORT enum specifies the sport heart rate zones should be read
@@ -223,9 +225,10 @@ from.</p>
 </ul>
 
 </div>
-        </dt>
-      
-        <dt id="HR_ZONE_SPORT_RUNNING-constant" class="">HR_ZONE_SPORT_RUNNING = 1  <div class="docstring">
+      </dt>
+    
+      <dt id="HR_ZONE_SPORT_RUNNING-constant" class="">HR_ZONE_SPORT_RUNNING = 1
+        <div class="docstring">
   <div class="discussion">
     
 
@@ -251,9 +254,10 @@ from.</p>
 </ul>
 
 </div>
-        </dt>
-      
-        <dt id="HR_ZONE_SPORT_BIKING-constant" class="">HR_ZONE_SPORT_BIKING = 2  <div class="docstring">
+      </dt>
+    
+      <dt id="HR_ZONE_SPORT_BIKING-constant" class="">HR_ZONE_SPORT_BIKING = 2
+        <div class="docstring">
   <div class="discussion">
     
 
@@ -279,9 +283,10 @@ from.</p>
 </ul>
 
 </div>
-        </dt>
-      
-        <dt id="HR_ZONE_SPORT_SWIMMING-constant" class="">HR_ZONE_SPORT_SWIMMING = 3  <div class="docstring">
+      </dt>
+    
+      <dt id="HR_ZONE_SPORT_SWIMMING-constant" class="">HR_ZONE_SPORT_SWIMMING = 3
+        <div class="docstring">
   <div class="discussion">
     
 
@@ -307,10 +312,9 @@ from.</p>
 </ul>
 
 </div>
-        </dt>
-      
-    </dl>
-  
+      </dt>
+    
+  </dl>
 
 
 
@@ -329,7 +333,7 @@ from.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#getCurrentSport-instance_method" title="#getCurrentSport (instance method)">#<strong>getCurrentSport</strong>  &#x21d2; Number </a>
+      <a href="#getCurrentSport-instance_method" title="#getCurrentSport (instance method)"><strong>getCurrentSport</strong>  &#x21d2; Number </a>
     
 
     
@@ -354,7 +358,7 @@ uses heart rate zones from.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#getHeartRateZones-instance_method" title="#getHeartRateZones (instance method)">#<strong>getHeartRateZones</strong>(sport)  &#x21d2; Array </a>
+      <a href="#getHeartRateZones-instance_method" title="#getHeartRateZones (instance method)"><strong>getHeartRateZones</strong>(sport)  &#x21d2; Array </a>
     
 
     
@@ -378,7 +382,7 @@ uses heart rate zones from.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#getProfile-instance_method" title="#getProfile (instance method)">#<strong>getProfile</strong>  &#x21d2; UserProfile.Profile </a>
+      <a href="#getProfile-instance_method" title="#getProfile (instance method)"><strong>getProfile</strong>  &#x21d2; UserProfile.Profile </a>
     
 
     
@@ -411,7 +415,7 @@ uses heart rate zones from.</p>
       <div class="method_details first">
   <h3 class="signature first" id="getCurrentSport-instance_method">
   
-    #<strong>getCurrentSport</strong>  &#x21d2; <tt>Number</tt> 
+    <strong>getCurrentSport</strong>  &#x21d2; <tt>Number</tt> 
   
 
   
@@ -464,13 +468,29 @@ specific zones, it will retrun HR_ZONE_SPORT_GENERIC.</p>
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+4884
+4885</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 4884</span>
+
+def getCurrentSport()
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
       <div class="method_details ">
   <h3 class="signature " id="getHeartRateZones-instance_method">
   
-    #<strong>getHeartRateZones</strong>(sport)  &#x21d2; <tt>Array</tt> 
+    <strong>getHeartRateZones</strong>(sport)  &#x21d2; <tt>Array</tt> 
   
 
   
@@ -548,13 +568,29 @@ contains zone values as follows:</p>
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+4876
+4877</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 4876</span>
+
+def getHeartRateZones(sport)
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
       <div class="method_details ">
   <h3 class="signature " id="getProfile-instance_method">
   
-    #<strong>getProfile</strong>  &#x21d2; <tt><span class='object_link'><a href="" title="Toybox::UserProfile (module)">UserProfile</a></span>.<span class='object_link'><a href="UserProfile/Profile.html" title="Toybox::UserProfile::Profile (class)">Profile</a></span></tt> 
+    <strong>getProfile</strong>  &#x21d2; <tt><span class='object_link'><a href="" title="Toybox::UserProfile (module)">UserProfile</a></span>.<span class='object_link'><a href="UserProfile/Profile.html" title="Toybox::UserProfile::Profile (class)">Profile</a></span></tt> 
   
 
   
@@ -605,7 +641,23 @@ contains zone values as follows:</p>
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+4868
+4869</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 4868</span>
+
+def getProfile()
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
   </div>
@@ -613,7 +665,7 @@ contains zone values as follows:</p>
 </div>
 
       <div id="footer">
-  Generated on Mon Nov  7 13:39:09 2016 by
+  Generated on Wed Dec 21 14:03:58 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.5 (ruby-2.1.5).
 </div>

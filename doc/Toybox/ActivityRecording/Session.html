@@ -66,32 +66,35 @@
   
   
 </h1>
-
-<dl class="box">
+<div class="box_info">
   
-    <dt class="r1">Inherits:</dt>
-    <dd class="r1">
-      <span class="inheritName">Object</span>
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="../Lang/Object.html" title="Toybox::Lang::Object (class)">Lang::Object</a></span></span>
       
         <ul class="fullTree">
           <li>Object</li>
+          
+            <li class="next"><span class='object_link'><a href="../Lang/Object.html" title="Toybox::Lang::Object (class)">Lang::Object</a></span></li>
           
             <li class="next">Toybox::ActivityRecording::Session</li>
           
         </ul>
         <a href="#" class="inheritanceTree">show all</a>
       
-      </dd>
-    
+    </dd>
+  </dl>
+  
+
   
   
-    
-  
-    
   
   
-</dl>
-<div class="clear"></div>
+  
+
+  
+</div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
@@ -138,7 +141,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#addLap-instance_method" title="#addLap (instance method)">#<strong>addLap</strong>  &#x21d2; Boolean </a>
+      <a href="#addLap-instance_method" title="#addLap (instance method)"><strong>addLap</strong>  &#x21d2; Boolean </a>
     
 
     
@@ -162,7 +165,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#createField-instance_method" title="#createField (instance method)">#<strong>createField</strong>(name, fieldId, type, options)  &#x21d2; Field </a>
+      <a href="#createField-instance_method" title="#createField (instance method)"><strong>createField</strong>(name, fieldId, type, options)  &#x21d2; Field </a>
     
 
     
@@ -186,7 +189,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#discard-instance_method" title="#discard (instance method)">#<strong>discard</strong>  &#x21d2; Boolean </a>
+      <a href="#discard-instance_method" title="#discard (instance method)"><strong>discard</strong>  &#x21d2; Boolean </a>
     
 
     
@@ -211,7 +214,7 @@ by discarding the recorded data.</p>
         <li class="public deprecated">
   <span class="summary_signature">
     
-      <a href="#getGeometry-instance_method" title="#getGeometry (instance method)">#<strong>getGeometry</strong>  &#x21d2; GeometryIterator </a>
+      <a href="#getGeometry-instance_method" title="#getGeometry (instance method)"><strong>getGeometry</strong>  &#x21d2; GeometryIterator </a>
     
 
     
@@ -235,7 +238,7 @@ by discarding the recorded data.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#isRecording-instance_method" title="#isRecording (instance method)">#<strong>isRecording</strong>  &#x21d2; Boolean </a>
+      <a href="#isRecording-instance_method" title="#isRecording (instance method)"><strong>isRecording</strong>  &#x21d2; Boolean </a>
     
 
     
@@ -259,7 +262,7 @@ by discarding the recorded data.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#save-instance_method" title="#save (instance method)">#<strong>save</strong>  &#x21d2; Boolean </a>
+      <a href="#save-instance_method" title="#save (instance method)"><strong>save</strong>  &#x21d2; Boolean </a>
     
 
     
@@ -284,7 +287,7 @@ storing the FIT file on the file system.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#start-instance_method" title="#start (instance method)">#<strong>start</strong>  &#x21d2; Boolean </a>
+      <a href="#start-instance_method" title="#start (instance method)"><strong>start</strong>  &#x21d2; Boolean </a>
     
 
     
@@ -308,7 +311,7 @@ storing the FIT file on the file system.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#stop-instance_method" title="#stop (instance method)">#<strong>stop</strong>  &#x21d2; Boolean </a>
+      <a href="#stop-instance_method" title="#stop (instance method)"><strong>stop</strong>  &#x21d2; Boolean </a>
     
 
     
@@ -333,6 +336,17 @@ storing the FIT file on the file system.</p>
   
 
 
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../Lang/Object.html" title="Toybox::Lang::Object (class)">Lang::Object</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Lang/Object.html#equals-instance_method" title="Toybox::Lang::Object#equals (method)">equals</a></span>, <span class='object_link'><a href="../Lang/Object.html#hashCode-instance_method" title="Toybox::Lang::Object#hashCode (method)">hashCode</a></span>, <span class='object_link'><a href="../Lang/Object.html#method-instance_method" title="Toybox::Lang::Object#method (method)">method</a></span>, <span class='object_link'><a href="../Lang/Object.html#toString-instance_method" title="Toybox::Lang::Object#toString (method)">toString</a></span>, <span class='object_link'><a href="../Lang/Object.html#weak-instance_method" title="Toybox::Lang::Object#weak (method)">weak</a></span></p>
+
 
   <div id="instance_method_details" class="method_details_list">
     <h2>Instance Method Details</h2>
@@ -341,7 +355,7 @@ storing the FIT file on the file system.</p>
       <div class="method_details first">
   <h3 class="signature first" id="addLap-instance_method">
   
-    #<strong>addLap</strong>  &#x21d2; <tt>Boolean</tt> 
+    <strong>addLap</strong>  &#x21d2; <tt>Boolean</tt> 
   
 
   
@@ -393,13 +407,29 @@ created</p>
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+2018
+2019</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 2018</span>
+
+def addLap()
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
       <div class="method_details ">
   <h3 class="signature " id="createField-instance_method">
   
-    #<strong>createField</strong>(name, fieldId, type, options)  &#x21d2; <tt>Field</tt> 
+    <strong>createField</strong>(name, fieldId, type, options)  &#x21d2; <tt>Field</tt> 
   
 
   
@@ -600,13 +630,29 @@ href="https://www.thisisant.com/resources/fit">www.thisisant.com/resources/fit</
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+2050
+2051</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 2050</span>
+
+def createField(name, fieldId, type, options)
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
       <div class="method_details ">
   <h3 class="signature " id="discard-instance_method">
   
-    #<strong>discard</strong>  &#x21d2; <tt>Boolean</tt> 
+    <strong>discard</strong>  &#x21d2; <tt>Boolean</tt> 
   
 
   
@@ -658,13 +704,29 @@ by discarding the recorded data.</p>
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+2036
+2037</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 2036</span>
+
+def discard()
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
       <div class="method_details ">
   <h3 class="signature " id="getGeometry-instance_method">
   
-    #<strong>getGeometry</strong>  &#x21d2; <tt>GeometryIterator</tt> 
+    <strong>getGeometry</strong>  &#x21d2; <tt>GeometryIterator</tt> 
   
 
   
@@ -722,13 +784,29 @@ there are no points, null is returned.</p>
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+2061
+2062</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 2061</span>
+
+def getGeometry()
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
       <div class="method_details ">
   <h3 class="signature " id="isRecording-instance_method">
   
-    #<strong>isRecording</strong>  &#x21d2; <tt>Boolean</tt> 
+    <strong>isRecording</strong>  &#x21d2; <tt>Boolean</tt> 
   
 
   
@@ -779,13 +857,29 @@ there are no points, null is returned.</p>
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+2024
+2025</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 2024</span>
+
+def isRecording()
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
       <div class="method_details ">
   <h3 class="signature " id="save-instance_method">
   
-    #<strong>save</strong>  &#x21d2; <tt>Boolean</tt> 
+    <strong>save</strong>  &#x21d2; <tt>Boolean</tt> 
   
 
   
@@ -838,13 +932,29 @@ save</p>
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+2030
+2031</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 2030</span>
+
+def save()
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
       <div class="method_details ">
   <h3 class="signature " id="start-instance_method">
   
-    #<strong>start</strong>  &#x21d2; <tt>Boolean</tt> 
+    <strong>start</strong>  &#x21d2; <tt>Boolean</tt> 
   
 
   
@@ -896,13 +1006,29 @@ started</p>
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+2006
+2007</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 2006</span>
+
+def start()
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
       <div class="method_details ">
   <h3 class="signature " id="stop-instance_method">
   
-    #<strong>stop</strong>  &#x21d2; <tt>Boolean</tt> 
+    <strong>stop</strong>  &#x21d2; <tt>Boolean</tt> 
   
 
   
@@ -954,7 +1080,23 @@ stopped</p>
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+2012
+2013</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 2012</span>
+
+def stop()
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
   </div>
@@ -962,7 +1104,7 @@ stopped</p>
 </div>
 
       <div id="footer">
-  Generated on Mon Nov  7 13:39:11 2016 by
+  Generated on Wed Dec 21 14:04:01 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.5 (ruby-2.1.5).
 </div>

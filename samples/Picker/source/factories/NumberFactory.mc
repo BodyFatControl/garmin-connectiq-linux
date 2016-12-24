@@ -14,6 +14,8 @@ class NumberFactory extends Ui.PickerFactory {
     }
 
     function initialize(start, stop, increment, options) {
+        PickerFactory.initialize();
+
         mStart = start;
         mStop = stop;
         mIncrement = increment;

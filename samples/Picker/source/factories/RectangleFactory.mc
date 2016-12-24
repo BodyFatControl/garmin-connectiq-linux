@@ -6,6 +6,7 @@ class RectangleFactory extends Ui.PickerFactory {
     hidden var mColor;
 
     function initialize(color) {
+        PickerFactory.initialize();
         mColor = color;
     }
 

@@ -66,32 +66,35 @@
   
   
 </h1>
-
-<dl class="box">
+<div class="box_info">
   
-    <dt class="r1">Inherits:</dt>
-    <dd class="r1">
-      <span class="inheritName">Object</span>
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="../Lang/Object.html" title="Toybox::Lang::Object (class)">Lang::Object</a></span></span>
       
         <ul class="fullTree">
           <li>Object</li>
+          
+            <li class="next"><span class='object_link'><a href="../Lang/Object.html" title="Toybox::Lang::Object (class)">Lang::Object</a></span></li>
           
             <li class="next">Toybox::System::Stats</li>
           
         </ul>
         <a href="#" class="inheritanceTree">show all</a>
       
-      </dd>
-    
+    </dd>
+  </dl>
+  
+
   
   
-    
-  
-    
   
   
-</dl>
-<div class="clear"></div>
+  
+
+  
+</div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
@@ -130,7 +133,7 @@
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#battery-instance_method" title="#battery (instance method)">#<strong>battery</strong>  &#x21d2; Float </a>
+      <a href="#battery-instance_method" title="#battery (instance method)"><strong>battery</strong>  &#x21d2; Float </a>
     
 
     
@@ -157,7 +160,7 @@
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#freeMemory-instance_method" title="#freeMemory (instance method)">#<strong>freeMemory</strong>  &#x21d2; Number </a>
+      <a href="#freeMemory-instance_method" title="#freeMemory (instance method)"><strong>freeMemory</strong>  &#x21d2; Number </a>
     
 
     
@@ -184,7 +187,7 @@
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#totalMemory-instance_method" title="#totalMemory (instance method)">#<strong>totalMemory</strong>  &#x21d2; Number </a>
+      <a href="#totalMemory-instance_method" title="#totalMemory (instance method)"><strong>totalMemory</strong>  &#x21d2; Number </a>
     
 
     
@@ -211,7 +214,7 @@
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#usedMemory-instance_method" title="#usedMemory (instance method)">#<strong>usedMemory</strong>  &#x21d2; Number </a>
+      <a href="#usedMemory-instance_method" title="#usedMemory (instance method)"><strong>usedMemory</strong>  &#x21d2; Number </a>
     
 
     
@@ -241,6 +244,17 @@
 
 
 
+  
+  
+  
+  
+  
+  
+  <h2>Method Summary</h2>
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../Lang/Object.html" title="Toybox::Lang::Object (class)">Lang::Object</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Lang/Object.html#equals-instance_method" title="Toybox::Lang::Object#equals (method)">equals</a></span>, <span class='object_link'><a href="../Lang/Object.html#hashCode-instance_method" title="Toybox::Lang::Object#hashCode (method)">hashCode</a></span>, <span class='object_link'><a href="../Lang/Object.html#method-instance_method" title="Toybox::Lang::Object#method (method)">method</a></span>, <span class='object_link'><a href="../Lang/Object.html#toString-instance_method" title="Toybox::Lang::Object#toString (method)">toString</a></span>, <span class='object_link'><a href="../Lang/Object.html#weak-instance_method" title="Toybox::Lang::Object#weak (method)">weak</a></span></p>
+
   <div id="instance_attr_details" class="attr_details">
     <h2>Instance Attribute Details</h2>
     
@@ -249,7 +263,7 @@
       <div class="method_details first">
   <h3 class="signature first" id="battery-instance_method">
   
-    #<strong>battery</strong>  &#x21d2; <tt>Float</tt> 
+    <strong>battery</strong>  &#x21d2; <tt>Float</tt> 
   
 
   
@@ -295,7 +309,25 @@
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+4231
+4232
+4233</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 4231</span>
+
+def battery
+  @battery
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
       
@@ -303,7 +335,7 @@
       <div class="method_details ">
   <h3 class="signature " id="freeMemory-instance_method">
   
-    #<strong>freeMemory</strong>  &#x21d2; <tt>Number</tt> 
+    <strong>freeMemory</strong>  &#x21d2; <tt>Number</tt> 
   
 
   
@@ -349,7 +381,25 @@
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+4243
+4244
+4245</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 4243</span>
+
+def freeMemory
+  @freeMemory
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
       
@@ -357,7 +407,7 @@
       <div class="method_details ">
   <h3 class="signature " id="totalMemory-instance_method">
   
-    #<strong>totalMemory</strong>  &#x21d2; <tt>Number</tt> 
+    <strong>totalMemory</strong>  &#x21d2; <tt>Number</tt> 
   
 
   
@@ -403,7 +453,25 @@
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+4249
+4250
+4251</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 4249</span>
+
+def totalMemory
+  @totalMemory
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
       
@@ -411,7 +479,7 @@
       <div class="method_details ">
   <h3 class="signature " id="usedMemory-instance_method">
   
-    #<strong>usedMemory</strong>  &#x21d2; <tt>Number</tt> 
+    <strong>usedMemory</strong>  &#x21d2; <tt>Number</tt> 
   
 
   
@@ -457,7 +525,25 @@
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+4237
+4238
+4239</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 4237</span>
+
+def usedMemory
+  @usedMemory
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
   </div>
@@ -466,7 +552,7 @@
 </div>
 
       <div id="footer">
-  Generated on Mon Nov  7 13:39:12 2016 by
+  Generated on Wed Dec 21 14:04:03 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.5 (ruby-2.1.5).
 </div>

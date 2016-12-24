@@ -66,11 +66,11 @@
   
   
 </h1>
-
-<dl class="box">
+<div class="box_info">
   
-    <dt class="r1">Inherits:</dt>
-    <dd class="r1">
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
       <span class="inheritName"><span class='object_link'><a href="Object.html" title="Toybox::Lang::Object (class)">Object</a></span></span>
       
         <ul class="fullTree">
@@ -83,17 +83,18 @@
         </ul>
         <a href="#" class="inheritanceTree">show all</a>
       
-      </dd>
-    
+    </dd>
+  </dl>
+  
+
   
   
-    
-  
-    
   
   
-</dl>
-<div class="clear"></div>
+  
+
+  
+</div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
@@ -141,7 +142,7 @@ default unless the &#39;d&#39; prefix is used.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#abs-instance_method" title="#abs (instance method)">#<strong>abs</strong>  &#x21d2; Float </a>
+      <a href="#abs-instance_method" title="#abs (instance method)"><strong>abs</strong>  &#x21d2; Float </a>
     
 
     
@@ -165,7 +166,7 @@ default unless the &#39;d&#39; prefix is used.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#format-instance_method" title="#format (instance method)">#<strong>format</strong>(format)  &#x21d2; String </a>
+      <a href="#format-instance_method" title="#format (instance method)"><strong>format</strong>(format)  &#x21d2; String </a>
     
 
     
@@ -189,7 +190,7 @@ default unless the &#39;d&#39; prefix is used.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#toDouble-instance_method" title="#toDouble (instance method)">#<strong>toDouble</strong>  &#x21d2; Double </a>
+      <a href="#toDouble-instance_method" title="#toDouble (instance method)"><strong>toDouble</strong>  &#x21d2; Double </a>
     
 
     
@@ -213,7 +214,7 @@ default unless the &#39;d&#39; prefix is used.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#toFloat-instance_method" title="#toFloat (instance method)">#<strong>toFloat</strong>  &#x21d2; Float </a>
+      <a href="#toFloat-instance_method" title="#toFloat (instance method)"><strong>toFloat</strong>  &#x21d2; Float </a>
     
 
     
@@ -237,7 +238,7 @@ default unless the &#39;d&#39; prefix is used.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#toLong-instance_method" title="#toLong (instance method)">#<strong>toLong</strong>  &#x21d2; Long </a>
+      <a href="#toLong-instance_method" title="#toLong (instance method)"><strong>toLong</strong>  &#x21d2; Long </a>
     
 
     
@@ -261,7 +262,7 @@ default unless the &#39;d&#39; prefix is used.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#toNumber-instance_method" title="#toNumber (instance method)">#<strong>toNumber</strong>  &#x21d2; Number </a>
+      <a href="#toNumber-instance_method" title="#toNumber (instance method)"><strong>toNumber</strong>  &#x21d2; Number </a>
     
 
     
@@ -295,7 +296,7 @@ default unless the &#39;d&#39; prefix is used.</p>
   
   
   <h3 class="inherited">Methods inherited from <span class='object_link'><a href="Object.html" title="Toybox::Lang::Object (class)">Object</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="Object.html#equals-instance_method" title="Toybox::Lang::Object#equals (method)">#equals</a></span>, <span class='object_link'><a href="Object.html#hashCode-instance_method" title="Toybox::Lang::Object#hashCode (method)">#hashCode</a></span>, <span class='object_link'><a href="Object.html#method-instance_method" title="Toybox::Lang::Object#method (method)">#method</a></span>, <span class='object_link'><a href="Object.html#toString-instance_method" title="Toybox::Lang::Object#toString (method)">#toString</a></span>, <span class='object_link'><a href="Object.html#weak-instance_method" title="Toybox::Lang::Object#weak (method)">#weak</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="Object.html#equals-instance_method" title="Toybox::Lang::Object#equals (method)">equals</a></span>, <span class='object_link'><a href="Object.html#hashCode-instance_method" title="Toybox::Lang::Object#hashCode (method)">hashCode</a></span>, <span class='object_link'><a href="Object.html#method-instance_method" title="Toybox::Lang::Object#method (method)">method</a></span>, <span class='object_link'><a href="Object.html#toString-instance_method" title="Toybox::Lang::Object#toString (method)">toString</a></span>, <span class='object_link'><a href="Object.html#weak-instance_method" title="Toybox::Lang::Object#weak (method)">weak</a></span></p>
 
 
   <div id="instance_method_details" class="method_details_list">
@@ -305,7 +306,7 @@ default unless the &#39;d&#39; prefix is used.</p>
       <div class="method_details first">
   <h3 class="signature first" id="abs-instance_method">
   
-    #<strong>abs</strong>  &#x21d2; <tt><span class='object_link'><a href="" title="Toybox::Lang::Float (class)">Float</a></span></tt> 
+    <strong>abs</strong>  &#x21d2; <tt><span class='object_link'><a href="" title="Toybox::Lang::Float (class)">Float</a></span></tt> 
   
 
   
@@ -356,13 +357,29 @@ default unless the &#39;d&#39; prefix is used.</p>
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+2697
+2698</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 2697</span>
+
+def abs()
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
       <div class="method_details ">
   <h3 class="signature " id="format-instance_method">
   
-    #<strong>format</strong>(format)  &#x21d2; <tt><span class='object_link'><a href="String.html" title="Toybox::Lang::String (class)">String</a></span></tt> 
+    <strong>format</strong>(format)  &#x21d2; <tt><span class='object_link'><a href="String.html" title="Toybox::Lang::String (class)">String</a></span></tt> 
   
 
   
@@ -429,13 +446,29 @@ printf in c stdio (the [length] option is not available):</p>
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+2731
+2732</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 2731</span>
+
+def format(format)
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
       <div class="method_details ">
   <h3 class="signature " id="toDouble-instance_method">
   
-    #<strong>toDouble</strong>  &#x21d2; <tt><span class='object_link'><a href="Double.html" title="Toybox::Lang::Double (class)">Double</a></span></tt> 
+    <strong>toDouble</strong>  &#x21d2; <tt><span class='object_link'><a href="Double.html" title="Toybox::Lang::Double (class)">Double</a></span></tt> 
   
 
   
@@ -486,13 +519,29 @@ printf in c stdio (the [length] option is not available):</p>
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+2711
+2712</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 2711</span>
+
+def toDouble()
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
       <div class="method_details ">
   <h3 class="signature " id="toFloat-instance_method">
   
-    #<strong>toFloat</strong>  &#x21d2; <tt><span class='object_link'><a href="" title="Toybox::Lang::Float (class)">Float</a></span></tt> 
+    <strong>toFloat</strong>  &#x21d2; <tt><span class='object_link'><a href="" title="Toybox::Lang::Float (class)">Float</a></span></tt> 
   
 
   
@@ -543,13 +592,29 @@ printf in c stdio (the [length] option is not available):</p>
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+2691
+2692</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 2691</span>
+
+def toFloat()
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
       <div class="method_details ">
   <h3 class="signature " id="toLong-instance_method">
   
-    #<strong>toLong</strong>  &#x21d2; <tt><span class='object_link'><a href="Long.html" title="Toybox::Lang::Long (class)">Long</a></span></tt> 
+    <strong>toLong</strong>  &#x21d2; <tt><span class='object_link'><a href="Long.html" title="Toybox::Lang::Long (class)">Long</a></span></tt> 
   
 
   
@@ -600,13 +665,29 @@ printf in c stdio (the [length] option is not available):</p>
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+2717
+2718</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 2717</span>
+
+def toLong()
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
       <div class="method_details ">
   <h3 class="signature " id="toNumber-instance_method">
   
-    #<strong>toNumber</strong>  &#x21d2; <tt><span class='object_link'><a href="Number.html" title="Toybox::Lang::Number (class)">Number</a></span></tt> 
+    <strong>toNumber</strong>  &#x21d2; <tt><span class='object_link'><a href="Number.html" title="Toybox::Lang::Number (class)">Number</a></span></tt> 
   
 
   
@@ -659,7 +740,23 @@ becomes -5.</p>
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+2705
+2706</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 2705</span>
+
+def toNumber()
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
   </div>
@@ -667,7 +764,7 @@ becomes -5.</p>
 </div>
 
       <div id="footer">
-  Generated on Mon Nov  7 13:39:11 2016 by
+  Generated on Wed Dec 21 14:04:01 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.5 (ruby-2.1.5).
 </div>

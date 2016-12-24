@@ -66,15 +66,17 @@
   
   
 </h1>
-
-<dl class="box">
+<div class="box_info">
   
-    <dt class="r1">Inherits:</dt>
-    <dd class="r1">
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
       <span class="inheritName"><span class='object_link'><a href="View.html" title="Toybox::WatchUi::View (class)">View</a></span></span>
       
         <ul class="fullTree">
           <li>Object</li>
+          
+            <li class="next"><span class='object_link'><a href="../Lang/Object.html" title="Toybox::Lang::Object (class)">Lang::Object</a></span></li>
           
             <li class="next"><span class='object_link'><a href="View.html" title="Toybox::WatchUi::View (class)">View</a></span></li>
           
@@ -83,17 +85,18 @@
         </ul>
         <a href="#" class="inheritanceTree">show all</a>
       
-      </dd>
-    
+    </dd>
+  </dl>
+  
+
   
   
-    
-  
-    
   
   
-</dl>
-<div class="clear"></div>
+  
+
+  
+</div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
@@ -146,12 +149,16 @@ system.</p>
   <h2>Direct Known Subclasses</h2>
   <p class="children"><span class='object_link'><a href="SimpleDataField.html" title="Toybox::WatchUi::SimpleDataField (class)">SimpleDataField</a></span></p>
 </div>
+<div id="subclasses">
+  <h2>Direct Known Subclasses</h2>
+  <p class="children"><span class='object_link'><a href="SimpleDataField.html" title="Toybox::WatchUi::SimpleDataField (class)">SimpleDataField</a></span></p>
+</div>
 
   <h2>Constant Summary</h2>
-  
-    <dl class="constants">
-      
-        <dt id="OBSCURE_LEFT-constant" class="">OBSCURE_LEFT = 1  <div class="docstring">
+  <dl class="constants">
+    
+      <dt id="OBSCURE_LEFT-constant" class="">OBSCURE_LEFT = 1
+        <div class="docstring">
   <div class="discussion">
     
 <p>Some of the left edge of the device context is obscured</p>
@@ -179,9 +186,10 @@ system.</p>
 </ul>
 
 </div>
-        </dt>
-      
-        <dt id="OBSCURE_TOP-constant" class="">OBSCURE_TOP = 2  <div class="docstring">
+      </dt>
+    
+      <dt id="OBSCURE_TOP-constant" class="">OBSCURE_TOP = 2
+        <div class="docstring">
   <div class="discussion">
     
 <p>Some of the top edge of the device context is obscured</p>
@@ -209,9 +217,10 @@ system.</p>
 </ul>
 
 </div>
-        </dt>
-      
-        <dt id="OBSCURE_RIGHT-constant" class="">OBSCURE_RIGHT = 4  <div class="docstring">
+      </dt>
+    
+      <dt id="OBSCURE_RIGHT-constant" class="">OBSCURE_RIGHT = 4
+        <div class="docstring">
   <div class="discussion">
     
 <p>Some of the right edge of the device context is obscured</p>
@@ -239,9 +248,10 @@ system.</p>
 </ul>
 
 </div>
-        </dt>
-      
-        <dt id="OBSCURE_BOTTOM-constant" class="">OBSCURE_BOTTOM = 8  <div class="docstring">
+      </dt>
+    
+      <dt id="OBSCURE_BOTTOM-constant" class="">OBSCURE_BOTTOM = 8
+        <div class="docstring">
   <div class="discussion">
     
 <p>Some of the bottom edge of the device context is obscured</p>
@@ -269,10 +279,9 @@ system.</p>
 </ul>
 
 </div>
-        </dt>
-      
-    </dl>
-  
+      </dt>
+    
+  </dl>
 
 
 
@@ -291,7 +300,7 @@ system.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#compute-instance_method" title="#compute (instance method)">#<strong>compute</strong>(info)  &#x21d2; Object </a>
+      <a href="#compute-instance_method" title="#compute (instance method)"><strong>compute</strong>(info)  &#x21d2; Object </a>
     
 
     
@@ -316,7 +325,7 @@ compute().</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#createField-instance_method" title="#createField (instance method)">#<strong>createField</strong>(name, fieldId, type, options)  &#x21d2; Field </a>
+      <a href="#createField-instance_method" title="#createField (instance method)"><strong>createField</strong>(name, fieldId, type, options)  &#x21d2; Field </a>
     
 
     
@@ -340,7 +349,7 @@ compute().</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#getBackgroundColor-instance_method" title="#getBackgroundColor (instance method)">#<strong>getBackgroundColor</strong>  &#x21d2; Number </a>
+      <a href="#getBackgroundColor-instance_method" title="#getBackgroundColor (instance method)"><strong>getBackgroundColor</strong>  &#x21d2; Number </a>
     
 
     
@@ -365,7 +374,7 @@ Graphics.COLOR_WHITE or Graphics.COLOR_BLACK.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#getObscurityFlags-instance_method" title="#getObscurityFlags (instance method)">#<strong>getObscurityFlags</strong>  &#x21d2; Number </a>
+      <a href="#getObscurityFlags-instance_method" title="#getObscurityFlags (instance method)"><strong>getObscurityFlags</strong>  &#x21d2; Number </a>
     
 
     
@@ -390,7 +399,7 @@ obscured by a round screen.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>  &#x21d2; DataField </a>
+      <a href="#initialize-instance_method" title="#initialize (instance method)"><strong>initialize</strong>  &#x21d2; DataField </a>
     
 
     
@@ -416,7 +425,7 @@ obscured by a round screen.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#onTimerLap-instance_method" title="#onTimerLap (instance method)">#<strong>onTimerLap</strong>  &#x21d2; Object </a>
+      <a href="#onTimerLap-instance_method" title="#onTimerLap (instance method)"><strong>onTimerLap</strong>  &#x21d2; Object </a>
     
 
     
@@ -441,7 +450,7 @@ activity.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#onTimerPause-instance_method" title="#onTimerPause (instance method)">#<strong>onTimerPause</strong>  &#x21d2; Object </a>
+      <a href="#onTimerPause-instance_method" title="#onTimerPause (instance method)"><strong>onTimerPause</strong>  &#x21d2; Object </a>
     
 
     
@@ -466,7 +475,7 @@ the running state to the paused state.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#onTimerReset-instance_method" title="#onTimerReset (instance method)">#<strong>onTimerReset</strong>  &#x21d2; Object </a>
+      <a href="#onTimerReset-instance_method" title="#onTimerReset (instance method)"><strong>onTimerReset</strong>  &#x21d2; Object </a>
     
 
     
@@ -491,7 +500,7 @@ ended.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#onTimerResume-instance_method" title="#onTimerResume (instance method)">#<strong>onTimerResume</strong>  &#x21d2; Object </a>
+      <a href="#onTimerResume-instance_method" title="#onTimerResume (instance method)"><strong>onTimerResume</strong>  &#x21d2; Object </a>
     
 
     
@@ -516,7 +525,7 @@ the paused state to the running state.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#onTimerStart-instance_method" title="#onTimerStart (instance method)">#<strong>onTimerStart</strong>  &#x21d2; Object </a>
+      <a href="#onTimerStart-instance_method" title="#onTimerStart (instance method)"><strong>onTimerStart</strong>  &#x21d2; Object </a>
     
 
     
@@ -541,7 +550,7 @@ the stopped state to the started state.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#onTimerStop-instance_method" title="#onTimerStop (instance method)">#<strong>onTimerStop</strong>  &#x21d2; Object </a>
+      <a href="#onTimerStop-instance_method" title="#onTimerStop (instance method)"><strong>onTimerStop</strong>  &#x21d2; Object </a>
     
 
     
@@ -576,14 +585,25 @@ the running state to the stopped state.</p>
   
   
   <h3 class="inherited">Methods inherited from <span class='object_link'><a href="View.html" title="Toybox::WatchUi::View (class)">View</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="View.html#findDrawableById-instance_method" title="Toybox::WatchUi::View#findDrawableById (method)">#findDrawableById</a></span>, <span class='object_link'><a href="View.html#onHide-instance_method" title="Toybox::WatchUi::View#onHide (method)">#onHide</a></span>, <span class='object_link'><a href="View.html#onLayout-instance_method" title="Toybox::WatchUi::View#onLayout (method)">#onLayout</a></span>, <span class='object_link'><a href="View.html#onShow-instance_method" title="Toybox::WatchUi::View#onShow (method)">#onShow</a></span>, <span class='object_link'><a href="View.html#onUpdate-instance_method" title="Toybox::WatchUi::View#onUpdate (method)">#onUpdate</a></span>, <span class='object_link'><a href="View.html#setKeyToSelectableInteraction-instance_method" title="Toybox::WatchUi::View#setKeyToSelectableInteraction (method)">#setKeyToSelectableInteraction</a></span>, <span class='object_link'><a href="View.html#setLayout-instance_method" title="Toybox::WatchUi::View#setLayout (method)">#setLayout</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="View.html#findDrawableById-instance_method" title="Toybox::WatchUi::View#findDrawableById (method)">findDrawableById</a></span>, <span class='object_link'><a href="View.html#onHide-instance_method" title="Toybox::WatchUi::View#onHide (method)">onHide</a></span>, <span class='object_link'><a href="View.html#onLayout-instance_method" title="Toybox::WatchUi::View#onLayout (method)">onLayout</a></span>, <span class='object_link'><a href="View.html#onShow-instance_method" title="Toybox::WatchUi::View#onShow (method)">onShow</a></span>, <span class='object_link'><a href="View.html#onUpdate-instance_method" title="Toybox::WatchUi::View#onUpdate (method)">onUpdate</a></span>, <span class='object_link'><a href="View.html#setKeyToSelectableInteraction-instance_method" title="Toybox::WatchUi::View#setKeyToSelectableInteraction (method)">setKeyToSelectableInteraction</a></span>, <span class='object_link'><a href="View.html#setLayout-instance_method" title="Toybox::WatchUi::View#setLayout (method)">setLayout</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../Lang/Object.html" title="Toybox::Lang::Object (class)">Lang::Object</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Lang/Object.html#equals-instance_method" title="Toybox::Lang::Object#equals (method)">equals</a></span>, <span class='object_link'><a href="../Lang/Object.html#hashCode-instance_method" title="Toybox::Lang::Object#hashCode (method)">hashCode</a></span>, <span class='object_link'><a href="../Lang/Object.html#method-instance_method" title="Toybox::Lang::Object#method (method)">method</a></span>, <span class='object_link'><a href="../Lang/Object.html#toString-instance_method" title="Toybox::Lang::Object#toString (method)">toString</a></span>, <span class='object_link'><a href="../Lang/Object.html#weak-instance_method" title="Toybox::Lang::Object#weak (method)">weak</a></span></p>
 <div id="constructor_details" class="method_details_list">
   <h2>Constructor Details</h2>
   
     <div class="method_details first">
   <h3 class="signature first" id="initialize-instance_method">
   
-    #<strong>initialize</strong>  &#x21d2; <tt><span class='object_link'><a href="" title="Toybox::WatchUi::DataField (class)">DataField</a></span></tt> 
+    <strong>initialize</strong>  &#x21d2; <tt><span class='object_link'><a href="" title="Toybox::WatchUi::DataField (class)">DataField</a></span></tt> 
   
 
   
@@ -616,7 +636,82 @@ the running state to the stopped state.</p>
   
 </ul>
 
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+5429
+5430</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 5429</span>
+
+def initialize()
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
+  
+</div>
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    <strong>initialize</strong>  &#x21d2; <tt><span class='object_link'><a href="" title="Toybox::WatchUi::DataField (class)">DataField</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Constructor</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+5429
+5430</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 5429</span>
+
+def initialize()
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
   
 </div>
@@ -629,7 +724,7 @@ the running state to the stopped state.</p>
       <div class="method_details first">
   <h3 class="signature first" id="compute-instance_method">
   
-    #<strong>compute</strong>(info)  &#x21d2; <tt>Object</tt> 
+    <strong>compute</strong>(info)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -684,13 +779,29 @@ information.</p>
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+5436
+5437</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 5436</span>
+
+def compute(info)
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
       <div class="method_details ">
   <h3 class="signature " id="createField-instance_method">
   
-    #<strong>createField</strong>(name, fieldId, type, options)  &#x21d2; <tt>Field</tt> 
+    <strong>createField</strong>(name, fieldId, type, options)  &#x21d2; <tt>Field</tt> 
   
 
   
@@ -828,13 +939,29 @@ For reference see: Messages Sheet in Profile.xlsx included in the FIT SDK availa
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+5506
+5507</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 5506</span>
+
+def createField(name, fieldId, type, options)
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
       <div class="method_details ">
   <h3 class="signature " id="getBackgroundColor-instance_method">
   
-    #<strong>getBackgroundColor</strong>  &#x21d2; <tt>Number</tt> 
+    <strong>getBackgroundColor</strong>  &#x21d2; <tt>Number</tt> 
   
 
   
@@ -887,13 +1014,29 @@ Graphics.COLOR_WHITE or Graphics.COLOR_BLACK</p>
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+5486
+5487</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 5486</span>
+
+def getBackgroundColor()
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
       <div class="method_details ">
   <h3 class="signature " id="getObscurityFlags-instance_method">
   
-    #<strong>getObscurityFlags</strong>  &#x21d2; <tt>Number</tt> 
+    <strong>getObscurityFlags</strong>  &#x21d2; <tt>Number</tt> 
   
 
   
@@ -946,13 +1089,29 @@ obscured by a round screen.  Valid during onUpdate.</p>
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+5480
+5481</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 5480</span>
+
+def getObscurityFlags()
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
       <div class="method_details ">
   <h3 class="signature " id="onTimerLap-instance_method">
   
-    #<strong>onTimerLap</strong>  &#x21d2; <tt>Object</tt> 
+    <strong>onTimerLap</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -987,13 +1146,29 @@ to the FIT file.</p>
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+5469
+5470</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 5469</span>
+
+def onTimerLap()
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
       <div class="method_details ">
   <h3 class="signature " id="onTimerPause-instance_method">
   
-    #<strong>onTimerPause</strong>  &#x21d2; <tt>Object</tt> 
+    <strong>onTimerPause</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1029,13 +1204,29 @@ the app is loaded, this event will run immediately after startup</p>
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+5457
+5458</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 5457</span>
+
+def onTimerPause()
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
       <div class="method_details ">
   <h3 class="signature " id="onTimerReset-instance_method">
   
-    #<strong>onTimerReset</strong>  &#x21d2; <tt>Object</tt> 
+    <strong>onTimerReset</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1068,13 +1259,29 @@ the app is loaded, this event will run immediately after startup</p>
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+5474
+5475</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 5474</span>
+
+def onTimerReset()
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
       <div class="method_details ">
   <h3 class="signature " id="onTimerResume-instance_method">
   
-    #<strong>onTimerResume</strong>  &#x21d2; <tt>Object</tt> 
+    <strong>onTimerResume</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1108,13 +1315,29 @@ the paused state to the running state.</p>
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+5463
+5464</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 5463</span>
+
+def onTimerResume()
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
       <div class="method_details ">
   <h3 class="signature " id="onTimerStart-instance_method">
   
-    #<strong>onTimerStart</strong>  &#x21d2; <tt>Object</tt> 
+    <strong>onTimerStart</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1149,13 +1372,29 @@ when the app is loaded, this event will run immediately after startup.</p>
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+5443
+5444</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 5443</span>
+
+def onTimerStart()
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
       <div class="method_details ">
   <h3 class="signature " id="onTimerStop-instance_method">
   
-    #<strong>onTimerStop</strong>  &#x21d2; <tt>Object</tt> 
+    <strong>onTimerStop</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1189,7 +1428,23 @@ the running state to the stopped state.</p>
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+5449
+5450</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 5449</span>
+
+def onTimerStop()
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
   </div>
@@ -1197,7 +1452,7 @@ the running state to the stopped state.</p>
 </div>
 
       <div id="footer">
-  Generated on Mon Nov  7 13:39:13 2016 by
+  Generated on Wed Dec 21 14:04:05 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.5 (ruby-2.1.5).
 </div>

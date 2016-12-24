@@ -6,6 +6,8 @@ class WordFactory extends Ui.PickerFactory {
     var mFont;
 
     function initialize(words, options) {
+        PickerFactory.initialize();
+
         mWords = words;
 
         if(options != null) {

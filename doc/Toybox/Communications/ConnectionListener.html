@@ -66,32 +66,35 @@
   
   
 </h1>
-
-<dl class="box">
+<div class="box_info">
   
-    <dt class="r1">Inherits:</dt>
-    <dd class="r1">
-      <span class="inheritName">Object</span>
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="../Lang/Object.html" title="Toybox::Lang::Object (class)">Lang::Object</a></span></span>
       
         <ul class="fullTree">
           <li>Object</li>
+          
+            <li class="next"><span class='object_link'><a href="../Lang/Object.html" title="Toybox::Lang::Object (class)">Lang::Object</a></span></li>
           
             <li class="next">Toybox::Communications::ConnectionListener</li>
           
         </ul>
         <a href="#" class="inheritanceTree">show all</a>
       
-      </dd>
-    
+    </dd>
+  </dl>
+  
+
   
   
-    
-  
-    
   
   
-</dl>
-<div class="clear"></div>
+  
+
+  
+</div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
@@ -136,7 +139,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#onComplete-instance_method" title="#onComplete (instance method)">#<strong>onComplete</strong>  &#x21d2; Object </a>
+      <a href="#onComplete-instance_method" title="#onComplete (instance method)"><strong>onComplete</strong>  &#x21d2; Object </a>
     
 
     
@@ -160,7 +163,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#onError-instance_method" title="#onError (instance method)">#<strong>onError</strong>  &#x21d2; Object </a>
+      <a href="#onError-instance_method" title="#onError (instance method)"><strong>onError</strong>  &#x21d2; Object </a>
     
 
     
@@ -185,6 +188,17 @@
   
 
 
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../Lang/Object.html" title="Toybox::Lang::Object (class)">Lang::Object</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Lang/Object.html#equals-instance_method" title="Toybox::Lang::Object#equals (method)">equals</a></span>, <span class='object_link'><a href="../Lang/Object.html#hashCode-instance_method" title="Toybox::Lang::Object#hashCode (method)">hashCode</a></span>, <span class='object_link'><a href="../Lang/Object.html#method-instance_method" title="Toybox::Lang::Object#method (method)">method</a></span>, <span class='object_link'><a href="../Lang/Object.html#toString-instance_method" title="Toybox::Lang::Object#toString (method)">toString</a></span>, <span class='object_link'><a href="../Lang/Object.html#weak-instance_method" title="Toybox::Lang::Object#weak (method)">weak</a></span></p>
+
 
   <div id="instance_method_details" class="method_details_list">
     <h2>Instance Method Details</h2>
@@ -193,7 +207,7 @@
       <div class="method_details first">
   <h3 class="signature first" id="onComplete-instance_method">
   
-    #<strong>onComplete</strong>  &#x21d2; <tt>Object</tt> 
+    <strong>onComplete</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -226,13 +240,29 @@
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+1750
+1751</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 1750</span>
+
+def onComplete()
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
       <div class="method_details ">
   <h3 class="signature " id="onError-instance_method">
   
-    #<strong>onError</strong>  &#x21d2; <tt>Object</tt> 
+    <strong>onError</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -265,7 +295,23 @@
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+1745
+1746</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 1745</span>
+
+def onError()
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
   </div>
@@ -273,7 +319,7 @@
 </div>
 
       <div id="footer">
-  Generated on Mon Nov  7 13:39:10 2016 by
+  Generated on Wed Dec 21 14:04:00 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.5 (ruby-2.1.5).
 </div>

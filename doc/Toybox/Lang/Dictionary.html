@@ -66,11 +66,11 @@
   
   
 </h1>
-
-<dl class="box">
+<div class="box_info">
   
-    <dt class="r1">Inherits:</dt>
-    <dd class="r1">
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
       <span class="inheritName"><span class='object_link'><a href="Object.html" title="Toybox::Lang::Object (class)">Object</a></span></span>
       
         <ul class="fullTree">
@@ -83,17 +83,18 @@
         </ul>
         <a href="#" class="inheritanceTree">show all</a>
       
-      </dd>
-    
+    </dd>
+  </dl>
+  
+
   
   
-    
-  
-    
   
   
-</dl>
-<div class="clear"></div>
+  
+
+  
+</div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
@@ -142,7 +143,7 @@ same type of object.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#get-instance_method" title="#get (instance method)">#<strong>get</strong>(key)  &#x21d2; Object </a>
+      <a href="#get-instance_method" title="#get (instance method)"><strong>get</strong>(key)  &#x21d2; Object </a>
     
 
     
@@ -166,7 +167,7 @@ same type of object.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#hasKey-instance_method" title="#hasKey (instance method)">#<strong>hasKey</strong>(key)  &#x21d2; Boolean </a>
+      <a href="#hasKey-instance_method" title="#hasKey (instance method)"><strong>hasKey</strong>(key)  &#x21d2; Boolean </a>
     
 
     
@@ -190,7 +191,7 @@ same type of object.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#isEmpty-instance_method" title="#isEmpty (instance method)">#<strong>isEmpty</strong>  &#x21d2; Boolean </a>
+      <a href="#isEmpty-instance_method" title="#isEmpty (instance method)"><strong>isEmpty</strong>  &#x21d2; Boolean </a>
     
 
     
@@ -214,7 +215,7 @@ same type of object.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#keys-instance_method" title="#keys (instance method)">#<strong>keys</strong>  &#x21d2; Array </a>
+      <a href="#keys-instance_method" title="#keys (instance method)"><strong>keys</strong>  &#x21d2; Array </a>
     
 
     
@@ -238,7 +239,7 @@ same type of object.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#put-instance_method" title="#put (instance method)">#<strong>put</strong>(key, value)  &#x21d2; Object </a>
+      <a href="#put-instance_method" title="#put (instance method)"><strong>put</strong>(key, value)  &#x21d2; Object </a>
     
 
     
@@ -262,7 +263,7 @@ same type of object.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#remove-instance_method" title="#remove (instance method)">#<strong>remove</strong>(key)  &#x21d2; Object </a>
+      <a href="#remove-instance_method" title="#remove (instance method)"><strong>remove</strong>(key)  &#x21d2; Object </a>
     
 
     
@@ -286,7 +287,7 @@ same type of object.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#size-instance_method" title="#size (instance method)">#<strong>size</strong>  &#x21d2; Number </a>
+      <a href="#size-instance_method" title="#size (instance method)"><strong>size</strong>  &#x21d2; Number </a>
     
 
     
@@ -310,7 +311,7 @@ same type of object.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#toString-instance_method" title="#toString (instance method)">#<strong>toString</strong>  &#x21d2; Object </a>
+      <a href="#toString-instance_method" title="#toString (instance method)"><strong>toString</strong>  &#x21d2; Object </a>
     
 
     
@@ -334,7 +335,7 @@ same type of object.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#values-instance_method" title="#values (instance method)">#<strong>values</strong>  &#x21d2; Array </a>
+      <a href="#values-instance_method" title="#values (instance method)"><strong>values</strong>  &#x21d2; Array </a>
     
 
     
@@ -368,7 +369,7 @@ same type of object.</p>
   
   
   <h3 class="inherited">Methods inherited from <span class='object_link'><a href="Object.html" title="Toybox::Lang::Object (class)">Object</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="Object.html#equals-instance_method" title="Toybox::Lang::Object#equals (method)">#equals</a></span>, <span class='object_link'><a href="Object.html#hashCode-instance_method" title="Toybox::Lang::Object#hashCode (method)">#hashCode</a></span>, <span class='object_link'><a href="Object.html#method-instance_method" title="Toybox::Lang::Object#method (method)">#method</a></span>, <span class='object_link'><a href="Object.html#weak-instance_method" title="Toybox::Lang::Object#weak (method)">#weak</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="Object.html#equals-instance_method" title="Toybox::Lang::Object#equals (method)">equals</a></span>, <span class='object_link'><a href="Object.html#hashCode-instance_method" title="Toybox::Lang::Object#hashCode (method)">hashCode</a></span>, <span class='object_link'><a href="Object.html#method-instance_method" title="Toybox::Lang::Object#method (method)">method</a></span>, <span class='object_link'><a href="Object.html#weak-instance_method" title="Toybox::Lang::Object#weak (method)">weak</a></span></p>
 
 
   <div id="instance_method_details" class="method_details_list">
@@ -378,7 +379,7 @@ same type of object.</p>
       <div class="method_details first">
   <h3 class="signature first" id="get-instance_method">
   
-    #<strong>get</strong>(key)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Toybox::Lang::Object (class)">Object</a></span></tt> 
+    <strong>get</strong>(key)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Toybox::Lang::Object (class)">Object</a></span></tt> 
   
 
   
@@ -449,13 +450,29 @@ same type of object.</p>
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+3097
+3098</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 3097</span>
+
+def get(key)
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
       <div class="method_details ">
   <h3 class="signature " id="hasKey-instance_method">
   
-    #<strong>hasKey</strong>(key)  &#x21d2; <tt><span class='object_link'><a href="Boolean.html" title="Toybox::Lang::Boolean (class)">Boolean</a></span></tt> 
+    <strong>hasKey</strong>(key)  &#x21d2; <tt><span class='object_link'><a href="Boolean.html" title="Toybox::Lang::Boolean (class)">Boolean</a></span></tt> 
   
 
   
@@ -526,13 +543,29 @@ same type of object.</p>
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+3104
+3105</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 3104</span>
+
+def hasKey(key)
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
       <div class="method_details ">
   <h3 class="signature " id="isEmpty-instance_method">
   
-    #<strong>isEmpty</strong>  &#x21d2; <tt><span class='object_link'><a href="Boolean.html" title="Toybox::Lang::Boolean (class)">Boolean</a></span></tt> 
+    <strong>isEmpty</strong>  &#x21d2; <tt><span class='object_link'><a href="Boolean.html" title="Toybox::Lang::Boolean (class)">Boolean</a></span></tt> 
   
 
   
@@ -583,13 +616,29 @@ same type of object.</p>
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+3122
+3123</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 3122</span>
+
+def isEmpty()
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
       <div class="method_details ">
   <h3 class="signature " id="keys-instance_method">
   
-    #<strong>keys</strong>  &#x21d2; <tt><span class='object_link'><a href="Array.html" title="Toybox::Lang::Array (class)">Array</a></span></tt> 
+    <strong>keys</strong>  &#x21d2; <tt><span class='object_link'><a href="Array.html" title="Toybox::Lang::Array (class)">Array</a></span></tt> 
   
 
   
@@ -640,13 +689,29 @@ same type of object.</p>
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+3128
+3129</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 3128</span>
+
+def keys()
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
       <div class="method_details ">
   <h3 class="signature " id="put-instance_method">
   
-    #<strong>put</strong>(key, value)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Toybox::Lang::Object (class)">Object</a></span></tt> 
+    <strong>put</strong>(key, value)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Toybox::Lang::Object (class)">Object</a></span></tt> 
   
 
   
@@ -715,13 +780,29 @@ same type of object.</p>
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+3090
+3091</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 3090</span>
+
+def put(key, value)
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
       <div class="method_details ">
   <h3 class="signature " id="remove-instance_method">
   
-    #<strong>remove</strong>(key)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Toybox::Lang::Object (class)">Object</a></span></tt> 
+    <strong>remove</strong>(key)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Toybox::Lang::Object (class)">Object</a></span></tt> 
   
 
   
@@ -774,13 +855,29 @@ same type of object.</p>
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+3110
+3111</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 3110</span>
+
+def remove(key)
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
       <div class="method_details ">
   <h3 class="signature " id="size-instance_method">
   
-    #<strong>size</strong>  &#x21d2; <tt><span class='object_link'><a href="Number.html" title="Toybox::Lang::Number (class)">Number</a></span></tt> 
+    <strong>size</strong>  &#x21d2; <tt><span class='object_link'><a href="Number.html" title="Toybox::Lang::Number (class)">Number</a></span></tt> 
   
 
   
@@ -831,13 +928,29 @@ same type of object.</p>
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+3116
+3117</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 3116</span>
+
+def size()
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
       <div class="method_details ">
   <h3 class="signature " id="toString-instance_method">
   
-    #<strong>toString</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Toybox::Lang::Object (class)">Object</a></span></tt> 
+    <strong>toString</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Toybox::Lang::Object (class)">Object</a></span></tt> 
   
 
   
@@ -888,13 +1001,29 @@ same type of object.</p>
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+3140
+3141</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 3140</span>
+
+def toString()
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
       <div class="method_details ">
   <h3 class="signature " id="values-instance_method">
   
-    #<strong>values</strong>  &#x21d2; <tt><span class='object_link'><a href="Array.html" title="Toybox::Lang::Array (class)">Array</a></span></tt> 
+    <strong>values</strong>  &#x21d2; <tt><span class='object_link'><a href="Array.html" title="Toybox::Lang::Array (class)">Array</a></span></tt> 
   
 
   
@@ -945,7 +1074,23 @@ same type of object.</p>
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+3134
+3135</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 3134</span>
+
+def values()
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
   </div>
@@ -953,7 +1098,7 @@ same type of object.</p>
 </div>
 
       <div id="footer">
-  Generated on Mon Nov  7 13:39:12 2016 by
+  Generated on Wed Dec 21 14:04:02 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.5 (ruby-2.1.5).
 </div>

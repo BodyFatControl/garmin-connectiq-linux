@@ -66,6 +66,9 @@ class BaseMenuDelegate extends Ui.MenuInputDelegate {
         } else if(item == :setListener) {
             menu.setTitle("Listner Type");
             menu.addItem("Mailbox", :mailbox);
+            if(Comm has :registerForPhoneAppMessages) {
+                menu.addItem("Phone App", :phone);
+            }
             menu.addItem("None", :none);
             menu.addItem("Crash if 'Hi'", :phoneFail);
             delegate = new ListnerMenuDelegate();
@@ -103,11 +106,16 @@ class ListnerMenuDelegate extends Ui.MenuInputDelegate {
     function onMenuItem(item) {
         if(item == :mailbox) {
             Comm.setMailboxListener(mailMethod);
+        } else if(item == :phone) {
+            if(Comm has :registerForPhoneAppMessages) {
+                Comm.registerForPhoneAppMessages(phoneMethod);
+            }
         } else if(item == :none) {
+            Comm.registerForPhoneAppMessages(null);
             Comm.setMailboxListener(null);
         } else if(item == :phoneFail) {
             crashOnMessage = true;
-            Comm.setMailboxListener(mailMethod);
+            Comm.registerForPhoneAppMessages(phoneMethod);
         }
 
         Ui.popView(SLIDE_IMMEDIATE);

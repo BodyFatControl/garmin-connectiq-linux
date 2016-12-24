@@ -66,17 +66,17 @@
   
   
 </h1>
+<div class="box_info">
+  
 
-<dl class="box">
   
   
-    
-  
-    
   
   
-</dl>
-<div class="clear"></div>
+  
+
+  
+</div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
@@ -157,10 +157,10 @@
 </p>
 
   <h2>Constant Summary</h2>
-  
-    <dl class="constants">
-      
-        <dt id="ORDER_NEWEST_FIRST-constant" class="">ORDER_NEWEST_FIRST = 0  <div class="docstring">
+  <dl class="constants">
+    
+      <dt id="ORDER_NEWEST_FIRST-constant" class="">ORDER_NEWEST_FIRST = 0
+        <div class="docstring">
   <div class="discussion">
     
 <p>The ORDER enum is used to select the data order of the iterator</p>
@@ -190,9 +190,10 @@
 </ul>
 
 </div>
-        </dt>
-      
-        <dt id="ORDER_OLDEST_FIRST-constant" class="">ORDER_OLDEST_FIRST = 1  <div class="docstring">
+      </dt>
+    
+      <dt id="ORDER_OLDEST_FIRST-constant" class="">ORDER_OLDEST_FIRST = 1
+        <div class="docstring">
   <div class="discussion">
     
 <p>Request iterator with oldest data first</p>
@@ -220,10 +221,9 @@
 </ul>
 
 </div>
-        </dt>
-      
-    </dl>
-  
+      </dt>
+    
+  </dl>
 
 
 
@@ -242,7 +242,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#getElevationHistory-instance_method" title="#getElevationHistory (instance method)">#<strong>getElevationHistory</strong>(options)  &#x21d2; SensorHistory.SensorHistoryIterator </a>
+      <a href="#getElevationHistory-instance_method" title="#getElevationHistory (instance method)"><strong>getElevationHistory</strong>(options)  &#x21d2; SensorHistory.SensorHistoryIterator </a>
     
 
     
@@ -267,7 +267,7 @@ cycle.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#getHeartRateHistory-instance_method" title="#getHeartRateHistory (instance method)">#<strong>getHeartRateHistory</strong>(options)  &#x21d2; SensorHistory.SensorHistoryIterator </a>
+      <a href="#getHeartRateHistory-instance_method" title="#getHeartRateHistory (instance method)"><strong>getHeartRateHistory</strong>(options)  &#x21d2; SensorHistory.SensorHistoryIterator </a>
     
 
     
@@ -292,7 +292,7 @@ cycle.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#getPressureHistory-instance_method" title="#getPressureHistory (instance method)">#<strong>getPressureHistory</strong>(options)  &#x21d2; SensorHistory.SensorHistoryIterator </a>
+      <a href="#getPressureHistory-instance_method" title="#getPressureHistory (instance method)"><strong>getPressureHistory</strong>(options)  &#x21d2; SensorHistory.SensorHistoryIterator </a>
     
 
     
@@ -317,7 +317,7 @@ cycle.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#getTemperatureHistory-instance_method" title="#getTemperatureHistory (instance method)">#<strong>getTemperatureHistory</strong>(options)  &#x21d2; SensorHistory.SensorHistoryIterator </a>
+      <a href="#getTemperatureHistory-instance_method" title="#getTemperatureHistory (instance method)"><strong>getTemperatureHistory</strong>(options)  &#x21d2; SensorHistory.SensorHistoryIterator </a>
     
 
     
@@ -351,7 +351,7 @@ cycle.</p>
       <div class="method_details first">
   <h3 class="signature first" id="getElevationHistory-instance_method">
   
-    #<strong>getElevationHistory</strong>(options)  &#x21d2; <tt><span class='object_link'><a href="" title="Toybox::SensorHistory (module)">SensorHistory</a></span>.<span class='object_link'><a href="SensorHistory/SensorHistoryIterator.html" title="Toybox::SensorHistory::SensorHistoryIterator (class)">SensorHistoryIterator</a></span></tt> 
+    <strong>getElevationHistory</strong>(options)  &#x21d2; <tt><span class='object_link'><a href="" title="Toybox::SensorHistory (module)">SensorHistory</a></span>.<span class='object_link'><a href="SensorHistory/SensorHistoryIterator.html" title="Toybox::SensorHistory::SensorHistoryIterator (class)">SensorHistoryIterator</a></span></tt> 
   
 
   
@@ -476,13 +476,29 @@ by this iterator are in meters.</p>
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+3984
+3985</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 3984</span>
+
+def getElevationHistory(options)
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
       <div class="method_details ">
   <h3 class="signature " id="getHeartRateHistory-instance_method">
   
-    #<strong>getHeartRateHistory</strong>(options)  &#x21d2; <tt><span class='object_link'><a href="" title="Toybox::SensorHistory (module)">SensorHistory</a></span>.<span class='object_link'><a href="SensorHistory/SensorHistoryIterator.html" title="Toybox::SensorHistory::SensorHistoryIterator (class)">SensorHistoryIterator</a></span></tt> 
+    <strong>getHeartRateHistory</strong>(options)  &#x21d2; <tt><span class='object_link'><a href="" title="Toybox::SensorHistory (module)">SensorHistory</a></span>.<span class='object_link'><a href="SensorHistory/SensorHistoryIterator.html" title="Toybox::SensorHistory::SensorHistoryIterator (class)">SensorHistoryIterator</a></span></tt> 
   
 
   
@@ -648,13 +664,29 @@ returned by this iterator are in beats per minute.</p>
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+3933
+3934</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 3933</span>
+
+def getHeartRateHistory(options)
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
       <div class="method_details ">
   <h3 class="signature " id="getPressureHistory-instance_method">
   
-    #<strong>getPressureHistory</strong>(options)  &#x21d2; <tt><span class='object_link'><a href="" title="Toybox::SensorHistory (module)">SensorHistory</a></span>.<span class='object_link'><a href="SensorHistory/SensorHistoryIterator.html" title="Toybox::SensorHistory::SensorHistoryIterator (class)">SensorHistoryIterator</a></span></tt> 
+    <strong>getPressureHistory</strong>(options)  &#x21d2; <tt><span class='object_link'><a href="" title="Toybox::SensorHistory (module)">SensorHistory</a></span>.<span class='object_link'><a href="SensorHistory/SensorHistoryIterator.html" title="Toybox::SensorHistory::SensorHistoryIterator (class)">SensorHistoryIterator</a></span></tt> 
   
 
   
@@ -779,13 +811,29 @@ by this iterator are in Pascals.</p>
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+3967
+3968</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 3967</span>
+
+def getPressureHistory(options)
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
       <div class="method_details ">
   <h3 class="signature " id="getTemperatureHistory-instance_method">
   
-    #<strong>getTemperatureHistory</strong>(options)  &#x21d2; <tt><span class='object_link'><a href="" title="Toybox::SensorHistory (module)">SensorHistory</a></span>.<span class='object_link'><a href="SensorHistory/SensorHistoryIterator.html" title="Toybox::SensorHistory::SensorHistoryIterator (class)">SensorHistoryIterator</a></span></tt> 
+    <strong>getTemperatureHistory</strong>(options)  &#x21d2; <tt><span class='object_link'><a href="" title="Toybox::SensorHistory (module)">SensorHistory</a></span>.<span class='object_link'><a href="SensorHistory/SensorHistoryIterator.html" title="Toybox::SensorHistory::SensorHistoryIterator (class)">SensorHistoryIterator</a></span></tt> 
   
 
   
@@ -910,7 +958,23 @@ returned by this iterator are in degrees Celcius.</p>
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+3950
+3951</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 3950</span>
+
+def getTemperatureHistory(options)
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
   </div>
@@ -918,7 +982,7 @@ returned by this iterator are in degrees Celcius.</p>
 </div>
 
       <div id="footer">
-  Generated on Mon Nov  7 13:39:09 2016 by
+  Generated on Wed Dec 21 14:03:58 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.5 (ruby-2.1.5).
 </div>

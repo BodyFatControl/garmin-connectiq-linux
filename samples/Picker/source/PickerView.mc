@@ -5,6 +5,10 @@ using Toybox.System as Sys;
 
 class PickerView extends Ui.View {
 
+    function initialize() {
+        View.initialize();
+    }
+
     //! Load your resources here
     function onLayout(dc) {
         setLayout(Rez.Layouts.MainLayout(dc));
@@ -63,6 +67,10 @@ class PickerView extends Ui.View {
 }
 
 class PickerDelegate extends Ui.BehaviorDelegate {
+
+    function initialize() {
+        BehaviorDelegate.initialize();
+    }
 
     function onMenu() {
         return pushPicker();

@@ -66,32 +66,35 @@
   
   
 </h1>
-
-<dl class="box">
+<div class="box_info">
   
-    <dt class="r1">Inherits:</dt>
-    <dd class="r1">
-      <span class="inheritName">Object</span>
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="../Lang/Object.html" title="Toybox::Lang::Object (class)">Lang::Object</a></span></span>
       
         <ul class="fullTree">
           <li>Object</li>
+          
+            <li class="next"><span class='object_link'><a href="../Lang/Object.html" title="Toybox::Lang::Object (class)">Lang::Object</a></span></li>
           
             <li class="next">Toybox::AntPlus::PedalPowerBalance</li>
           
         </ul>
         <a href="#" class="inheritanceTree">show all</a>
       
-      </dd>
-    
+    </dd>
+  </dl>
+  
+
   
   
-    
-  
-    
   
   
-</dl>
-<div class="clear"></div>
+  
+
+  
+</div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
@@ -132,7 +135,7 @@ null check values before using them.</p>
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#pedalPowerPercent-instance_method" title="#pedalPowerPercent (instance method)">#<strong>pedalPowerPercent</strong>  &#x21d2; Number </a>
+      <a href="#pedalPowerPercent-instance_method" title="#pedalPowerPercent (instance method)"><strong>pedalPowerPercent</strong>  &#x21d2; Number </a>
     
 
     
@@ -159,7 +162,7 @@ null check values before using them.</p>
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#rightPedalIndicator-instance_method" title="#rightPedalIndicator (instance method)">#<strong>rightPedalIndicator</strong>  &#x21d2; Boolean </a>
+      <a href="#rightPedalIndicator-instance_method" title="#rightPedalIndicator (instance method)"><strong>rightPedalIndicator</strong>  &#x21d2; Boolean </a>
     
 
     
@@ -189,6 +192,17 @@ null check values before using them.</p>
 
 
 
+  
+  
+  
+  
+  
+  
+  <h2>Method Summary</h2>
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../Lang/Object.html" title="Toybox::Lang::Object (class)">Lang::Object</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Lang/Object.html#equals-instance_method" title="Toybox::Lang::Object#equals (method)">equals</a></span>, <span class='object_link'><a href="../Lang/Object.html#hashCode-instance_method" title="Toybox::Lang::Object#hashCode (method)">hashCode</a></span>, <span class='object_link'><a href="../Lang/Object.html#method-instance_method" title="Toybox::Lang::Object#method (method)">method</a></span>, <span class='object_link'><a href="../Lang/Object.html#toString-instance_method" title="Toybox::Lang::Object#toString (method)">toString</a></span>, <span class='object_link'><a href="../Lang/Object.html#weak-instance_method" title="Toybox::Lang::Object#weak (method)">weak</a></span></p>
+
   <div id="instance_attr_details" class="attr_details">
     <h2>Instance Attribute Details</h2>
     
@@ -197,7 +211,7 @@ null check values before using them.</p>
       <div class="method_details first">
   <h3 class="signature first" id="pedalPowerPercent-instance_method">
   
-    #<strong>pedalPowerPercent</strong>  &#x21d2; <tt>Number</tt> 
+    <strong>pedalPowerPercent</strong>  &#x21d2; <tt>Number</tt> 
   
 
   
@@ -243,7 +257,25 @@ null check values before using them.</p>
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+6827
+6828
+6829</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 6827</span>
+
+def pedalPowerPercent
+  @pedalPowerPercent
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
       
@@ -251,7 +283,7 @@ null check values before using them.</p>
       <div class="method_details ">
   <h3 class="signature " id="rightPedalIndicator-instance_method">
   
-    #<strong>rightPedalIndicator</strong>  &#x21d2; <tt>Boolean</tt> 
+    <strong>rightPedalIndicator</strong>  &#x21d2; <tt>Boolean</tt> 
   
 
   
@@ -297,7 +329,25 @@ null check values before using them.</p>
   
 </ul>
 
-</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+6821
+6822
+6823</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'Monkeybrains.rb', line 6821</span>
+
+def rightPedalIndicator
+  @rightPedalIndicator
+end</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
   </div>
@@ -306,7 +356,7 @@ null check values before using them.</p>
 </div>
 
       <div id="footer">
-  Generated on Mon Nov  7 13:39:14 2016 by
+  Generated on Wed Dec 21 14:04:07 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.5 (ruby-2.1.5).
 </div>

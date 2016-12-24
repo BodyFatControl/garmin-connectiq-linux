@@ -6,7 +6,8 @@ class CharacterFactory extends Ui.PickerFactory {
     hidden var mAddOk;
     const DONE = -1;
 
-    function initialize(characterSet,options) {
+    function initialize(characterSet, options) {
+        PickerFactory.initialize();
         mCharacterSet = characterSet;
         mAddOk = (null != options) and (options.get(:addOk) == true);
     }
