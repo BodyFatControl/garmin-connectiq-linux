@@ -8,6 +8,10 @@ using Toybox.Application as App;
 
 class KeyboardApp extends App.AppBase {
 
+    function initialize() {
+        App.AppBase.initialize();
+    }
+
     // onStart() is called on application start up
     function onStart(state) {
     }

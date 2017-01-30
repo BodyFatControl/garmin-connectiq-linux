@@ -11,6 +11,11 @@ using Toybox.System as Sys;
 var last_key = null;
 
 class InputDelegate extends Ui.BehaviorDelegate {
+
+    function initialize() {
+        BehaviorDelegate.initialize();
+    }
+
     function onNextPage() {
         setBehaviorString("NEXT_PAGE");
         return false;

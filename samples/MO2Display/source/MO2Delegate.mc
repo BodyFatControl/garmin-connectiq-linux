@@ -11,6 +11,8 @@ class MO2Delegate extends Ui.InputDelegate {
     var mSensor;
 
     function initialize(sensor, index) {
+        Ui.InputDelegate.initialize();
+
         mSensor = sensor;
         mIndex = index;
     }

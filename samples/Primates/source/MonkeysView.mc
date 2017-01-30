@@ -25,13 +25,20 @@ class MonkeysView extends Ui.View {
 
         dc.setColor(Gfx.COLOR_BLACK, Gfx.COLOR_WHITE);
         dc.fillRectangle(0, 0, dc.getWidth(), dc.getHeight());
-
         dc.setColor(color, Gfx.COLOR_TRANSPARENT);
-        dc.drawText(10, 20, Gfx.FONT_LARGE, "Monkeys", Gfx.TEXT_JUSTIFY_LEFT);
 
-        dc.drawText(10, 50, Gfx.FONT_MEDIUM, "Monkeys are divided", Gfx.TEXT_JUSTIFY_LEFT);
-        dc.drawText(10, 70, Gfx.FONT_MEDIUM, "into two types: Old", Gfx.TEXT_JUSTIFY_LEFT);
-        dc.drawText(10, 90, Gfx.FONT_MEDIUM, "World and New World.", Gfx.TEXT_JUSTIFY_LEFT);
+        var x = dc.getWidth() / 2;
+        var y = 20;
+
+        dc.drawText(x, y, Gfx.FONT_MEDIUM, "Monkeys", Gfx.TEXT_JUSTIFY_CENTER);
+        y += dc.getFontHeight(Gfx.FONT_MEDIUM);
+        dc.drawText(x, y, Gfx.FONT_SMALL, "Monkeys are", Gfx.TEXT_JUSTIFY_CENTER);
+        y += dc.getFontHeight(Gfx.FONT_SMALL);
+        dc.drawText(x, y, Gfx.FONT_SMALL, "divided into two", Gfx.TEXT_JUSTIFY_CENTER);
+        y += dc.getFontHeight(Gfx.FONT_SMALL);
+        dc.drawText(x, y, Gfx.FONT_SMALL, "types: Old World", Gfx.TEXT_JUSTIFY_CENTER);
+        y += dc.getFontHeight(Gfx.FONT_SMALL);
+        dc.drawText(x, y, Gfx.FONT_SMALL, "and New World.", Gfx.TEXT_JUSTIFY_CENTER);
     }
 
 }

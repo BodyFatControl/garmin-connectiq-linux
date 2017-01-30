@@ -9,6 +9,7 @@ using Toybox.WatchUi as Ui;
 class HistoryDelegate extends Ui.BehaviorDelegate {
     // Constructor
     function initialize() {
+        BehaviorDelegate.initialize();
     }
 
     function onBack() {

@@ -32,10 +32,11 @@ class PrimatesView extends Ui.View {
 
         indicator = new PageIndicator();
         var size = 3;
+        var margin = 3;
         var selected = Gfx.COLOR_DK_GRAY;
         var notSelected = Gfx.COLOR_LT_GRAY;
-        var alignment = indicator.ALIGN_BOTTOM_RIGHT;
-        indicator.setup(size, selected, notSelected, alignment, 3);
+        var alignment = indicator.ALIGN_BOTTOM_CENTER;
+        indicator.setup(size, selected, notSelected, alignment, margin);
     }
 
     function setIndex(newIndex) {

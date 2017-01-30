@@ -8,10 +8,14 @@ using Toybox.Graphics as Gfx;
 
 class PageIndicator {
 
-    var ALIGN_BOTTOM_RIGHT = 0;
-    var ALIGN_BOTTOM_LEFT = 1;
-    var ALIGN_TOP_RIGHT = 2;
-    var ALIGN_TOP_LEFT = 3;
+    enum {
+        ALIGN_BOTTOM_RIGHT,
+        ALIGN_BOTTOM_LEFT,
+        ALIGN_BOTTOM_CENTER,
+        ALIGN_TOP_RIGHT,
+        ALIGN_TOP_LEFT,
+        ALIGN_TOP_CENTER
+    }
 
     var mSize, mSelectedColor, mNotSelectedColor, mAlignment, mMargin;
 
@@ -32,17 +36,20 @@ class PageIndicator {
         if (mAlignment == ALIGN_BOTTOM_RIGHT) {
             x = dc.getWidth() - width - mMargin;
             y = dc.getHeight() - height - mMargin;
-
         } else if (mAlignment == ALIGN_BOTTOM_LEFT) {
             x = 0 + mMargin;
             y = dc.getHeight() - height - mMargin;
-
-        } else if (mAlignment == ALIGN_TOP_RIGHT) {
+        } else if (mAlignment == ALIGN_BOTTOM_CENTER) {
+            x = (dc.getWidth() / 2) - (width / 2);
+            y = dc.getHeight() - height - mMargin;
+        }  else if (mAlignment == ALIGN_TOP_RIGHT) {
             x = dc.getWidth() - width - mMargin;
             y = 0 + mMargin;
-
         } else if (mAlignment == ALIGN_TOP_LEFT) {
             x = 0 + mMargin;
+            y = 0 + mMargin;
+        } else if (mAlignment == ALIGN_TOP_CENTER) {
+            x = (dc.getWidth() / 2) - (width / 2);
             y = 0 + mMargin;
         } else {
             x = 0;

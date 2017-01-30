@@ -17,6 +17,8 @@ class DataView extends Ui.View {
     hidden var mUnitFont;
 
     function initialize(sensor, index) {
+        Ui.View.initialize();
+
         mIndex = index;
 
         mHeadingFont = Gfx.FONT_SMALL;

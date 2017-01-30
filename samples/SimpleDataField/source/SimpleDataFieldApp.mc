@@ -7,6 +7,11 @@
 using Toybox.Application as App;
 
 class SimpleDataField extends App.AppBase {
+
+    function initialize() {
+        AppBase.initialize();
+    }
+
     function onStart(state) {
         return false;
     }
@@ -18,4 +23,5 @@ class SimpleDataField extends App.AppBase {
     function onStop(state) {
         return false;
     }
+
 }

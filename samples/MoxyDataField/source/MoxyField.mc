@@ -57,6 +57,7 @@ class MO2Field extends Ui.DataField {
 
     // Constructor
     function initialize(sensor) {
+        DataField.initialize();
         mSensor = sensor;
         mFitContributor = new MO2FitContributor(self);
     }
@@ -224,6 +225,10 @@ class MO2Field extends Ui.DataField {
 
 class MoxyField extends App.AppBase {
     var mSensor;
+
+    function initialize() {
+        AppBase.initialize();
+    }
 
     // onStart is the primary start point for a Monkeybrains application
     function onStart(state) {

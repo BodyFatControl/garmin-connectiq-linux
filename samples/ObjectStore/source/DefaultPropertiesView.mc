@@ -8,12 +8,12 @@ using Toybox.WatchUi as Ui;
 using Toybox.Graphics as Gfx;
 using Toybox.Application as App;
 
-class DefaultPropertiesView extends Ui.View
-{
+class DefaultPropertiesView extends Ui.View {
 
     hidden var mIndicator;
 
     function initialize() {
+        View.initialize();
         mIndicator = new PageIndicator();
         var size = 2;
         var selected = Gfx.COLOR_DK_GRAY;
@@ -23,8 +23,7 @@ class DefaultPropertiesView extends Ui.View
         mIndicator.setup(size, selected, notSelected, alignment, margin);
     }
 
-    function onUpdate(dc)
-    {
+    function onUpdate(dc) {
         var app = App.getApp();
 
         var int = app.getProperty("number_prop");
@@ -32,23 +31,19 @@ class DefaultPropertiesView extends Ui.View
         var string = app.getProperty("string_prop");
         var boolean = app.getProperty("boolean_prop");
 
-        if(null==int)
-        {
+        if (null==int) {
             int="Not set";
         }
 
-        if(null==float)
-        {
+        if (null==float) {
             float="Not set";
         }
 
-        if(null==string)
-        {
+        if (null==string) {
             string="Not set";
         }
 
-        if(null==boolean)
-        {
+        if (null==boolean) {
             boolean="Not set";
         }
 
@@ -69,9 +64,13 @@ class DefaultPropertiesView extends Ui.View
     }
 }
 
-class DefaultPropertiesViewDelegate extends Ui.BehaviorDelegate
-{
+class DefaultPropertiesViewDelegate extends Ui.BehaviorDelegate {
+
     var count = 0;
+
+    function initialize() {
+        BehaviorDelegate.initialize();
+    }
 
     function onNextPage() {
         Ui.switchToView(new ObjectStoreView(), new ObjectStoreViewDelegate(), Ui.SLIDE_LEFT);
@@ -98,4 +97,5 @@ class DefaultPropertiesViewDelegate extends Ui.BehaviorDelegate
         Ui.requestUpdate();
         return true;
     }
+
 }

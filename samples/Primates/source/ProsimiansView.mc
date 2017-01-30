@@ -25,14 +25,20 @@ class ProsimiansView extends Ui.View {
 
         dc.setColor(Gfx.COLOR_BLACK, Gfx.COLOR_WHITE);
         dc.fillRectangle(0, 0, dc.getWidth(), dc.getHeight());
-
         dc.setColor(color, Gfx.COLOR_TRANSPARENT);
-        dc.drawText(20, 20, Gfx.FONT_LARGE, "Prosimians", Gfx.TEXT_JUSTIFY_LEFT);
 
-        dc.drawText(20, 50, Gfx.FONT_MEDIUM, "Prosimian means", Gfx.TEXT_JUSTIFY_LEFT);
-        dc.drawText(20, 70, Gfx.FONT_MEDIUM, "'before monkeys'", Gfx.TEXT_JUSTIFY_LEFT);
-        dc.drawText(20, 90, Gfx.FONT_MEDIUM, "and they are the", Gfx.TEXT_JUSTIFY_LEFT);
-        dc.drawText(20, 110, Gfx.FONT_MEDIUM, "most primitive.", Gfx.TEXT_JUSTIFY_LEFT);
+        var x = dc.getWidth() / 2;
+        var y = 20;
+
+        dc.drawText(x, y, Gfx.FONT_MEDIUM, "Prosimians", Gfx.TEXT_JUSTIFY_CENTER);
+        y += dc.getFontHeight(Gfx.FONT_MEDIUM);
+        dc.drawText(x, y, Gfx.FONT_SMALL, "Prosimian means", Gfx.TEXT_JUSTIFY_CENTER);
+        y += dc.getFontHeight(Gfx.FONT_SMALL);
+        dc.drawText(x, y, Gfx.FONT_SMALL, "'before monkeys'", Gfx.TEXT_JUSTIFY_CENTER);
+        y += dc.getFontHeight(Gfx.FONT_SMALL);
+        dc.drawText(x, y, Gfx.FONT_SMALL, "and they are the", Gfx.TEXT_JUSTIFY_CENTER);
+        y += dc.getFontHeight(Gfx.FONT_SMALL);
+        dc.drawText(x, y, Gfx.FONT_SMALL, "most primitive.", Gfx.TEXT_JUSTIFY_CENTER);
     }
 
 }

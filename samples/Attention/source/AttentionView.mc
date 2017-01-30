@@ -37,6 +37,10 @@ class AttentionView extends Ui.View {
                       "Low Battery",
                       "Error" ];
 
+    function initialize() {
+        View.initialize();
+    }
+
     // Load your resources here
     function onLayout(dc) {
         selectedIndex = 0;

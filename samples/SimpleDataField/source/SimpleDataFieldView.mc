@@ -16,6 +16,7 @@ class DataField extends Ui.SimpleDataField {
 
     // Constructor
     function initialize() {
+        SimpleDataField.initialize();
         label = "HR, Dist, Time";
         counter = 0;
     }

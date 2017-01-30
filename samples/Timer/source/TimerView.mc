@@ -16,6 +16,11 @@ var count2 = 0;
 var count3 = 0;
 
 class TimerView extends Ui.View {
+
+    function initialize() {
+        Ui.View.initialize();
+    }
+
     function callback1() {
         count1 += 1;
         Ui.requestUpdate();

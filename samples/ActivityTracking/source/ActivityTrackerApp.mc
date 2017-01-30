@@ -11,6 +11,10 @@ var screenShape;
 
 // This is the primary start point for a ConnectIQ application
 class ActivityTrackerApp extends App.AppBase {
+    function initialize() {
+        AppBase.initialize();
+    }
+
     function onStart(state) {
         screenShape = Sys.getDeviceSettings().screenShape;
         return false;

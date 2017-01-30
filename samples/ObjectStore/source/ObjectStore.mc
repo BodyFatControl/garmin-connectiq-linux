@@ -7,17 +7,19 @@
 using Toybox.Application as App;
 using Toybox.WatchUi as Ui;
 
-class ObjectStore extends App.AppBase
-{
-    function getInitialView()
-    {
-        return [new ObjectStoreView(), new ObjectStoreViewDelegate()];
+class ObjectStore extends App.AppBase {
+
+    function initialize() {
+        AppBase.initialize();
+    }
+
+    function getInitialView() {
+        return [ new ObjectStoreView(), new ObjectStoreViewDelegate() ];
     }
 
     // For this app all that needs to be done is trigger a Ui refresh
     // since the settings are only used in onUpdate().
-    function onSettingsChanged()
-    {
+    function onSettingsChanged() {
         Ui.requestUpdate();
     }
 }

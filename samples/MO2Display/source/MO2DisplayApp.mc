@@ -10,6 +10,10 @@ class MO2DisplayApp extends App.AppBase
 {
     var mSensor;
 
+    function initialize() {
+        App.AppBase.initialize();
+    }
+
     // onStart() is called on application start up
     function onStart(state) {
         //Create the sensor object and open it

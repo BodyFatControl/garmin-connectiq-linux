@@ -9,6 +9,10 @@ using Toybox.Application as App;
 
 class AttentionDelegate extends Ui.InputDelegate {
 
+    function initialize() {
+        InputDelegate.initialize();
+    }
+
     // Handle key  events
     function onKey(evt) {
         var app = App.getApp();

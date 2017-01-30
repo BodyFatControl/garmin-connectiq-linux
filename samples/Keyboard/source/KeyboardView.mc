@@ -11,6 +11,10 @@ var globalText = "Push Up\nor Tap\nTo Start";
 
 class KeyboardView extends Ui.View {
 
+    function initialize() {
+        Ui.View.initialize();
+    }
+
     // Load your resources here
     function onLayout(dc) {
     }

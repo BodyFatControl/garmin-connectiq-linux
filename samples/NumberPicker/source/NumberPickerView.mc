@@ -26,18 +26,30 @@ var count = 0;
 var dur = null;
 
 class NPDf extends Ui.NumberPickerDelegate {
+    function initialize() {
+        NumberPickerDelegate.initialize();
+    }
+
     function onNumberPicked(value) {
         testValf = value;
     }
 }
 
 class NPDi extends Ui.NumberPickerDelegate {
+    function initialize() {
+        NumberPickerDelegate.initialize();
+    }
+
     function onNumberPicked(value) {
         testVali = value;
     }
 }
 
 class NPDd extends Ui.NumberPickerDelegate {
+    function initialize() {
+        NumberPickerDelegate.initialize();
+    }
+
     function onNumberPicked(value) {
         dur = value;
     }
@@ -46,6 +58,10 @@ class NPDd extends Ui.NumberPickerDelegate {
 class BaseInputDelegate extends Ui.BehaviorDelegate {
     var np;
     var npi;
+
+    function initialize() {
+        BehaviorDelegate.initialize();
+    }
 
     function onSelect() {
         onMenu();
@@ -129,6 +145,10 @@ class BaseInputDelegate extends Ui.BehaviorDelegate {
 }
 
 class NumberPickerView extends Ui.View {
+
+    function initialize() {
+        View.initialize();
+    }
 
     function onLayout(dc) {
         onUpdate(dc);

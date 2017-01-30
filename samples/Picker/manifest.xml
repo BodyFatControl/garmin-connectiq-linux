@@ -2,7 +2,9 @@
     <iq:application entry="PickerApp" id="974924410B214771B0B8D798D97D723D" launcherIcon="@Drawables.LauncherIcon" minSdkVersion="1.2.1" name="@Strings.appName" type="watch-app">
 
         <iq:products>
-            <iq:product id="round-240x240"/>
+            <iq:product id="fenix5"/>
+            <iq:product id="fenix5x"/>
+            <iq:product id="fenix5s"/>
             <iq:product id="fr630"/>
             <iq:product id="fr235"/>
             <iq:product id="fr230"/>

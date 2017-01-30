@@ -4,7 +4,7 @@
 	<meta charset="utf-8"/>
 	<title>Monkey C Release Notes</title>
 	<meta name="author" content="Garmin International"/>
-	<meta name="date" content="December 14, 2016"/>
+	<meta name="date" content="January 4, 2017"/>
 	<link type="text/css" rel="stylesheet" href="resources/readme/style.css"/>
 </head>
 <body>
@@ -27,7 +27,7 @@ function toggle(id, img_name) {
 // End -->
 </script>
 <div id="title">MONKEY C</div>
-<div id="tagline">Release 2.2.2 (Biker Monkey)</div>
+<div id="tagline">Release 2.2.3 (Biker Monkey)</div>
 <div class="clear"></div>
 
 <h1 id="tableofcontents">Table of Contents</h1>
@@ -55,37 +55,64 @@ function toggle(id, img_name) {
 <li><a href="#usingthesamples">Using the Samples</a>
 
 <ul>
-<li><a href="#accelmag">AccelMag</a></li>
+<li><a href="#fundamentals">Fundamentals</a>
+
+<ul>
+<li><a href="#objectstore">ObjectStore</a></li>
+<li><a href="#timer">Timer</a></li>
+<li><a href="#userprofile">UserProfile</a></li>
+</ul></li>
+<li><a href="#userinterface">User Interface</a>
+
+<ul>
 <li><a href="#activitytracker">ActivityTracker</a></li>
 <li><a href="#analog">Analog</a></li>
 <li><a href="#attention">Attention</a></li>
-<li><a href="#comm">Comm</a></li>
 <li><a href="#confirmationdialog">ConfirmationDialog</a></li>
-<li><a href="#drawable">Drawable</a></li>
 <li><a href="#input">Input</a></li>
 <li><a href="#keyboard">Keyboard</a></li>
-<li><a href="#mathsample">MathSample</a></li>
-<li><a href="#menutest">MenuTest</a></li>
-<li><a href="#mo2display">MO2Display</a></li>
-<li><a href="#moxydatafield">MoxyDataField</a></li>
-<li><a href="#numberpicker">NumberPicker</a></li>
-<li><a href="#objectstore">ObjectStore</a></li>
 <li><a href="#picker">Picker</a></li>
-<li><a href="#positionsample">PositionSample</a></li>
+<li><a href="#menutest">MenuTest</a></li>
+<li><a href="#numberpicker">NumberPicker</a></li>
 <li><a href="#primates">Primates</a></li>
 <li><a href="#progressbar">ProgressBar</a></li>
+<li><a href="#selectable">Selectable</a></li>
+</ul></li>
+<li><a href="#mobilewebcommunication">Mobile/Web Communication</a>
+
+<ul>
+<li><a href="#comm">Comm</a></li>
+<li><a href="#webrequest">WebRequest</a></li>
+</ul></li>
+<li><a href="#sensorandfitrecording">Sensor and FIT Recording</a>
+
+<ul>
+<li><a href="#accelmag">AccelMag</a></li>
+<li><a href="#fieldtimerevents">FieldTimerEvents</a></li>
+<li><a href="#positionsample">PositionSample</a></li>
 <li><a href="#recordsample">RecordSample</a></li>
 <li><a href="#sensor">Sensor</a></li>
+<li><a href="#sensorhistory">SensorHistory</a></li>
 <li><a href="#simpledatafield">SimpleDataField</a></li>
+</ul></li>
+<li><a href="#ant">ANT</a>
+
+<ul>
+<li><a href="#genericchannelburst">GenericChannelBurst</a></li>
+<li><a href="#mo2display">MO2Display</a></li>
+<li><a href="#moxydatafield">MoxyDataField</a></li>
+</ul></li>
+<li><a href="#resources">Resources</a>
+
+<ul>
+<li><a href="#drawable">Drawable</a></li>
 <li><a href="#strings">Strings</a></li>
-<li><a href="#timer">Timer</a></li>
-<li><a href="#userprofile">UserProfile</a></li>
-<li><a href="#webrequest">WebRequest</a></li>
+</ul></li>
 </ul></li>
 <li><a href="#releasenotes">Release Notes</a>
 
 <ul>
-<li><a href="#v2.2.2">v2.2.2</a></li>
+<li><a href="#v2.2.3">v2.2.3</a></li>
 </ul></li>
 <li><a href="#additionalnotes">Additional Notes</a></li>
 </ul>
@@ -289,39 +316,93 @@ $ open ~/.bash_profile
 
 <h1 id="usingthesamples">Using the Samples</h1>
 
-<p>Sample applications are included with every SDK release in the &#8216;samples&#8217; directory, and are meant give a small demonstration of the different parts of the Connect IQ API.</p>
+<p>Sample applications are included with every SDK release in the &#8216;samples&#8217; directory, and are meant give a small demonstration of the different parts of the Connect IQ API. Samples can be loaded through in regular fashion. They can also be viewed via the Eclipse Plugin by clicking Connect IQ&gt; Samples.</p>
 
-<h2 id="accelmag">AccelMag</h2>
+<h2 id="fundamentals">Fundamentals</h2>
+
+<h3 id="objectstore">ObjectStore</h3>
 
 <p><strong>About The Sample</strong></p>
 <figure>
-<img src="resources/readme/AccelMag.png" />
+<img src="resources/readme/ObjectStore.png" />
 </figure>
 
 <ul>
 <li>Type: Application</li>
-<li>Modules: <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/WatchUi.html" title="WatchUi API documentation">WatchUi</a>, <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Sensor.html" title="Sensor API documentation">Sensor</a></li>
+<li>Modules/Classes: <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Application.html" title="Application API documentation">Application</a></li>
 </ul>
 
-<p>Demonstrates Accelerometer and Magnetometer support.</p>
+<p>Demonstrates saving and retrieving data in the <a href="https://developer.garmin.com/connect-iq/programmers-guide/resource-compiler/" title="Resource Compiler Programmer's Guide documentation">Object Store and App Settings</a> on the device.</p>
 
 <p><strong>How It Works</strong></p>
 
+<p><strong>Object Store:</strong></p>
+
+<p>The first page displays values from the ObjectStore. Tap the screen six times, pausing between each tap to check for changed values on the screen:</p>
+
 <ul>
-<li>Accelerometer:
-
-<ol>
-<li>Tilt device in various directions - The ball on the screen moves in the direction of the tilt</li>
-</ol></li>
-<li>Magnetometer:
-
-<ol>
-<li>Turn the device in place - An arrow on the edge of the screen should point north</li>
-<li>Press the start button - The ball will get &#8220;kicked&#8221; in the direction the arrow is pointing</li>
-</ol></li>
+<li>&#8220;Int&#8221; is assigned a value of 3</li>
+<li>&#8220;Float&#8221; is assigned a value of 3.141590</li>
+<li>&#8220;String&#8221; is assigned a value of &#8220;pie&#8221;</li>
+<li>&#8220;Boolean&#8221; is assigned a value of &#8220;true&#8221;</li>
+<li>&#8220;Array&#8221; is assigned a value of &#8220;[1,2,3,null]&#8221;</li>
+<li>&#8220;Dictionary&#8221; is assigned a value of &#8220;{two=&gt;2, 1=&gt;one, null=&gt;null}&#8221;</li>
 </ul>
 
-<h2 id="activitytracker">ActivityTracker</h2>
+<p>Tapping the screen another six times will result in all values indicating &#8220;Not set&#8221;.</p>
+
+<p><strong>App Settings:</strong></p>
+
+<p>The second page will display the settings. To modify these values when the sample running in the Simulator:</p>
+
+<ol>
+<li>Select the &#8220;App Settings Editor&#8221; item from the Connect IQ Eclipse Plugin</li>
+<li>Select the ObjectStore item from the &#8220;Project&#8221; drop down</li>
+<li>Edit any of the values present and click &#8220;Send Settings&#8221;</li>
+<li>The values will change in the Connect IQ simulator display</li>
+</ol>
+
+<h3 id="timer">Timer</h3>
+
+<p><strong>About The Sample</strong></p>
+<figure>
+<img src="resources/readme/Timer.png" />
+</figure>
+
+<ul>
+<li><p>Modules/Classes: <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Timer.html" title="Timer API documentation">Timer</a></p></li>
+<li><p>Type: Application
+Demonstrates the implementation of a Timer.</p></li>
+</ul>
+
+<p><strong>How It Works</strong></p>
+
+<p>Three timers will start counting with different frequencies, and will update the screen with the count. The timer on the top should be the fastest, and the bottom the slowest.</p>
+
+<h3 id="userprofile">UserProfile</h3>
+
+<p><strong>About The Sample</strong></p>
+<figure>
+<img src="resources/readme/UserProfile.png" />
+</figure>
+
+<ul>
+<li>Type: Widget</li>
+<li>Modules/Classes: <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/UserProfile.html" title="UserProfile API documentation">UserProfile</a></li>
+</ul>
+
+<p>Demonstrates how to access user profile data from a device.</p>
+
+<p><strong>How It Works</strong></p>
+
+<ol>
+<li>Press the menu to cycle through each of three screens of user profile data</li>
+<li>The values should match the user profile configured if used on a device, or show preset values in the Connect IQ simulator</li>
+</ol>
+
+<h2 id="userinterface">User Interface</h2>
+
+<h3 id="activitytracker">ActivityTracker</h3>
 
 <p><strong>About The Sample</strong></p>
 <figure>
@@ -330,23 +411,23 @@ $ open ~/.bash_profile
 
 <ul>
 <li>Type: Widget</li>
-<li>Modules: <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/ActivityMonitor.html" title="ActivityMonitor API documentation">ActivityMonitor</a>, <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Timer.html" title="Timer API documentation">Timer</a></li>
+<li>Modules/Classes: <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/ActivityMonitor.html" title="ActivityMonitor API documentation">ActivityMonitor</a>, <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Timer.html" title="Timer API documentation">Timer</a></li>
 </ul>
 
 <p>Demonstrates an application of the activity tracking features.</p>
 
 <p><strong>How It Works</strong></p>
 
-<p>Three values are displayed; the current number of steps, your step goal, and the goal pace (the number of steps you should have taken by the current time of day).</p>
+<p>Three bars are displayed; a steps bar, a floors climbed bar, and an active minutes bar. Note: Bars are only display if data is available.</p>
 
 <ol>
 <li>Swipe to the widget</li>
 <li>Walk around with the device for a short period of time</li>
+<li>Press Enter or tap the screen - Three values are displayed; current steps, your step goal, and goal pace (the number of steps you should have taken by the current time of day.)</li>
+<li>Press Enter or tap the screen - An Activity History Screen is displayed, showing step, goal, and floors climbed history.</li>
 </ol>
 
-<p>The step counter increases, the step pace increases, and the progress bar advances, all in accordance to the number of steps taken during the test.</p>
-
-<h2 id="analog">Analog</h2>
+<h3 id="analog">Analog</h3>
 
 <p><strong>About The Sample</strong></p>
 <figure>
@@ -355,16 +436,12 @@ $ open ~/.bash_profile
 
 <ul>
 <li>Type: Watch Face</li>
-<li>Modules: <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Math.html" title="Math API documentation">Math</a>, <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Time.html" title="Time API documentation">Time</a></li>
+<li>Modules/Classes: <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Math.html" title="Math API documentation">Math</a>, <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Time.html" title="Time API documentation">Time</a></li>
 </ul>
 
-<p>A simple analog watch face.</p>
+<p>Demonstrates a basic analog watch face with support for onEnterSleep(), onExitSleep, and DeviceSettings.doNotDistrub</p>
 
-<p><strong>How It Works</strong></p>
-
-<p>Show the current time, and will update the watch hands once a minute.</p>
-
-<h2 id="attention">Attention</h2>
+<h3 id="attention">Attention</h3>
 
 <p><strong>About The Sample</strong></p>
 <figure>
@@ -373,75 +450,31 @@ $ open ~/.bash_profile
 
 <ul>
 <li>Type: Widget</li>
-<li>Modules: <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Attention.html" title="Attention API documentation">Attention</a>, <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/WatchUi.html" title="WatchUi API documentation">WatchUi</a></li>
+<li>Modules/Classes: <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Attention.html" title="Attention API documentation">Attention</a>, <a href="https://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/WatchUi/InputDelegate.html" title="InputDelegate API documentation">InputDelegate</a></li>
 </ul>
 
-<p>Demonstrates tones, vibration alerts and use of the back light.</p>
+<p>Demonstrates tones, vibration alerts and use of the back light. (Tones not supported in vivoactive or vivoactive HR. Vibration is not supported on Edge 520).</p>
 
 <p><strong>How It Works</strong></p>
 
 <ol>
-<li>Tap the screen - The back light activates</li>
-<li>Tap and hold screen - Vibration activates</li>
-<li>Press Menu - Each Menu press cycles through available tones</li>
+<li>Select &#8220;Toggle backlight&#8221; - Backlight activates or deactivates respectively (not seen in simulator)</li>
+<li>Select &#8220;Play a tone&#8221; - Tone will play. Pressing repeatedly will demonstrate the different tones available with their names</li>
+<li>Select &#8220;Vibration&#8221; - Device vibrates (simulator shakes)</li>
 </ol>
-
-<h2 id="comm">Comm</h2>
-
-<p><strong>About The Sample</strong></p>
-<figure>
-<img src="resources/readme/Comm.png" />
-</figure>
-
-<ul>
-<li>Type: Widget</li>
-<li>Modules: <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Communications.html" title="Communications API documentation">Communications</a></li>
-</ul>
-
-<p>Tests communication between a device and a phone (Android and iOS).</p>
 
 <p><strong>How It Works</strong></p>
 
-<p>Loading the Mobile Comm sample to a Android/iOS phone:</p>
-
 <ol>
-<li>Download the appropriate <a href="http://developer.garmin.com/connect-iq/sdk/" title="Mobile SDK Download Link">Mobile SDK</a> for the phone</li>
-<li>Follow the included instructions for building/installing the sample application</li>
+<li>Were on your wrist normally</li>
+<li>Lower arm to normal resting position for about 15 seconds (Demostrates OnSleep() - seconds hand disapears)</li>
+<li>Raise arm to look at watch (Demonstrates onWake() - Seconds hand will appear for 15 seconds)</li>
+<li>Turn on Do Not Disturb - (Demonstrates DeviceSettings.doNotDistrub - when device updates Do Not Disturb symbol appears)</li>
 </ol>
 
-<p>Connecting the Connect IQ simulator and Android phone:</p>
+<p>OnSleep(), onWake(), and DoNotDistrub can be simulated in the simulator under Settings.</p>
 
-<ol>
-<li>Run the Connect IQ Comm sample application on the Connect IQ simulator</li>
-<li>Connect your Android phone to your computer, ensuring Android Debug Bridge (ADB) is installed</li>
-<li>Using a console, run &#8220;adb devices&#8221; - your device should appear in this list (if not, install the drivers for your phone)</li>
-<li>Using the same console, run &#8220;adb forward tcp:7381 tcp:7381&#8221; to forward ADB traffic to the Connect IQ simulator</li>
-<li>Select &#8220;Connection-&gt;Start&#8221; from the simulator drop down menu</li>
-</ol>
-
-<p>Connecting a device and Android/iOS phone:</p>
-
-<ol>
-<li>Connect the test device to your computer</li>
-<li>Install the Connect IQ Comm sample widget to the test device by side-loading it directly to the device&#8217;s file system</li>
-<li>Disconnect the test device from the computer</li>
-<li>Pair the test device to the phone via GCM/BLE</li>
-<li>Run the sample application on the phone</li>
-<li>Launch the Comm sample widget on the test device</li>
-<li>Touch the test device in the device list on the phone (if presented)</li>
-</ol>
-
-<p>Using the sample:</p>
-
-<ol>
-<li>Touch any of the available strings on the phone (e.g. &#8220;Hello World&#8221;)</li>
-<li>Watch for a response on the Connect IQ Comm sample with the string you selected</li>
-<li>Touch the menu button on the Connect IQ Comm sample</li>
-<li>Swipe to select and touch any available string on the Connect IQ Comm sample</li>
-<li>Watch for a response on the phone with the string you selected</li>
-</ol>
-
-<h2 id="confirmationdialog">ConfirmationDialog</h2>
+<h3 id="confirmationdialog">ConfirmationDialog</h3>
 
 <p><strong>About The Sample</strong></p>
 <figure>
@@ -450,10 +483,10 @@ $ open ~/.bash_profile
 
 <ul>
 <li>Type: Widget</li>
-<li>Modules: <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/WatchUi.html" title="WatchUi API documentation">WatchUi</a></li>
+<li>Modules/Classes: <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/WatchUi/BehaviorDelegate.html" title="BehaviorDelegate API documentation">BehaviorDelegate</a>, <a href="https://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/WatchUi/ConfirmationDelegate.html" title="ConfirmationDelegate API documentation">ConfirmationDelegate</a></li>
 </ul>
 
-<p>Example of how to handle behaviours (e.g. button presses) and present confirmation dialogues.</p>
+<p>Demonstrates how to handle behaviours (e.g. button presses) and present confirmation dialogues.</p>
 
 <p><strong>How It Works</strong></p>
 
@@ -473,47 +506,7 @@ $ open ~/.bash_profile
 <li>Press Menu to return to dismiss the response.</li>
 </ol>
 
-<h2 id="drawable">Drawable</h2>
-
-<p><strong>About The Sample</strong></p>
-<figure>
-<img src="resources/readme/Drawable.png" />
-</figure>
-
-<ul>
-<li>Type: Widget</li>
-<li>Modules: <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Graphics.html" title="Graphics API documentation">Graphics</a></li>
-</ul>
-
-<p>Demonstrates use of the resource compiler.</p>
-
-<p><strong>How It Works</strong></p>
-
-<p>Swipe to the widget, and picture with a train, cloud and the sun is displayed.</p>
-<!-- ##FieldTimerEvents
-
-**About The Sample**
-
-<figure>
-<img src="resources/readme/FieldTimerEvents.png" />
-</figure>
-
-* Type: Data Field
-* Modules: [WatchUi]
-
-Demonstrates use timer events within a data field.
-
-**How It Works**
-
-Displays a number with a color and value that changes depending on timer events:
-
-* The lap number should be red if the timer is stopped
-* The lap number should be green if the timer is running
-* The lap number should be yellow if the timer has been auto-paused (make sure this feature is enabled in your device settings)
-* The lap number should increment with each lap key press
--->
-
-<h2 id="input">Input</h2>
+<h3 id="input">Input</h3>
 
 <p><strong>About The Sample</strong></p>
 <figure>
@@ -521,11 +514,11 @@ Displays a number with a color and value that changes depending on timer events:
 </figure>
 
 <ul>
-<li>Type: Widget</li>
-<li>Modules: <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/WatchUi.html" title="WatchUi API documentation">WatchUi</a></li>
+<li>Type: Application</li>
+<li>Modules/Classes: <a href="https://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/WatchUi/InputDelegate.html" title="InputDelegate API documentation">InputDelegate</a>, <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/WatchUi/BehaviorDelegate.html" title="BehaviorDelegate API documentation">BehaviorDelegate</a></li>
 </ul>
 
-<p>Demonstrates various ways of detecting and handling user input.</p>
+<p>Demonstrates handling all input types including page swipes, holds, and button presses</p>
 
 <p><strong>How It Works</strong></p>
 
@@ -538,7 +531,7 @@ Displays a number with a color and value that changes depending on timer events:
 
 <p>Not all devices support every touch/key/swipe event. To exit the sample, press the back button twice in a row.</p>
 
-<h2 id="keyboard">Keyboard</h2>
+<h3 id="keyboard">Keyboard</h3>
 
 <p><strong>About The Sample</strong></p>
 <figure>
@@ -547,171 +540,16 @@ Displays a number with a color and value that changes depending on timer events:
 
 <ul>
 <li>Type: Application</li>
-<li>Modules: <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/WatchUi.html" title="WatchUi API documentation">WatchUi</a></li>
+<li>Modules/Classes: <a href="https://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/WatchUi/InputDelegate.html" title="InputDelegate API documentation">InputDelegate</a>, <a href="https://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/WatchUi/TextPicker.html" title="TextPicker API documentation">TextPicker</a>, <a href="https://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/WatchUi/TextPickerDelegate.html" title="TextPickerDelegate API documentation">TextPickerDelegate</a></li>
 </ul>
 
-<p>Demonstrate use of the text picker page in an application.</p>
+<p>Demonstrates use of the text picker.</p>
 
 <p><strong>How It Works</strong></p>
 
 <p>Select characters one-by-one to create a string. When &#8220;OK&#8221; is selected, the final string will be returned with a &#8220;Changed=true&#8221; status.</p>
 
-<p><strong>How It Works</strong></p>
-
-<p>A watch face with a centered blue triangle is displayed; the watch hands will move with each minute. There is a separate layout for square and round devices.</p>
-
-<h2 id="mathsample">MathSample</h2>
-
-<p><strong>About The Sample</strong></p>
-<figure>
-<img src="resources/readme/MathSample.png" />
-</figure>
-
-<ul>
-<li>Type: Widget</li>
-<li>Modules: <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Math.html" title="Math API documentation">Math</a></li>
-</ul>
-
-<p>Demonstrates the use of math functions available in Connect IQ.</p>
-
-<p><strong>How It Works</strong></p>
-
-<p>Click the screen to cycle through several different math functions displaying input values and their respective results.</p>
-
-<h2 id="menutest">MenuTest</h2>
-
-<p><strong>About the Sample</strong></p>
-<figure>
-<img src="resources/readme/MenuTest.png" />
-</figure>
-
-<ul>
-<li>Type: Application</li>
-<li>Modules: <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/WatchUi/Menu.html" title="Menu API Documentation">Menu</a>, <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/WatchUi/MenuInputDelegate.html" title="MenuInputDelegate API Documentation">MenuInputDelegate</a></li>
-</ul>
-
-<p>This sample shows how to define menus using resources and demonstrates the use of nested menus.</p>
-
-<p><strong>How It Works</strong></p>
-
-<p>Press the Menu button to display an on-screen menu, which has options to return to the home screen or display an auxiliary, nested menu.</p>
-
-<h2 id="mo2display">MO2Display</h2>
-
-<p><strong>About The Sample</strong></p>
-<figure>
-<img src="resources/readme/MO2Display.png" />
-</figure>
-
-<ul>
-<li>Type: Application</li>
-<li>Modules: <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Ant.html" title="Ant API documentation">Ant</a></li>
-</ul>
-
-<p>Demonstrates use of the Ant module by connecting to the closest ANT source broadcasting Muscle Oxygen Monitor data.</p>
-
-<p><strong>How It Works</strong></p>
-
-<p>The sample works with either a <a href="http://www.moxymonitor.com/" title="Muscle Oxygen Monitor Home Page">Muscle Oxygen Monitor</a> or the SimulAnt tool from <a href="https://www.thisisant.com/" title="ANT+ Developer Resources">ANT+</a> and an ANT stick configured to run in Muscle Oxygen Monitor mode:</p>
-
-<ol>
-<li>Launch the sample (on the Connect IQ simulator or device)</li>
-<li>The Muscle Oxygen Monitor should be set to broadcast mode and nearby the test device or computer</li>
-<li>The sample will start tracking the broadcasted data and indicate that with green &#8220;tracking&#8221; text</li>
-<li>Swipe to the second page to see information on the current event packets being received</li>
-<li>Swipe to the third page to see a graph of g/dl output of the data (historical)</li>
-</ol>
-
-<h2 id="moxydatafield">MoxyDataField</h2>
-
-<p><strong>About The Sample</strong></p>
-<figure>
-<img src="resources/readme/MoxyDataField.png" />
-</figure>
-
-<ul>
-<li>Type: Widget</li>
-<li>Modules: <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/WatchUi.html" title="WatchUi API documentation">WatchUi</a>, <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Ant.html" title="Ant API documentation">Ant</a></li>
-</ul>
-
-<p>An example of how to use the <a href="http://www.moxymonitor.com/" title="Muscle Oxygen Monitor Home Page">Muscle Oxygen Monitor</a> in a Data Field.</p>
-
-<p><strong>How It Works</strong></p>
-
-<p>See the MO2Display for instructions on how to set up a real or simulated <a href="http://www.moxymonitor.com/" title="Muscle Oxygen Monitor Home Page">Muscle Oxygen Monitor</a>:</p>
-
-<ol>
-<li>The Data Field will start and initially display &#8220;Searching&#8221; until a broadcast source is found</li>
-<li>The sample will start tracking the broadcasted data and indicate that with green &#8220;tracking&#8221; text</li>
-<li>Saturated Hemoglobin (%) and Hemoglobin Concentration (g/dl) are displayed</li>
-</ol>
-
-<h2 id="numberpicker">NumberPicker</h2>
-
-<p><strong>About The Sample</strong></p>
-<figure>
-<img src="resources/readme/NumberPicker.png" />
-</figure>
-
-<ul>
-<li>Type: Widget</li>
-<li>Modules: <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/WatchUi.html" title="WatchUi API documentation">WatchUi</a></li>
-</ul>
-
-<p>An example of how to use the number picker in an application.</p>
-
-<p><strong>How It Works</strong></p>
-
-<p>The number picker sample takes inputs with specific units and converts them to system units. Press &#8220;Menu&#8221; to cycle through each input:</p>
-
-<ol>
-<li>Enter 5 miles - Top value changes to 8046.735840 (Meters)</li>
-<li>Enter &#8220;05:00:00&#8221; - Bottom value changes to 18000 (Seconds)</li>
-<li>Enter &#8220;30:00&#8221; - Bottom value changes to 1800 (Seconds)</li>
-<li>Enter &#8220;05:00:00 PM&#8221; - Bottom value changes to 61200 (Seconds)</li>
-<li>Enter 250 pounds - Top value changes to 113.398087 (Kilograms)</li>
-<li>Enter 72.00 inches - Top value changes to 1.828800 (Meters)</li>
-<li>Enter 200 calories - Middle value changes to 200 (Calories)</li>
-<li>Enter 1975 - Middle value changes to 1975 (Years)</li>
-</ol>
-
-<h2 id="objectstore">ObjectStore</h2>
-
-<p><strong>About The Sample</strong></p>
-<figure>
-<img src="resources/readme/ObjectStore.png" />
-</figure>
-
-<ul>
-<li>Type: Application</li>
-<li>Modules: [AppBase]</li>
-</ul>
-
-<p>Demonstrates saving and retrieving data in the object store on the device.</p>
-
-<p><strong>How It Works</strong></p>
-
-<p>The first page displays values from the ObjectStore. Tap the screen six times, pausing between each tap to check for changed values on the screen:</p>
-
-<ul>
-<li>&#8220;Int&#8221; is assigned a value of 3</li>
-<li>&#8220;Float&#8221; is assigned a value of 3.141590</li>
-<li>&#8220;String&#8221; is assigned a value of &#8220;pie&#8221;</li>
-<li>&#8220;Boolean&#8221; is assigned a value of &#8220;true&#8221;</li>
-<li>&#8220;Array&#8221; is assigned a value of &#8220;[1,2,3,null]&#8221;</li>
-<li>&#8220;Dictionary&#8221; is assigned a value of &#8220;{two=&gt;2, 1=&gt;one, null=&gt;null}&#8221;</li>
-</ul>
-
-<p>Tapping the screen another six times will result in all values indicating &#8220;Not set&#8221;. The second page displays the settings. To modify these values when the sample running in the Simulator:</p>
-
-<ol>
-<li>Select the &#8220;App Settings Editor&#8221; item from the Connect IQ Eclipse Plugin</li>
-<li>Select the ObjectStore item from the &#8220;Project&#8221; drop down</li>
-<li>Edit any of the values present and click &#8220;Send Settings&#8221;</li>
-<li>The values will change in the Connect IQ simulator display</li>
-</ol>
-
-<h2 id="picker">Picker</h2>
+<h3 id="picker">Picker</h3>
 
 <p><strong>About The Sample</strong></p>
 <figure>
@@ -720,7 +558,7 @@ Displays a number with a color and value that changes depending on timer events:
 
 <ul>
 <li>Type: Application</li>
-<li>Modules: <a href="#picker">Picker</a></li>
+<li>Modules/Classes: <a href="#picker">Picker</a></li>
 </ul>
 
 <p>Demonstrates the generic Picker features via several different implementations.</p>
@@ -786,28 +624,58 @@ Displays a number with a color and value that changes depending on timer events:
 <li>The middle string shows the selected time</li>
 </ol>
 
-<h2 id="positionsample">PositionSample</h2>
+<p>Layout Picker:</p>
 
-<p><strong>About The Sample</strong></p>
+<p>This is included to show you the layout of the picker in a given device. It currently serves no other function in the sample.</p>
+
+<h3 id="menutest">MenuTest</h3>
+
+<p><strong>About the Sample</strong></p>
 <figure>
-<img src="resources/readme/PositionSample.png" />
+<img src="resources/readme/MenuTest.png" />
 </figure>
 
 <ul>
 <li>Type: Application</li>
-<li>Modules: <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Position.html" title="Position API documentation">Position</a></li>
+<li>Modules/Classes: <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/WatchUi/Menu.html" title="Menu API Documentation">Menu</a>, <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/WatchUi/MenuInputDelegate.html" title="MenuInputDelegate API documentation">MenuInputDelegate</a></li>
 </ul>
 
-<p>Demonstrates how to get device position.</p>
+<p>Demonstrates how to define menus using resources and the use of nested menus.</p>
 
 <p><strong>How It Works</strong></p>
 
+<p>Press the Menu button to display an on-screen menu, which has options to return to the home screen or display an auxiliary, nested menu.</p>
+
+<h3 id="numberpicker">NumberPicker</h3>
+
+<p><strong>About The Sample</strong></p>
+<figure>
+<img src="resources/readme/NumberPicker.png" />
+</figure>
+
 <ul>
-<li>Allow the GPS to acquire a position (device) or simulate FIT data (CIQ simulator)</li>
-<li>A screen showing simulated values (or values reasonable for your current position) will display</li>
+<li>Type: Widget</li>
+<li>Modules/Classes: <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/WatchUi/BehaviorDelegate.html" title="BehaviorDelegate API documentation">BehaviorDelegate</a>, <a href="https://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/WatchUi/NumberPicker.html" title="NumberPicker API documentation">NumberPicker</a>, <a href="https://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/WatchUi/NumberPickerDelegate.html" title="NumberPickerDelegate API documentation">NumberPickerDelegate</a></li>
 </ul>
 
-<h2 id="primates">Primates</h2>
+<p>An example of how to use the number picker in an application.</p>
+
+<p><strong>How It Works</strong></p>
+
+<p>The number picker sample takes inputs with specific units and converts them to system units. Press &#8220;Menu&#8221; to cycle through each input:</p>
+
+<ol>
+<li>Enter 5 miles - Top value changes to 8046.735840 (Meters)</li>
+<li>Enter &#8220;05:00:00&#8221; - Bottom value changes to 18000 (Seconds)</li>
+<li>Enter &#8220;30:00&#8221; - Bottom value changes to 1800 (Seconds)</li>
+<li>Enter &#8220;05:00:00 PM&#8221; - Bottom value changes to 61200 (Seconds)</li>
+<li>Enter 250 pounds - Top value changes to 113.398087 (Kilograms)</li>
+<li>Enter 72.00 inches - Top value changes to 1.828800 (Meters)</li>
+<li>Enter 200 calories - Middle value changes to 200 (Calories)</li>
+<li>Enter 1975 - Middle value changes to 1975 (Years)</li>
+</ol>
+
+<h3 id="primates">Primates</h3>
 
 <p><strong>About The Sample</strong></p>
 <figure>
@@ -816,10 +684,10 @@ Displays a number with a color and value that changes depending on timer events:
 
 <ul>
 <li>Type: Application</li>
-<li>Modules: <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Graphics.html" title="Graphics API documentation">Graphics</a>, <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/WatchUi.html" title="WatchUi API documentation">WatchUi</a></li>
+<li>Modules/Classes: <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Graphics.html" title="Graphics API documentation">Graphics</a>, <a href="https://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/WatchUi/InputDelegate.html" title="InputDelegate API documentation">InputDelegate</a></li>
 </ul>
 
-<p>A good example of multiple pages within a single application and use of different types of graphics resources.</p>
+<p>Demonstrates the use of multiple pages within a single application and of different types of graphics resources.</p>
 
 <p><strong>How It Works</strong></p>
 
@@ -835,7 +703,7 @@ Displays a number with a color and value that changes depending on timer events:
 <li>Tapping a page will push a new view which displays information about the primate species</li>
 </ol>
 
-<h2 id="progressbar">ProgressBar</h2>
+<h3 id="progressbar">ProgressBar</h3>
 
 <p><strong>About The Sample</strong></p>
 <figure>
@@ -844,25 +712,222 @@ Displays a number with a color and value that changes depending on timer events:
 
 <ul>
 <li>Type: Widget</li>
-<li>Modules: <a href="#progressbar">ProgressBar</a></li>
+<li>Modules/Classes: <a href="#progressbar">ProgressBar</a></li>
 </ul>
 
-<p>A demonstration of the use of the WatchUi ProgressBar.</p>
+<p>Demonstrates the use of the WatchUi ProgressBar.</p>
 
 <p><strong>How It Works</strong></p>
 
 <ol>
-<li>Tap the screen</li>
+<li>Tap the screen or hit Start/Enter</li>
 <li>Displays &#8220;Processing&#8221; with a &#8220;busy&#8221; progress bar for five seconds
 
 <ul>
 <li>After five seconds, displays &#8220;Processing&#8221; with an updating progress bar for ten seconds</li>
 <li>After ten seconds, displays &#8220;Complete&#8221;</li>
 </ul></li>
-<li>Displays &#8220;Tap to test progress bar&#8221; message</li>
+<li>Displays &#8220;Tap or hit start/enter to test progress bar&#8221; message</li>
 </ol>
 
-<h2 id="recordsample">RecordSample</h2>
+<h3 id="selectable">Selectable</h3>
+
+<p><strong>About The Sample</strong></p>
+<figure>
+<img src="resources/readme/selectable.png" />
+</figure>
+
+<ul>
+<li>Type: Application</li>
+<li>Modules/Classes: <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/WatchUi.html" title="WatchUi API documentation">WatchUi</a></li>
+</ul>
+
+<p>Demonstrates the use of Selectables and Buttons on a touch-screen / hard-key device</p>
+
+<p><strong>How It Works</strong></p>
+
+<p>Touch Screen Devices:</p>
+
+<ol>
+<li>Press and hold one of the white boxes - The box outline should turn red with now check displayed</li>
+<li>Release the click - The box should now display a white outline witha green check</li>
+<li>These steps can be repeated on each box</li>
+<li>Start/Enter and Menu buttons should respond in a similar manner</li>
+</ol>
+
+<p>Non-Touch Screen Devices:</p>
+
+<ol>
+<li>Press Menu - The left outline box should turn red</li>
+<li>Press Up or Down -The red outline should move to the next or previous box</li>
+<li>Press Start/Enter - The current box should be selected and display a green check</li>
+<li>Press Menu - No check boxes should be outline in red/selected</li>
+<li>Press Start/Enter - No response (no selections to check)</li>
+</ol>
+
+<h2 id="mobilewebcommunication">Mobile/Web Communication</h2>
+
+<h3 id="comm">Comm</h3>
+
+<p><strong>About The Sample</strong></p>
+<figure>
+<img src="resources/readme/Comm.png" />
+</figure>
+
+<ul>
+<li>Type: Application</li>
+<li>Modules/Classes: <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Communications.html" title="Communications API documentation">Communications</a></li>
+</ul>
+
+<p>Demonstrates communication between a device and Garmin Connect Mobile (Android and iOS).</p>
+
+<p><strong>How It Works</strong></p>
+
+<p>Loading the Mobile Comm sample to a Android/iOS phone:</p>
+
+<ol>
+<li>Download the appropriate <a href="http://developer.garmin.com/connect-iq/sdk/" title="Mobile SDK Download Link">Mobile SDK</a> for the phone</li>
+<li>Follow the included instructions for building/installing the sample application</li>
+</ol>
+
+<p>Connecting the Connect IQ simulator and Android phone:</p>
+
+<ol>
+<li>Run the Connect IQ Comm sample application on the Connect IQ simulator</li>
+<li>Connect your Android phone to your computer, ensuring Android Debug Bridge (ADB) is installed</li>
+<li>Using a console, run &#8220;adb devices&#8221; - your device should appear in this list (if not, install the drivers for your phone)</li>
+<li>Using the same console, run &#8220;adb forward tcp:7381 tcp:7381&#8221; to forward ADB traffic to the Connect IQ simulator</li>
+<li>Select &#8220;Connection-&gt;Start&#8221; from the simulator drop down menu</li>
+</ol>
+
+<p>Connecting a device and Android/iOS phone:</p>
+
+<ol>
+<li>Connect the test device to your computer</li>
+<li>Install the Connect IQ Comm sample widget to the test device by side-loading it directly to the device&#8217;s file system</li>
+<li>Disconnect the test device from the computer</li>
+<li>Pair the test device to the phone via GCM/BLE</li>
+<li>Run the sample application on the phone</li>
+<li>Launch the Comm sample widget on the test device</li>
+<li>Touch the test device in the device list on the phone (if presented)</li>
+</ol>
+
+<p>Using the sample:</p>
+
+<ol>
+<li>Touch any of the available strings on the phone (e.g. &#8220;Hello World&#8221;)</li>
+<li>Watch for a response on the Connect IQ Comm sample with the string you selected</li>
+<li>Touch the menu button on the Connect IQ Comm sample</li>
+<li>Swipe to select and touch any available string on the Connect IQ Comm sample</li>
+<li>Watch for a response on the phone with the string you selected</li>
+</ol>
+
+<h3 id="webrequest">WebRequest</h3>
+
+<p><strong>About The Sample</strong></p>
+<figure>
+<img src="resources/readme/WebRequest.png" />
+</figure>
+
+<ul>
+<li>Type: Widget</li>
+<li>Modules/Classes: <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Communications.html" title="Communications API documentation">Communications</a></li>
+</ul>
+
+<p>Demonstrates making web requests through GCM to get mirrored data from httpbin.org</p>
+
+<p><strong>How It Works</strong></p>
+
+<p>The CIQ simulator will start the web request when the menu button is pushed. The response may either be the hard coded arguments the app sends as URL encoded paramaters or a BLE/HTTP response code. To run on a device:</p>
+
+<ol>
+<li>Side-load the sample directly to the device&#8217;s file system</li>
+<li>Disconnect the test device from the computer</li>
+<li>Pair the test device to the mobile device via GCM/BLE</li>
+<li>Launch the WebRequest widget on the test device</li>
+<li>Press the device menu button</li>
+<li>Watch for a response from the widget</li>
+</ol>
+
+<h2 id="sensorandfitrecording">Sensor and FIT Recording</h2>
+
+<h3 id="accelmag">AccelMag</h3>
+
+<p><strong>About The Sample</strong></p>
+<figure>
+<img src="resources/readme/AccelMag.png" />
+</figure>
+
+<ul>
+<li>Type: Application</li>
+<li>Modules/Classes: <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/WatchUi/BehaviorDelegate.html" title="BehaviorDelegate API documentation">BehaviorDelegate</a>, <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Sensor.html" title="Sensor API documentation">Sensor</a></li>
+</ul>
+
+<p>Demonstrates Accelerometer and Magnetometer support.</p>
+
+<p><strong>How It Works</strong></p>
+
+<ul>
+<li>Accelerometer:
+
+<ol>
+<li>Tilt device in various directions - The ball on the screen moves in the direction of the tilt</li>
+</ol></li>
+<li>Magnetometer:
+
+<ol>
+<li>Turn the device in place - An arrow on the edge of the screen should point north</li>
+<li>Press the start button - The ball will get &#8220;kicked&#8221; in the direction the arrow is pointing</li>
+</ol></li>
+</ul>
+
+<h3 id="fieldtimerevents">FieldTimerEvents</h3>
+
+<p><strong>About The Sample</strong></p>
+<figure>
+<img src="resources/readme/FieldTimerEvents.png" />
+</figure>
+
+<ul>
+<li>Type: Data Field</li>
+<li>Modules/Classes: <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Activity.html" title="Activity API documentation">Activity</a></li>
+</ul>
+
+<p>Demonstrates use timer events within a data field.</p>
+
+<p><strong>How It Works</strong></p>
+
+<p>Displays a number with a color and value that changes depending on timer events:</p>
+
+<ul>
+<li>The lap number should be red if the timer is stopped</li>
+<li>The lap number should be green if the timer is running</li>
+<li>The lap number should be yellow if the timer has been auto-paused (make sure this feature is enabled in your device settings)</li>
+<li>The lap number should increment with each lap key press</li>
+</ul>
+
+<h3 id="positionsample">PositionSample</h3>
+
+<p><strong>About The Sample</strong></p>
+<figure>
+<img src="resources/readme/PositionSample.png" />
+</figure>
+
+<ul>
+<li>Type: Application</li>
+<li>Modules/Classes: <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Position.html" title="Position API documentation">Position</a></li>
+</ul>
+
+<p>Demonstrates how to get device position.</p>
+
+<p><strong>How It Works</strong></p>
+
+<ul>
+<li>Allow the GPS to acquire a position (device) or simulate FIT data (CIQ simulator)</li>
+<li>A screen showing simulated values (or values reasonable for your current position) will display</li>
+</ul>
+
+<h3 id="recordsample">RecordSample</h3>
 
 <p><strong>About The Sample</strong></p>
 <figure>
@@ -871,10 +936,10 @@ Displays a number with a color and value that changes depending on timer events:
 
 <ul>
 <li>Type: Application</li>
-<li>Modules: <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/ActivityRecording.html" title="ActivityRecording API documentation">ActivityRecording</a>, <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Position.html" title="Position API documentation">Position</a></li>
+<li>Modules/Classes: <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/ActivityRecording.html" title="ActivityRecording API documentation">ActivityRecording</a>, <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Position.html" title="Position API documentation">Position</a></li>
 </ul>
 
-<p>Shows how to record an activity session.</p>
+<p>Demonstrates how to record an activity session.</p>
 
 <p><strong>How It Works</strong></p>
 
@@ -891,7 +956,7 @@ Displays a number with a color and value that changes depending on timer events:
 <li>A Walking activity is saved for the duration of the activity (Device Only)</li>
 </ol>
 
-<h2 id="sensor">Sensor</h2>
+<h3 id="sensor">Sensor</h3>
 
 <p><strong>About The Sample</strong></p>
 <figure>
@@ -900,16 +965,41 @@ Displays a number with a color and value that changes depending on timer events:
 
 <ul>
 <li>Type: Application</li>
-<li>Modules: <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Sensor.html" title="Sensor API documentation">Sensor</a>, <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Position.html" title="Position API documentation">Position</a></li>
+<li>Modules/Classes: <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Sensor.html" title="Sensor API documentation">Sensor</a>, <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Position.html" title="Position API documentation">Position</a></li>
 </ul>
 
-<p>Demonstrates access to sensors (in this case, the HRM), and is a good sample of graphing data.</p>
+<p>Demonstrates access to sensors (in this case, the HRM), and is a good sample of a live-updating graph.</p>
 
 <p><strong>How It Works</strong></p>
 
-<p>Displays current heart rate, along with a time series graph of the heart rate from the last 20 seconds.</p>
+<p>Displays current heart rate, along with a time series graph of the heart rate from the last 20 seconds. Requires paired heart rate monitor or wrist heart rate monitor for full function (on device). Can also use simulated data (in simulator).</p>
 
-<h2 id="simpledatafield">SimpleDataField</h2>
+<h3 id="sensorhistory">SensorHistory</h3>
+
+<p><strong>About The Sample</strong></p>
+<figure>
+<img src="resources/readme/SensorHistory.png" />
+</figure>
+
+<ul>
+<li>Type: Widget</li>
+<li>Modules/Classes: <a href="#sensorhistory">SensorHistory</a></li>
+</ul>
+
+<p>Demonstrates using and displaying various sensor history information. This is only available on 2.x VM devices.</p>
+
+<p><strong>How It Works</strong></p>
+
+<p>This shows four pages of Sensor History graphs accessed by pressing Up or Down in the widget:</p>
+
+<ol>
+<li>Heart Rate History</li>
+<li>Temperature History</li>
+<li>Pressure History</li>
+<li>Elevation History</li>
+</ol>
+
+<h3 id="simpledatafield">SimpleDataField</h3>
 
 <p><strong>About The Sample</strong></p>
 <figure>
@@ -918,14 +1008,14 @@ Displays a number with a color and value that changes depending on timer events:
 
 <ul>
 <li>Type: Data Field</li>
-<li>Modules: <a href="#simpledatafield">SimpleDataField</a></li>
+<li>Modules/Classes: <a href="#simpledatafield">SimpleDataField</a></li>
 </ul>
 
-<p>A sample of the simple data field; good for basic data field testing.</p>
+<p>Demonstrates basic use of a simple data field; good for basic data field testing.</p>
 
 <p><strong>How It Works</strong></p>
 
-<p>Simple Data Field that alternates between heart rate, distance and total time every few seconds. To run it on a physical device:</p>
+<p>This is a Simple Data Field that alternates between heart rate, distance and total time every few seconds. To run it on a physical device:</p>
 
 <ol>
 <li>Pair an HRM (either real or simulated) to the wearable device</li>
@@ -936,7 +1026,105 @@ Displays a number with a color and value that changes depending on timer events:
 
 <p>The displayed values are reasonable for the current activity session if used on a device.</p>
 
-<h2 id="strings">Strings</h2>
+<h2 id="ant">ANT</h2>
+
+<h3 id="genericchannelburst">GenericChannelBurst</h3>
+
+<p><strong>About The Sample</strong></p>
+<figure>
+<img src="downloads/connect-iq/resources/readme/GenericChannelBurst.png" />
+</figure>
+
+<ul>
+<li>Type: Application</li>
+<li>Modules/Classes: <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Ant.html" title="Ant API documentation">Ant</a></li>
+</ul>
+
+<p>Demonstrates Generic Channel Burst</p>
+
+<p>Requires 2 devices and only supported on Edge 520, Edge 820, and edge 1000.</p>
+
+<p><strong>How It Works</strong></p>
+
+<ol>
+<li>Start app on device 1</li>
+<li>Start app on device 2 and wait about 10 seconds for them to connect</li>
+<li>Press Menu key on device 1 (device 2 &#8220;Recieve Success&#8221; count increments)</li>
+<li>Press Menu key on device 2 (device 1 &#8220;Recieve Success&#8221; count increments)</li>
+<li>Pressing repeatedly or only running one device should give a &#8220;Receive Fail&#8221; or &#8220;Transmit Fail&#8221; respectively</li>
+</ol>
+
+<h3 id="mo2display">MO2Display</h3>
+
+<p><strong>About The Sample</strong></p>
+<figure>
+<img src="resources/readme/MO2Display.png" />
+</figure>
+
+<ul>
+<li>Type: Application</li>
+<li>Modules/Classes: <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Ant.html" title="Ant API documentation">Ant</a></li>
+</ul>
+
+<p>Demonstrates use of the Ant module by connecting to the closest ANT source broadcasting Muscle Oxygen Monitor data.</p>
+
+<p><strong>How It Works</strong></p>
+
+<p>The sample works with either a <a href="http://www.moxymonitor.com/" title="Muscle Oxygen Monitor Home Page">Muscle Oxygen Monitor</a> or the SimulAnt tool from <a href="https://www.thisisant.com/" title="ANT+ Developer Resources">ANT+</a> and an ANT stick configured to run in Muscle Oxygen Monitor mode:</p>
+
+<ol>
+<li>Launch the sample (on the Connect IQ simulator or device)</li>
+<li>The Muscle Oxygen Monitor should be set to broadcast mode and nearby the test device or computer</li>
+<li>The sample will start tracking the broadcasted data and indicate that with green &#8220;tracking&#8221; text</li>
+<li>Swipe to the second page to see information on the current event packets being received</li>
+<li>Swipe to the third page to see a graph of g/dl output of the data (historical)</li>
+</ol>
+
+<h3 id="moxydatafield">MoxyDataField</h3>
+
+<p><strong>About The Sample</strong></p>
+<figure>
+<img src="resources/readme/MoxyDataField.png" />
+</figure>
+
+<ul>
+<li>Type: DataField</li>
+<li>Modules/Classes: <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Ant.html" title="Ant API documentation">Ant</a>, <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/FitContributor.html" title="FIT Contributor API documentation">FitContributor</a></li>
+</ul>
+
+<p>An example of how to use the <a href="http://www.moxymonitor.com/" title="Muscle Oxygen Monitor Home Page">Muscle Oxygen Monitor</a> in a Data Field.</p>
+
+<p><strong>How It Works</strong></p>
+
+<p>See the MO2Display for instructions on how to set up a real or simulated <a href="http://www.moxymonitor.com/" title="Muscle Oxygen Monitor Home Page">Muscle Oxygen Monitor</a>:</p>
+
+<ol>
+<li>The Data Field will start and initially display &#8220;Searching&#8221; until a broadcast source is found</li>
+<li>The sample will start tracking the broadcasted data and indicate that with green &#8220;tracking&#8221; text</li>
+<li>Saturated Hemoglobin (%) and Hemoglobin Concentration (g/dl) are displayed</li>
+</ol>
+
+<h2 id="resources">Resources</h2>
+
+<h3 id="drawable">Drawable</h3>
+
+<p><strong>About The Sample</strong></p>
+<figure>
+<img src="resources/readme/Drawable.png" />
+</figure>
+
+<ul>
+<li>Type: Widget</li>
+<li>Modules/Classes: <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Graphics.html" title="Graphics API documentation">Graphics</a>, <a href="https://developer.garmin.com/connect-iq/programmers-guide/resource-compiler/" title="Resource Compiler Programmer's Guide documentation">Rez</a></li>
+</ul>
+
+<p>Demonstrates use of the resource compiler.</p>
+
+<p><strong>How It Works</strong></p>
+
+<p>Swipe to the widget, and picture with a train, cloud and the sun is displayed.</p>
+
+<h3 id="strings">Strings</h3>
 
 <p><strong>About The Sample</strong></p>
 <figure>
@@ -945,7 +1133,7 @@ Displays a number with a color and value that changes depending on timer events:
 
 <ul>
 <li>Type: Application</li>
-<li>Modules: <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Graphics.html" title="Graphics API documentation">Graphics</a></li>
+<li>Modules/Classes: <a href="https://developer.garmin.com/connect-iq/programmers-guide/resource-compiler/" title="Resource Compiler Programmer's Guide documentation">Rez</a></li>
 </ul>
 
 <p>Demonstrates localization techniques using string resources.</p>
@@ -989,75 +1177,44 @@ Displays a number with a color and value that changes depending on timer events:
 </ul></li>
 </ol>
 
-<h2 id="timer">Timer</h2>
-
-<p><strong>About The Sample</strong></p>
-<figure>
-<img src="resources/readme/Timer.png" />
-</figure>
-
-<ul>
-<li>Type: Application</li>
-<li>Modules: <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Timer.html" title="Timer API documentation">Timer</a></li>
-</ul>
-
-<p>A simple demonstration of the implementation of a Timer.</p>
-
-<p><strong>How It Works</strong></p>
-
-<p>Three timers will start counting with different frequencies, and will update the screen with the count. The timer on the top should be the fastest, and the bottom the slowest.</p>
-
-<h2 id="userprofile">UserProfile</h2>
-
-<p><strong>About The Sample</strong></p>
-<figure>
-<img src="resources/readme/UserProfile.png" />
-</figure>
-
-<ul>
-<li>Type: Widget</li>
-<li>Modules: <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/UserProfile.html" title="UserProfile API documentation">UserProfile</a></li>
-</ul>
-
-<p>Shows how to access user profile data from a device.</p>
-
-<p><strong>How It Works</strong></p>
-
-<ol>
-<li>Press the menu to cycle through each of three screens of user profile data</li>
-<li>The values should match the user profile configured if used on a device, or show preset values in the Connect IQ simulator</li>
-</ol>
-
-<h2 id="webrequest">WebRequest</h2>
-
-<p><strong>About The Sample</strong></p>
-<figure>
-<img src="resources/readme/WebRequest.png" />
-</figure>
-
-<ul>
-<li>Type: Widget</li>
-<li>Modules: <a href="http://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Communications.html" title="Communications API documentation">Communications</a></li>
-</ul>
-
-<p>Tests web requests through GCM to get mirrored data from httpbin.org</p>
-
-<p><strong>How It Works</strong></p>
-
-<p>The CIQ simulator will start the web request when the menu button is pushed. The response may either be the hard coded arguments the app sends as URL encoded paramaters or a BLE/HTTP response code. To run on a device:</p>
-
-<ol>
-<li>Side-load the sample directly to the device&#8217;s file system</li>
-<li>Disconnect the test device from the computer</li>
-<li>Pair the test device to the mobile device via GCM/BLE</li>
-<li>Launch the WebRequest widget on the test device</li>
-<li>Press the device menu button</li>
-<li>Watch for a response from the widget</li>
-</ol>
-
 <h1 id="releasenotes">Release Notes</h1>
 
-<h2 id="v2.2.2">v2.2.2</h2>
+<h2 id="v2.2.3">v2.2.3</h2>
+
+<p><strong>General Changes</strong></p>
+
+<ul>
+<li>Add fenix 5, fenix 5S and fenix 5X device support to SDK and samples.</li>
+<li>Remove support for the &#8220;Round 240x240 Family&#8221; preview device. Existing apps should be directly migratable to either the fenix 5 or 5X and will be assisted by the Eclipse plug-in or console output.</li>
+<li>Fix issue where animations that are started in AppBase or View initialize functions did not work in some cases.</li>
+<li>Fix loading lag for apps that do not have settings.</li>
+<li>Fix issue where deleting a non-existant mailbox would cause the app the crash.</li>
+<li>Prevent device crash that could occur in rare conditions during startup.</li>
+<li>Prevent device crash with FitContributor.setData() that could occur under certain circumstances.</li>
+<li>Send a burst error when an Ant.GenericChannel burst fails instead of crashing the app.</li>
+<li>Fix an unexpected type error that occured when attempting to access nested class members from the parent.</li>
+<li>Properly handle key presses on System.exit() to prevent unexpected device behavior.</li>
+<li>Update device minimum firmware versions.</li>
+<li>Many documentation improvements and bug fixes.</li>
+</ul>
+
+<p><strong>Simulator Changes</strong></p>
+
+<ul>
+<li>Close a widget when a NEXT_PAGE or PREVIOUS_PAGE behavior is issued on the base view to match devices.</li>
+<li>Fix issue where power meter support was not available on some simulated devices.</li>
+<li>Support Enhanced Speed / Altitude (D2 Bravo / Titanium) in simulator FIT parsing.</li>
+<li>Prevent failure to auto-pop a view when the back key is pressed if there was no delegate.</li>
+<li>Fix issue where Attention.vibrate did not work on the MacOS Simulator.</li>
+</ul>
+
+<p><strong>Known Issues</strong></p>
+
+<ul>
+<li>Known issues will now be tracked in the <a href="https://forums.garmin.com/showthread.php?364535-Known-Issues-Thread">Connect IQ forums</a>.</li>
+</ul>
+<h3 id="v2.2.2"><a href="#2.2.2" onclick="toggle('2.2.2', 'Img_2.2.2');"><img src="resources/readme/hide.jpg" border=0 name="Img_2.2.2" />v2.2.2</a></h3>
+<div id="2.2.2" style="display:none;">
 
 <p><strong>General Changes</strong></p>
 
@@ -1070,7 +1227,7 @@ Displays a number with a color and value that changes depending on timer events:
 <li>Do not allow modulus operator to be used with float / double when folding constants</li>
 <li>Correctly evaluate boolean operations when comparing Numbers when folding constants</li>
 <li>Fix several issues in API Documention / Programmer&#8217;s Guide documentation</li>
-<li>Deprecated Communications.setMailboxListener(). Use Communications.registerForPhoneMessages() instead. D2 Bravo and vívoactive HR do not support this new API at this time.</li>
+<li>Deprecated Communications.setMailboxListener(). Use Communications.registerForPhoneMessages() instead.</li>
 <li>Clarify compiler error message when tyring to compile for an invalid device ID</li>
 <li>Remove support for communicating with the mobile Connect IQ SDK in the API for Edge, Oregon, and Rino devices.</li>
 <li>Prevent an app crash when a character is not present in a device&#8217;s font set.</li>
@@ -1095,6 +1252,7 @@ Displays a number with a color and value that changes depending on timer events:
 <ul>
 <li>Known issues will now be tracked in the <a href="https://forums.garmin.com/showthread.php?364535-Known-Issues-Thread">Connect IQ forums</a></li>
 </ul>
+</div>
 <h3 id="v2.2.1"><a href="#2.2.1" onclick="toggle('2.2.1', 'Img_2.2.1');"><img src="resources/readme/hide.jpg" border=0 name="Img_2.2.1" />v2.2.1</a></h3>
 <div id="2.2.1" style="display:none;">
 

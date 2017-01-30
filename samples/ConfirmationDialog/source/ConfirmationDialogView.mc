@@ -11,11 +11,14 @@ using Toybox.Lang as Lang;
 
 class ConfirmationDialogView extends Ui.View {
 
+    function initialize() {
+        View.initialize();
+    }
+
     // Load your resources here
     function onLayout(dc) {
         onUpdate(dc);
     }
-
 
     // Restore the state of the app and prepare the view to be shown
     function onShow() {
@@ -25,9 +28,8 @@ class ConfirmationDialogView extends Ui.View {
         dc.setColor(Gfx.COLOR_TRANSPARENT, Gfx.COLOR_BLACK);
         dc.clear();
         dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
-        dc.drawText((dc.getWidth() / 2), (dc.getHeight() / 2) - 2 * Gfx.getFontHeight(Gfx.FONT_SMALL), Gfx.FONT_SMALL, instructionString, Gfx.TEXT_JUSTIFY_CENTER);
-        dc.drawText((dc.getWidth() / 2), (dc.getHeight() / 2) + Gfx.getFontHeight(Gfx.FONT_SMALL), Gfx.FONT_SMALL, resultString, Gfx.TEXT_JUSTIFY_CENTER);
+        dc.drawText((dc.getWidth() / 2), (dc.getHeight() / 2) - 2 * Gfx.getFontHeight(Gfx.FONT_TINY), Gfx.FONT_TINY, instructionString, Gfx.TEXT_JUSTIFY_CENTER);
+        dc.drawText((dc.getWidth() / 2), (dc.getHeight() / 2) + Gfx.getFontHeight(Gfx.FONT_TINY), Gfx.FONT_TINY, resultString, Gfx.TEXT_JUSTIFY_CENTER);
     }
-
 
 }

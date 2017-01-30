@@ -14,6 +14,8 @@ class CommandView extends Ui.View {
     hidden var mSensor;
 
     function initialize(sensor, index) {
+        Ui.View.initialize();
+
         mIndex = index;
 
         mIndicator = new PageIndicator();

@@ -10,6 +10,7 @@ class AccelMagDelegate extends Ui.BehaviorDelegate {
     var parentView;
 
     function initialize(view) {
+        BehaviorDelegate.initialize();
         parentView = view;
     }
 

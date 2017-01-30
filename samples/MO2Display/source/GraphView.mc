@@ -17,6 +17,8 @@ class GraphView extends Ui.View {
     hidden var mCurrentGraph;
 
     function initialize(sensor, index) {
+        Ui.View.initialize();
+
         mIndex = index;
 
         mIndicator = new PageIndicator();
@@ -50,27 +52,27 @@ class GraphView extends Ui.View {
 
             //Draw HR value with drop shadow
             dc.setColor(Gfx.COLOR_DK_GRAY, Gfx.COLOR_TRANSPARENT);
-            dc.drawText(2 + 1, (height / 2) - 4 + 1, font, totalString, Gfx.TEXT_JUSTIFY_LEFT);
+            dc.drawText((width/2) + 1, (height / 2) - 4 + 1, font, totalString, Gfx.TEXT_JUSTIFY_CENTER);
             dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
-            dc.drawText(2, (height / 2) - 4, font, totalString, Gfx.TEXT_JUSTIFY_LEFT);
-
+            dc.drawText(width/2, (height / 2) - 4, font, totalString, Gfx.TEXT_JUSTIFY_CENTER);
+            var numberXPos = (width/2) + 1 + ( fWidth/2 );
 
             totalString = "Total";
             font = pickFont(dc, totalString, width/5);
             //Draw with drop shadow
             dc.setColor(Gfx.COLOR_DK_RED, Gfx.COLOR_TRANSPARENT);
-            dc.drawText(2 + 1, (height / 3) + 1, font, totalString, Gfx.TEXT_JUSTIFY_LEFT);
+            dc.drawText((width/2) + 1, (height / 3) + 1, font, totalString, Gfx.TEXT_JUSTIFY_CENTER);
             dc.setColor(Gfx.COLOR_RED, Gfx.COLOR_TRANSPARENT);
-            dc.drawText(2, (height / 3), font, totalString, Gfx.TEXT_JUSTIFY_LEFT);
+            dc.drawText((width/2), (height / 3), font, totalString, Gfx.TEXT_JUSTIFY_CENTER);
 
             //use smallest font for "g / dl"
             font = mFonts[0];
             totalString = "g / dl";
             //Draw with drop shadow
             dc.setColor(Gfx.COLOR_DK_RED, Gfx.COLOR_TRANSPARENT);
-            dc.drawText(2 + fWidth + 3 + 1, (height / 2) - 4 + 1, font, totalString, Gfx.TEXT_JUSTIFY_LEFT);
+            dc.drawText(numberXPos + 2 + 1, (height / 2) - 4 + 1, font, totalString, Gfx.TEXT_JUSTIFY_LEFT);
             dc.setColor(Gfx.COLOR_RED, Gfx.COLOR_TRANSPARENT);
-            dc.drawText(2 + fWidth + 3, (height / 2) - 4, font, totalString, Gfx.TEXT_JUSTIFY_LEFT);
+            dc.drawText(numberXPos + 2, (height / 2) - 4, font, totalString, Gfx.TEXT_JUSTIFY_LEFT);
 
             //We should have thick lines eventually... this is a hack for now.
             mTotalGraph.draw(dc, [(width / 4) + 2, 3], [width - 3, (height / 2) - 3]);
@@ -83,29 +85,36 @@ class GraphView extends Ui.View {
             var currentString = mSensor.data.currentHemoPercent.format("%0.1f");
             var font = pickFont(dc, currentString, width / 4);
             var fWidth = dc.getTextWidthInPixels(currentString, font);
+            var numberFHeight = dc.getFontHeight(font);
+            var numberYPos = height - numberFHeight + 1;
 
             //Draw mSensor.data.currentHemoPercent value with drop shadow
             dc.setColor(Gfx.COLOR_DK_GRAY, Gfx.COLOR_TRANSPARENT);
-            dc.drawText(2 + 1, height - 4 + 1, font, currentString, Gfx.TEXT_JUSTIFY_LEFT);
+            dc.drawText((width/2)+1, numberYPos, font, currentString, Gfx.TEXT_JUSTIFY_CENTER);
             dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
-            dc.drawText(2, height - 4, font, currentString, Gfx.TEXT_JUSTIFY_LEFT);
+            dc.drawText((width/2), numberYPos - 1, font, currentString, Gfx.TEXT_JUSTIFY_CENTER);
+            var numberXPos = (width/2) + 1 + ( fWidth/2 );
 
             currentString = "Current";
             font = pickFont(dc, currentString, width/5);
+            var fHeight = dc.getFontHeight(font);
+
             //Draw with drop shadow
             dc.setColor(Gfx.COLOR_PURPLE, Gfx.COLOR_TRANSPARENT);
-            dc.drawText(2 + 1, height - (height / 5) + 1, font, currentString, Gfx.TEXT_JUSTIFY_LEFT);
+            dc.drawText((width/2)+1, height - (fHeight + (numberFHeight-1)) + 1, font, currentString, Gfx.TEXT_JUSTIFY_CENTER);
             dc.setColor(Gfx.COLOR_BLUE, Gfx.COLOR_TRANSPARENT);
-            dc.drawText(2, height - (height / 5), font, currentString, Gfx.TEXT_JUSTIFY_LEFT);
+            dc.drawText(width/2, height - (fHeight + (numberFHeight-1)), font, currentString, Gfx.TEXT_JUSTIFY_CENTER);
 
             //use smallest font for "percent"
             font = mFonts[0];
             currentString = "%";
+            fHeight = dc.getFontHeight(font);
+
             //Draw with drop shadow
             dc.setColor(Gfx.COLOR_PURPLE, Gfx.COLOR_TRANSPARENT);
-            dc.drawText(2 + fWidth + 3 + 1, height - 4 + 1, font, currentString, Gfx.TEXT_JUSTIFY_LEFT);
+            dc.drawText(numberXPos + 2 + 1, numberYPos, font, currentString, Gfx.TEXT_JUSTIFY_LEFT);
             dc.setColor(Gfx.COLOR_BLUE, Gfx.COLOR_TRANSPARENT);
-            dc.drawText(2 + fWidth + 3, height - 4, font, currentString, Gfx.TEXT_JUSTIFY_LEFT);
+            dc.drawText(numberXPos + 2, numberYPos - 1, font, currentString, Gfx.TEXT_JUSTIFY_LEFT);
 
             //We should have thick lines eventually... this is a hack for now.
             mCurrentGraph.draw(dc, [(width / 4) + 2, height / 2], [width - 3, height - 3]);

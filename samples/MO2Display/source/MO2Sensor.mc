@@ -128,6 +128,7 @@ class MO2Sensor extends Ant.GenericChannel {
         // Get the channel
         chanAssign = new Ant.ChannelAssignment(Ant.CHANNEL_TYPE_RX_NOT_TX, Ant.NETWORK_PLUS);
         GenericChannel.initialize(method(:onMessage), chanAssign);
+        fitField = null;
 
         // Set the configuration
         deviceCfg = new Ant.DeviceConfig( {
@@ -153,7 +154,15 @@ class MO2Sensor extends Ant.GenericChannel {
         pastEventCount = 0;
         searching = true;
         session.start();
-        fitField = session.createField(Ui.loadResource(Rez.Strings.fitFieldName), MO2_FIELD_ID, Fit.DATA_TYPE_FLOAT, { :mesgType=>Fit.MESG_TYPE_RECORD, :units=>Ui.loadResource(Rez.Strings.fitUnitsLabel)});
+        if( null == fitField ) {
+            fitField = session.createField
+                (
+                Ui.loadResource(Rez.Strings.fitFieldName),
+                MO2_FIELD_ID,
+                Fit.DATA_TYPE_FLOAT,
+                { :mesgType=>Fit.MESG_TYPE_RECORD, :units=>Ui.loadResource(Rez.Strings.fitUnitsLabel)}
+                );
+        }
     }
 
     function closeSensor() {

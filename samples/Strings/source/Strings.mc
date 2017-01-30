@@ -8,8 +8,8 @@ using Toybox.WatchUi as Ui;
 using Toybox.Graphics as Gfx;
 using Toybox.Application as App;
 
-class StringView extends Ui.View
-{
+class StringView extends Ui.View {
+
     var common;
     var language;
     var greeting;
@@ -21,9 +21,15 @@ class StringView extends Ui.View
     var foodLabel;
     var drinkLabel;
 
+    var font = Gfx.FONT_SMALL;
+    var lineSpacing = Gfx.getFontHeight(font);
+    var centerY = 60; // Default taken from previous hard coded values
 
-    function onLayout(dc)
-    {
+    function initialize() {
+        View.initialize();
+    }
+
+    function onLayout(dc) {
         common = Ui.loadResource( Rez.Strings.common );
         language = Ui.loadResource( Rez.Strings.language );
         greeting = Ui.loadResource( Rez.Strings.greeting );
@@ -34,33 +40,38 @@ class StringView extends Ui.View
         greetingLabel = Ui.loadResource( Rez.Strings.greeting_label );
         foodLabel = Ui.loadResource( Rez.Strings.food_label );
         drinkLabel = Ui.loadResource( Rez.Strings.drink_label );
+
+        centerY = (dc.getHeight() / 2) - (lineSpacing / 2);
     }
 
-    function onUpdate(dc)
-    {
+    function onUpdate(dc) {
         dc.setColor( Gfx.COLOR_BLACK, Gfx.COLOR_BLACK );
         dc.clear();
         dc.setColor( Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT );
 
-        dc.drawText( 85, 0, Gfx.FONT_SMALL, commonLabel, Gfx.TEXT_JUSTIFY_RIGHT );
-        dc.drawText( 85, 30, Gfx.FONT_SMALL, languageLabel, Gfx.TEXT_JUSTIFY_RIGHT );
-        dc.drawText( 85, 60, Gfx.FONT_SMALL, greetingLabel, Gfx.TEXT_JUSTIFY_RIGHT );
-        dc.drawText( 85, 90, Gfx.FONT_SMALL, foodLabel, Gfx.TEXT_JUSTIFY_RIGHT );
-        dc.drawText( 85, 120, Gfx.FONT_SMALL, drinkLabel, Gfx.TEXT_JUSTIFY_RIGHT );
+        dc.drawText( 85, centerY - (2 * lineSpacing), font, commonLabel,   Gfx.TEXT_JUSTIFY_RIGHT );
+        dc.drawText( 85, centerY - (1 * lineSpacing), font, languageLabel, Gfx.TEXT_JUSTIFY_RIGHT );
+        dc.drawText( 85, centerY,                     font, greetingLabel, Gfx.TEXT_JUSTIFY_RIGHT );
+        dc.drawText( 85, centerY + (1 * lineSpacing), font, foodLabel,     Gfx.TEXT_JUSTIFY_RIGHT );
+        dc.drawText( 85, centerY + (2 * lineSpacing), font, drinkLabel,    Gfx.TEXT_JUSTIFY_RIGHT );
 
-        dc.drawText( 100, 0, Gfx.FONT_SMALL, common, Gfx.TEXT_JUSTIFY_LEFT );
-        dc.drawText( 100, 30, Gfx.FONT_SMALL, language, Gfx.TEXT_JUSTIFY_LEFT );
-        dc.drawText( 100, 60, Gfx.FONT_SMALL, greeting, Gfx.TEXT_JUSTIFY_LEFT );
-        dc.drawText( 100, 90, Gfx.FONT_SMALL, food, Gfx.TEXT_JUSTIFY_LEFT );
-        dc.drawText( 100, 120, Gfx.FONT_SMALL, drink, Gfx.TEXT_JUSTIFY_LEFT );
+        dc.drawText( 95, centerY - (2 * lineSpacing), font, common,   Gfx.TEXT_JUSTIFY_LEFT );
+        dc.drawText( 95, centerY - (1 * lineSpacing), font, language, Gfx.TEXT_JUSTIFY_LEFT );
+        dc.drawText( 95, centerY,                     font, greeting, Gfx.TEXT_JUSTIFY_LEFT );
+        dc.drawText( 95, centerY + (1 * lineSpacing), font, food,     Gfx.TEXT_JUSTIFY_LEFT );
+        dc.drawText( 95, centerY + (2 * lineSpacing), font, drink,    Gfx.TEXT_JUSTIFY_LEFT );
     }
+
 }
 
 //! Watch Face Page class
-class StringApp extends App.AppBase
-{
-    function getInitialView()
-    {
+class StringApp extends App.AppBase {
+
+    function initialize() {
+        AppBase.initialize();
+    }
+
+    function getInitialView() {
         return [ new StringView() ];
     }
 }

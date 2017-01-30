@@ -1,0 +1,15 @@
+<layout id="MainLayout">
+    <label id="labelTitle" x="center" y="5" color="Gfx.COLOR_LT_GRAY" justification="Gfx.TEXT_JUSTIFY_CENTER" text="@Strings.title" font="Gfx.FONT_TINY"/>
+
+    <label id="labelRxFail" x="center" y="55" color="Gfx.COLOR_WHITE" justification="Gfx.TEXT_JUSTIFY_CENTER" text="@Strings.rxFail" font="Gfx.FONT_TINY" />
+    <label id="rxFail" x="center" y="75" color="Gfx.COLOR_WHITE" justification="Gfx.TEXT_JUSTIFY_CENTER" font="Gfx.FONT_TINY" />
+
+    <label id="labelRxSuccess" x="center" y="95" color="Gfx.COLOR_WHITE" justification="Gfx.TEXT_JUSTIFY_CENTER" text="@Strings.rxSuccess" font="Gfx.FONT_TINY" />
+    <label id="rxSuccess" x="center" y="115" color="Gfx.COLOR_WHITE" justification="Gfx.TEXT_JUSTIFY_CENTER" font="Gfx.FONT_TINY" />
+
+    <label id="labelTxFail" x="center" y="135" color="Gfx.COLOR_WHITE" justification="Gfx.TEXT_JUSTIFY_CENTER" text="@Strings.txFail" font="Gfx.FONT_TINY" />
+    <label id="txFail" x="center" y="155" color="Gfx.COLOR_WHITE" justification="Gfx.TEXT_JUSTIFY_CENTER" font="Gfx.FONT_TINY" />
+
+    <label id="labelTxSuccess" x="center" y="175" color="Gfx.COLOR_WHITE" justification="Gfx.TEXT_JUSTIFY_CENTER" text="@Strings.txSuccess" font="Gfx.FONT_TINY" />
+    <label id="txSuccess" x="center" y="195" color="Gfx.COLOR_WHITE" justification="Gfx.TEXT_JUSTIFY_CENTER" font="Gfx.FONT_TINY" />
+</layout>

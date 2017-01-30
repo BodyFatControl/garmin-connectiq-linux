@@ -10,6 +10,7 @@ class ActivityTrackerDelegate extends Ui.BehaviorDelegate {
 
     // Constructor
     function initialize() {
+        BehaviorDelegate.initialize();
     }
 
     function onSelect() {

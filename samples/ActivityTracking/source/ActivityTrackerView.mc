@@ -14,6 +14,8 @@ class ActivityTrackerView extends Ui.View {
 
     // Constructor
     function initialize() {
+        View.initialize();
+
         // Set up a 1Hz update timer because we aren't registering
         // for any data callbacks that can kick our display update.
         timer = new Timer.Timer();
@@ -41,6 +43,10 @@ class ActivityTrackerView extends Ui.View {
             var stepsPercent = info.steps.toFloat() / info.stepGoal;
             drawBar(dc, "Steps", dc.getHeight() / 4, stepsPercent, Gfx.COLOR_GREEN);
         }
+        else {
+            dc.drawText(20, dc.getHeight() / 4, Gfx.FONT_SMALL, "Steps not supported!", Gfx.TEXT_JUSTIFY_LEFT);
+        }
+
         if (info has :floorsClimbed && info has :floorsClimbedGoal) {
             if (info.floorsClimbedGoal == 0) {
                 info.floorsClimbedGoal = 10;
@@ -48,12 +54,19 @@ class ActivityTrackerView extends Ui.View {
             var floorsPercent = info.floorsClimbed.toFloat() / info.floorsClimbedGoal;
             drawBar(dc, "Floors", dc.getHeight() / 2, floorsPercent, Gfx.COLOR_BLUE);
         }
+        else {
+            dc.drawText(20, dc.getHeight() / 2, Gfx.FONT_SMALL, "Floors not supported!", Gfx.TEXT_JUSTIFY_LEFT);
+        }
+
         if (info has :activeMinutesWeek && info has :activeMinutesWeekGoal) {
             if (info.activeMinutesWeekGoal == 0) {
                 info.activeMinutesWeekGoal = 150;
             }
             var activePercent = info.activeMinutesWeek.total.toFloat() / info.activeMinutesWeekGoal;
             drawBar(dc, "Minutes", dc.getHeight() / 4 * 3, activePercent, Gfx.COLOR_ORANGE);
+        }
+        else {
+            dc.drawText(20, dc.getHeight() / 4 * 3, Gfx.FONT_SMALL, "Minutes not supported!", Gfx.TEXT_JUSTIFY_LEFT);
         }
     }
 

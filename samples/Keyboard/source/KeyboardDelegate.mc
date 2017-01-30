@@ -10,6 +10,10 @@ var lastText = "";
 
 class KeyboardDelegate extends Ui.InputDelegate {
 
+    function initialize() {
+        Ui.InputDelegate.initialize();
+    }
+
     // Push a text picker if the up button is pressed
     // or the screen receives a tap.
     function onKey(key) {
@@ -29,6 +33,11 @@ class KeyboardDelegate extends Ui.InputDelegate {
 }
 
 class KeyboardListener extends Ui.TextPickerDelegate {
+
+    function initialize() {
+        Ui.TextPickerDelegate.initialize();
+    }
+
     function onTextEntered(text, changed) {
         globalText = text + "\n" + "Changed: " + changed;
         lastText = text;

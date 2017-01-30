@@ -1,4 +1,4 @@
 <menu id="MainMenu">
-    <menu-item id="item_1">Item 1</menu-item>
-    <menu-item id="item_2">Item 2</menu-item>
+    <menu-item id="item_1">@Strings.menu_item_1</menu-item>
+    <menu-item id="item_2">@Strings.menu_item_2</menu-item>
 </menu>

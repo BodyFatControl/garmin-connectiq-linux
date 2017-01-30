@@ -32,6 +32,10 @@ class AccelMagView extends Ui.View {
     var accel;
     var mag;
 
+    function initialize() {
+        View.initialize();
+    }
+
     // Load your resources here
     function onLayout(dc) {
         dataTimer = new Timer.Timer();

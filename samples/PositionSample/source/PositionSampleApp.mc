@@ -11,6 +11,10 @@ class PositionSampleApp extends App.AppBase {
 
     var positionView;
 
+    function initialize() {
+        AppBase.initialize();
+    }
+
     //! onStart() is called on application start up
     function onStart(state) {
         Position.enableLocationEvents(Position.LOCATION_CONTINUOUS, method(:onPosition));

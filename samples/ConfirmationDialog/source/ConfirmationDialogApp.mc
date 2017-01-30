@@ -15,6 +15,10 @@ var cancelString;
 
 class ConfirmationDialogApp extends App.AppBase {
 
+    function initialize() {
+        AppBase.initialize();
+    }
+
     // onStart() is called on application start up
     function onStart(state) {
         instructionString = Ui.loadResource(Rez.Strings.TestInfo);

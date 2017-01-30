@@ -7,6 +7,10 @@
 using Toybox.WatchUi as Ui;
 
 class ConfirmationDialogDelegate extends Ui.ConfirmationDelegate {
+    function initialize() {
+        ConfirmationDelegate.initialize();
+    }
+
     function onResponse(value) {
         if (value == 0) {
             resultString = cancelString;
@@ -20,6 +24,10 @@ class ConfirmationDialogDelegate extends Ui.ConfirmationDelegate {
 
 class BaseInputDelegate extends Ui.BehaviorDelegate {
     var dialog;
+
+    function initialize() {
+        BehaviorDelegate.initialize();
+    }
 
     // Handle menu input
     function onMenu() {

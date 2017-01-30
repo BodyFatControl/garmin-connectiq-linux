@@ -22,11 +22,11 @@ class CommView extends Ui.View {
 
     function drawIntroPage(dc) {
         if(Sys.SCREEN_SHAPE_ROUND == screenShape) {
-            dc.drawText(dc.getWidth() / 2, 25,  Gfx.FONT_MEDIUM, "Communications", Gfx.TEXT_JUSTIFY_CENTER);
-            dc.drawText(dc.getWidth() / 2, 55, Gfx.FONT_MEDIUM, "Test", Gfx.TEXT_JUSTIFY_CENTER);
-            dc.drawText(dc.getWidth() / 2, 80,  Gfx.FONT_SMALL,  "Connect a phone then", Gfx.TEXT_JUSTIFY_CENTER);
-            dc.drawText(dc.getWidth() / 2, 100,  Gfx.FONT_SMALL,  "use the menu to send", Gfx.TEXT_JUSTIFY_CENTER);
-            dc.drawText(dc.getWidth() / 2, 120,  Gfx.FONT_SMALL,  "strings to your phone", Gfx.TEXT_JUSTIFY_CENTER);
+            dc.drawText(dc.getWidth() / 2, 25,  Gfx.FONT_SMALL, "Communications", Gfx.TEXT_JUSTIFY_CENTER);
+            dc.drawText(dc.getWidth() / 2, 55, Gfx.FONT_SMALL, "Test", Gfx.TEXT_JUSTIFY_CENTER);
+            dc.drawText(dc.getWidth() / 2, 80,  Gfx.FONT_TINY,  "Connect a phone then", Gfx.TEXT_JUSTIFY_CENTER);
+            dc.drawText(dc.getWidth() / 2, 100,  Gfx.FONT_TINY,  "use the menu to send", Gfx.TEXT_JUSTIFY_CENTER);
+            dc.drawText(dc.getWidth() / 2, 120,  Gfx.FONT_TINY,  "strings to your phone", Gfx.TEXT_JUSTIFY_CENTER);
         } else if(Sys.SCREEN_SHAPE_SEMI_ROUND == screenShape) {
             dc.drawText(dc.getWidth() / 2, 20,  Gfx.FONT_MEDIUM, "Communications test", Gfx.TEXT_JUSTIFY_CENTER);
             dc.drawText(dc.getWidth() / 2, 50,  Gfx.FONT_SMALL,  "Connect a phone", Gfx.TEXT_JUSTIFY_CENTER);

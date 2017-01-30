@@ -16,6 +16,8 @@ class StepsView extends Ui.View {
 
     // Constructor
     function initialize() {
+        View.initialize();
+
         // Set up a 1Hz update timer because we aren't registering
         // for any data callbacks that can kick our display update.
         timer = new Timer.Timer();

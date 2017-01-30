@@ -15,19 +15,19 @@
     </strings>
 
     <settings>
-        <setting propertyKey="number_prop" title="Rez.Strings.number_title">
+        <setting propertyKey="@Properties.number_prop" title="@Strings.number_title">
             <settingConfig type="numeric" />
         </setting>
 
-        <setting propertyKey="float_prop" title="float_title">
+        <setting propertyKey="@Properties.float_prop" title="@Strings.float_title">
             <settingConfig type="numeric" />
         </setting>
 
-        <setting propertyKey="string_prop" title="string_title">
+        <setting propertyKey="@Properties.string_prop" title="@Strings.string_title">
             <settingConfig type="alphaNumeric" />
         </setting>
 
-        <setting propertyKey="boolean_prop" title="boolean_title">
+        <setting propertyKey="@Properties.boolean_prop" title="@Strings.boolean_title">
             <settingConfig type="boolean" />
         </setting>
     </settings>

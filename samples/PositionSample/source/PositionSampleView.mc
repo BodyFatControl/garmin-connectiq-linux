@@ -13,6 +13,10 @@ class PositionSampleView extends Ui.View {
 
     var posnInfo = null;
 
+    function initialize() {
+        View.initialize();
+    }
+
     //! Load your resources here
     function onLayout(dc) {
     }

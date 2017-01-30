@@ -7,6 +7,11 @@
 using Toybox.WatchUi as Ui;
 
 class InputDelegate extends Ui.BehaviorDelegate {
+
+    function initialize() {
+        Ui.BehaviorDelegate.initialize();
+    }
+
     function onMenu() {
         timer1.stop();
         return true;

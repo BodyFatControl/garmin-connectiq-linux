@@ -38,6 +38,7 @@ function setBehaviorString(new_string) {
 
 class InputView extends Ui.View {
     function initialize() {
+        View.initialize();
         action_string = "NO_ACTION";
         behavior_string = "NO_BEHAVIOR";
         status_string = "NO_EVENT";

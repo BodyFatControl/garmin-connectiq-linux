@@ -6,7 +6,7 @@
 
     For example 1.2.0-dev9 would be valid, 1.2-dev is not valid.
     -->
-    <version>2.2.2</version>
+    <version>2.2.3</version>
 
     <!--
     Information about the exit codes the compiler returns.

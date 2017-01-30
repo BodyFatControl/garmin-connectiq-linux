@@ -615,9 +615,9 @@
                 </font_set>
             </fonts>
         </device>
-        <device id="round-240x240" part_number="006-B2603-00" name="Round 240x240 Family" family="round-240x240">
-            <part_numbers>
-                <part_number number="006-B2603-00" connectIQVersion="2.2.1">
+        <device id="fenix5" part_number="006-B2697-00" name="fenix™ 5" family="round-240x240">
+        <part_numbers>
+                <part_number number="006-B2697-00" connectIQVersion="2.2.2">
                     <languages>
                         <language font_set="ww">ind</language>
                         <language font_set="ww">zsm</language>
@@ -640,6 +640,8 @@
                         <language font_set="ww">slv</language>
                         <language font_set="ww">spa</language>
                         <language font_set="ww">swe</language>
+                        <language font_set="ww">ara</language>
+                        <language font_set="ww">heb</language>
                     </languages>
                 </part_number>
             </part_numbers>
@@ -647,53 +649,61 @@
             <orientation>GFX_ORNTN_0</orientation>
             <bpp>8</bpp>
             <resolution width="240" height="240" />
-            <image filename="round_watch_240x240.png" >
+            <image filename="fenix5.png" >
                 <display shape="round">
                     <region>
-                        <point x="37" y="88" />
-                        <point x="37" y="328" />
-                        <point x="277" y="328" />
-                        <point x="277" y="88" />
+                        <point x="105" y="170" />
+                        <point x="345" y="170" />
+                        <point x="345" y="410" />
+                        <point x="105" y="410" />
                     </region>
                 </display>
                 <key id="ENTER" behavior="ON_SELECT">
                     <region>
-                        <point x="245" y="345" />
-                        <point x="245" y="373" />
-                        <point x="272" y="373" />
-                        <point x="272" y="345" />
+                        <point x="377" y="183" />
+                        <point x="415" y="183" />
+                        <point x="415" y="235" />
+                        <point x="377" y="235" />
                     </region>
                 </key>
                 <key id="UP" behavior="PREVIOUS_PAGE">
                     <region>
-                        <point x="160" y="345" />
-                        <point x="160" y="373" />
-                        <point x="194" y="373" />
-                        <point x="194" y="345" />
+                        <point x="25"  y="262" />
+                        <point x="50" y="262" />
+                        <point x="50"  y="319" />
+                        <point x="25" y="319" />
+                    </region>
+                </key>
+                <key id="MENU" behavior="ON_MENU" isHold="TRUE">
+                    <region>
+                        <point x="25"  y="262" />
+                        <point x="50" y="262" />
+                        <point x="50"  y="319" />
+                        <point x="25" y="319" />
                     </region>
                 </key>
                 <key id="DOWN" behavior="NEXT_PAGE">
                     <region>
-                        <point x="120" y="345" />
-                        <point x="120" y="373" />
-                        <point x="153" y="373" />
-                        <point x="153" y="345" />
+                        <point x="41" y="345" />
+                        <point x="73" y="345" />
+                        <point x="73" y="397" />
+                        <point x="41" y="397" />
                     </region>
                 </key>
-                <key id="MENU" behavior="ON_MENU">
+                 <key id="CLOCK" isHold="TRUE">
                     <region>
-                        <point x="200" y="345" />
-                        <point x="200" y="373" />
-                        <point x="236" y="373" />
-                        <point x="236" y="345" />
+                        <point x="41" y="345" />
+                        <point x="73" y="345" />
+                        <point x="73" y="397" />
+                        <point x="41" y="397" />
                     </region>
                 </key>
                 <key id="ESC" behavior="ON_BACK">
                     <region>
-                      <point x="79" y="345" />
-                      <point x="79" y="373" />
-                      <point x="116" y="373" />
-                      <point x="116" y="345" />
+                      <point x="376" y="339" />
+                      <point x="409" y="339" />
+                      <point x="409" y="399" />
+                      <point x="376" y="399" />
                     </region>
                 </key>
             </image>
@@ -765,33 +775,33 @@
             </palette>
             <datafieldlayouts>
                 <layout name="1 Field">
-                    <field left="0" top="0" width="240" height="240" obscurity="15" labelx="120" labely="65" labelfont ="tiny" labeljustify="center" datax ="120" datay="160" datawidth="192" datafont="numberThaiHot" datajustify="center"/>
+                    <field left="0" top="0" width="240" height="240" obscurity="15" labelx="119" labely="73" labelfont ="tiny" labeljustify="center" datax ="119" datay="157" datawidth="192" datafont="numberThaiHot" datajustify="center"/>
                 </layout>
                 <layout name="2 Fields">
-                    <field left="0" top="0"   width="240" height="119" obscurity="7"  labelx="120" labely="48" labelfont ="tiny" labeljustify="center" datax ="120" datay="113" datawidth="154" datafont="numberHot" datajustify="center"/>
-                    <field left="0" top="121" width="240" height="119" obscurity="13" labelx="120" labely="18" labelfont ="tiny" labeljustify="center" datax ="120" datay="84"  datawidth="154" datafont="numberHot" datajustify="center"/>
+                    <field left="0" top="0"   width="240" height="120" obscurity="7"  labelx="119" labely="47" labelfont ="tiny" labeljustify="center" datax ="120" datay="115" datawidth="154" datafont="numberThaiHot" datajustify="center"/>
+                    <field left="0" top="122" width="240" height="118" obscurity="13" labelx="119" labely="22" labelfont ="tiny" labeljustify="center" datax ="120" datay="89"  datawidth="154" datafont="numberThaiHot" datajustify="center"/>
                 </layout>
                 <layout name="3 Fields A">
-                    <field left="0" top="0"   width="240" height="76" obscurity="7"  labelx="120" labely="24" labelfont ="tiny" labeljustify="center" datax ="120" datay="72" datawidth="132" datafont="numberMedium" datajustify="center"/>
-                    <field left="0" top="78"  width="240" height="81" obscurity="5"  labelx="120" labely="14" labelfont ="tiny" labeljustify="center" datax ="120" datay="76" datawidth="165" datafont="numberHot"    datajustify="center"/>
-                    <field left="0" top="162" width="240" height="77" obscurity="13" labelx="120" labely="14" labelfont ="tiny" labeljustify="center" datax ="120" datay="62" datawidth="132" datafont="numberMedium" datajustify="center"/>
+                    <field left="0" top="0"   width="240" height="77" obscurity="7"  labelx="119" labely="29" labelfont ="tiny" labeljustify="center" datax ="120" datay="74" datawidth="132" datafont="numberMedium" datajustify="center"/>
+                    <field left="0" top="79"  width="240" height="82" obscurity="5"  labelx="119" labely="22" labelfont ="tiny" labeljustify="center" datax ="120" datay="79" datawidth="165" datafont="numberHot"    datajustify="center"/>
+                    <field left="0" top="163" width="240" height="77" obscurity="13" labelx="119" labely="21" labelfont ="tiny" labeljustify="center" datax ="120" datay="65" datawidth="132" datafont="numberMedium" datajustify="center"/>
                 </layout>
                 <layout name="3 Fields B">
-                    <field left="0"   top="0"   width="240" height="119" obscurity="7"  labelx="119" labely="48" labelfont ="tiny" labeljustify="center" datax ="119" datay="113" datawidth="154" datafont="numberHot"    datajustify="center"/>
-                    <field left="0"   top="121" width="119" height="119" obscurity="9"  labelx="68"  labely="18" labelfont ="tiny" labeljustify="center" datax ="68"  datay="65"  datawidth="96" datafont="numberMedium" datajustify="center"/>
-                    <field left="121" top="121" width="119" height="119" obscurity="12" labelx="51"  labely="18" labelfont ="tiny" labeljustify="center" datax ="51"  datay="65"  datawidth="96" datafont="numberMedium" datajustify="center"/>
+                    <field left="0"   top="0"   width="240" height="119" obscurity="7"  labelx="119" labely="46" labelfont ="tiny" labeljustify="center" datax ="120" datay="114" datawidth="154" datafont="numberThaiHot"    datajustify="center"/>
+                    <field left="0"   top="121" width="119" height="119" obscurity="9"  labelx="63"  labely="23" labelfont ="tiny" labeljustify="center" datax ="66"  datay="62"  datawidth="96" datafont="numberMild" datajustify="center"/>
+                    <field left="121" top="121" width="119" height="119" obscurity="12" labelx="54"  labely="23" labelfont ="tiny" labeljustify="center" datax ="54"  datay="62"  datawidth="96" datafont="numberMild" datajustify="center"/>
                 </layout>
                 <layout name="4 Fields A">
-                    <field left="0"   top="0"   width="240" height="76" obscurity="7"  labelx="120" labely="24" labelfont ="tiny" labeljustify="center" datax ="120" datay="72" datawidth="132" datafont="numberMedium" datajustify="center"/>
-                    <field left="0"   top="78"  width="119" height="81" obscurity="1"  labelx="59"  labely="17" labelfont ="tiny" labeljustify="center" datax ="59"  datay="66" datawidth="115" datafont="numberMedium" datajustify="center"/>
-                    <field left="121" top="78"  width="119" height="81" obscurity="4"  labelx="59"  labely="17" labelfont ="tiny" labeljustify="center" datax ="59"  datay="66" datawidth="115" datafont="numberMedium" datajustify="center"/>
-                    <field left="0"   top="161" width="240" height="79" obscurity="13" labelx="120" labely="16" labelfont ="tiny" labeljustify="center" datax ="120" datay="62" datawidth="132" datafont="numberMedium" datajustify="center"/>
+                    <field left="0"   top="0"   width="240" height="77" obscurity="7"  labelx="119" labely="29" labelfont ="tiny" labeljustify="center" datax ="120" datay="74" datawidth="132" datafont="numberMedium" datajustify="center"/>
+                    <field left="0"   top="79"  width="119" height="82" obscurity="1"  labelx="58"  labely="25" labelfont ="tiny" labeljustify="center" datax ="60"  datay="69" datawidth="115" datafont="numberMedium" datajustify="center"/>
+                    <field left="121" top="79"  width="119" height="82" obscurity="4"  labelx="58"  labely="25" labelfont ="tiny" labeljustify="center" datax ="60"  datay="69" datawidth="115" datafont="numberMedium" datajustify="center"/>
+                    <field left="0"   top="163" width="240" height="77" obscurity="13" labelx="119" labely="21" labelfont ="tiny" labeljustify="center" datax ="120" datay="65" datawidth="132" datafont="numberMedium" datajustify="center"/>
                 </layout>
                 <layout name="4 Fields B">
-                    <field left="0"   top="0"   width="119" height="119" obscurity="3"  labelx="68" labely="65" labelfont ="tiny" labeljustify="center" datax ="68" datay="114" datawidth="96" datafont="numberMedium" datajustify="center"/>
-                    <field left="121" top="0"   width="119" height="119" obscurity="6"  labelx="51" labely="65" labelfont ="tiny" labeljustify="center" datax ="51" datay="114" datawidth="96" datafont="numberMedium" datajustify="center"/>
-                    <field left="0"   top="121" width="119" height="119" obscurity="9"  labelx="68" labely="15" labelfont ="tiny" labeljustify="center" datax ="68" datay="65"  datawidth="96" datafont="numberMedium" datajustify="center"/>
-                    <field left="121" top="121" width="119" height="119" obscurity="12" labelx="51" labely="15" labelfont ="tiny" labeljustify="center" datax ="51" datay="65"  datawidth="96" datafont="numberMedium" datajustify="center"/>
+                    <field left="0"   top="0"   width="119" height="120" obscurity="3"  labelx="67" labely="72" labelfont ="tiny" labeljustify="center" datax ="66" datay="111" datawidth="96" datafont="numberMild" datajustify="center"/>
+                    <field left="121" top="0"   width="119" height="120" obscurity="6"  labelx="51" labely="72" labelfont ="tiny" labeljustify="center" datax ="54" datay="111" datawidth="96" datafont="numberMild" datajustify="center"/>
+                    <field left="0"   top="122" width="119" height="118" obscurity="9"  labelx="63" labely="23" labelfont ="tiny" labeljustify="center" datax ="66" datay="62"  datawidth="96" datafont="numberMild" datajustify="center"/>
+                    <field left="121" top="122" width="119" height="118" obscurity="12" labelx="54" labely="23" labelfont ="tiny" labeljustify="center" datax ="54" datay="62"  datawidth="96" datafont="numberMild" datajustify="center"/>
                 </layout>
             </datafieldlayouts>
             <app_types>
@@ -800,6 +810,10 @@
                 <app id="widget" memory_limit="65536" />
                 <app id="datafield" memory_limit="32768" />
             </app_types>
+            <hr_data>
+                <sample_rate>67</sample_rate>
+                <history_size>200</history_size>
+            </hr_data>
             <watchdog_count>120000</watchdog_count>
             <picker_layout>
                 <title x="0" y="0" w="240" h="66" />
@@ -813,24 +827,488 @@
             </picker_layout>
             <fonts>
                 <font_set id="ww">
-                    <font id="xtiny">FNT_ROBOTO_11B</font>
-                    <font id="tiny">FNT_ROBOTO_14B</font>
-                    <font id="small">FNT_ROBOTO_17</font>
-                    <font id="medium">FNT_ROBOTO_19</font>
-                    <font id="large">FNT_ROBOTO_24B</font>
-                    <font id="numberMild">FNT_STEELFISH_22</font>
-                    <font id="numberMedium">FNT_STEELFISH_40</font>
-                    <font id="numberHot">FNT_STEELFISH_54</font>
-                    <font id="numberThaiHot">FNT_STEELFISH_75</font>
-                    <font id="systemXtiny">FNT_CFPG_ROBOTO_17</font>
-                    <font id="systemTiny">FNT_CFPG_ROBOTO_17B</font>
-                    <font id="systemSmall">FNT_CFPG_ROBOTO_19B</font>
-                    <font id="systemMedium">FNT_CFPG_ROBOTO_22B</font>
-                    <font id="systemLarge">FNT_CFPG_ROBOTO_26B</font>
-                    <font id="systemNumberMild">FNT_CFPG_ROBOTO_26BC</font>
-                    <font id="systemNumberMedium">FNT_CFPG_ROBOTO_36BC</font>
-                    <font id="systemNumberHot">FNT_CFPG_ROBOTO_52BC</font>
-                    <font id="systemNumberThaiHot">FNT_CFPG_ROBOTO_58BC</font>
+                    <font id="xtiny">FNT_FENIX5_ROBOTOCONDENSEDREGULAR_26PX</font>
+                    <font id="tiny">FNT_FENIX5_ROBOTOCONDENSEDBOLD_26PX</font>
+                    <font id="small">FNT_FENIX5_ROBOTOCONDENSEDBOLD_29PX</font>
+                    <font id="medium">FNT_FENIX5_ROBOTOCONDENSEDBOLD_34PX</font>
+                    <font id="large">FNT_FENIX5_ROBOTOCONDENSEDBOLD_41PX</font>
+                    <font id="numberMild">FNT_FENIX5_CHRONOSSEMIBOLDCONDENSED_26PX</font>
+                    <font id="numberMedium">FNT_FENIX5_CHRONOSSEMIBOLDCONDENSED_36PX</font>
+                    <font id="numberHot">FNT_FENIX5_CHRONOSSEMIBOLDCONDENSED_52PX</font>
+                    <font id="numberThaiHot">FNT_FENIX5_CHRONOSSEMIBOLDCONDENSED_58PX</font>
+                    <font id="systemXtiny">FNT_FENIX5_ROBOTOCONDENSEDREGULAR_26PX</font>
+                    <font id="systemTiny">FNT_FENIX5_ROBOTOCONDENSEDBOLD_26PX</font>
+                    <font id="systemSmall">FNT_FENIX5_ROBOTOCONDENSEDBOLD_29PX</font>
+                    <font id="systemMedium">FNT_FENIX5_ROBOTOCONDENSEDBOLD_34PX</font>
+                    <font id="systemLarge">FNT_FENIX5_ROBOTOCONDENSEDBOLD_41PX</font>
+                    <font id="systemNumberMild">FNT_FENIX5_CHRONOSSEMIBOLDCONDENSED_26PX</font>
+                    <font id="systemNumberMedium">FNT_FENIX5_CHRONOSSEMIBOLDCONDENSED_36PX</font>
+                    <font id="systemNumberHot">FNT_FENIX5_CHRONOSSEMIBOLDCONDENSED_52PX</font>
+                    <font id="systemNumberThaiHot">FNT_FENIX5_CHRONOSSEMIBOLDCONDENSED_58PX</font>
+                </font_set>
+            </fonts>
+        </device>
+        <device id="fenix5x" part_number="006-B2604-00" name="fenix™ 5X" family="round-240x240">
+        <part_numbers>
+                <part_number number="006-B2604-00" connectIQVersion="2.2.2">
+                    <languages>
+                        <language font_set="ww">ind</language>
+                        <language font_set="ww">zsm</language>
+                        <language font_set="ww">hrv</language>
+                        <language font_set="ww">ces</language>
+                        <language font_set="ww">dan</language>
+                        <language font_set="ww">dut</language>
+                        <language font_set="ww">eng</language>
+                        <language font_set="ww">fin</language>
+                        <language font_set="ww">fre</language>
+                        <language font_set="ww">deu</language>
+                        <language font_set="ww">gre</language>
+                        <language font_set="ww">hun</language>
+                        <language font_set="ww">ita</language>
+                        <language font_set="ww">nob</language>
+                        <language font_set="ww">pol</language>
+                        <language font_set="ww">por</language>
+                        <language font_set="ww">rus</language>
+                        <language font_set="ww">slo</language>
+                        <language font_set="ww">slv</language>
+                        <language font_set="ww">spa</language>
+                        <language font_set="ww">swe</language>
+                        <language font_set="ww">ara</language>
+                        <language font_set="ww">heb</language>
+                    </languages>
+                </part_number>
+            </part_numbers>
+            <launcher_icon width="40" height="40" />
+            <orientation>GFX_ORNTN_0</orientation>
+            <bpp>8</bpp>
+            <resolution width="240" height="240" />
+            <image filename="fenix5x.png" >
+                <display shape="round">
+                    <region>
+                        <point x="124" y="184" />
+                        <point x="364" y="184" />
+                        <point x="364" y="424" />
+                        <point x="124" y="424" />
+                    </region>
+                </display>
+                <key id="ENTER" behavior="ON_SELECT">
+                    <region>
+                        <point x="407" y="181" />
+                        <point x="450" y="181" />
+                        <point x="450" y="244" />
+                        <point x="407" y="244" />
+                    </region>
+                </key>
+                <key id="UP" behavior="PREVIOUS_PAGE">
+                    <region>
+                        <point x="33" y="269" />
+                        <point x="60" y="269" />
+                        <point x="60" y="339" />
+                        <point x="33" y="339" />
+                    </region>
+                </key>
+                <key id="MENU" behavior="ON_MENU" isHold="TRUE">
+                    <region>
+                        <point x="33" y="269" />
+                        <point x="60" y="269" />
+                        <point x="60" y="339" />
+                        <point x="33" y="339" />
+                    </region>
+                </key>
+                <key id="DOWN" behavior="NEXT_PAGE">
+                    <region>
+                        <point x="46" y="356" />
+                        <point x="89" y="356" />
+                        <point x="89" y="418" />
+                        <point x="46" y="418" />
+                    </region>
+                </key>
+                 <key id="CLOCK" isHold="TRUE">
+                    <region>
+                        <point x="46" y="356" />
+                        <point x="89" y="356" />
+                        <point x="89" y="418" />
+                        <point x="46" y="418" />
+                    </region>
+                </key>
+                <key id="ESC" behavior="ON_BACK">
+                    <region>
+                      <point x="399" y="353" />
+                      <point x="443" y="353" />
+                      <point x="443" y="420" />
+                      <point x="399" y="420" />
+                    </region>
+                </key>
+            </image>
+            <palette>
+                <color>000000</color>
+                <color>000055</color>
+                <color>0000AA</color>
+                <color>0000FF</color>
+                <color>005500</color>
+                <color>005555</color>
+                <color>0055AA</color>
+                <color>0055FF</color>
+                <color>00AA00</color>
+                <color>00AA55</color>
+                <color>00AAAA</color>
+                <color>00AAFF</color>
+                <color>00FF00</color>
+                <color>00FF55</color>
+                <color>00FFAA</color>
+                <color>00FFFF</color>
+                <color>550000</color>
+                <color>550055</color>
+                <color>5500AA</color>
+                <color>5500FF</color>
+                <color>555500</color>
+                <color>555555</color>
+                <color>5555AA</color>
+                <color>5555FF</color>
+                <color>55AA00</color>
+                <color>55AA55</color>
+                <color>55AAAA</color>
+                <color>55AAFF</color>
+                <color>55FF00</color>
+                <color>55FF55</color>
+                <color>55FFAA</color>
+                <color>55FFFF</color>
+                <color>AA0000</color>
+                <color>AA0055</color>
+                <color>AA00AA</color>
+                <color>AA00FF</color>
+                <color>AA5500</color>
+                <color>AA5555</color>
+                <color>AA55AA</color>
+                <color>AA55FF</color>
+                <color>AAAA00</color>
+                <color>AAAA55</color>
+                <color>AAAAAA</color>
+                <color>AAAAFF</color>
+                <color>AAFF00</color>
+                <color>AAFF55</color>
+                <color>AAFFAA</color>
+                <color>AAFFFF</color>
+                <color>FF0000</color>
+                <color>FF0055</color>
+                <color>FF00AA</color>
+                <color>FF00FF</color>
+                <color>FF5500</color>
+                <color>FF5555</color>
+                <color>FF55AA</color>
+                <color>FF55FF</color>
+                <color>FFAA00</color>
+                <color>FFAA55</color>
+                <color>FFAAAA</color>
+                <color>FFAAFF</color>
+                <color>FFFF00</color>
+                <color>FFFF55</color>
+                <color>FFFFAA</color>
+                <color>FFFFFF</color>
+            </palette>
+            <datafieldlayouts>
+                <layout name="1 Field">
+                    <field left="0" top="0" width="240" height="240" obscurity="15" labelx="119" labely="73" labelfont ="tiny" labeljustify="center" datax ="119" datay="157" datawidth="192" datafont="numberThaiHot" datajustify="center"/>
+                </layout>
+                <layout name="2 Fields">
+                    <field left="0" top="0"   width="240" height="120" obscurity="7"  labelx="119" labely="47" labelfont ="tiny" labeljustify="center" datax ="120" datay="115" datawidth="154" datafont="numberThaiHot" datajustify="center"/>
+                    <field left="0" top="122" width="240" height="118" obscurity="13" labelx="119" labely="22" labelfont ="tiny" labeljustify="center" datax ="120" datay="89"  datawidth="154" datafont="numberThaiHot" datajustify="center"/>
+                </layout>
+                <layout name="3 Fields A">
+                    <field left="0" top="0"   width="240" height="77" obscurity="7"  labelx="119" labely="29" labelfont ="tiny" labeljustify="center" datax ="120" datay="74" datawidth="132" datafont="numberMedium" datajustify="center"/>
+                    <field left="0" top="79"  width="240" height="82" obscurity="5"  labelx="119" labely="22" labelfont ="tiny" labeljustify="center" datax ="120" datay="79" datawidth="165" datafont="numberHot"    datajustify="center"/>
+                    <field left="0" top="163" width="240" height="77" obscurity="13" labelx="119" labely="21" labelfont ="tiny" labeljustify="center" datax ="120" datay="65" datawidth="132" datafont="numberMedium" datajustify="center"/>
+                </layout>
+                <layout name="3 Fields B">
+                    <field left="0"   top="0"   width="240" height="119" obscurity="7"  labelx="119" labely="46" labelfont ="tiny" labeljustify="center" datax ="120" datay="114" datawidth="154" datafont="numberThaiHot"    datajustify="center"/>
+                    <field left="0"   top="121" width="119" height="119" obscurity="9"  labelx="63"  labely="23" labelfont ="tiny" labeljustify="center" datax ="66"  datay="62"  datawidth="96" datafont="numberMild" datajustify="center"/>
+                    <field left="121" top="121" width="119" height="119" obscurity="12" labelx="54"  labely="23" labelfont ="tiny" labeljustify="center" datax ="54"  datay="62"  datawidth="96" datafont="numberMild" datajustify="center"/>
+                </layout>
+                <layout name="4 Fields A">
+                    <field left="0"   top="0"   width="240" height="77" obscurity="7"  labelx="119" labely="29" labelfont ="tiny" labeljustify="center" datax ="120" datay="74" datawidth="132" datafont="numberMedium" datajustify="center"/>
+                    <field left="0"   top="79"  width="119" height="82" obscurity="1"  labelx="58"  labely="25" labelfont ="tiny" labeljustify="center" datax ="60"  datay="69" datawidth="115" datafont="numberMedium" datajustify="center"/>
+                    <field left="121" top="79"  width="119" height="82" obscurity="4"  labelx="58"  labely="25" labelfont ="tiny" labeljustify="center" datax ="60"  datay="69" datawidth="115" datafont="numberMedium" datajustify="center"/>
+                    <field left="0"   top="163" width="240" height="77" obscurity="13" labelx="119" labely="21" labelfont ="tiny" labeljustify="center" datax ="120" datay="65" datawidth="132" datafont="numberMedium" datajustify="center"/>
+                </layout>
+                <layout name="4 Fields B">
+                    <field left="0"   top="0"   width="119" height="120" obscurity="3"  labelx="67" labely="72" labelfont ="tiny" labeljustify="center" datax ="66" datay="111" datawidth="96" datafont="numberMild" datajustify="center"/>
+                    <field left="121" top="0"   width="119" height="120" obscurity="6"  labelx="51" labely="72" labelfont ="tiny" labeljustify="center" datax ="54" datay="111" datawidth="96" datafont="numberMild" datajustify="center"/>
+                    <field left="0"   top="122" width="119" height="118" obscurity="9"  labelx="63" labely="23" labelfont ="tiny" labeljustify="center" datax ="66" datay="62"  datawidth="96" datafont="numberMild" datajustify="center"/>
+                    <field left="121" top="122" width="119" height="118" obscurity="12" labelx="54" labely="23" labelfont ="tiny" labeljustify="center" datax ="54" datay="62"  datawidth="96" datafont="numberMild" datajustify="center"/>
+                </layout>
+            </datafieldlayouts>
+            <app_types>
+                <app id="watchface" memory_limit="98304" prg_limit="1048576" />
+                <app id="watch-app" memory_limit="1310720" />
+                <app id="widget" memory_limit="1048576" />
+                <app id="datafield" memory_limit="131072" />
+            </app_types>
+            <hr_data>
+                <sample_rate>67</sample_rate>
+                <history_size>200</history_size>
+            </hr_data>
+            <watchdog_count>120000</watchdog_count>
+            <picker_layout>
+                <title x="0" y="0" w="240" h="66" />
+                <nextArrow x="103" y="74" w="34" h="22" />
+                <previousArrow x="103" y="190" w="34" h="22" />
+                <entries>
+                    <entry x="11" y="80" w="65" h="132" />
+                    <entry x="87" y="80" w="65" h="132" />
+                    <entry x="164" y="80" w="65" h="132" />
+                </entries>
+            </picker_layout>
+            <fonts>
+                <font_set id="ww">
+                    <font id="xtiny">FNT_FENIX5_ROBOTOCONDENSEDREGULAR_26PX</font>
+                    <font id="tiny">FNT_FENIX5_ROBOTOCONDENSEDBOLD_26PX</font>
+                    <font id="small">FNT_FENIX5_ROBOTOCONDENSEDBOLD_29PX</font>
+                    <font id="medium">FNT_FENIX5_ROBOTOCONDENSEDBOLD_34PX</font>
+                    <font id="large">FNT_FENIX5_ROBOTOCONDENSEDBOLD_41PX</font>
+                    <font id="numberMild">FNT_FENIX5_CHRONOSSEMIBOLDCONDENSED_26PX</font>
+                    <font id="numberMedium">FNT_FENIX5_CHRONOSSEMIBOLDCONDENSED_36PX</font>
+                    <font id="numberHot">FNT_FENIX5_CHRONOSSEMIBOLDCONDENSED_52PX</font>
+                    <font id="numberThaiHot">FNT_FENIX5_CHRONOSSEMIBOLDCONDENSED_58PX</font>
+                    <font id="systemXtiny">FNT_FENIX5_ROBOTOCONDENSEDREGULAR_26PX</font>
+                    <font id="systemTiny">FNT_FENIX5_ROBOTOCONDENSEDBOLD_26PX</font>
+                    <font id="systemSmall">FNT_FENIX5_ROBOTOCONDENSEDBOLD_29PX</font>
+                    <font id="systemMedium">FNT_FENIX5_ROBOTOCONDENSEDBOLD_34PX</font>
+                    <font id="systemLarge">FNT_FENIX5_ROBOTOCONDENSEDBOLD_41PX</font>
+                    <font id="systemNumberMild">FNT_FENIX5_CHRONOSSEMIBOLDCONDENSED_26PX</font>
+                    <font id="systemNumberMedium">FNT_FENIX5_CHRONOSSEMIBOLDCONDENSED_36PX</font>
+                    <font id="systemNumberHot">FNT_FENIX5_CHRONOSSEMIBOLDCONDENSED_52PX</font>
+                    <font id="systemNumberThaiHot">FNT_FENIX5_CHRONOSSEMIBOLDCONDENSED_58PX</font>
+                </font_set>
+            </fonts>
+        </device>
+        <device id="fenix5s" part_number="006-B2544-00" name="fēnix™ 5S" family="round-218x218">
+            <part_numbers>
+                <part_number number="006-B2544-00" firmwareVersion="100" connectIQVersion="2.2.2">
+                    <languages>
+                        <language font_set="ww">hrv</language>
+                        <language font_set="ww">ces</language>
+                        <language font_set="ww">dan</language>
+                        <language font_set="ww">dut</language>
+                        <language font_set="ww">eng</language>
+                        <language font_set="ww">fin</language>
+                        <language font_set="ww">fre</language>
+                        <language font_set="ww">deu</language>
+                        <language font_set="ww">gre</language>
+                        <language font_set="ww">hun</language>
+                        <language font_set="ww">ita</language>
+                        <language font_set="ww">nob</language>
+                        <language font_set="ww">pol</language>
+                        <language font_set="ww">por</language>
+                        <language font_set="ww">rus</language>
+                        <language font_set="ww">slo</language>
+                        <language font_set="ww">slv</language>
+                        <language font_set="ww">spa</language>
+                        <language font_set="ww">swe</language>
+                        <language font_set="ww">ara</language>
+                        <language font_set="ww">heb</language>
+                    </languages>
+                </part_number>
+            </part_numbers>
+            <launcher_icon width="36" height="36" />
+            <orientation>GFX_ORNTN_0</orientation>
+            <bpp>8</bpp>
+            <resolution width="218" height="218" />
+            <image filename="fenix5s.png" >
+                <display shape="round">
+                    <region>
+                        <point x="94" y="142" />
+                        <point x="312" y="142" />
+                        <point x="312" y="360" />
+                        <point x="94" y="360" />
+                    </region>
+                </display>
+                <key id="ENTER" behavior="ON_SELECT">
+                    <region>
+                        <point x="346" y="146" />
+                        <point x="388" y="146" />
+                        <point x="388" y="200" />
+                        <point x="346" y="200" />
+                    </region>
+                </key>
+                <key id="UP" behavior="PREVIOUS_PAGE">
+                    <region>
+                        <point x="11" y="224" />
+                        <point x="41" y="224" />
+                        <point x="41" y="281" />
+                        <point x="11" y="281" />
+                    </region>
+                </key>
+                <key id="MENU" behavior="ON_MENU" isHold="TRUE">
+                    <region>
+                        <point x="11" y="224" />
+                        <point x="41" y="224" />
+                        <point x="41" y="281" />
+                        <point x="11" y="281" />
+                    </region>
+                </key>
+                <key id="DOWN" behavior="NEXT_PAGE">
+                    <region>
+                        <point x="26" y="302" />
+                        <point x="61" y="302" />
+                        <point x="61" y="355" />
+                        <point x="26" y="355" />
+                    </region>
+                </key>
+                 <key id="CLOCK" isHold="TRUE">
+                    <region>
+                        <point x="26" y="302" />
+                        <point x="61" y="302" />
+                        <point x="61" y="355" />
+                        <point x="26" y="355" />
+                    </region>
+                </key>
+                <key id="ESC" behavior="ON_BACK">
+                    <region>
+                      <point x="346" y="302" />
+                      <point x="388" y="302" />
+                      <point x="388" y="355" />
+                      <point x="346" y="355" />
+                    </region>
+                </key>
+            </image>
+            <palette>
+                <color>000000</color>
+                <color>000055</color>
+                <color>0000AA</color>
+                <color>0000FF</color>
+                <color>005500</color>
+                <color>005555</color>
+                <color>0055AA</color>
+                <color>0055FF</color>
+                <color>00AA00</color>
+                <color>00AA55</color>
+                <color>00AAAA</color>
+                <color>00AAFF</color>
+                <color>00FF00</color>
+                <color>00FF55</color>
+                <color>00FFAA</color>
+                <color>00FFFF</color>
+                <color>550000</color>
+                <color>550055</color>
+                <color>5500AA</color>
+                <color>5500FF</color>
+                <color>555500</color>
+                <color>555555</color>
+                <color>5555AA</color>
+                <color>5555FF</color>
+                <color>55AA00</color>
+                <color>55AA55</color>
+                <color>55AAAA</color>
+                <color>55AAFF</color>
+                <color>55FF00</color>
+                <color>55FF55</color>
+                <color>55FFAA</color>
+                <color>55FFFF</color>
+                <color>AA0000</color>
+                <color>AA0055</color>
+                <color>AA00AA</color>
+                <color>AA00FF</color>
+                <color>AA5500</color>
+                <color>AA5555</color>
+                <color>AA55AA</color>
+                <color>AA55FF</color>
+                <color>AAAA00</color>
+                <color>AAAA55</color>
+                <color>AAAAAA</color>
+                <color>AAAAFF</color>
+                <color>AAFF00</color>
+                <color>AAFF55</color>
+                <color>AAFFAA</color>
+                <color>AAFFFF</color>
+                <color>FF0000</color>
+                <color>FF0055</color>
+                <color>FF00AA</color>
+                <color>FF00FF</color>
+                <color>FF5500</color>
+                <color>FF5555</color>
+                <color>FF55AA</color>
+                <color>FF55FF</color>
+                <color>FFAA00</color>
+                <color>FFAA55</color>
+                <color>FFAAAA</color>
+                <color>FFAAFF</color>
+                <color>FFFF00</color>
+                <color>FFFF55</color>
+                <color>FFFFAA</color>
+                <color>FFFFFF</color>
+            </palette>
+            <picker_layout>
+                <title x="0" y="30" w="218" h="28"/>
+                <nextArrow x="79" y="60" w="59" h="24" />
+                <previousArrow x="79" y="194" w="59" h="24" />
+                <entries>
+                    <entry x="12" y="86" w="55" h="106"/>
+                    <entry x="81" y="86" w="55" h="106"/>
+                    <entry x="150" y="86" w="55" h="106"/>
+                </entries>
+            </picker_layout>
+            <datafieldlayouts>
+                <layout name="1 Field">
+                    <field left="0" top="0" width="218" height="218" obscurity="15" labelx="109" labely="65" labelfont ="tiny" labeljustify="center" datax ="108" datay="128" datawidth="174" datafont="systemNumberThaiHot" datajustify="center"/>
+                </layout>
+                <layout name="2 Fields">
+                    <field left="0" top="0"   width="218" height="108" obscurity="7"  labelx="109" labely="41" labelfont ="tiny" labeljustify="center" datax ="109" datay="103" datawidth="140" datafont="systemNumberThaiHot" datajustify="center"/>
+                    <field left="0" top="110" width="218" height="108" obscurity="13" labelx="109" labely="20" labelfont ="tiny" labeljustify="center" datax ="109" datay="80"  datawidth="140" datafont="systemNumberThaiHot" datajustify="center"/>
+                </layout>
+                <layout name="3 Fields A">
+                    <field left="0" top="0"   width="218" height="70" obscurity="7"  labelx="109" labely="26" labelfont ="tiny" labeljustify="center" datax ="109" datay="66" datawidth="120" datafont="systemNumberMedium" datajustify="center"/>
+                    <field left="0" top="72"  width="218" height="74" obscurity="5"  labelx="109" labely="19" labelfont ="tiny" labeljustify="center" datax ="109" datay="70" datawidth="150" datafont="systemNumberHot"    datajustify="center"/>
+                    <field left="0" top="148" width="218" height="70" obscurity="13" labelx="109" labely="18" labelfont ="tiny" labeljustify="center" datax ="109" datay="57" datawidth="120" datafont="systemNumberMedium" datajustify="center"/>
+                </layout>
+                <layout name="3 Fields B">
+                    <field left="0"   top="0"   width="218" height="108" obscurity="7"  labelx="108" labely="41" labelfont ="tiny" labeljustify="center" datax ="108" datay="103" datawidth="140" datafont="systemNumberThaiHot"    datajustify="center"/>
+                    <field left="0"   top="110" width="108" height="108" obscurity="9"  labelx="58"  labely="20" labelfont ="tiny" labeljustify="center" datax ="60"  datay="55"  datawidth="87" datafont="systemNumberMild" datajustify="center"/>
+                    <field left="110" top="110" width="108" height="108" obscurity="12" labelx="50"  labely="20" labelfont ="tiny" labeljustify="center" datax ="46"  datay="55"  datawidth="87" datafont="systemNumberMild" datajustify="center"/>
+                </layout>
+                <layout name="4 Fields A">
+                    <field left="0"   top="0"   width="218" height="70" obscurity="7"  labelx="109" labely="26" labelfont ="tiny" labeljustify="center" datax ="109" datay="66" datawidth="120" datafont="systemNumberMedium" datajustify="center"/>
+                    <field left="0"   top="72"  width="108" height="74" obscurity="1"  labelx="54"  labely="21" labelfont ="tiny" labeljustify="center" datax ="54"  datay="58" datawidth="105" datafont="systemNumberMedium" datajustify="center"/>
+                    <field left="110" top="72"  width="108" height="74" obscurity="4"  labelx="54"  labely="21" labelfont ="tiny" labeljustify="center" datax ="54"  datay="58" datawidth="105" datafont="systemNumberMedium" datajustify="center"/>
+                    <field left="0"   top="148" width="218" height="70" obscurity="13" labelx="109" labely="18" labelfont ="tiny" labeljustify="center" datax ="109" datay="57" datawidth="120" datafont="systemNumberMedium" datajustify="center"/>
+                </layout>
+                <layout name="4 Fields B">
+                    <field left="0"   top="0"   width="108" height="108" obscurity="3"  labelx="62" labely="65" labelfont ="tiny" labeljustify="center" datax ="60" datay="100" datawidth="87" datafont="systemNumberMild" datajustify="center"/>
+                    <field left="110" top="0"   width="108" height="108" obscurity="6"  labelx="46" labely="65" labelfont ="tiny" labeljustify="center" datax ="46" datay="100" datawidth="87" datafont="systemNumberMild" datajustify="center"/>
+                    <field left="0"   top="110" width="108" height="108" obscurity="9"  labelx="62" labely="20" labelfont ="tiny" labeljustify="center" datax ="60" datay="55"  datawidth="87" datafont="systemNumberMild" datajustify="center"/>
+                    <field left="110" top="110" width="108" height="108" obscurity="12" labelx="46" labely="20" labelfont ="tiny" labeljustify="center" datax ="46" datay="55"  datawidth="87" datafont="systemNumberMild" datajustify="center"/>
+                </layout>
+            </datafieldlayouts>
+            <app_types>
+                <app id="watchface" memory_limit="65536" />
+                <app id="watch-app" memory_limit="131072" />
+                <app id="widget" memory_limit="65536" />
+                <app id="datafield" memory_limit="32768" />
+            </app_types>
+            <hr_data>
+                <sample_rate>67</sample_rate>
+                <history_size>178</history_size>
+            </hr_data>
+            <watchdog_count>120000</watchdog_count>
+            <fonts>
+                <font_set id="ww">
+                    <font id="xtiny">FNT_FENIX5_ROBOTOCONDENSEDREGULAR_23PX</font>
+                    <font id="tiny">FNT_FENIX5_ROBOTOCONDENSEDBOLD_23PX</font>
+                    <font id="small">FNT_FENIX5_ROBOTOCONDENSEDBOLD_25PX</font>
+                    <font id="medium">FNT_FENIX5_ROBOTOCONDENSEDBOLD_31PX</font>
+                    <font id="large">FNT_FENIX5_ROBOTOCONDENSEDBOLD_37PX</font>
+                    <font id="numberMild">FNT_FENIX5_CHRONOSSEMIBOLDCONDENSED_24PX</font>
+                    <font id="numberMedium">FNT_FENIX5_CHRONOSSEMIBOLDCONDENSED_32PX</font>
+                    <font id="numberHot">FNT_FENIX5_CHRONOSSEMIBOLDCONDENSED_46PX</font>
+                    <font id="numberThaiHot">FNT_FENIX5_CHRONOSSEMIBOLDCONDENSED_53PX</font>
+                    <font id="systemXtiny">FNT_FENIX5_ROBOTOCONDENSEDREGULAR_23PX</font>
+                    <font id="systemTiny">FNT_FENIX5_ROBOTOCONDENSEDBOLD_23PX</font>
+                    <font id="systemSmall">FNT_FENIX5_ROBOTOCONDENSEDBOLD_25PX</font>
+                    <font id="systemMedium">FNT_FENIX5_ROBOTOCONDENSEDBOLD_31PX</font>
+                    <font id="systemLarge">FNT_FENIX5_ROBOTOCONDENSEDBOLD_37PX</font>
+                    <font id="numberMild">FNT_FENIX5_CHRONOSSEMIBOLDCONDENSED_24PX</font>
+                    <font id="numberMedium">FNT_FENIX5_CHRONOSSEMIBOLDCONDENSED_32PX</font>
+                    <font id="numberHot">FNT_FENIX5_CHRONOSSEMIBOLDCONDENSED_46PX</font>
+                    <font id="numberThaiHot">FNT_FENIX5_CHRONOSSEMIBOLDCONDENSED_53PX</font>
                 </font_set>
             </fonts>
         </device>
@@ -2852,7 +3330,7 @@
         </device>
         <device id="d2bravo" part_number="006-B2262-00" name="D2™ Bravo" family="round-218x218">
             <part_numbers>
-                <part_number number="006-B2262-00" firmwareVersion="360" connectIQVersion="1.3.1">
+                <part_number number="006-B2262-00" firmwareVersion="380" connectIQVersion="1.4.1">
                     <languages>
                         <language font_set="ww">hrv</language>
                         <language font_set="ww">ces</language>
@@ -3056,7 +3534,7 @@
         </device>
         <device id="d2bravo_titanium" part_number="006-B2547-00" name="D2™ Bravo Titanium" family="round-218x218">
             <part_numbers>
-                <part_number number="006-B2547-00" firmwareVersion="260" connectIQVersion="1.3.1">
+                <part_number number="006-B2547-00" firmwareVersion="280" connectIQVersion="1.4.1">
                     <languages>
                         <language font_set="ww">hrv</language>
                         <language font_set="ww">ces</language>
